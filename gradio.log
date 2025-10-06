@@ -1,0 +1,246 @@
+2025-10-01 12:31:55.380 | INFO     | __main__:load_pipe:22 - Pipeline loaded
+2025-10-01 12:34:54.329 | INFO     | __main__:load_pipe:22 - Pipeline loaded
+2025-10-01 12:40:11.335 | INFO     | __main__:load_pipe:22 - Pipeline loaded
+2025-10-01 15:51:28.610 | INFO     | __main__:load_pipe_mvadapter:24 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 15:52:02.027 | INFO     | __main__:load_pipe_trellis:51 - [TRELLIS] Pipeline loaded
+2025-10-01 16:01:55.515 | INFO     | __main__:load_pipe_mvadapter:24 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 16:02:29.944 | INFO     | __main__:load_pipe_trellis:51 - [TRELLIS] Pipeline loaded
+2025-10-01 16:07:17.206 | INFO     | __main__:load_pipe_mvadapter:25 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 16:07:40.951 | INFO     | __main__:load_pipe_trellis:52 - [TRELLIS] Pipeline loaded
+2025-10-01 16:13:37.890 | INFO     | __main__:load_pipe_mvadapter:25 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 16:13:52.663 | INFO     | __main__:load_pipe_trellis:52 - [TRELLIS] Pipeline loaded
+2025-10-01 16:16:05.648 | INFO     | __main__:load_pipe_mvadapter:25 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 16:16:21.171 | INFO     | __main__:load_pipe_trellis:52 - [TRELLIS] Pipeline loaded
+2025-10-01 16:21:29.664 | INFO     | __main__:load_pipe_mvadapter:25 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 16:21:58.842 | INFO     | __main__:load_pipe_trellis:52 - [TRELLIS] Pipeline loaded
+2025-10-01 16:26:55.867 | INFO     | __main__:load_pipe_mvadapter:25 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 16:27:21.768 | INFO     | __main__:load_pipe_trellis:52 - [TRELLIS] Pipeline loaded
+2025-10-01 16:39:48.928 | INFO     | __main__:load_pipe_mvadapter:26 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 16:40:07.720 | INFO     | __main__:load_pipe_trellis:53 - [TRELLIS] Pipeline loaded
+2025-10-01 16:59:06.343 | INFO     | __main__:load_pipe_mvadapter:56 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 17:00:41.501 | INFO     | __main__:load_pipe_trellis:83 - [TRELLIS] Pipeline loaded
+2025-10-01 17:13:04.875 | INFO     | __main__:load_pipe_mvadapter:32 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 17:20:08.610 | INFO     | __main__:load_pipe_mvadapter:33 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 17:22:40.333 | INFO     | __main__:load_pipe_trellis:65 - [TRELLIS] Pipeline loaded
+2025-10-01 17:26:21.538 | INFO     | __main__:load_pipe_mvadapter:33 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 17:28:37.562 | INFO     | __main__:load_pipe_trellis:65 - [TRELLIS] Pipeline loaded
+2025-10-01 17:36:07.390 | INFO     | __main__:load_pipe_mvadapter:33 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 17:46:52.195 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 17:48:21.737 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_5q2jyfb4
+2025-10-01 17:48:57.885 | INFO     | __main__:generate_3d:121 - [TRELLIS] received 6 views: ['/tmp/views_5q2jyfb4/view_00.png', '/tmp/views_5q2jyfb4/view_01.png', '/tmp/views_5q2jyfb4/view_02.png', '/tmp/views_5q2jyfb4/view_03.png', '/tmp/views_5q2jyfb4/view_04.png', '/tmp/views_5q2jyfb4/view_05.png']
+2025-10-01 17:50:17.559 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 17:51:47.096 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_e5yasxke
+2025-10-01 17:52:51.758 | INFO     | __main__:load_pipe_trellis:101 - [TRELLIS] Pipeline loaded
+2025-10-01 17:52:51.790 | INFO     | __main__:generate_3d:122 - [TRELLIS] received 6 views: ['/tmp/views_e5yasxke/view_00.png', '/tmp/views_e5yasxke/view_01.png', '/tmp/views_e5yasxke/view_02.png', '/tmp/views_e5yasxke/view_03.png', '/tmp/views_e5yasxke/view_04.png', '/tmp/views_e5yasxke/view_05.png']
+2025-10-01 17:55:01.880 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 17:56:31.438 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_wd4in990
+2025-10-01 17:57:33.163 | INFO     | __main__:load_pipe_trellis:103 - [TRELLIS] Pipeline loaded
+2025-10-01 17:57:33.195 | INFO     | __main__:generate_3d:124 - [TRELLIS] received 6 views: ['/tmp/views_wd4in990/view_00.png', '/tmp/views_wd4in990/view_01.png', '/tmp/views_wd4in990/view_02.png', '/tmp/views_wd4in990/view_03.png', '/tmp/views_wd4in990/view_04.png', '/tmp/views_wd4in990/view_05.png']
+2025-10-01 18:06:40.281 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 18:08:09.809 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_u26cjflw
+2025-10-01 18:08:51.273 | INFO     | __main__:load_pipe_trellis:103 - [TRELLIS] Pipeline loaded
+2025-10-01 18:08:51.305 | INFO     | __main__:generate_3d:124 - [TRELLIS] received 6 views: ['/tmp/views_u26cjflw/view_00.png', '/tmp/views_u26cjflw/view_01.png', '/tmp/views_u26cjflw/view_02.png', '/tmp/views_u26cjflw/view_03.png', '/tmp/views_u26cjflw/view_04.png', '/tmp/views_u26cjflw/view_05.png']
+2025-10-01 18:11:28.395 | INFO     | __main__:load_pipe_trellis:103 - [TRELLIS] Pipeline loaded
+2025-10-01 18:11:28.427 | INFO     | __main__:generate_3d:124 - [TRELLIS] received 6 views: ['/tmp/views_u26cjflw/view_00.png', '/tmp/views_u26cjflw/view_01.png', '/tmp/views_u26cjflw/view_02.png', '/tmp/views_u26cjflw/view_03.png', '/tmp/views_u26cjflw/view_04.png', '/tmp/views_u26cjflw/view_05.png']
+2025-10-01 18:16:13.995 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-01 18:17:43.522 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_scflbwlx
+2025-10-01 18:19:08.251 | INFO     | __main__:load_pipe_trellis:103 - [TRELLIS] Pipeline loaded
+2025-10-01 18:19:08.282 | INFO     | __main__:generate_3d:124 - [TRELLIS] received 6 views: ['/tmp/views_scflbwlx/view_00.png', '/tmp/views_scflbwlx/view_01.png', '/tmp/views_scflbwlx/view_02.png', '/tmp/views_scflbwlx/view_03.png', '/tmp/views_scflbwlx/view_04.png', '/tmp/views_scflbwlx/view_05.png']
+2025-10-02 09:45:06.852 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 09:46:36.434 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views__3dn1t9e
+2025-10-02 09:47:01.859 | INFO     | __main__:load_pipe_trellis:103 - [TRELLIS] Pipeline loaded
+2025-10-02 09:47:01.898 | INFO     | __main__:generate_3d:124 - [TRELLIS] received 6 views: ['/tmp/views__3dn1t9e/view_00.png', '/tmp/views__3dn1t9e/view_01.png', '/tmp/views__3dn1t9e/view_02.png', '/tmp/views__3dn1t9e/view_03.png', '/tmp/views__3dn1t9e/view_04.png', '/tmp/views__3dn1t9e/view_05.png']
+2025-10-02 09:48:39.003 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 09:50:08.435 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_ilc_tkx1
+2025-10-02 09:51:16.242 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 09:52:45.767 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_a053hms2
+2025-10-02 09:53:42.838 | INFO     | __main__:load_pipe_trellis:103 - [TRELLIS] Pipeline loaded
+2025-10-02 09:53:42.888 | INFO     | __main__:generate_3d:124 - [TRELLIS] received 6 views: ['/tmp/views_a053hms2/view_00.png', '/tmp/views_a053hms2/view_01.png', '/tmp/views_a053hms2/view_02.png', '/tmp/views_a053hms2/view_03.png', '/tmp/views_a053hms2/view_04.png', '/tmp/views_a053hms2/view_05.png']
+2025-10-02 09:55:27.213 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 09:56:57.109 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_8kg8q2do
+2025-10-02 09:58:53.453 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 10:00:21.153 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_j2ei_0y6
+2025-10-02 10:01:53.727 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 10:03:21.573 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_3lvas8gc
+2025-10-02 10:04:57.813 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 10:06:25.720 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_0h9gfih7
+2025-10-02 10:08:33.921 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 10:10:02.184 | INFO     | __main__:generate_images:85 - [MV-ADAPTER]: generated 6 views in /tmp/views_fp2okp0t
+2025-10-02 10:11:12.024 | INFO     | __main__:load_pipe_trellis:103 - [TRELLIS] Pipeline loaded
+2025-10-02 10:11:12.102 | INFO     | __main__:generate_3d:124 - [TRELLIS] received 6 views: ['/tmp/views_fp2okp0t/view_00.png', '/tmp/views_fp2okp0t/view_01.png', '/tmp/views_fp2okp0t/view_02.png', '/tmp/views_fp2okp0t/view_03.png', '/tmp/views_fp2okp0t/view_04.png', '/tmp/views_fp2okp0t/view_05.png']
+2025-10-02 10:47:04.888 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 10:48:38.420 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_cglwzltt
+2025-10-02 11:07:01.559 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 11:08:34.851 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_e4j9rt8d
+2025-10-02 11:22:38.003 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 11:24:10.704 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_hijdjwsm
+2025-10-02 11:31:00.876 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 11:32:30.158 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_xdcsc39l
+2025-10-02 11:33:10.857 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 11:34:38.761 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_43lgp6fn
+2025-10-02 11:36:11.019 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 11:36:11.064 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_43lgp6fn/view_00.png', '/tmp/views_43lgp6fn/view_01.png', '/tmp/views_43lgp6fn/view_02.png', '/tmp/views_43lgp6fn/view_03.png', '/tmp/views_43lgp6fn/view_04.png', '/tmp/views_43lgp6fn/view_05.png']
+2025-10-02 11:44:53.294 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 11:46:21.014 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_gi5fk09s
+2025-10-02 11:46:57.478 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 11:46:57.508 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_gi5fk09s/view_00.png', '/tmp/views_gi5fk09s/view_01.png', '/tmp/views_gi5fk09s/view_02.png', '/tmp/views_gi5fk09s/view_03.png', '/tmp/views_gi5fk09s/view_04.png', '/tmp/views_gi5fk09s/view_05.png']
+2025-10-02 11:51:54.000 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 11:53:21.765 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_6lmjsulf
+2025-10-02 11:54:53.497 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 11:56:21.562 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_msjcrlnw
+2025-10-02 11:57:28.243 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 11:57:28.285 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_msjcrlnw/view_00.png', '/tmp/views_msjcrlnw/view_01.png', '/tmp/views_msjcrlnw/view_02.png', '/tmp/views_msjcrlnw/view_03.png', '/tmp/views_msjcrlnw/view_04.png', '/tmp/views_msjcrlnw/view_05.png']
+2025-10-02 12:07:23.198 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 12:08:51.503 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views__69rqo2i
+2025-10-02 12:09:06.128 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 12:10:33.895 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_m6wed85j
+2025-10-02 12:13:21.030 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 12:13:21.058 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_m6wed85j/view_00.png', '/tmp/views_m6wed85j/view_01.png', '/tmp/views_m6wed85j/view_02.png', '/tmp/views_m6wed85j/view_03.png', '/tmp/views_m6wed85j/view_04.png', '/tmp/views_m6wed85j/view_05.png']
+2025-10-02 12:16:55.017 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 12:18:22.976 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_hyd7h0rr
+2025-10-02 12:19:28.908 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 12:19:28.938 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_hyd7h0rr/view_00.png', '/tmp/views_hyd7h0rr/view_01.png', '/tmp/views_hyd7h0rr/view_02.png', '/tmp/views_hyd7h0rr/view_03.png', '/tmp/views_hyd7h0rr/view_04.png', '/tmp/views_hyd7h0rr/view_05.png']
+2025-10-02 12:38:57.836 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 12:40:25.606 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_90voldvk
+2025-10-02 12:43:54.689 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 12:45:23.285 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_2y6gp8j0
+2025-10-02 12:49:52.019 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 12:51:19.809 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_6g5l3z5l
+2025-10-02 13:05:57.446 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 13:07:25.321 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_hcy65edw
+2025-10-02 13:12:46.055 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 13:12:46.086 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_hcy65edw/view_00.png', '/tmp/views_hcy65edw/view_01.png', '/tmp/views_hcy65edw/view_02.png', '/tmp/views_hcy65edw/view_03.png', '/tmp/views_hcy65edw/view_04.png', '/tmp/views_hcy65edw/view_05.png']
+2025-10-02 13:18:51.870 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 13:20:19.678 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_83ebj2pt
+2025-10-02 13:21:33.821 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 13:23:01.882 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_t519s51j
+2025-10-02 13:23:40.201 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 13:23:40.242 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_t519s51j/view_00.png', '/tmp/views_t519s51j/view_01.png', '/tmp/views_t519s51j/view_02.png', '/tmp/views_t519s51j/view_03.png', '/tmp/views_t519s51j/view_04.png', '/tmp/views_t519s51j/view_05.png']
+2025-10-02 13:25:00.613 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 13:25:00.657 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_t519s51j/view_00.png', '/tmp/views_t519s51j/view_01.png', '/tmp/views_t519s51j/view_02.png', '/tmp/views_t519s51j/view_03.png', '/tmp/views_t519s51j/view_04.png', '/tmp/views_t519s51j/view_05.png']
+2025-10-02 13:27:56.551 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 13:29:24.335 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_j5lo6of8
+2025-10-02 13:31:58.709 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 13:33:26.759 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_duo5xk72
+2025-10-02 13:34:04.707 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 13:34:04.748 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_duo5xk72/view_00.png', '/tmp/views_duo5xk72/view_01.png', '/tmp/views_duo5xk72/view_02.png', '/tmp/views_duo5xk72/view_03.png', '/tmp/views_duo5xk72/view_04.png', '/tmp/views_duo5xk72/view_05.png']
+2025-10-02 15:12:35.391 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 15:14:04.017 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_z272kx8_
+2025-10-02 15:14:42.071 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 15:16:09.466 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_v4qo8h4c
+2025-10-02 15:21:19.497 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 15:22:47.063 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_o4as7l9p
+2025-10-02 15:26:48.001 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 15:28:15.471 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_zytct1ff
+2025-10-02 15:29:58.476 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 15:31:26.120 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_qcb09npl
+2025-10-02 15:32:49.241 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 15:34:17.117 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_f602tok8
+2025-10-02 15:35:43.039 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-02 15:35:43.082 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_f602tok8/view_00.png', '/tmp/views_f602tok8/view_01.png', '/tmp/views_f602tok8/view_02.png', '/tmp/views_f602tok8/view_03.png', '/tmp/views_f602tok8/view_04.png', '/tmp/views_f602tok8/view_05.png']
+2025-10-02 15:40:07.630 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-02 15:41:35.674 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_9o3dsmlq
+2025-10-03 11:00:57.066 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-03 11:02:25.558 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_74nhtxoy
+2025-10-03 11:03:13.099 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 11:03:13.129 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_74nhtxoy/view_00.png', '/tmp/views_74nhtxoy/view_01.png', '/tmp/views_74nhtxoy/view_02.png', '/tmp/views_74nhtxoy/view_03.png', '/tmp/views_74nhtxoy/view_04.png', '/tmp/views_74nhtxoy/view_05.png']
+2025-10-03 11:03:56.473 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_74nhtxoy/mesh.glb and ply to /tmp/views_74nhtxoy/mesh.ply
+2025-10-03 11:38:01.203 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-03 11:39:28.682 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_2krnvu49
+2025-10-03 11:40:04.296 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 11:40:04.327 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_2krnvu49/view_00.png', '/tmp/views_2krnvu49/view_01.png', '/tmp/views_2krnvu49/view_02.png', '/tmp/views_2krnvu49/view_03.png', '/tmp/views_2krnvu49/view_04.png', '/tmp/views_2krnvu49/view_05.png']
+2025-10-03 11:40:46.688 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_2krnvu49/mesh.glb and ply to /tmp/views_2krnvu49/mesh.ply
+2025-10-03 12:20:46.994 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-03 12:22:14.504 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_raqmqqxy
+2025-10-03 12:23:04.772 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 12:23:04.803 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_raqmqqxy/view_00.png', '/tmp/views_raqmqqxy/view_01.png', '/tmp/views_raqmqqxy/view_02.png', '/tmp/views_raqmqqxy/view_03.png', '/tmp/views_raqmqqxy/view_04.png', '/tmp/views_raqmqqxy/view_05.png']
+2025-10-03 12:23:53.495 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_raqmqqxy/mesh.glb and ply to /tmp/views_raqmqqxy/mesh.ply
+2025-10-03 12:24:11.990 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 12:24:12.022 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_raqmqqxy/view_00.png', '/tmp/views_raqmqqxy/view_01.png', '/tmp/views_raqmqqxy/view_02.png', '/tmp/views_raqmqqxy/view_03.png', '/tmp/views_raqmqqxy/view_04.png', '/tmp/views_raqmqqxy/view_05.png']
+2025-10-03 12:24:46.671 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_raqmqqxy/mesh.glb and ply to /tmp/views_raqmqqxy/mesh.ply
+2025-10-03 12:28:07.199 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-03 12:29:34.613 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_ug98uj09
+2025-10-03 12:29:59.506 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 12:29:59.538 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_ug98uj09/view_00.png', '/tmp/views_ug98uj09/view_01.png', '/tmp/views_ug98uj09/view_02.png', '/tmp/views_ug98uj09/view_03.png', '/tmp/views_ug98uj09/view_04.png', '/tmp/views_ug98uj09/view_05.png']
+2025-10-03 12:30:33.935 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_ug98uj09/mesh.glb and ply to /tmp/views_ug98uj09/mesh.ply
+2025-10-03 12:30:53.202 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 12:30:53.233 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_ug98uj09/view_00.png', '/tmp/views_ug98uj09/view_01.png', '/tmp/views_ug98uj09/view_02.png', '/tmp/views_ug98uj09/view_03.png', '/tmp/views_ug98uj09/view_04.png', '/tmp/views_ug98uj09/view_05.png']
+2025-10-03 12:31:27.544 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_ug98uj09/mesh.glb and ply to /tmp/views_ug98uj09/mesh.ply
+2025-10-03 12:32:10.026 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-03 12:33:37.407 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_5dbr8aef
+2025-10-03 12:42:40.002 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 12:42:40.033 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_5dbr8aef/view_00.png', '/tmp/views_5dbr8aef/view_01.png', '/tmp/views_5dbr8aef/view_02.png', '/tmp/views_5dbr8aef/view_03.png', '/tmp/views_5dbr8aef/view_04.png', '/tmp/views_5dbr8aef/view_05.png']
+2025-10-03 12:44:52.098 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_5dbr8aef/mesh.glb and ply to /tmp/views_5dbr8aef/mesh.ply
+2025-10-03 12:45:10.923 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 12:45:10.954 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_5dbr8aef/view_00.png', '/tmp/views_5dbr8aef/view_01.png', '/tmp/views_5dbr8aef/view_02.png', '/tmp/views_5dbr8aef/view_03.png', '/tmp/views_5dbr8aef/view_04.png', '/tmp/views_5dbr8aef/view_05.png']
+2025-10-03 12:45:45.185 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_5dbr8aef/mesh.glb and ply to /tmp/views_5dbr8aef/mesh.ply
+2025-10-03 13:14:04.296 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 13:14:04.327 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_5dbr8aef/view_00.png', '/tmp/views_5dbr8aef/view_01.png', '/tmp/views_5dbr8aef/view_02.png', '/tmp/views_5dbr8aef/view_03.png', '/tmp/views_5dbr8aef/view_04.png', '/tmp/views_5dbr8aef/view_05.png']
+2025-10-03 13:14:38.524 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_5dbr8aef/mesh.glb and ply to /tmp/views_5dbr8aef/mesh.ply
+2025-10-03 13:14:57.145 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 13:14:57.176 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_5dbr8aef/view_00.png', '/tmp/views_5dbr8aef/view_01.png', '/tmp/views_5dbr8aef/view_02.png', '/tmp/views_5dbr8aef/view_03.png', '/tmp/views_5dbr8aef/view_04.png', '/tmp/views_5dbr8aef/view_05.png']
+2025-10-03 13:15:32.177 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_5dbr8aef/mesh.glb and ply to /tmp/views_5dbr8aef/mesh.ply
+2025-10-03 16:24:15.095 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-03 16:26:15.319 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_jud0fh3s
+2025-10-03 16:33:01.887 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-03 16:33:01.934 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_jud0fh3s/view_00.png', '/tmp/views_jud0fh3s/view_01.png', '/tmp/views_jud0fh3s/view_02.png', '/tmp/views_jud0fh3s/view_03.png', '/tmp/views_jud0fh3s/view_04.png', '/tmp/views_jud0fh3s/view_05.png']
+2025-10-06 08:18:08.575 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 08:19:36.946 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_39a_l9wm
+2025-10-06 08:32:10.898 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 08:33:38.508 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_p2wsnkjn
+2025-10-06 08:37:19.803 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 08:37:19.855 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_p2wsnkjn/view_00.png', '/tmp/views_p2wsnkjn/view_01.png', '/tmp/views_p2wsnkjn/view_02.png', '/tmp/views_p2wsnkjn/view_03.png', '/tmp/views_p2wsnkjn/view_04.png', '/tmp/views_p2wsnkjn/view_05.png']
+2025-10-06 08:38:29.509 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_p2wsnkjn/mesh.glb and ply to /tmp/views_p2wsnkjn/mesh.ply
+2025-10-06 08:38:50.196 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 08:38:50.247 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_p2wsnkjn/view_00.png', '/tmp/views_p2wsnkjn/view_01.png', '/tmp/views_p2wsnkjn/view_02.png', '/tmp/views_p2wsnkjn/view_03.png', '/tmp/views_p2wsnkjn/view_04.png', '/tmp/views_p2wsnkjn/view_05.png']
+2025-10-06 08:39:30.901 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_p2wsnkjn/mesh.glb and ply to /tmp/views_p2wsnkjn/mesh.ply
+2025-10-06 08:59:49.316 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 09:01:17.047 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_6w2673_l
+2025-10-06 09:11:18.131 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 09:11:18.179 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_6w2673_l/view_00.png', '/tmp/views_6w2673_l/view_01.png', '/tmp/views_6w2673_l/view_02.png', '/tmp/views_6w2673_l/view_03.png', '/tmp/views_6w2673_l/view_04.png', '/tmp/views_6w2673_l/view_05.png']
+2025-10-06 09:12:07.727 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_6w2673_l/mesh.glb and ply to /tmp/views_6w2673_l/mesh.ply
+2025-10-06 09:12:31.005 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 09:12:31.052 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_6w2673_l/view_00.png', '/tmp/views_6w2673_l/view_01.png', '/tmp/views_6w2673_l/view_02.png', '/tmp/views_6w2673_l/view_03.png', '/tmp/views_6w2673_l/view_04.png', '/tmp/views_6w2673_l/view_05.png']
+2025-10-06 09:13:19.865 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_6w2673_l/mesh.glb and ply to /tmp/views_6w2673_l/mesh.ply
+2025-10-06 09:33:13.901 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 09:34:44.607 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_jl_7rxt9
+2025-10-06 09:35:40.542 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 09:35:40.581 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_jl_7rxt9/view_00.png', '/tmp/views_jl_7rxt9/view_01.png', '/tmp/views_jl_7rxt9/view_02.png', '/tmp/views_jl_7rxt9/view_03.png', '/tmp/views_jl_7rxt9/view_04.png', '/tmp/views_jl_7rxt9/view_05.png']
+2025-10-06 09:40:30.686 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_jl_7rxt9/mesh.glb and ply to /tmp/views_jl_7rxt9/mesh.ply
+2025-10-06 09:40:50.771 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 09:40:50.808 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_jl_7rxt9/view_00.png', '/tmp/views_jl_7rxt9/view_01.png', '/tmp/views_jl_7rxt9/view_02.png', '/tmp/views_jl_7rxt9/view_03.png', '/tmp/views_jl_7rxt9/view_04.png', '/tmp/views_jl_7rxt9/view_05.png']
+2025-10-06 09:45:32.485 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_jl_7rxt9/mesh.glb and ply to /tmp/views_jl_7rxt9/mesh.ply
+2025-10-06 11:02:44.144 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 11:04:11.893 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_mhxr9wlo
+2025-10-06 11:05:00.984 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 11:05:01.030 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_mhxr9wlo/view_00.png', '/tmp/views_mhxr9wlo/view_01.png', '/tmp/views_mhxr9wlo/view_02.png', '/tmp/views_mhxr9wlo/view_03.png', '/tmp/views_mhxr9wlo/view_04.png', '/tmp/views_mhxr9wlo/view_05.png']
+2025-10-06 11:06:31.356 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_mhxr9wlo/mesh.glb and ply to /tmp/views_mhxr9wlo/mesh.ply
+2025-10-06 11:06:50.975 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 11:06:51.022 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_mhxr9wlo/view_00.png', '/tmp/views_mhxr9wlo/view_01.png', '/tmp/views_mhxr9wlo/view_02.png', '/tmp/views_mhxr9wlo/view_03.png', '/tmp/views_mhxr9wlo/view_04.png', '/tmp/views_mhxr9wlo/view_05.png']
+2025-10-06 11:12:30.524 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_mhxr9wlo/mesh.glb and ply to /tmp/views_mhxr9wlo/mesh.ply
+2025-10-06 11:33:13.177 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 11:37:10.952 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 11:38:39.532 | INFO     | __main__:generate_images:87 - [MV-ADAPTER]: generated 6 views in /tmp/views_tosk51do
+2025-10-06 11:39:49.752 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 11:39:49.798 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_tosk51do/view_00.png', '/tmp/views_tosk51do/view_01.png', '/tmp/views_tosk51do/view_02.png', '/tmp/views_tosk51do/view_03.png', '/tmp/views_tosk51do/view_04.png', '/tmp/views_tosk51do/view_05.png']
+2025-10-06 11:40:40.200 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_tosk51do/mesh.glb and ply to /tmp/views_tosk51do/mesh.ply
+2025-10-06 11:40:59.216 | INFO     | __main__:load_pipe_trellis:105 - [TRELLIS] Pipeline loaded
+2025-10-06 11:40:59.261 | INFO     | __main__:generate_3d:126 - [TRELLIS] received 6 views: ['/tmp/views_tosk51do/view_00.png', '/tmp/views_tosk51do/view_01.png', '/tmp/views_tosk51do/view_02.png', '/tmp/views_tosk51do/view_03.png', '/tmp/views_tosk51do/view_04.png', '/tmp/views_tosk51do/view_05.png']
+2025-10-06 11:41:49.336 | INFO     | __main__:generate_3d:136 - [TRELLIS] saved glb to /tmp/views_tosk51do/mesh.glb and ply to /tmp/views_tosk51do/mesh.ply
+2025-10-06 11:46:09.387 | INFO     | __main__:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 16:19:05.552 | INFO     | __main__:llm_prompt_processing:73 - [MV-ADAPTER] refined prompt: cat, big, fat, drinking, red water
+2025-10-06 16:19:05.643 | INFO     | __main__:llm_prompt_processing:74 - [MV-ADAPTER] negative prompt: extra limbs, deformed face, incorrect fur, incorrect tail, incorrect ears, incorrect eyes, incorrect whiskers, incorrect posture, incorrect fur color, incorrect water color, incorrect water reflections, incorrect water surface, incorrect water scale
+2025-10-06 16:19:34.426 | INFO     | __main__:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 16:21:08.952 | INFO     | __main__:generate_images:98 - [MV-ADAPTER]: generated 6 views in /tmp/views_socysrb1
+2025-10-06 16:26:05.380 | INFO     | __main__:llm_prompt_processing:73 - [MV-ADAPTER] refined prompt: cat, fat, drinking, red water
+2025-10-06 16:26:05.380 | INFO     | __main__:llm_prompt_processing:74 - [MV-ADAPTER] negative prompt: extra limbs, deformed face, bloated body, unrealistic fur, incorrect posture, unnatural color, distorted tail, incorrect fur pattern, bloated belly, unrealistic water reflections, incorrect scale
+2025-10-06 16:26:26.510 | INFO     | __main__:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 16:28:00.754 | INFO     | __main__:generate_images:98 - [MV-ADAPTER]: generated 6 views in /tmp/views_lg1uopas
+2025-10-06 16:29:10.152 | INFO     | __main__:llm_prompt_processing:73 - [MV-ADAPTER] refined prompt: cat, fat, drinking, red water
+2025-10-06 16:29:10.153 | INFO     | __main__:llm_prompt_processing:74 - [MV-ADAPTER] negative prompt: extra limbs, deformed face, bloated body, unrealistic fur, incorrect posture, unnatural color, distorted tail, incorrect fur pattern, bloated belly, unrealistic water reflections, incorrect scale
+2025-10-06 16:29:31.893 | INFO     | __main__:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 16:31:06.442 | INFO     | __main__:generate_images:98 - [MV-ADAPTER]: generated 6 views in /tmp/views_p0hus741
+2025-10-06 16:42:51.849 | INFO     | __main__:llm_prompt_processing:73 - [MV-ADAPTER] refined prompt: cat, fat, drinking, red water
+2025-10-06 16:42:51.850 | INFO     | __main__:llm_prompt_processing:74 - [MV-ADAPTER] negative prompt: extra limbs, deformed face, bloated body, unrealistic fur, incorrect posture, unnatural color, distorted tail, incorrect fur pattern, bloated belly, unrealistic water reflections, incorrect scale
+2025-10-06 16:43:04.904 | INFO     | __main__:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded
+2025-10-06 16:44:39.640 | INFO     | __main__:generate_images:98 - [MV-ADAPTER]: generated 6 views in /tmp/views_ugfkyomv
