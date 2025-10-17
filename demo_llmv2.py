@@ -1,6 +1,6 @@
 from mvadapter_t2mv import MVAdapterT2MV
 from trellis_mv2m import TrellisMV2M
-from ollama import refine_prompt, negative_prompt
+from ollama import refine_prompt, negative_prompt, check_views, prepare_prompts
 
 import os, tempfile, glob, gc
 import torch
@@ -68,28 +68,35 @@ def load_pipe_mvadapter():
 #     del pipe_mv, adapters
 #     return imgs, imgs, gr.update(visible=True)
 def llm_prompt_processing(prompt):
-    ref_prompt = refine_prompt(prompt)
-    neg_prompt = negative_prompt(ref_prompt)
+    # ref_prompt = refine_prompt(prompt)
+    # neg_prompt = negative_prompt(ref_prompt)
+    logger.info(f"[MV-ADAPTER] generating images. prompt to be refined: {prompt}")
+    result = prepare_prompts(prompt)
+    ref_prompt = result['refined']
+    neg_prompt = result['negative'] or "nothing to change"
     logger.info(f"[MV-ADAPTER] refined prompt: {ref_prompt}")
     logger.info(f"[MV-ADAPTER] negative prompt: {neg_prompt}")
-    return ref_prompt, neg_prompt
+    return (
+        gr.update(value=ref_prompt, visible=True), # ref_prompt
+        gr.update(value=neg_prompt, visible=True), # neg_prompt
+        ref_prompt, # state_last_prompt
+        neg_prompt # state_neg_prompt
+    )
 
-def generate_images(prompt, randomize=False):
+def generate_images(refined_prompt, negative_prompt, randomize=False):
     seed = -1 if randomize else 42
-
-    refined_prompt, negative_prompt = llm_prompt_processing(prompt)
 
     global pipe_mv, adapters
     load_pipe_mvadapter()
     imgs = MVAdapterT2MV.run_pipeline(
         pipe=pipe_mv,
         num_views=6,
-        text=prompt,
+        text=refined_prompt,
         height=768, width=768,
         num_inference_steps=50,
         guidance_scale=7.0,
         seed=seed,
-        negative_prompt="ugly anatomy",
+        negative_prompt=negative_prompt,
         device="cuda",
         adapter_name_list=adapters,
     )
@@ -100,8 +107,25 @@ def generate_images(prompt, randomize=False):
     paths = sorted(glob.glob(os.path.join(views_dir, "*.png")))
     pipe_mv.to("cpu")
     del pipe_mv, adapters
-    return paths, views_dir, gr.update(visible=True), prompt, gr.update(value=refined_prompt, visible=True), gr.update(value=negative_prompt, visible=True),
+    
+    # llm quality checker and negative prompt generator
+    llm_avaliation, llm_eval_neg_prompt = check_views_quality(refined_prompt, views_dir)
+    return (
+        paths,
+        views_dir,
+        gr.update(visible=True),
+        refined_prompt,
+        gr.update(value=llm_avaliation, visible=True),
+        gr.update(value=llm_eval_neg_prompt, visible=True)
+    )
 
+def check_views_quality(views_dir, prompt):
+    result = check_views(views_dir, prompt)
+    llm_avaliation = result['avaliation']
+    llm_neg_prompt = result['negative_prompt']
+
+    logger.info(f"[MV-ADAPTER] views quality check: {result}")
+    return llm_avaliation, llm_neg_prompt
 
  # ------------ TRELLIS ------------
 pipe_trellis = None
@@ -177,17 +201,18 @@ def _unlock_after_trellis():
 
 
 with gr.Blocks() as demo:
-    gr.Markdown("full demo")
+    gr.Markdown("llm demo")
 
     # images to generate
     # state_images = gr.State([])
     state_views_dir = gr.State(value="")
     state_last_prompt = gr.State(value="")
+    state_neg_prompt = gr.State(value="")
 
     prompt = gr.Textbox(label="Prompt")
     run_btn = gr.Button("Generate")
 
-    with gr.Accordion("LLM prompts", open=False):
+    with gr.Accordion("LLM prompts", open=True):
         ref_prompt = gr.Textbox(
             label="Refined positive prompt",
             interactive=False,
@@ -206,6 +231,22 @@ with gr.Blocks() as demo:
     remake_btn = gr.Button("Remake images (same prompt but different seed)", visible=False)
     gallery = gr.Gallery(columns=3, rows=2, height="auto")
 
+    with gr.Accordion("LLM Image Avaliation", open=False):
+        llm_avaliation = gr.Textbox(
+            label="LLM Image Avaliation",
+            interactive=False,
+            visible=False,
+            show_copy_button=True,
+            lines=2
+        )
+        llm_eval_neg_prompt = gr.Textbox(
+            label="LLM Prompt Negative using image avaliation",
+            interactive=False,
+            visible=False,
+            show_copy_button=True,
+            lines=2
+        )
+
     # only shows when mv adapter ends
     run_trellis_btn = gr.Button("Generate 3D Mesh", visible=False)
     video = gr.Video(label="Mesh video preview")
@@ -213,7 +254,7 @@ with gr.Blocks() as demo:
 
     # download_glb = gr.File(label="Download GLB mesh", visible=False)
     # download_ply = gr.File(label="Download PLY mesh", visible=False)
-    with gr.Row():  # coloca os botões na mesma linha
+    with gr.Row():
         download_glb = gr.DownloadButton(
             label="Download GLB",
             value=None,
@@ -229,24 +270,64 @@ with gr.Blocks() as demo:
 
 
     # generate
+    # GENERATE V3 - SHOW LLM FIRST
+    #first step show llm
     run_btn.click(
-        fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
+    fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
     ).then(
-        fn=generate_images, inputs=[prompt, gr.State(False)],
-        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, ref_prompt, neg_prompt]
+    fn=llm_prompt_processing,
+    inputs=prompt,
+    outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt],
+    ).then(
+    fn=generate_images,
+    inputs=[state_last_prompt, state_neg_prompt, gr.State(False)],
+    outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
+    queue=True
     ).then(
         fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
     )
+    # GENERATE V2
+    # run_btn.click(
+    # fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
+    # ).then(
+    #     fn=llm_prompt_processing, inputs=prompt,
+    #     outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt],
+    # ).then(
+    #     fn=generate_images, inputs=[state_last_prompt, state_neg_prompt, gr.State(False)],
+    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, ref_prompt, neg_prompt, llm_avaliation, llm_eval_neg_prompt]
+    # ).then(
+    #     fn=_unlock_after_generate, inputs=None,
+    #     outputs=[run_btn, remake_btn, run_trellis_btn]
+    # )
+    # GENERATE V1
+    # run_btn.click(
+    #     fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
+    # ).then(
+    #     fn=generate_images, inputs=[prompt, gr.State(False)],
+    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, ref_prompt, neg_prompt, llm_avaliation, llm_eval_neg_prompt]
+    # ).then(
+    #     fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
+    # )
 
     # remake
     remake_btn.click(
-        fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
+    fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
     ).then(
-        fn=generate_images, inputs=[state_last_prompt, gr.State(True)],
-        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt]
+        fn=generate_images, inputs=[state_last_prompt, state_neg_prompt, gr.State(True)],
+        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt]
     ).then(
-        fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
+        fn=_unlock_after_generate, inputs=None,
+        outputs=[run_btn, remake_btn, run_trellis_btn]
     )
+
+    # remake_btn.click(
+    #     fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
+    # ).then(
+    #     fn=generate_images, inputs=[state_last_prompt, gr.State(True)],
+    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, ref_prompt, neg_prompt, llm_avaliation, llm_eval_neg_prompt]
+    # ).then(
+    #     fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
+    # )
 
     # trellis
     run_trellis_btn.click(
