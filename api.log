@@ -7,3 +7,7 @@
 2025-10-17 12:59:14.223 | INFO     | __main__:chat_start_fn:49 - [CHAT] starting chat with refined: cat, orange, detailed fur, full body, negative: blurry, low detail, bad anatomy, incorrect tail, extra limbs, deformed face, lighting, shadows, background, eval: The images show a detailed orange cat with realistic fur texture. The views are consistent, and there are no visible artifacts or geometry holes. The lighting and shadows are well-rendered, and the background is neutral, keeping the focus on the cat. The cat's posture and fur details are well-captured from different angles.
 2025-10-17 12:59:14.223 | INFO     | ollama_chat:start_chat_from_inputs:109 - [CHAT] STARTING CHAT
 2025-10-17 13:01:10.769 | INFO     | __main__:generate_3d:209 - [TRELLIS/API-b64] assets: /tmp/views_jtku197x/mesh.glb, /tmp/views_jtku197x/mesh.ply, /tmp/views_jtku197x/preview.mp4
+2025-10-20 10:02:04.257 | INFO     | api:load_pipe_mvadapter:41 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-20 10:03:32.099 | INFO     | api:t2mv_generate:64 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-20 15:13:01.715 | INFO     | api:load_pipe_mvadapter:41 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-20 15:14:28.915 | INFO     | api:t2mv_generate:64 - [MV-ADAPTER] Images generated 6 views (API)

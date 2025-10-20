@@ -17,7 +17,7 @@ You will receive:
 Avaliation:
 - Compare the image quality to the prompts.
 - You can be critical but not too much in your evaluation. If the images have minor issues but overall look good, say so. If they have major problems, point them out clearly. Only give constructive feedback.
-- If the overall quality is good, you don't need to list every small issue and the negative prompt can be "none".
+- If the overall quality is good, you don't need to list every small issue and the negative prompt can be the same negative prompt received.
 - The bigger problems are: geometry holes, extra limbs (if the prompt doesn't call for it), deformed face, artifacts, lighting, shadows, background.
 - Example: if the input is "a cat", the images should look like a real cat from different angles. If the cat has extra limbs, deformed face, a extra tail, say so.
 
