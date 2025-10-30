@@ -36,9 +36,7 @@ class MVAdapterT2MV:
         self.scheduler = scheduler
         self.num_views = num_views
         self.device = device
-        self.dtype = dtype
 
-    @staticmethod
     def prepare_pipeline(
         base_model,
         vae_model,
@@ -50,19 +48,14 @@ class MVAdapterT2MV:
         device,
         dtype,
     ):
-        # Load vae and unet if provided - OTIMIZAÇÃO: adicionar torch_dtype
+        # Load vae and unet if provided
         pipe_kwargs = {}
         if vae_model is not None:
-            pipe_kwargs["vae"] = AutoencoderKL.from_pretrained(
-                vae_model, 
-                torch_dtype=dtype
-            )
+            pipe_kwargs["vae"] = AutoencoderKL.from_pretrained(vae_model, torch_dtype=dtype)
         if unet_model is not None:
-            pipe_kwargs["unet"] = UNet2DConditionModel.from_pretrained(
-                unet_model,
-                torch_dtype=dtype
-            )
+            pipe_kwargs["unet"] = UNet2DConditionModel.from_pretrained(unet_model,torch_dtype=dtype)
 
+        # Prepare pipeline
         pipe: MVAdapterT2MVSDXLPipeline
         pipe = MVAdapterT2MVSDXLPipeline.from_pretrained(
             base_model, 
@@ -106,7 +99,7 @@ class MVAdapterT2MV:
 
         return pipe, adapter_name_list
 
-    @staticmethod
+
     def run_pipeline(
         pipe,
         num_views,

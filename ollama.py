@@ -11,8 +11,8 @@ logger.add("ollama.log", rotation="10 MB")
 # nsfw checker
 # mesh checker
 
-OLLAMA_URL = "http://localhost:11500" 
-MODEL = "qwen2.5vl:7b"
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11200")
+MODEL = os.getenv("CHAT_MODEL","qwen2.5vl:7b")
 
 # testar com modificadores de qualidade
 
@@ -20,7 +20,26 @@ def _b64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
 
+def start_ollama(keep="2h"):
+    r = requests.post(
+        f"{OLLAMA_URL}/api/generate",
+        json={"model": MODEL, "prompt": "ok", "stream": False, "keep_alive": keep},
+        timeout=(3, 15), # 3 to connect 15 to receive sresponse
+    )
+    r.raise_for_status()
+    return True
 
+def is_ollama_loaded(model="qwen2.5vl:7b"):
+    try:
+        resp = requests.get("http://127.0.0.1:11200/api/ps", timeout=5)
+        data = resp.json()
+        for m in data.get("models", []):
+            if m.get("model") == model and m.get("loaded"):
+                return True
+        return False
+    except Exception:
+        return False
+    
 def prepare_prompts(user_prompt: str) -> dict:
     prompt_text = f"""
         You are a prompt engineer for text-to-3D/multiview generation.
@@ -83,6 +102,8 @@ def prepare_prompts(user_prompt: str) -> dict:
         Input: {user_prompt}
         """.strip()
 
+    logger.info(f"[OLLAMA] prepare_prompts: preparing prompts for input: {user_prompt}")
+    
     payload = {
         "model": MODEL,
         "prompt": prompt_text,
@@ -90,17 +111,17 @@ def prepare_prompts(user_prompt: str) -> dict:
         "temperature": 0.3,
         "top_p": 0.9,
         "stream": False,
-        "keep_alive": "0s",
+        "keep_alive": "1h",
         "format": "json"
     }
 
-    logger.info("[OLLAMA] prepare_prompts: POST /api/generate")
     resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=(10, 120))
     resp.raise_for_status()
     raw = resp.json()["response"].strip()
 
     data = json.loads(raw)
     print(data)
+    logger.info(f"[MV-ADAPTER] prepare_prompts result: {data}")
 
     return data
 
@@ -142,7 +163,7 @@ def refine_prompt(user_prompt):
         "top_p": 0.9,
         "n": 1,
         "stream": False,
-        "keep_alive": "0s"
+        "keep_alive": "1h"
         
     }
     logger.info(f"[MV-ADAPTER] refine prompt loading. POST /api/generate to {OLLAMA_URL}")
@@ -183,7 +204,7 @@ def negative_prompt(user_prompt):
         "top_p": 0.9,
         "n": 1,
         "stream": False,
-        "keep_alive": "0s"
+        "keep_alive": "1h"
     }
 
     logger.info(f"[MV-ADAPTER] negative prompt loading. POST /api/generate to {OLLAMA_URL}")
@@ -236,10 +257,9 @@ def check_views(dir_path, user_prompt):
         "temperature": 0.3,
         "top_p": 0.9,
         "stream": False,
-        "keep_alive": "0s",
+        "keep_alive": "1h",
         "format": "json"
     }
-
     resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=180)
     resp.raise_for_status()
     raw = resp.json()["response"].strip()
@@ -287,7 +307,7 @@ def check_image(image_path):
         "temperature": 0.2,
         "top_p": 0.9,
         "stream": False,
-        "keep_alive": "0s",
+        "keep_alive": "1h",
     }
     resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=120)
     resp.raise_for_status()

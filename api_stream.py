@@ -1,14 +1,16 @@
 import base64, io, os
 import shutil
 import tempfile
+import zipfile
 from typing import List, Optional
-from fastapi import FastAPI, UploadFile, File, HTTPException, Depends, Form
+from fastapi import FastAPI, UploadFile, File, HTTPException, Depends, Form, BackgroundTasks
+from fastapi.responses import FileResponse
 from PIL import Image
 from loguru import logger
 import torch
 from trellis_mv2m import TrellisMV2M
 import cv2
-from mvadapter_t2mv import MVAdapterT2MV
+from mvadapter_t2mv_sdxl import MVAdapterT2MV
 import traceback
 from ollama import start_ollama
 
@@ -46,9 +48,9 @@ def load_pipe_mvadapter():
         base_model="Lykon/dreamshaper-xl-1-0", # Lykon/dreamshaper-xl-1-0 # stabilityai/stable-diffusion-xl-base-1.0
         vae_model="madebyollin/sdxl-vae-fp16-fix",
         unet_model=None,
-        lora_model=None,
+        lora_model= "goofyai/3d_render_style_xl/3d_render_style_xl.safetensors", # None,
         adapter_path="huanngzh/mv-adapter",
-        scheduler="ddpm",
+        scheduler= "lcm", # "ddpm",
         num_views=6,
         device="cuda" if torch.cuda.is_available() else "cpu",
         dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
@@ -58,9 +60,12 @@ def load_pipe_mvadapter():
     
 
 @app.post("/t2mv/generate")
-def t2mv_generate(ref_prompt, neg_prompt, randomize):
+def t2mv_generate(ref_prompt, neg_prompt, randomize:bool = False):
     seed = -1 if randomize else 42
-
+    seed = 1
+    logger.info(f"[MV-ADAPTER] Generating images with seed {seed} (API)")
+    logger.info(f"[MV-ADAPTER] prompt: {ref_prompt} and neg_prompt: {neg_prompt} (API)")
+    
     global pipe_mv, adapters
     # load_pipe_mvadapter()
     
@@ -69,20 +74,74 @@ def t2mv_generate(ref_prompt, neg_prompt, randomize):
         num_views=6,
         text=ref_prompt,
         height=768, width=768,
-        num_inference_steps=30, # 50 default
+        num_inference_steps=12, # 50 default
         guidance_scale=7.0,
         seed=seed,
         negative_prompt=neg_prompt,
         device="cuda" if torch.cuda.is_available() else "cpu",
         adapter_name_list=adapters,
+        # azimuth_deg= [270]
+        # azimuth_deg= [315]
+        # azimuth_deg = [45, 180, 315]
+       #  azimuth_deg = [0, 90, 270]
+        # azimuth_deg = [0, 45, 90, 180, 270, 315]
     )
 
     logger.info("[MV-ADAPTER] Images generated {} views (API)".format(len(imgs)))
-    # pipe_mv.to("cpu")
+    # pipe_mv.to("cpu")-ls
     # del pipe_mv, adapters
     # pipe_mv, adapters = None, []
 
     return {"views": [{"b64png": _pil_to_b64(im)} for im in imgs]}
+
+@app.post("/t2mv/generate2")
+def t2mv_generate2(
+    ref_prompt: str,
+    neg_prompt: str,
+    randomize: bool = False,
+    background_tasks: BackgroundTasks = None
+):
+    seed = -1 if randomize else 42
+    seed = 1
+    logger.info(f"[MV-ADAPTER] Generating images with seed {seed} (API)")
+    logger.info(f"[MV-ADAPTER] prompt: {ref_prompt} and neg_prompt: {neg_prompt} (API)")
+    global pipe_mv, adapters
+    # load_pipe_mvadapter()
+    
+    imgs = MVAdapterT2MV.run_pipeline(
+        pipe=pipe_mv,
+        num_views=6,
+        text=ref_prompt,
+        height=768, width=768,
+        num_inference_steps=12, # 50 default
+        guidance_scale=7.0,
+        seed=seed,
+        negative_prompt=neg_prompt,
+        device="cuda" if torch.cuda.is_available() else "cpu",
+        adapter_name_list=adapters,
+        # azimuth_deg= 45
+        # azimuth_deg = [45, 180, 315]
+        # azimuth_deg = [0, 90, 270]
+        # azimuth_deg = [0, 45, 90, 180, 270, 315]
+    )
+    
+    session_id = str(uuid.uuid4())
+    zip_path = f"/tmp/views_{session_id}.zip"
+    
+    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        for i, img in enumerate(imgs):
+            buf = io.BytesIO()
+            img.save(buf, format="PNG")
+            zipf.writestr(f"view_{i:02d}.png", buf.getvalue())
+    
+    logger.info(f"[MV-ADAPTER] ZIP created with {len(imgs)} views")
+    background_tasks.add_task(os.remove, zip_path)
+    
+    return FileResponse(
+        zip_path, 
+        media_type="application/zip",
+        filename=f"views_{session_id}.zip",        
+    )
 
 
 # --------- TRELLIS

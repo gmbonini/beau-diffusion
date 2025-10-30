@@ -4,7 +4,7 @@ import json, requests, re
 from loguru import logger
 
 
-OLLAMA_URL = "http://localhost:11500"
+OLLAMA_URL = "http://127.0.0.1:11200"
 MODEL = "qwen2.5vl:7b"
 
 SYSTEM_CHAT = """

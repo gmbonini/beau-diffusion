@@ -1,19 +1,29 @@
 import argparse
-
 import torch
+
 from diffusers import AutoencoderKL, DDPMScheduler, LCMScheduler, UNet2DConditionModel
 import sys
 import os
+from PIL import Image
+import time
+
+
 
 MVADAPTER_PATH = "/workspace/beau/MV-Adapter"
 if MVADAPTER_PATH not in sys.path:
     sys.path.append(MVADAPTER_PATH)
 
-from mvadapter.pipelines.pipeline_mvadapter_t2mv_sdxl import MVAdapterT2MVSDXLPipeline
-from mvadapter.schedulers.scheduling_shift_snr import ShiftSNRScheduler
-from mvadapter.utils import make_image_grid
-from mvadapter.utils.geometry import get_plucker_embeds_from_cameras_ortho
-from mvadapter.utils.mesh_utils import get_orthogonal_camera
+try:
+    from mvadapter.pipelines.pipeline_mvadapter_t2mv_sdxl import MVAdapterT2MVSDXLPipeline
+    from mvadapter.schedulers.scheduling_shift_snr import ShiftSNRScheduler
+    from mvadapter.utils import make_image_grid
+    from mvadapter.utils.geometry import get_plucker_embeds_from_cameras_ortho
+    from mvadapter.utils.mesh_utils import get_orthogonal_camera
+except ImportError as e:
+    print(f"Erro ao importar de mvadapter: {e}")
+    print(f"Verifique se o MVADAPTER_PATH ('{MVADAPTER_PATH}') está correto.")
+    sys.exit(1)
+
 
 class MVAdapterT2MV:
     def __init__(
@@ -27,7 +37,7 @@ class MVAdapterT2MV:
         num_views: int = 6,
         device: str = "cuda",
         dtype: torch.dtype | str = "auto",
-        ):
+    ):
         self.base_model = base_model
         self.vae_model = vae_model
         self.unet_model = unet_model
@@ -36,7 +46,7 @@ class MVAdapterT2MV:
         self.scheduler = scheduler
         self.num_views = num_views
         self.device = device
-        self.dtype = dtype
+        self.dtype = dtype  
 
     @staticmethod
     def prepare_pipeline(
@@ -50,27 +60,28 @@ class MVAdapterT2MV:
         device,
         dtype,
     ):
-        # Load vae and unet if provided - OTIMIZAÇÃO: adicionar torch_dtype
+        
         pipe_kwargs = {}
         if vae_model is not None:
             pipe_kwargs["vae"] = AutoencoderKL.from_pretrained(
-                vae_model, 
-                torch_dtype=dtype
+                vae_model,
+                torch_dtype=dtype  
             )
         if unet_model is not None:
             pipe_kwargs["unet"] = UNet2DConditionModel.from_pretrained(
                 unet_model,
-                torch_dtype=dtype
+                torch_dtype=dtype  
             )
 
+        
         pipe: MVAdapterT2MVSDXLPipeline
         pipe = MVAdapterT2MVSDXLPipeline.from_pretrained(
-            base_model, 
-            torch_dtype=dtype,
+            base_model,
+            torch_dtype=dtype,  
             **pipe_kwargs
         )
 
-        # Load scheduler if provided
+        
         scheduler_class = None
         if scheduler == "ddpm":
             scheduler_class = DDPMScheduler
@@ -91,7 +102,7 @@ class MVAdapterT2MV:
         pipe.to(device=device, dtype=dtype)
         pipe.cond_encoder.to(device=device, dtype=dtype)
 
-        # load lora if provided
+        
         adapter_name_list = []
         if lora_model is not None:
             lora_model_list = lora_model.split(",")
@@ -101,8 +112,9 @@ class MVAdapterT2MV:
                 adapter_name_list.append(adapter_name)
                 pipe.load_lora_weights(model_, weight_name=name_, adapter_name=adapter_name)
 
-        # vae slicing for lower memory usage
+        
         pipe.enable_vae_slicing()
+                
 
         return pipe, adapter_name_list
 
@@ -122,7 +134,7 @@ class MVAdapterT2MV:
         azimuth_deg=None,
         adapter_name_list=[],
     ):
-        # Set lora scale
+        
         if len(adapter_name_list) > 0:
             if len(lora_scale) == 1:
                 lora_scale = [lora_scale[0]] * len(adapter_name_list)
@@ -134,7 +146,7 @@ class MVAdapterT2MV:
             pipe.set_adapters(adapter_name_list, adapter_weights=lora_scale)
             print(f"Loaded {len(adapter_name_list)} adapters with scales {lora_scale}")
 
-        # Prepare cameras
+        
         if azimuth_deg is None:
             azimuth_deg = [0, 45, 90, 180, 270, 315]
         cameras = get_orthogonal_camera(
@@ -144,7 +156,7 @@ class MVAdapterT2MV:
             right=0.55,
             bottom=-0.55,
             top=0.55,
-            azimuth_deg=[x - 90 for x in azimuth_deg],
+            azimuth_deg=azimuth_deg,
             device=device,
         )
 
@@ -171,3 +183,98 @@ class MVAdapterT2MV:
         ).images
 
         return images
+
+
+
+def main():
+    
+    total_start_time = time.time()
+    print("Iniciando script T2MV do MVAdapter...")
+
+    
+    
+    
+    base_model = "Lykon/dreamshaper-xl-1-0"
+    vae_model = "madebyollin/sdxl-vae-fp16-fix"
+    adapter_path = "huanngzh/mv-adapter"
+    scheduler = "ddpm"
+    num_views = 6
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+
+    
+    prompt = "orange cute cat"
+    negative_prompt = "low quality, bad quality, blurry, deformed, worst quality" 
+    height = 768
+    width = 768
+    num_inference_steps = 50
+    guidance_scale = 7.0
+    seed = 42  
+
+    
+    start_load_time = time.time()
+    pipe_mv, adapters = MVAdapterT2MV.prepare_pipeline(
+        base_model=base_model,
+        vae_model=vae_model,
+        unet_model=None,  
+        lora_model=None,  
+        adapter_path=adapter_path,
+        scheduler=scheduler,
+        num_views=num_views,
+        device=device,
+        dtype=dtype,
+    )
+    end_load_time = time.time()
+    print(f"Pipeline carregado em {end_load_time - start_load_time:.2f} segundos.")
+    
+    print(f"Gerando {num_views} views para o prompt: '{prompt}'")
+
+    
+    start_gen_time = time.time()
+    images = MVAdapterT2MV.run_pipeline(
+        pipe=pipe_mv,
+        num_views=num_views,
+        text=prompt,
+        height=height,
+        width=width,
+        num_inference_steps=num_inference_steps,
+        guidance_scale=guidance_scale,
+        seed=seed,
+        negative_prompt=negative_prompt,
+        device=device,
+        adapter_name_list=adapters,
+    )
+    end_gen_time = time.time()
+    print(f"Geração de imagens completa em {end_gen_time - start_gen_time:.2f} segundos.")
+
+    
+    output_dir = "mvadapter_output"
+    os.makedirs(output_dir, exist_ok=True)
+    
+    
+    start_save_time = time.time()
+    for i, img in enumerate(images):
+        img_path = os.path.join(output_dir, f"view_{i:02d}.png")
+        img.save(img_path)
+        
+
+    
+    try:
+        grid = make_image_grid(images, rows=2, cols=3)  
+        grid_path = os.path.join(output_dir, "views_grid.png")
+        grid.save(grid_path)
+        print(f"Grade salva: {grid_path}")
+    except Exception as e:
+        print(f"Não foi possível criar a grade de imagens: {e}")
+    
+    end_save_time = time.time()
+    print(f"Imagens salvas em {end_save_time - start_save_time:.2f} segundos.")
+
+    print(f"Todos os resultados salvos no diretório '{output_dir}'.")
+    
+    total_end_time = time.time()
+    print(f"Tempo total de execução do script: {total_end_time - total_start_time:.2f} segundos.")
+
+
+if __name__ == "__main__":
+    main()

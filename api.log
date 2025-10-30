@@ -11,3 +11,874 @@
 2025-10-20 10:03:32.099 | INFO     | api:t2mv_generate:64 - [MV-ADAPTER] Images generated 6 views (API)
 2025-10-20 15:13:01.715 | INFO     | api:load_pipe_mvadapter:41 - [MV-ADAPTER] Pipeline loaded (API)
 2025-10-20 15:14:28.915 | INFO     | api:t2mv_generate:64 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-22 20:09:21.014 | INFO     | api:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:09:21.014 | INFO     | api:load_pipe_trellis:87 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:09:21.023 | INFO     | api:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:09:21.024 | INFO     | api:load_pipe_trellis:87 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:12:51.750 | INFO     | api:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:12:51.750 | INFO     | api:load_pipe_trellis:87 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:16:02.358 | INFO     | api:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:16:02.358 | INFO     | api:load_pipe_trellis:87 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:18:09.247 | INFO     | api:load_pipe_mvadapter:47 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:18:09.248 | INFO     | api:load_pipe_trellis:87 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:22:36.124 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:22:36.125 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:22:37.429 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:22:37.430 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:28:03.553 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:28:03.554 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:28:54.634 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-22 20:28:54.634 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-22 20:31:06.821 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:31:06.822 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:31:26.931 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:31:26.931 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:31:48.906 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-22 20:31:48.906 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-22 20:32:21.041 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:32:21.041 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:32:42.957 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-22 20:32:42.957 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-22 20:33:01.742 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:33:01.742 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:33:18.424 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:33:18.424 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:33:48.254 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:33:48.254 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:33:49.336 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-22 20:33:49.336 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-22 20:34:21.418 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:34:21.418 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:34:30.651 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:34:30.652 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:34:49.315 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-22 20:34:49.315 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-22 20:35:04.119 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:35:04.119 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:38:06.153 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-22 20:38:06.153 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-22 20:38:27.540 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-22 20:38:27.541 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-23 13:29:41.092 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 13:29:41.093 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 13:45:25.385 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 13:45:25.386 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 13:46:40.689 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-23 13:46:40.689 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-23 14:09:17.886 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 14:09:17.887 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 14:14:13.089 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 14:14:13.089 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 14:15:13.970 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-23 14:15:13.970 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-23 14:23:10.523 | INFO     | api:t2mv_generate:72 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-23 14:43:58.286 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 14:43:58.286 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 14:44:53.668 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-23 14:44:53.669 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-23 14:50:39.145 | INFO     | api:t2mv_generate:72 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-23 15:14:42.889 | INFO     | api:load_pipe_mvadapter:49 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 15:14:42.890 | INFO     | api:load_pipe_trellis:89 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 15:15:39.002 | INFO     | api:load_pipe_trellis:92 - [TRELLIS] Pipeline prepared (API)
+2025-10-23 15:15:39.003 | INFO     | api:_startup:22 - [STARTUP] loaded pipelines
+2025-10-23 15:16:01.042 | INFO     | api:t2mv_generate:72 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-23 18:36:30.086 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 18:36:30.086 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 18:45:07.893 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 18:45:07.894 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 19:16:44.785 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 19:16:44.786 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 19:18:02.136 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-23 19:18:02.136 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-23 19:20:31.029 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-23 19:41:48.594 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 19:41:48.595 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 19:42:41.724 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-23 19:42:41.724 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-23 19:43:06.820 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-23 20:08:40.089 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 20:08:40.090 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 20:09:33.613 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline prepared (API)
+2025-10-23 20:09:33.614 | INFO     | api:_startup:23 - [STARTUP] loaded pipelines
+2025-10-23 20:11:21.855 | INFO     | api:t2mv_generate:74 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-23 20:21:29.886 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-23 20:21:29.887 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-23 20:22:22.084 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline prepared (API)
+2025-10-23 20:22:22.085 | INFO     | api:_startup:23 - [STARTUP] loaded pipelines
+2025-10-24 13:11:27.528 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 13:11:27.528 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 13:12:58.922 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 13:12:58.923 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 13:15:58.819 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 13:15:58.820 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 13:16:45.411 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 13:16:45.412 | INFO     | api:_startup:23 - [STARTUP] loaded pipelines
+2025-10-24 13:21:50.153 | INFO     | api:t2mv_generate:74 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 13:23:59.635 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 13:23:59.636 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 13:24:36.458 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 13:24:36.459 | INFO     | api:_startup:23 - [STARTUP] loaded pipelines
+2025-10-24 13:25:30.535 | INFO     | api:t2mv_generate:74 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 13:29:40.454 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 13:29:40.455 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 13:30:14.165 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 13:30:14.166 | INFO     | api:_startup:23 - [STARTUP] loaded pipelines
+2025-10-24 13:32:37.744 | INFO     | api:t2mv_generate:74 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 13:40:05.119 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 13:40:05.119 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 13:40:40.106 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 13:40:40.106 | INFO     | api:_startup:23 - [STARTUP] loaded pipelines
+2025-10-24 13:42:13.767 | INFO     | api:t2mv_generate:74 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 14:06:25.461 | INFO     | api:load_pipe_mvadapter:51 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 14:06:46.246 | INFO     | api:t2mv_generate:74 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 14:09:00.366 | INFO     | api:load_pipe_trellis:91 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 14:09:37.810 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 15:15:35.957 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 15:15:56.885 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 15:16:48.358 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 15:17:08.644 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 15:17:41.012 | ERROR    | sql.db_connector:__enter__:25 - [DB] Error connecting to MySQL: 2003: Can't connect to MySQL server on 'localhost:3306' (Errno 111: Connection refused)
+2025-10-24 15:20:35.764 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 15:20:55.944 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 15:28:16.170 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 15:28:25.790 | ERROR    | api:trellis_run:148 - [TRELLIS] FAILED: %s
+%s
+2025-10-24 15:29:48.945 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 15:30:26.467 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 15:34:54.258 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 15:35:15.072 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 15:39:25.639 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 15:39:45.955 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 15:40:19.670 | INFO     | sql.db_connector:__enter__:22 - [DB] Connection established.
+2025-10-24 15:40:19.672 | ERROR    | api:feedback_save:189 - [DB ERROR] DatabaseConnector.save_feedback() got an unexpected keyword argument 'step'
+2025-10-24 15:40:19.673 | INFO     | sql.db_connector:__exit__:34 - [DB] Connection closed.
+2025-10-24 15:50:14.340 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 15:50:35.174 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 15:51:06.591 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 15:51:06.605 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 16:47:46.753 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 16:48:07.563 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 16:48:44.705 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 16:48:44.708 | ERROR    | sql.db_connector:save_feedback:46 - [DB] Failed to save feedback: 1054 (42S22): Unknown column 'refined' in 'field list'
+2025-10-24 16:48:44.708 | ERROR    | api:feedback_save:222 - [DB ERROR] 1054 (42S22): Unknown column 'refined' in 'field list'
+2025-10-24 16:48:44.709 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 16:53:57.972 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 16:54:18.602 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 16:55:59.667 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 16:55:59.669 | ERROR    | sql.db_connector:save_feedback:46 - [DB] Failed to save feedback: 1054 (42S22): Unknown column 'refined' in 'field list'
+2025-10-24 16:55:59.669 | ERROR    | api:feedback_save:222 - [DB ERROR] 1054 (42S22): Unknown column 'refined' in 'field list'
+2025-10-24 16:55:59.670 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:00:01.739 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 17:00:21.884 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 17:00:42.336 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 17:00:42.340 | ERROR    | sql.db_connector:save_feedback:46 - [DB] Failed to save feedback: 1054 (42S22): Unknown column 'refined' in 'field list'
+2025-10-24 17:00:42.340 | ERROR    | api:feedback_save:222 - [DB ERROR] 1054 (42S22): Unknown column 'refined' in 'field list'
+2025-10-24 17:00:42.341 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:06:26.954 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 17:06:47.498 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 17:08:36.558 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 17:08:36.579 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:26:13.627 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 17:26:34.416 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 17:27:08.167 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 17:27:08.169 | ERROR    | api:feedback_save:222 - [DB ERROR] DatabaseConnector.save_feedback() got an unexpected keyword argument 'refined'
+2025-10-24 17:27:08.171 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:29:08.662 | INFO     | api:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 17:29:29.507 | INFO     | api:t2mv_generate:77 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 17:31:40.778 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 17:31:40.796 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:34:08.927 | INFO     | api:load_pipe_trellis:94 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 17:34:39.117 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 17:35:38.336 | INFO     | api:trellis_run:137 - [TRELLIS] Frame saved on /tmp/trellis_xfux9m3x/frame.jpg
+2025-10-24 17:35:38.338 | INFO     | api:trellis_run:144 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-24 17:35:38.410 | INFO     | api:trellis_run:159 - [TRELLIS] Sizes {'glb': 1626588, 'ply': 21658144, 'mp4': 495702, 'frame': 31629} (API)
+2025-10-24 17:41:19.630 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 17:41:40.313 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 17:42:21.305 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 17:42:21.322 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:42:39.756 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 17:43:09.802 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 17:43:45.959 | INFO     | api:trellis_run:141 - [TRELLIS] Frame saved on /tmp/trellis_5b522bb0-e333-4126-a376-68636fbdb172_e0j3p61a/frame_5b522bb0-e333-4126-a376-68636fbdb172.jpg
+2025-10-24 17:43:45.961 | INFO     | api:trellis_run:148 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-24 17:43:46.026 | INFO     | api:trellis_run:163 - [TRELLIS] Sizes {'glb': 1479388, 'ply': 16581536, 'mp4': 393544, 'frame': 27388} (API)
+2025-10-24 17:44:06.071 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 17:44:06.092 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:46:16.841 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 17:46:36.986 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 17:48:50.922 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 17:48:50.954 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:49:37.554 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 17:50:03.237 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 17:50:36.626 | INFO     | api:trellis_run:141 - [TRELLIS] Frame saved on /tmp/trellis_8e3544ba-b59b-48aa-84f2-b58ba2c7b0ac_i9v14_g5/frame_8e3544ba-b59b-48aa-84f2-b58ba2c7b0ac.jpg
+2025-10-24 17:50:36.629 | INFO     | api:trellis_run:148 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-24 17:50:36.678 | INFO     | api:trellis_run:163 - [TRELLIS] Sizes {'glb': 1537156, 'ply': 18485536, 'mp4': 421163, 'frame': 32145} (API)
+2025-10-24 17:52:08.479 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 17:52:29.321 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 17:53:25.968 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 17:53:25.988 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 17:54:32.472 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 17:54:52.676 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:00:40.251 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 18:01:01.055 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:01:49.042 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 18:02:09.189 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:22:59.822 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-24 18:22:59.823 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-24 18:23:31.702 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-24 18:23:31.702 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-24 18:26:17.826 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:26:51.008 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:27:14.677 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 18:27:14.704 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 18:28:56.948 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:30:34.027 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 18:30:34.060 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 18:32:19.704 | INFO     | api:trellis_run:141 - [TRELLIS] Frame saved on /tmp/trellis_a0f6c150-0d54-47db-b849-abda416e8198_m1nsfv8z/frame_a0f6c150-0d54-47db-b849-abda416e8198.jpg
+2025-10-24 18:32:19.707 | INFO     | api:trellis_run:148 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-24 18:32:19.787 | INFO     | api:trellis_run:163 - [TRELLIS] Sizes {'glb': 1963216, 'ply': 40025760, 'mp4': 427567, 'frame': 46763} (API)
+2025-10-24 18:35:37.666 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:46:27.967 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:48:57.518 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:49:43.361 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:54:57.640 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 18:56:08.637 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:01:50.407 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:02:13.318 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 19:02:13.329 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 19:05:55.768 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:08:10.042 | INFO     | api:trellis_run:141 - [TRELLIS] Frame saved on /tmp/trellis_b8882a03-eefa-460c-8534-95b2f00b0d06_a9v_hy8d/frame_b8882a03-eefa-460c-8534-95b2f00b0d06.jpg
+2025-10-24 19:08:10.046 | INFO     | api:trellis_run:148 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-24 19:08:10.183 | INFO     | api:trellis_run:163 - [TRELLIS] Sizes {'glb': 2289500, 'ply': 62915104, 'mp4': 663522, 'frame': 50393} (API)
+2025-10-24 19:08:19.670 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 19:08:19.693 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 19:08:57.370 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:10:06.085 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 19:10:06.104 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 19:11:13.709 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:12:13.730 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 19:12:13.759 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 19:13:00.111 | INFO     | api:trellis_run:141 - [TRELLIS] Frame saved on /tmp/trellis_4ccae939-6198-4f2a-9cff-a09cc0d870b4_8ugxmg5v/frame_4ccae939-6198-4f2a-9cff-a09cc0d870b4.jpg
+2025-10-24 19:13:00.117 | INFO     | api:trellis_run:148 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-24 19:13:00.216 | INFO     | api:trellis_run:163 - [TRELLIS] Sizes {'glb': 1656248, 'ply': 34864288, 'mp4': 475564, 'frame': 44264} (API)
+2025-10-24 19:15:21.694 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 19:15:21.715 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 19:16:04.417 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:17:03.206 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:17:18.756 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 19:17:18.778 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 19:23:01.040 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:25:16.437 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:25:33.125 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 19:25:33.145 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 19:54:50.664 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:56:03.308 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 19:58:31.596 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 20:02:07.017 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 20:05:02.875 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 20:23:24.209 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 20:24:20.097 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 20:24:40.082 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 20:24:40.100 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-24 20:28:02.444 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 20:29:05.995 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-24 20:29:25.615 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-24 20:29:25.639 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 13:36:19.794 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 13:36:19.795 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 13:41:31.757 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 13:41:31.758 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-27 13:47:18.197 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 13:47:18.198 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 13:47:48.437 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 13:47:48.437 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-27 13:50:30.051 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 14:04:48.241 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 14:10:08.715 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 14:10:08.716 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 14:10:42.412 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 14:10:42.412 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-27 14:21:07.144 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 14:21:37.108 | ERROR    | sql.db_connector:__enter__:24 - [DB] Error connecting to MySQL: 1045 (28000): Access denied for user 'admin'@'localhost' (using password: YES)
+2025-10-27 14:26:43.098 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 14:28:28.841 | ERROR    | sql.db_connector:__enter__:24 - [DB] Error connecting to MySQL: 1044 (42000): Access denied for user 'admin'@'localhost' to database 'text_to_model_db'
+2025-10-27 14:32:54.543 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 14:33:08.592 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 14:33:08.593 | ERROR    | api:feedback_save:304 - [DB ERROR] 'DatabaseConnector' object has no attribute 'get_multiview_count'
+2025-10-27 14:33:08.594 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 14:36:30.781 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 14:36:56.522 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 14:36:56.524 | ERROR    | api:feedback_save:304 - [DB ERROR] 'DatabaseConnector' object has no attribute 'get_multiview_count'
+2025-10-27 14:36:56.524 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 14:39:10.503 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 14:39:10.504 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 14:39:40.371 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 14:39:40.372 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-27 14:41:58.898 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 14:42:19.187 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 14:42:19.188 | ERROR    | api:feedback_save:288 - [DB ERROR] 'DatabaseConnector' object has no attribute 'get_multiview_count'
+2025-10-27 14:42:19.188 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 14:44:54.706 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 14:44:54.707 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 14:45:26.546 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 14:45:26.547 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-27 14:53:18.202 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 14:53:18.202 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 14:53:48.720 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 14:53:48.720 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-27 15:12:19.675 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 15:13:34.249 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 15:13:34.272 | INFO     | api:feedback_save:266 - [FEEDBACK] Saved feedback (ID: 1) with 6 images
+2025-10-27 15:13:34.273 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 15:15:53.380 | INFO     | api:trellis_run:141 - [TRELLIS] Frame saved on /tmp/trellis_d01eafb9-69ad-410a-974b-5dd14ec5a574_vr6idfes/frame_d01eafb9-69ad-410a-974b-5dd14ec5a574.jpg
+2025-10-27 15:15:53.383 | INFO     | api:trellis_run:148 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-27 15:15:53.481 | INFO     | api:trellis_run:163 - [TRELLIS] Sizes {'glb': 2653676, 'ply': 48512160, 'mp4': 1337385, 'frame': 85232} (API)
+2025-10-27 15:24:20.162 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 15:24:20.175 | INFO     | api:feedback_save:266 - [FEEDBACK] Saved feedback (ID: 2) with 6 images
+2025-10-27 15:24:20.176 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 15:26:56.394 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 15:26:56.395 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 15:27:29.374 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 15:27:29.374 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-27 15:35:31.549 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 15:43:40.551 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 15:43:40.570 | INFO     | api:feedback_save:266 - [FEEDBACK] Saved feedback (ID: 3) with 6 images
+2025-10-27 15:43:40.572 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 15:44:21.642 | INFO     | api:trellis_run:141 - [TRELLIS] Frame saved on /tmp/trellis_82668050-8fe9-41c3-969d-11880c68a8b3_fxebx0ys/frame_82668050-8fe9-41c3-969d-11880c68a8b3.jpg
+2025-10-27 15:44:21.644 | INFO     | api:trellis_run:148 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-27 15:44:21.742 | INFO     | api:trellis_run:163 - [TRELLIS] Sizes {'glb': 1657524, 'ply': 29095712, 'mp4': 627543, 'frame': 33152} (API)
+2025-10-27 15:44:27.899 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 15:44:27.919 | INFO     | api:feedback_save:266 - [FEEDBACK] Saved feedback (ID: 4) with 6 images
+2025-10-27 15:44:27.921 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 15:51:55.520 | INFO     | api:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 15:51:55.520 | INFO     | api:load_pipe_trellis:95 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 15:52:27.360 | INFO     | api:load_pipe_trellis:98 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 15:52:27.360 | INFO     | api:_startup:27 - [STARTUP] loaded pipelines
+2025-10-27 16:03:40.001 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:03:58.130 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:03:58.140 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 5) with 6 images
+2025-10-27 16:03:58.142 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:04:36.665 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:04:53.273 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:04:53.287 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 6) with 6 images
+2025-10-27 16:04:53.287 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:06:04.569 | INFO     | api:trellis_run:144 - [TRELLIS] Frame saved on temp_images_path/frame_0b06785f-49dc-44ae-ab0e-6e610384178c.jpg
+2025-10-27 16:06:04.571 | INFO     | api:trellis_run:151 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-27 16:06:04.647 | INFO     | api:trellis_run:165 - [TRELLIS] Sizes {'glb': 1989848, 'ply': 41324832, 'mp4': 573301, 'frame': 49865} (API)
+2025-10-27 16:08:21.152 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:08:21.167 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 7) with 6 images
+2025-10-27 16:08:21.168 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:09:45.683 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:10:56.970 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:10:56.978 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 8) with 6 images
+2025-10-27 16:10:56.979 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:18:43.333 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:19:04.559 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:19:04.569 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 9) with 6 images
+2025-10-27 16:19:04.570 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:19:49.005 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:20:05.010 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:20:05.022 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 10) with 6 images
+2025-10-27 16:20:05.022 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:21:41.647 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:21:58.279 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:21:58.293 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 11) with 6 images
+2025-10-27 16:21:58.294 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:29:37.335 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:30:15.336 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:30:15.353 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 12) with 6 images
+2025-10-27 16:30:15.354 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:30:55.640 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:31:47.190 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:33:22.715 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:33:41.407 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:33:41.421 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 13) with 6 images
+2025-10-27 16:33:41.422 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:34:18.064 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:34:36.313 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:34:36.325 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 14) with 6 images
+2025-10-27 16:34:36.325 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:46:32.090 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:46:56.060 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:46:56.075 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 15) with 6 images
+2025-10-27 16:46:56.077 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:47:31.500 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:47:51.935 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:47:51.945 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 16) with 6 images
+2025-10-27 16:47:51.947 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:48:51.223 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:49:08.250 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:49:08.254 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/0ac76eab-efe9-4dcd-9601-8c769d2eb529_0.png
+2025-10-27 16:49:08.254 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/0ac76eab-efe9-4dcd-9601-8c769d2eb529_1.png
+2025-10-27 16:49:08.254 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/0ac76eab-efe9-4dcd-9601-8c769d2eb529_2.png
+2025-10-27 16:49:08.255 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/0ac76eab-efe9-4dcd-9601-8c769d2eb529_3.png
+2025-10-27 16:49:08.255 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/0ac76eab-efe9-4dcd-9601-8c769d2eb529_4.png
+2025-10-27 16:49:08.255 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/0ac76eab-efe9-4dcd-9601-8c769d2eb529_5.png
+2025-10-27 16:49:08.258 | INFO     | api:feedback_save:238 - [CLEANUP] Deleted oldest feedback (ID: 1) with 6 images
+2025-10-27 16:49:08.266 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 17) with 6 images
+2025-10-27 16:49:08.267 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:50:07.307 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:50:23.533 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 16:50:23.537 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/084fb715-1a52-4269-b661-6e6833dde57f_0.png
+2025-10-27 16:50:23.537 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/084fb715-1a52-4269-b661-6e6833dde57f_1.png
+2025-10-27 16:50:23.537 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/084fb715-1a52-4269-b661-6e6833dde57f_2.png
+2025-10-27 16:50:23.537 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/084fb715-1a52-4269-b661-6e6833dde57f_3.png
+2025-10-27 16:50:23.538 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/084fb715-1a52-4269-b661-6e6833dde57f_4.png
+2025-10-27 16:50:23.538 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/084fb715-1a52-4269-b661-6e6833dde57f_5.png
+2025-10-27 16:50:23.540 | INFO     | api:feedback_save:238 - [CLEANUP] Deleted oldest feedback (ID: 2) with 6 images
+2025-10-27 16:50:23.548 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 18) with 6 images
+2025-10-27 16:50:23.549 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 16:57:25.378 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 16:59:09.597 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:00:22.805 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:01:48.464 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:05:10.848 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:09:35.011 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:09:52.845 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 17:09:52.849 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/3221179d-b823-413a-b8d1-df5d3721804f_0.png
+2025-10-27 17:09:52.849 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/3221179d-b823-413a-b8d1-df5d3721804f_1.png
+2025-10-27 17:09:52.850 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/3221179d-b823-413a-b8d1-df5d3721804f_2.png
+2025-10-27 17:09:52.850 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/3221179d-b823-413a-b8d1-df5d3721804f_3.png
+2025-10-27 17:09:52.850 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/3221179d-b823-413a-b8d1-df5d3721804f_4.png
+2025-10-27 17:09:52.851 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/3221179d-b823-413a-b8d1-df5d3721804f_5.png
+2025-10-27 17:09:52.855 | INFO     | api:feedback_save:238 - [CLEANUP] Deleted oldest feedback (ID: 3) with 6 images
+2025-10-27 17:09:52.866 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 19) with 6 images
+2025-10-27 17:09:52.867 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 17:14:46.538 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:17:09.176 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 17:17:09.181 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/fdf2e68c-01a5-4139-80a2-249873e1d500_0.png
+2025-10-27 17:17:09.181 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/fdf2e68c-01a5-4139-80a2-249873e1d500_1.png
+2025-10-27 17:17:09.181 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/fdf2e68c-01a5-4139-80a2-249873e1d500_2.png
+2025-10-27 17:17:09.181 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/fdf2e68c-01a5-4139-80a2-249873e1d500_3.png
+2025-10-27 17:17:09.182 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/fdf2e68c-01a5-4139-80a2-249873e1d500_4.png
+2025-10-27 17:17:09.182 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/fdf2e68c-01a5-4139-80a2-249873e1d500_5.png
+2025-10-27 17:17:09.186 | INFO     | api:feedback_save:238 - [CLEANUP] Deleted oldest feedback (ID: 4) with 6 images
+2025-10-27 17:17:09.200 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 20) with 6 images
+2025-10-27 17:17:09.201 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 17:17:34.295 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:19:45.753 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 17:19:45.756 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/d41c2198-c1ff-41d1-8f18-df5b000c61b5_0.png
+2025-10-27 17:19:45.756 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/d41c2198-c1ff-41d1-8f18-df5b000c61b5_1.png
+2025-10-27 17:19:45.757 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/d41c2198-c1ff-41d1-8f18-df5b000c61b5_2.png
+2025-10-27 17:19:45.757 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/d41c2198-c1ff-41d1-8f18-df5b000c61b5_3.png
+2025-10-27 17:19:45.757 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/d41c2198-c1ff-41d1-8f18-df5b000c61b5_4.png
+2025-10-27 17:19:45.757 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/d41c2198-c1ff-41d1-8f18-df5b000c61b5_5.png
+2025-10-27 17:19:45.762 | INFO     | api:feedback_save:238 - [CLEANUP] Deleted oldest feedback (ID: 5) with 6 images
+2025-10-27 17:19:45.776 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 21) with 6 images
+2025-10-27 17:19:45.778 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 17:25:00.625 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:26:16.384 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:31:09.160 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:33:29.039 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:33:42.458 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 17:33:42.461 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/c39e2cf4-15e6-475b-b6c3-94737f9e6771_0.png
+2025-10-27 17:33:42.461 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/c39e2cf4-15e6-475b-b6c3-94737f9e6771_1.png
+2025-10-27 17:33:42.461 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/c39e2cf4-15e6-475b-b6c3-94737f9e6771_2.png
+2025-10-27 17:33:42.461 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/c39e2cf4-15e6-475b-b6c3-94737f9e6771_3.png
+2025-10-27 17:33:42.462 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/c39e2cf4-15e6-475b-b6c3-94737f9e6771_4.png
+2025-10-27 17:33:42.462 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/c39e2cf4-15e6-475b-b6c3-94737f9e6771_5.png
+2025-10-27 17:33:42.464 | INFO     | api:feedback_save:238 - [CLEANUP] Deleted oldest feedback (ID: 6) with 6 images
+2025-10-27 17:33:42.471 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 22) with 6 images
+2025-10-27 17:33:42.472 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 17:34:13.353 | INFO     | api:trellis_run:144 - [TRELLIS] Frame saved on temp_images_path/frame_b7f755c6-d708-43a7-ad3e-8d87e9390053.jpg
+2025-10-27 17:34:13.356 | INFO     | api:trellis_run:151 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-27 17:34:13.396 | INFO     | api:trellis_run:165 - [TRELLIS] Sizes {'glb': 1866660, 'ply': 19973920, 'mp4': 678426, 'frame': 29645} (API)
+2025-10-27 17:41:21.841 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 17:41:21.847 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/7c6ddf09-731a-4805-ae14-66c4d17f09f9_0.png
+2025-10-27 17:41:21.847 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/7c6ddf09-731a-4805-ae14-66c4d17f09f9_1.png
+2025-10-27 17:41:21.848 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/7c6ddf09-731a-4805-ae14-66c4d17f09f9_2.png
+2025-10-27 17:41:21.848 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/7c6ddf09-731a-4805-ae14-66c4d17f09f9_3.png
+2025-10-27 17:41:21.848 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/7c6ddf09-731a-4805-ae14-66c4d17f09f9_4.png
+2025-10-27 17:41:21.848 | INFO     | api:feedback_save:230 - [CLEANUP] Deleted file: temp_images_path/7c6ddf09-731a-4805-ae14-66c4d17f09f9_5.png
+2025-10-27 17:41:21.852 | INFO     | api:feedback_save:238 - [CLEANUP] Deleted oldest feedback (ID: 7) with 6 images
+2025-10-27 17:41:21.863 | INFO     | api:feedback_save:271 - [FEEDBACK] Saved feedback (ID: 23) with 6 images
+2025-10-27 17:41:21.865 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 17:45:14.945 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 17:48:11.795 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 18:05:34.449 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 18:15:24.312 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 18:18:56.112 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 18:34:21.643 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 18:45:27.606 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 18:49:44.323 | INFO     | api:t2mv_generate:78 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 19:18:46.817 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 19:18:46.887 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 19:19:17.369 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 19:19:20.401 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-27 19:25:58.196 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 19:25:58.197 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 19:26:28.807 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 19:26:31.884 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-27 19:28:22.523 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 19:28:22.588 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 19:28:53.155 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 19:28:53.369 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-27 19:32:08.788 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-27 19:32:08.789 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-27 19:32:39.984 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-27 19:32:40.234 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-27 19:33:39.894 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-27 19:33:51.241 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-27 19:33:51.246 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/37144448-ebb5-446c-8f1b-c41ffc204ed1_0.png
+2025-10-27 19:33:51.247 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/37144448-ebb5-446c-8f1b-c41ffc204ed1_1.png
+2025-10-27 19:33:51.247 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/37144448-ebb5-446c-8f1b-c41ffc204ed1_2.png
+2025-10-27 19:33:51.247 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/37144448-ebb5-446c-8f1b-c41ffc204ed1_3.png
+2025-10-27 19:33:51.248 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/37144448-ebb5-446c-8f1b-c41ffc204ed1_4.png
+2025-10-27 19:33:51.248 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/37144448-ebb5-446c-8f1b-c41ffc204ed1_5.png
+2025-10-27 19:33:51.251 | INFO     | api:feedback_save:239 - [CLEANUP] Deleted oldest feedback (ID: 8) with 6 images
+2025-10-27 19:33:51.262 | INFO     | api:feedback_save:272 - [FEEDBACK] Saved feedback (ID: 24) with 6 images
+2025-10-27 19:33:51.263 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-27 19:58:07.340 | INFO     | api:trellis_run:146 - [TRELLIS] Frame saved on temp_images_path/frame_4d189705-ead7-49b7-b3ea-152fb7819d5e.jpg
+2025-10-27 19:58:07.343 | INFO     | api:trellis_run:153 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-27 19:58:07.427 | INFO     | api:trellis_run:167 - [TRELLIS] Sizes {'glb': 1767996, 'ply': 42153888, 'mp4': 676293, 'frame': 48381} (API)
+2025-10-28 11:45:27.102 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-28 11:45:27.103 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-28 11:46:00.375 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-28 11:46:03.681 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-28 11:48:09.628 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 11:48:45.828 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 11:49:18.685 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 11:50:06.341 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 11:50:38.795 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 11:51:53.836 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 11:52:52.756 | INFO     | api:trellis_run:146 - [TRELLIS] Frame saved on temp_images_path/frame_77847062-4073-4081-9ab1-a2324945ba22.jpg
+2025-10-28 11:52:52.758 | INFO     | api:trellis_run:153 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-28 11:52:52.848 | INFO     | api:trellis_run:167 - [TRELLIS] Sizes {'glb': 1619592, 'ply': 29750688, 'mp4': 549014, 'frame': 38640} (API)
+2025-10-28 11:57:56.233 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 11:58:24.475 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-28 11:58:24.485 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/944b17fd-b828-46e8-89aa-c67258e0bdcb_0.png
+2025-10-28 11:58:24.485 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/944b17fd-b828-46e8-89aa-c67258e0bdcb_1.png
+2025-10-28 11:58:24.485 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/944b17fd-b828-46e8-89aa-c67258e0bdcb_2.png
+2025-10-28 11:58:24.486 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/944b17fd-b828-46e8-89aa-c67258e0bdcb_3.png
+2025-10-28 11:58:24.486 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/944b17fd-b828-46e8-89aa-c67258e0bdcb_4.png
+2025-10-28 11:58:24.486 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/944b17fd-b828-46e8-89aa-c67258e0bdcb_5.png
+2025-10-28 11:58:24.492 | INFO     | api:feedback_save:239 - [CLEANUP] Deleted oldest feedback (ID: 9) with 6 images
+2025-10-28 11:58:24.515 | INFO     | api:feedback_save:272 - [FEEDBACK] Saved feedback (ID: 25) with 6 images
+2025-10-28 11:58:24.516 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-28 11:59:24.053 | INFO     | api:trellis_run:146 - [TRELLIS] Frame saved on temp_images_path/frame_356f329c-8f58-42ac-8361-f2ed66c226b1.jpg
+2025-10-28 11:59:24.055 | INFO     | api:trellis_run:153 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-28 11:59:24.205 | INFO     | api:trellis_run:167 - [TRELLIS] Sizes {'glb': 2231928, 'ply': 73283745, 'mp4': 1135223, 'frame': 56430} (API)
+2025-10-28 12:10:26.830 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-28 12:10:26.834 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/c062ad2d-fad4-4175-a0f7-231380e07b45_0.png
+2025-10-28 12:10:26.834 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/c062ad2d-fad4-4175-a0f7-231380e07b45_1.png
+2025-10-28 12:10:26.835 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/c062ad2d-fad4-4175-a0f7-231380e07b45_2.png
+2025-10-28 12:10:26.835 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/c062ad2d-fad4-4175-a0f7-231380e07b45_3.png
+2025-10-28 12:10:26.836 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/c062ad2d-fad4-4175-a0f7-231380e07b45_4.png
+2025-10-28 12:10:26.836 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/c062ad2d-fad4-4175-a0f7-231380e07b45_5.png
+2025-10-28 12:10:26.838 | INFO     | api:feedback_save:239 - [CLEANUP] Deleted oldest feedback (ID: 10) with 6 images
+2025-10-28 12:10:26.849 | INFO     | api:feedback_save:272 - [FEEDBACK] Saved feedback (ID: 26) with 6 images
+2025-10-28 12:10:26.850 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-28 13:47:44.765 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-28 13:47:44.766 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-28 13:48:17.545 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-28 13:48:20.602 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-28 13:50:15.565 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-28 13:50:15.565 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-28 13:50:47.147 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-28 13:50:47.396 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-28 13:57:14.642 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-28 13:57:14.643 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-28 13:57:47.034 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-28 13:57:47.304 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-28 13:58:09.777 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 19:57:50.601 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-28 19:57:50.601 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-28 19:58:21.756 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-28 20:00:56.914 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-28 20:00:56.988 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-28 20:01:27.792 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-28 20:01:30.808 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-28 20:03:43.900 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-28 20:03:43.901 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-28 20:04:15.175 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-28 20:04:15.437 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-28 20:08:02.696 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:09:53.914 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:11:05.780 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:11:37.289 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:17:09.330 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:17:24.568 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-28 20:17:24.575 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/7246e2f3-986f-485a-a18c-eaa85a6fa2cf_0.png
+2025-10-28 20:17:24.575 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/7246e2f3-986f-485a-a18c-eaa85a6fa2cf_1.png
+2025-10-28 20:17:24.575 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/7246e2f3-986f-485a-a18c-eaa85a6fa2cf_2.png
+2025-10-28 20:17:24.576 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/7246e2f3-986f-485a-a18c-eaa85a6fa2cf_3.png
+2025-10-28 20:17:24.576 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/7246e2f3-986f-485a-a18c-eaa85a6fa2cf_4.png
+2025-10-28 20:17:24.577 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/7246e2f3-986f-485a-a18c-eaa85a6fa2cf_5.png
+2025-10-28 20:17:24.580 | INFO     | api:feedback_save:239 - [CLEANUP] Deleted oldest feedback (ID: 11) with 6 images
+2025-10-28 20:17:24.595 | INFO     | api:feedback_save:272 - [FEEDBACK] Saved feedback (ID: 27) with 6 images
+2025-10-28 20:17:24.597 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-28 20:18:41.630 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:18:57.974 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-28 20:18:57.979 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/13a3ab1f-7c74-4e43-afba-5e04e59104d0_0.png
+2025-10-28 20:18:57.979 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/13a3ab1f-7c74-4e43-afba-5e04e59104d0_1.png
+2025-10-28 20:18:57.980 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/13a3ab1f-7c74-4e43-afba-5e04e59104d0_2.png
+2025-10-28 20:18:57.980 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/13a3ab1f-7c74-4e43-afba-5e04e59104d0_3.png
+2025-10-28 20:18:57.981 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/13a3ab1f-7c74-4e43-afba-5e04e59104d0_4.png
+2025-10-28 20:18:57.981 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/13a3ab1f-7c74-4e43-afba-5e04e59104d0_5.png
+2025-10-28 20:18:57.985 | INFO     | api:feedback_save:239 - [CLEANUP] Deleted oldest feedback (ID: 12) with 6 images
+2025-10-28 20:18:57.999 | INFO     | api:feedback_save:272 - [FEEDBACK] Saved feedback (ID: 28) with 6 images
+2025-10-28 20:18:58.001 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-28 20:19:28.764 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:20:02.145 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-28 20:20:02.150 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/53e28443-99f2-420f-8e85-4ccc93c306f9_0.png
+2025-10-28 20:20:02.151 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/53e28443-99f2-420f-8e85-4ccc93c306f9_1.png
+2025-10-28 20:20:02.151 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/53e28443-99f2-420f-8e85-4ccc93c306f9_2.png
+2025-10-28 20:20:02.151 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/53e28443-99f2-420f-8e85-4ccc93c306f9_3.png
+2025-10-28 20:20:02.152 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/53e28443-99f2-420f-8e85-4ccc93c306f9_4.png
+2025-10-28 20:20:02.152 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/53e28443-99f2-420f-8e85-4ccc93c306f9_5.png
+2025-10-28 20:20:02.156 | INFO     | api:feedback_save:239 - [CLEANUP] Deleted oldest feedback (ID: 13) with 6 images
+2025-10-28 20:20:02.169 | INFO     | api:feedback_save:272 - [FEEDBACK] Saved feedback (ID: 29) with 6 images
+2025-10-28 20:20:02.171 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-28 20:21:14.479 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:22:46.633 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-28 20:23:56.820 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-29 11:50:31.710 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-29 11:54:06.078 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-29 11:55:22.279 | INFO     | api:trellis_run:146 - [TRELLIS] Frame saved on temp_images_path/frame_fa08fdd9-fe0b-4b34-b518-e51e9ab062cd.jpg
+2025-10-29 11:55:22.281 | INFO     | api:trellis_run:153 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-29 11:55:22.400 | INFO     | api:trellis_run:167 - [TRELLIS] Sizes {'glb': 1858376, 'ply': 56957216, 'mp4': 770266, 'frame': 65080} (API)
+2025-10-29 11:55:50.939 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-29 11:57:04.978 | INFO     | api:trellis_run:146 - [TRELLIS] Frame saved on temp_images_path/frame_b3abaf3f-c9bf-45ea-9bf1-bd7a3a8f5938.jpg
+2025-10-29 11:57:04.981 | INFO     | api:trellis_run:153 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-29 11:57:05.172 | INFO     | api:trellis_run:167 - [TRELLIS] Sizes {'glb': 3098656, 'ply': 96482081, 'mp4': 1482305, 'frame': 94237} (API)
+2025-10-29 11:59:36.626 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-29 12:00:37.860 | INFO     | api:trellis_run:146 - [TRELLIS] Frame saved on temp_images_path/frame_97567498-1d11-4caa-a71e-adab02266e13.jpg
+2025-10-29 12:00:37.863 | INFO     | api:trellis_run:153 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-29 12:00:37.934 | INFO     | api:trellis_run:167 - [TRELLIS] Sizes {'glb': 2263196, 'ply': 47952928, 'mp4': 855588, 'frame': 60003} (API)
+2025-10-29 18:58:44.014 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-29 18:58:44.015 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-10-29 18:59:15.515 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-10-29 18:59:18.645 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-10-29 19:16:53.700 | INFO     | api:t2mv_generate:80 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-29 19:17:09.699 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-29 19:17:09.707 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/99d5e4e1-063d-47c6-aacd-ed547580380a_0.png
+2025-10-29 19:17:09.708 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/99d5e4e1-063d-47c6-aacd-ed547580380a_1.png
+2025-10-29 19:17:09.708 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/99d5e4e1-063d-47c6-aacd-ed547580380a_2.png
+2025-10-29 19:17:09.708 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/99d5e4e1-063d-47c6-aacd-ed547580380a_3.png
+2025-10-29 19:17:09.709 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/99d5e4e1-063d-47c6-aacd-ed547580380a_4.png
+2025-10-29 19:17:09.710 | INFO     | api:feedback_save:231 - [CLEANUP] Deleted file: temp_images_path/99d5e4e1-063d-47c6-aacd-ed547580380a_5.png
+2025-10-29 19:17:09.714 | INFO     | api:feedback_save:239 - [CLEANUP] Deleted oldest feedback (ID: 14) with 6 images
+2025-10-29 19:17:09.725 | INFO     | api:feedback_save:272 - [FEEDBACK] Saved feedback (ID: 30) with 6 images
+2025-10-29 19:17:09.727 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-29 19:17:36.738 | INFO     | api:trellis_run:146 - [TRELLIS] Frame saved on temp_images_path/frame_60546855-e8e2-45c7-a19d-687520dfa298.jpg
+2025-10-29 19:17:36.740 | INFO     | api:trellis_run:153 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-10-29 19:17:36.771 | INFO     | api:trellis_run:167 - [TRELLIS] Sizes {'glb': 1980400, 'ply': 11857440, 'mp4': 767627, 'frame': 25537} (API)
+2025-10-30 12:58:20.590 | INFO     | api_stream:load_pipe_mvadapter:58 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 12:58:20.590 | INFO     | api_stream:load_pipe_trellis:114 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 12:58:52.547 | INFO     | api_stream:load_pipe_trellis:117 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 12:58:55.798 | INFO     | api_stream:_startup:30 - [STARTUP] loaded pipelines
+2025-10-30 12:59:39.329 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:01:09.897 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:03:31.520 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:05:49.323 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 13:05:49.323 | INFO     | api_stream:load_pipe_trellis:116 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 13:06:17.499 | INFO     | api_stream:load_pipe_trellis:119 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 13:06:17.762 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 13:06:40.486 | INFO     | api_stream:t2mv_generate:86 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:06:40.831 | INFO     | api_stream:t2mv_generate:97 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:07:24.746 | INFO     | api_stream:t2mv_generate:86 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:07:25.107 | INFO     | api_stream:t2mv_generate:97 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:12:18.606 | INFO     | api_stream:t2mv_generate:86 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:12:19.169 | INFO     | api_stream:t2mv_generate:97 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:13:15.185 | INFO     | api_stream:t2mv_generate:86 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:13:15.782 | INFO     | api_stream:t2mv_generate:97 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:27:35.401 | INFO     | api_stream:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 13:27:35.401 | INFO     | api_stream:load_pipe_trellis:111 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 13:28:04.138 | INFO     | api_stream:load_pipe_trellis:114 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 13:28:07.353 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 13:31:39.193 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:31:39.541 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:31:54.016 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:31:55.069 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:35:10.156 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-30 13:35:10.161 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/a152a78a-0a4e-4202-943a-8ce76e7178ec_0.png
+2025-10-30 13:35:10.162 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/a152a78a-0a4e-4202-943a-8ce76e7178ec_1.png
+2025-10-30 13:35:10.162 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/a152a78a-0a4e-4202-943a-8ce76e7178ec_2.png
+2025-10-30 13:35:10.162 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/a152a78a-0a4e-4202-943a-8ce76e7178ec_3.png
+2025-10-30 13:35:10.162 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/a152a78a-0a4e-4202-943a-8ce76e7178ec_4.png
+2025-10-30 13:35:10.163 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/a152a78a-0a4e-4202-943a-8ce76e7178ec_5.png
+2025-10-30 13:35:10.165 | INFO     | api_stream:feedback_save:253 - [CLEANUP] Deleted oldest feedback (ID: 15) with 6 images
+2025-10-30 13:35:10.175 | INFO     | api_stream:feedback_save:286 - [FEEDBACK] Saved feedback (ID: 31) with 6 images
+2025-10-30 13:35:10.177 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-30 13:36:04.117 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:36:04.790 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:36:44.129 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:36:44.484 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:38:14.302 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-30 13:38:14.307 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/8818bb8d-338d-4126-aff3-78794d2543a6_0.png
+2025-10-30 13:38:14.308 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/8818bb8d-338d-4126-aff3-78794d2543a6_1.png
+2025-10-30 13:38:14.308 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/8818bb8d-338d-4126-aff3-78794d2543a6_2.png
+2025-10-30 13:38:14.308 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/8818bb8d-338d-4126-aff3-78794d2543a6_3.png
+2025-10-30 13:38:14.308 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/8818bb8d-338d-4126-aff3-78794d2543a6_4.png
+2025-10-30 13:38:14.309 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/8818bb8d-338d-4126-aff3-78794d2543a6_5.png
+2025-10-30 13:38:14.312 | INFO     | api_stream:feedback_save:253 - [CLEANUP] Deleted oldest feedback (ID: 16) with 6 images
+2025-10-30 13:38:14.330 | INFO     | api_stream:feedback_save:286 - [FEEDBACK] Saved feedback (ID: 32) with 6 images
+2025-10-30 13:38:14.332 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-30 13:38:23.357 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:38:24.032 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:38:38.563 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:38:39.101 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:39:27.202 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:39:27.545 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:39:43.665 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-30 13:39:43.669 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/b0053c44-ad06-4736-8e94-406dd11af3b6_0.png
+2025-10-30 13:39:43.669 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/b0053c44-ad06-4736-8e94-406dd11af3b6_1.png
+2025-10-30 13:39:43.669 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/b0053c44-ad06-4736-8e94-406dd11af3b6_2.png
+2025-10-30 13:39:43.669 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/b0053c44-ad06-4736-8e94-406dd11af3b6_3.png
+2025-10-30 13:39:43.670 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/b0053c44-ad06-4736-8e94-406dd11af3b6_4.png
+2025-10-30 13:39:43.670 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/b0053c44-ad06-4736-8e94-406dd11af3b6_5.png
+2025-10-30 13:39:43.674 | INFO     | api_stream:feedback_save:253 - [CLEANUP] Deleted oldest feedback (ID: 17) with 6 images
+2025-10-30 13:39:43.687 | INFO     | api_stream:feedback_save:286 - [FEEDBACK] Saved feedback (ID: 33) with 6 images
+2025-10-30 13:39:43.688 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-30 13:39:58.398 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:39:59.503 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:40:41.194 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:40:42.098 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:41:15.938 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:41:16.622 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:41:37.472 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-30 13:41:37.476 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/df107ccc-b80d-40bd-b2c0-5f1f2a5dbb7e_0.png
+2025-10-30 13:41:37.476 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/df107ccc-b80d-40bd-b2c0-5f1f2a5dbb7e_1.png
+2025-10-30 13:41:37.477 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/df107ccc-b80d-40bd-b2c0-5f1f2a5dbb7e_2.png
+2025-10-30 13:41:37.477 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/df107ccc-b80d-40bd-b2c0-5f1f2a5dbb7e_3.png
+2025-10-30 13:41:37.477 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/df107ccc-b80d-40bd-b2c0-5f1f2a5dbb7e_4.png
+2025-10-30 13:41:37.478 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/df107ccc-b80d-40bd-b2c0-5f1f2a5dbb7e_5.png
+2025-10-30 13:41:37.481 | INFO     | api_stream:feedback_save:253 - [CLEANUP] Deleted oldest feedback (ID: 18) with 6 images
+2025-10-30 13:41:37.492 | INFO     | api_stream:feedback_save:286 - [FEEDBACK] Saved feedback (ID: 34) with 6 images
+2025-10-30 13:41:37.494 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-30 13:42:04.706 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 13:42:05.719 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 13:42:19.078 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-10-30 13:42:19.081 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/f58fbb81-3ac7-49e8-a0e3-5aeccf3c5f9d_0.png
+2025-10-30 13:42:19.082 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/f58fbb81-3ac7-49e8-a0e3-5aeccf3c5f9d_1.png
+2025-10-30 13:42:19.082 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/f58fbb81-3ac7-49e8-a0e3-5aeccf3c5f9d_2.png
+2025-10-30 13:42:19.082 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/f58fbb81-3ac7-49e8-a0e3-5aeccf3c5f9d_3.png
+2025-10-30 13:42:19.082 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/f58fbb81-3ac7-49e8-a0e3-5aeccf3c5f9d_4.png
+2025-10-30 13:42:19.083 | INFO     | api_stream:feedback_save:245 - [CLEANUP] Deleted file: temp_images_path/f58fbb81-3ac7-49e8-a0e3-5aeccf3c5f9d_5.png
+2025-10-30 13:42:19.085 | INFO     | api_stream:feedback_save:253 - [CLEANUP] Deleted oldest feedback (ID: 19) with 6 images
+2025-10-30 13:42:19.093 | INFO     | api_stream:feedback_save:286 - [FEEDBACK] Saved feedback (ID: 35) with 6 images
+2025-10-30 13:42:19.094 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-10-30 14:17:30.303 | INFO     | api_stream:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 14:17:30.304 | INFO     | api_stream:load_pipe_trellis:118 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 14:17:59.122 | INFO     | api_stream:load_pipe_trellis:121 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 14:18:02.169 | INFO     | api_stream:_startup:32 - [STARTUP] loaded pipelines
+2025-10-30 14:19:22.620 | INFO     | api_stream:t2mv_generate:85 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 14:19:22.979 | INFO     | api_stream:t2mv_generate:96 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 14:23:41.765 | INFO     | api_stream:t2mv_generate:85 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 14:23:42.118 | INFO     | api_stream:t2mv_generate:96 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 14:27:08.209 | INFO     | api_stream:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 14:27:08.209 | INFO     | api_stream:load_pipe_trellis:116 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 14:27:36.950 | INFO     | api_stream:load_pipe_trellis:119 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 14:27:39.885 | INFO     | ollama:start_ollama:33 - [OLLAMA] Model qwen2.5vl:7b loaded successfully
+2025-10-30 14:27:39.886 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 14:30:10.415 | INFO     | api_stream:t2mv_generate:83 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 14:30:10.775 | INFO     | api_stream:t2mv_generate:94 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 14:33:37.668 | INFO     | api_stream:t2mv_generate:83 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 14:33:38.025 | INFO     | api_stream:t2mv_generate:94 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 14:37:54.014 | INFO     | api_stream:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 14:37:54.087 | INFO     | api_stream:load_pipe_trellis:116 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 14:38:26.893 | INFO     | api_stream:load_pipe_trellis:119 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 14:38:29.899 | INFO     | ollama:start_ollama:33 - [OLLAMA] Model qwen2.5vl:7b loaded successfully
+2025-10-30 14:38:29.899 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 14:38:55.927 | INFO     | api_stream:t2mv_generate:83 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 14:38:56.283 | INFO     | api_stream:t2mv_generate:94 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 14:47:26.101 | INFO     | api_stream:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 14:47:26.101 | INFO     | api_stream:load_pipe_trellis:116 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 14:47:58.372 | INFO     | api_stream:load_pipe_trellis:119 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 14:48:03.194 | INFO     | ollama:start_ollama:33 - [OLLAMA] Model qwen2.5vl:7b loaded successfully
+2025-10-30 14:48:03.194 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 14:49:06.267 | ERROR    | api_stream:t2mv_generate:103 - [MV-ADAPTER] FAILED: %s
+%s
+2025-10-30 14:54:56.315 | INFO     | api_stream:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 14:54:56.316 | INFO     | api_stream:load_pipe_trellis:116 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 14:55:24.069 | INFO     | api_stream:load_pipe_trellis:119 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 14:55:25.606 | INFO     | ollama:start_ollama:33 - [OLLAMA] Model qwen2.5vl:7b loaded successfully
+2025-10-30 14:55:25.608 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 14:57:03.831 | ERROR    | api_stream:t2mv_generate:103 - [MV-ADAPTER] FAILED: %s
+%s
+2025-10-30 15:00:22.288 | INFO     | api_stream:load_pipe_mvadapter:54 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 15:00:22.288 | INFO     | api_stream:load_pipe_trellis:111 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 15:00:52.665 | INFO     | api_stream:load_pipe_trellis:114 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 15:00:57.391 | INFO     | ollama:start_ollama:33 - [OLLAMA] Model qwen2.5vl:7b loaded successfully
+2025-10-30 15:00:57.392 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 15:52:22.498 | INFO     | api_stream:t2mv_generate:81 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 15:52:22.938 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:04:17.207 | INFO     | api_stream:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 16:04:17.208 | INFO     | api_stream:load_pipe_trellis:112 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 16:04:48.506 | INFO     | api_stream:load_pipe_trellis:115 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 16:04:51.449 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 16:06:38.299 | INFO     | api_stream:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 16:06:38.299 | INFO     | api_stream:load_pipe_trellis:112 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 16:10:11.597 | INFO     | api_stream:load_pipe_mvadapter:55 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 16:10:11.598 | INFO     | api_stream:load_pipe_trellis:112 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 16:10:46.441 | INFO     | api_stream:load_pipe_trellis:115 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 16:10:46.672 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 16:14:16.186 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 16:14:16.573 | INFO     | api_stream:t2mv_generate:93 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:16:26.999 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 16:16:28.406 | INFO     | api_stream:t2mv_generate:93 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:25:17.153 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 16:25:17.153 | INFO     | api_stream:load_pipe_trellis:151 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 16:25:49.584 | INFO     | api_stream:load_pipe_trellis:154 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 16:25:53.891 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 16:27:11.557 | INFO     | api_stream:t2mv_generate:66 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:27:11.558 | INFO     | api_stream:t2mv_generate:67 - [MV-ADAPTER] prompt: dog, blue, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect fur, incorrect color, lighting, shadows, background (API)
+2025-10-30 16:27:39.798 | INFO     | api_stream:t2mv_generate:66 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:27:39.798 | INFO     | api_stream:t2mv_generate:67 - [MV-ADAPTER] prompt: dog, blue, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 16:27:56.792 | INFO     | api_stream:t2mv_generate:66 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:27:56.793 | INFO     | api_stream:t2mv_generate:67 - [MV-ADAPTER] prompt: dog, blue, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 16:30:29.673 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 16:30:29.674 | INFO     | api_stream:load_pipe_trellis:151 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 16:30:59.770 | INFO     | api_stream:load_pipe_trellis:154 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 16:31:01.022 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 16:31:38.351 | INFO     | api_stream:t2mv_generate:66 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:31:38.351 | INFO     | api_stream:t2mv_generate:67 - [MV-ADAPTER] prompt: dog, blue, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect fur, incorrect color, lighting, shadows, background (API)
+2025-10-30 16:34:14.376 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 16:34:14.376 | INFO     | api_stream:load_pipe_trellis:151 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 16:34:43.641 | INFO     | api_stream:load_pipe_trellis:154 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 16:34:44.999 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 16:34:59.599 | INFO     | api_stream:t2mv_generate:66 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:34:59.599 | INFO     | api_stream:t2mv_generate:67 - [MV-ADAPTER] prompt: dog, blue, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect fur, incorrect color, lighting, shadows, background (API)
+2025-10-30 16:35:06.839 | INFO     | api_stream:t2mv_generate:90 - [MV-ADAPTER] Images generated 6 views (API)
+2025-10-30 16:39:01.147 | INFO     | api_stream:t2mv_generate:101 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:39:01.147 | INFO     | api_stream:t2mv_generate:102 - [MV-ADAPTER] prompt: dog, blue, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 16:39:08.438 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:42:29.121 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 16:42:29.122 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 16:42:58.833 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 16:42:59.891 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 16:44:36.502 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:44:36.502 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: dog, blue, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect fur, incorrect color, lighting, shadows, background (API)
+2025-10-30 16:44:44.337 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:52:36.605 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:52:36.605 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-10-30 16:52:43.931 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:54:03.030 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 16:54:03.031 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 16:54:32.990 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 16:54:36.049 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 16:54:45.742 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:54:45.743 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: dog, red, detailed fur, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect eyes, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 16:54:53.710 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:55:12.970 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:55:12.970 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: red dog, detailed fur, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect eyes, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 16:55:20.310 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:55:33.210 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:55:33.211 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: red dog, detailed fur, full body and neg_prompt: blurry, low detail, deformed face, extra limbs, incorrect tail, incorrect ears, incorrect eyes, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 16:55:40.548 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:55:59.180 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:55:59.181 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: dog, blue, full body and neg_prompt: blurry, low detail, bad anatomy, incorrect limbs, deformed face, incorrect tail, incorrect ears, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect posture, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 16:56:06.344 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 16:56:29.353 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 16:56:29.353 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: blue dog, full body and neg_prompt: blurry, low detail, bad anatomy, incorrect limbs, deformed face, incorrect tail, incorrect ears, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect posture, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 16:56:36.502 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 17:00:07.126 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-10-30 17:00:07.126 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: blue dog, full body and neg_prompt: blurry, low detail, bad anatomy, incorrect limbs, deformed face, incorrect tail, incorrect ears, incorrect fur, incorrect color, incorrect size, incorrect proportions, incorrect posture, incorrect lighting, incorrect shadows, incorrect background (API)
+2025-10-30 17:00:14.225 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] ZIP created with 6 views
+2025-10-30 17:24:08.265 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 17:24:08.265 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 17:24:36.110 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 17:24:39.503 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-10-30 18:13:39.525 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-10-30 18:13:39.525 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-10-30 18:14:09.091 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-10-30 18:14:12.637 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines

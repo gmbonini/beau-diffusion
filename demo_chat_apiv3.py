@@ -4,7 +4,7 @@ from typing import List, Tuple
 import io
 from ollama import refine_prompt, negative_prompt, check_views, prepare_prompts
 from ollama_chat import start_chat_from_inputs, continue_chat_with_feedback, format_first_message, user_accepted, format_turn_message
-
+import zipfile
 import os, tempfile, glob, gc
 import torch
 from loguru import logger
@@ -15,7 +15,7 @@ import requests
 
 # LOCK REGENERATE BUTTON LLM
 # ATT LLM PROMPT WITH CHAT PROMPT
-API_URL = os.getenv("API_URL", "http://127.0.0.1:8086")
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8081")
 
 logger.add("gradio.log", rotation="1 MB")
 
@@ -92,27 +92,18 @@ def llm_prompt_processing(prompt):
 
 def _api_t2mv_generate(refined_prompt, negative_prompt, randomize):
     resp = requests.post(
-        f"{API_URL}/t2mv/generate",
+        f"{API_URL}/t2mv/generate2",
         params={"ref_prompt": refined_prompt, "neg_prompt": negative_prompt, "randomize": randomize},
         timeout=600,
     )
-    logger.info(f"[MV-ADAPTER/API] response status: {resp.status_code}")
     resp.raise_for_status()
-    data = resp.json()
-    views = data.get("views", [])
-    if not views:
-        raise RuntimeError(f"API retornou vazio: {data}")
-
+    
     imgs = []
-    for v in views:
-        b64 = v.get("b64png")
-        if not b64:
-            continue
-        raw = base64.b64decode(b64)
-        imgs.append(Image.open(io.BytesIO(raw)).convert("RGB"))
-
-    if not imgs:
-        raise RuntimeError("[MV-Adapter] Invalid images.")
+    with zipfile.ZipFile(io.BytesIO(resp.content)) as zf:
+        for name in sorted(zf.namelist()):
+            with zf.open(name) as f:
+                imgs.append(Image.open(f).convert("RGB"))
+    
     return imgs
 
 
@@ -746,4 +737,4 @@ with gr.Blocks() as demo:
 if __name__ == "__main__":
     # load_pipe_mvadapter()
     # load_pipe_trellis()
-    demo.launch(share=True, server_port=os.getenv("SERVER_PORT", 8880))
+    demo.launch(share=True, server_port=os.getenv("SERVER_PORT", 8883))

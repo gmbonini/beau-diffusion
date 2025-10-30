@@ -12,6 +12,7 @@ from PIL import Image
 # LOCK REGENERATE BUTTON LLM
 # ATT LLM PROMPT WITH CHAT PROMPT
 
+os.environ['ATTN_BACKEND'] = 'xformers'
 
 logger.add("gradio.log", rotation="1 MB")
 

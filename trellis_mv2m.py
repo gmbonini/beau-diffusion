@@ -1,8 +1,9 @@
 import sys
 import numpy as np
 import imageio
+import os 
 
-TRELLIS_PATH = "/mnt/DATA/projects/beau/TRELLIS"
+TRELLIS_PATH = "/workspace/beau/TRELLIS"
 if TRELLIS_PATH not in sys.path:
     sys.path.append(TRELLIS_PATH)
 
@@ -10,6 +11,7 @@ from trellis.pipelines import TrellisImageTo3DPipeline
 from trellis.utils import render_utils
 from trellis.utils import render_utils, postprocessing_utils
 
+os.environ['ATTN_BACKEND'] = 'xformers' 
 
 class TrellisMV2M:
     def __init__(
