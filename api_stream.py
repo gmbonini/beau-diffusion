@@ -45,15 +45,12 @@ def load_pipe_mvadapter():
     global pipe_mv, adapters
     print('Loading MV-Adapter pipeline...')
     pipe_mv, adapters = MVAdapterT2MV.prepare_pipeline(
-        base_model="Lykon/dreamshaper-xl-1-0", # Lykon/dreamshaper-xl-1-0 # stabilityai/stable-diffusion-xl-base-1.0
+        base_model="SG161222/RealVisXL_V4.0",
         vae_model="madebyollin/sdxl-vae-fp16-fix",
-        unet_model=None,
-        lora_model= "goofyai/3d_render_style_xl/3d_render_style_xl.safetensors", # None,
+        lora_model="guoyww/realismLora",
         adapter_path="huanngzh/mv-adapter",
-        scheduler= "lcm", # "ddpm",
-        num_views=6,
-        device="cuda" if torch.cuda.is_available() else "cpu",
-        dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        scheduler="euler_a",
+        dtype=torch.bfloat16,
     )
     print('MV-Adapter pipeline loaded.')
     logger.info("[MV-ADAPTER] Pipeline loaded (API)")
@@ -119,10 +116,6 @@ def t2mv_generate2(
         negative_prompt=neg_prompt,
         device="cuda" if torch.cuda.is_available() else "cpu",
         adapter_name_list=adapters,
-        # azimuth_deg= 45
-        # azimuth_deg = [45, 180, 315]
-        # azimuth_deg = [0, 90, 270]
-        # azimuth_deg = [0, 45, 90, 180, 270, 315]
     )
     
     session_id = str(uuid.uuid4())

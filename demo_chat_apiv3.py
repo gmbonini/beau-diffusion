@@ -2,7 +2,7 @@ import base64
 import traceback
 from typing import List, Tuple
 import io
-from ollama import refine_prompt, negative_prompt, check_views, prepare_prompts
+from ollama import check_views, prepare_prompts
 from ollama_chat import start_chat_from_inputs, continue_chat_with_feedback, format_first_message, user_accepted, format_turn_message
 import zipfile
 import os, tempfile, glob, gc
@@ -737,4 +737,4 @@ with gr.Blocks() as demo:
 if __name__ == "__main__":
     # load_pipe_mvadapter()
     # load_pipe_trellis()
-    demo.launch(share=True, server_port=os.getenv("SERVER_PORT", 8883))
+    demo.launch(share=True, server_port=os.getenv("SERVER_PORT", 8881))

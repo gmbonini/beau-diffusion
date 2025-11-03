@@ -1,0 +1,14 @@
+pipe_mv, adapters = MVAdapterT2MV.prepare_pipeline(
+    base_model="SG161222/RealVisXL_V4.0",
+    vae_model="madebyollin/sdxl-vae-fp16-fix",
+    unet_model=None,
+    lora_model="yehiaa/RealVisXL_V4.0‑lora‑drew‑v1",
+    adapter_path="huanngzh/mv-adapter",
+    scheduler="dpm++_2m_karras",
+    num_views=6,
+    device="cuda",
+    dtype=torch.float16,
+    lora_strength=0.5,              # ajuste de força do LoRA
+    adapter_strength=1.0,           # se aplicável
+    view_angle_range=45             # exemplo de parâmetro de ângulo
+)

@@ -5,7 +5,7 @@ from loguru import logger
 
 
 OLLAMA_URL = "http://127.0.0.1:11200"
-MODEL = "qwen2.5vl:7b"
+MODEL_TEXT = "qwen2.5:7b"
 
 SYSTEM_CHAT = """
 You are a prompt engineer and image reviewer for text-to-3D/multiview generation.
@@ -45,7 +45,7 @@ Positive rules:
 * "less trees" > remove objects or caracteristics if present; do NOT add to positive. Mitigate or remove in negative.
 
 Negative rules:
-- 6–8 items MAX (do not exceed); focus on artifacts/geometry/texture; comma-separated.
+- 6-8 items MAX (do not exceed); focus on artifacts/geometry/texture; comma-separated.
 -If the user wants to mitigate/reduce/remove something, add it to the negative prompt.
 - Map mitigation requests to negatives, examle.:
   * less trees > "excessive trees", "overcrowded foliage", "duplicate trees"
@@ -83,8 +83,9 @@ def _strip_fences(s: str) -> str:
     return s.strip()
 
 def chat_call(messages, *, json_mode=True, temperature=0.3, top_p=0.9, seed=None, timeout=180):
+    """Usa modelo de TEXTO para conversação"""
     payload = {
-        "model": MODEL,
+        "model": MODEL_TEXT,
         "messages": messages,
         "stream": False,
         "keep_alive": "5m",
@@ -92,6 +93,8 @@ def chat_call(messages, *, json_mode=True, temperature=0.3, top_p=0.9, seed=None
     }
     if json_mode:
         payload["format"] = "json"
+    
+    logger.info(f"[CHAT] chat_call using {MODEL_TEXT}")
     r = requests.post(f"{OLLAMA_URL}/api/chat", json=payload, timeout=timeout)
     r.raise_for_status()
     return r.json()["message"]["content"]
@@ -106,7 +109,7 @@ def start_chat_from_inputs(refined_init, negative_init, avaliation_txt):
             f"- Current negative: {negative_init}\n"
         }
     ]
-    logger.info("[CHAT] STARTING CHAT")
+    logger.info(f"[CHAT] STARTING CHAT (using {MODEL_TEXT})")
     resp = chat_call(messages, json_mode=True)
     resp = _strip_fences(resp)
     try:
@@ -142,7 +145,7 @@ def continue_chat_with_feedback(messages, feedback, current_refined, current_neg
         f"- Current positive: {current_refined}\n"
         f"- Current negative: {current_negative}\n"
     })
-    logger.info("[CHAT] continue_chat_with_feedback")
+    logger.info(f"[CHAT] continue_chat_with_feedback (using {MODEL_TEXT})")
     resp = chat_call(messages, json_mode=True)
     resp = _strip_fences(resp)
     try:

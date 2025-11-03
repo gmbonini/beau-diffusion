@@ -1,4 +1,3 @@
-
 import base64
 import glob
 import requests
@@ -12,7 +11,8 @@ logger.add("ollama.log", rotation="10 MB")
 # mesh checker
 
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11200")
-MODEL = os.getenv("CHAT_MODEL","qwen2.5vl:7b")
+MODEL_TEXT = os.getenv("TEXT_MODEL", "qwen2.5:7b")
+MODEL_VISION = os.getenv("VISION_MODEL", "qwen2.5vl:7b")
 
 # testar com modificadores de qualidade
 
@@ -20,27 +20,35 @@ def _b64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
 
-def start_ollama(keep="2h"):
-    r = requests.post(
-        f"{OLLAMA_URL}/api/generate",
-        json={"model": MODEL, "prompt": "ok", "stream": False, "keep_alive": keep},
-        timeout=(3, 15), # 3 to connect 15 to receive sresponse
-    )
-    r.raise_for_status()
+def start_ollama(model=None, keep="2h"):
+    """Inicia o modelo especificado ou ambos se None"""
+    models_to_start = [model] if model else [MODEL_TEXT, MODEL_VISION]
+    
+    for m in models_to_start:
+        r = requests.post(
+            f"{OLLAMA_URL}/api/generate",
+            json={"model": m, "prompt": "ok", "stream": False, "keep_alive": keep},
+            timeout=(3, 15), # 3 to connect 15 to receive response
+        )
+        r.raise_for_status()
     return True
 
-def is_ollama_loaded(model="qwen2.5vl:7b"):
+def is_ollama_loaded(model=None):
+    """Verifica se um modelo específico está carregado, ou ambos se None"""
     try:
-        resp = requests.get("http://127.0.0.1:11200/api/ps", timeout=5)
+        resp = requests.get(f"{OLLAMA_URL}/api/ps", timeout=5)
         data = resp.json()
-        for m in data.get("models", []):
-            if m.get("model") == model and m.get("loaded"):
-                return True
-        return False
+        loaded_models = {m.get("model") for m in data.get("models", []) if m.get("loaded")}
+        
+        if model:
+            return model in loaded_models
+        
+        return MODEL_TEXT in loaded_models
     except Exception:
         return False
     
 def prepare_prompts(user_prompt: str) -> dict:
+    """Usa modelo de TEXTO para processar prompts"""
     prompt_text = f"""
         You are a prompt engineer for text-to-3D/multiview generation.
         YOU HAVE TWO TASKS.
@@ -80,7 +88,7 @@ def prepare_prompts(user_prompt: str) -> dict:
             - Focus on common issues in 3D generation: "blurry", "low detail", "bad anatomy"; but related to the object.
             - Be context-aware. Also focus on the prompt object and give relevant negative attributes related to it. Example: for "cat", include "extra limbs", "extra tail", "deformed face".
                 * Humans/animals: anatomy terms allowed (example: extra limbs, deformed face).
-                * Landscapes/scenes/objects: DO NOT use anatomy words or “incorrect <object>” phrases. Prefer concrete artifact terms (topology, textures, composition).
+                * Landscapes/scenes/objects: DO NOT use anatomy words or "incorrect <object>" phrases. Prefer concrete artifact terms (topology, textures, composition).
             - Prefer general artifact terms + a few scene-specific constraints. No redundancy.
             - Avoid overly specific or rare terms.
             - Avoid vague terms like "weird", "strange", "bad".
@@ -102,10 +110,10 @@ def prepare_prompts(user_prompt: str) -> dict:
         Input: {user_prompt}
         """.strip()
 
-    logger.info(f"[OLLAMA] prepare_prompts: preparing prompts for input: {user_prompt}")
+    logger.info(f"[OLLAMA] prepare_prompts: preparing prompts for input: {user_prompt} (using {MODEL_TEXT})")
     
     payload = {
-        "model": MODEL,
+        "model": MODEL_TEXT,
         "prompt": prompt_text,
         "max_tokens": 256,
         "temperature": 0.3,
@@ -126,95 +134,97 @@ def prepare_prompts(user_prompt: str) -> dict:
     return data
 
 
-def refine_prompt(user_prompt):
+# def refine_prompt(user_prompt):
+#     """Usa modelo de TEXTO para refinar prompts"""
+#     payload ={
+#         "model": MODEL_TEXT,
+#         "prompt": f"""
+#             You are a prompt engineer for text-to-3D/multiview generation.
+#             Goal: rewrite a messy input into a clean, structured description that keeps multi-word phrases intact.
+#             Rules:
+#             - Start with the object name (singular, lowercase).
+#             - Use concise, visual attributes.
+#             - Keep compound phrases together (examples: "lake in the middle", "red door on the left", "snow-capped mountain").
+#             - Preserve spatial relations ("at the center", "on the left/right", "surrounded by").
+#             - Do NOT split a phrase into separate tokens like "lake, middle". Keep it as "central lake" or "lake in the middle".
+#             - Prefer synonyms that compress relations: "lake in the middle" to "central lake".
+#             - Output ONLY the refined prompt.
+#             - No extra text.
 
-    payload ={
-        "model": MODEL,
-        "prompt": f"""
-            You are a prompt engineer for text-to-3D/multiview generation.
-            Goal: rewrite a messy input into a clean, structured description that keeps multi-word phrases intact.
-            Rules:
-            - Start with the object name (singular, lowercase).
-            - Use concise, visual attributes.
-            - Keep compound phrases together (examples: "lake in the middle", "red door on the left", "snow-capped mountain").
-            - Preserve spatial relations ("at the center", "on the left/right", "surrounded by").
-            - Do NOT split a phrase into separate tokens like "lake, middle". Keep it as "central lake" or "lake in the middle".
-            - Prefer synonyms that compress relations: "lake in the middle" to "central lake".
-            - Output ONLY the refined prompt.
-            - No extra text.
+#             Examples:
+#             Input: "a cute orange cat"
+#             Output: "cat, cute, orange, detailed fur"
+# ,
+#             Input: "a house with a red door on the left and a big tree behind"
+#             Output: "house, red door on the left, big tree behind"
 
-            Examples:
-            Input: "a cute orange cat"
-            Output: "cat, cute, orange, detailed fur"
-,
-            Input: "a house with a red door on the left and a big tree behind"
-            Output: "house, red door on the left, big tree behind"
+#             Input: "a city square with a fountain in the center and benches around"
+#             Output: "city square, central fountain, benches around"
 
-            Input: "a city square with a fountain in the center and benches around"
-            Output: "city square, central fountain, benches around"
+#             Input: "a big park with trails and trees and a big lake in the middle"
+#             Output: "park, big, trails, trees, central lake"
 
-            Input: "a big park with trails and trees and a big lake in the middle"
-            Output: "park, big, trails, trees, central lake"
-
-            Refine this prompt: {user_prompt}
-            """,
-        "max_tokens": 256,
-        "temperature": 0.7,
-        "top_p": 0.9,
-        "n": 1,
-        "stream": False,
-        "keep_alive": "1h"
+#             Refine this prompt: {user_prompt}
+#             """,
+#         "max_tokens": 256,
+#         "temperature": 0.7,
+#         "top_p": 0.9,
+#         "n": 1,
+#         "stream": False,
+#         "keep_alive": "1h"
         
-    }
-    logger.info(f"[MV-ADAPTER] refine prompt loading. POST /api/generate to {OLLAMA_URL}")
-    resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload)
-    resp.raise_for_status()
-    refined_prompt = resp.json()['response']
-    logger.info(f"[MV-ADAPTER] refined prompt result: {refined_prompt}")
-    return refined_prompt
+#     }
+#     logger.info(f"[MV-ADAPTER] refine prompt loading. POST /api/generate to {OLLAMA_URL} (using {MODEL_TEXT})")
+#     resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload)
+#     resp.raise_for_status()
+#     refined_prompt = resp.json()['response']
+#     logger.info(f"[MV-ADAPTER] refined prompt result: {refined_prompt}")
+#     return refined_prompt
 
-def negative_prompt(user_prompt):
-    payload ={
-        "model": MODEL,
-        "prompt": f"""
-            You are a prompt engineer for text-to-3D/multiview generation.
-            Goal: given a positive prompt, generate a concise negative prompt that lists unwanted attributes to avoid in the generated output.
-            Rules:
-            - Use concise, visual attributes.
-            - 6-8 items max. Do NOT exceed 8 items. NEVER give a list longer than 8 items. The negative prompt cannot pass 8 items.
-            - Focus on common issues in 3D generation: "blurry", "low detail", "bad anatomy"; but related to the object.
-            - Be context-aware. Also focus on the prompt object and give relevant negative attributes related to it. Example: for "cat", include "extra limbs", "extra tail", "deformed face".
-                * Humans/animals: anatomy terms allowed (example: extra limbs, deformed face).
-                * Landscapes/scenes/objects: DO NOT use anatomy words or “incorrect <object>” phrases. Prefer concrete artifact terms (topology, textures, composition).
-            - Prefer general artifact terms + a few scene-specific constraints. No redundancy.
-            - Avoid overly specific or rare terms.
-            - Avoid vague terms like "weird", "strange", "bad".
-            - Avois insert "incorrent <object>" phrases. Specific anatomy terms are allowed only for humans/animals/objects. Cite a problem that makes sense for the object. Example: don't say "incorrect car" for a car prompt. Instead, say "deformed wheels" or "bad car proportions".
-            - EVER add "lighting", "shadows", "background". We just want to focus on the main object. This can exceed the 8 item limit.
-            - Output ONLY the negative prompt and on one line with commas separating attributes.
-            - No extra text.
+# def negative_prompt(user_prompt):
+#     """Usa modelo de TEXTO para gerar negative prompts"""
+#     payload ={
+#         "model": MODEL_TEXT,
+#         "prompt": f"""
+#             You are a prompt engineer for text-to-3D/multiview generation.
+#             Goal: given a positive prompt, generate a concise negative prompt that lists unwanted attributes to avoid in the generated output.
+#             Rules:
+#             - Use concise, visual attributes.
+#             - 6-8 items max. Do NOT exceed 8 items. NEVER give a list longer than 8 items. The negative prompt cannot pass 8 items.
+#             - Focus on common issues in 3D generation: "blurry", "low detail", "bad anatomy"; but related to the object.
+#             - Be context-aware. Also focus on the prompt object and give relevant negative attributes related to it. Example: for "cat", include "extra limbs", "extra tail", "deformed face".
+#                 * Humans/animals: anatomy terms allowed (example: extra limbs, deformed face).
+#                 * Landscapes/scenes/objects: DO NOT use anatomy words or "incorrect <object>" phrases. Prefer concrete artifact terms (topology, textures, composition).
+#             - Prefer general artifact terms + a few scene-specific constraints. No redundancy.
+#             - Avoid overly specific or rare terms.
+#             - Avoid vague terms like "weird", "strange", "bad".
+#             - Avois insert "incorrent <object>" phrases. Specific anatomy terms are allowed only for humans/animals/objects. Cite a problem that makes sense for the object. Example: don't say "incorrect car" for a car prompt. Instead, say "deformed wheels" or "bad car proportions".
+#             - EVER add "lighting", "shadows", "background". We just want to focus on the main object. This can exceed the 8 item limit.
+#             - Output ONLY the negative prompt and on one line with commas separating attributes.
+#             - No extra text.
 
-            Input: park, big, trails, trees, central lake
-            Output: low detail, artifacts, duplicate trees, intersecting trails, overcrowded foliage, floating objects, geometry holes, texture stretching, tiling textures, flat water, blocky water surface, unrealistic water reflections, incorrect scale
+#             Input: park, big, trails, trees, central lake
+#             Output: low detail, artifacts, duplicate trees, intersecting trails, overcrowded foliage, floating objects, geometry holes, texture stretching, tiling textures, flat water, blocky water surface, unrealistic water reflections, incorrect scale
 
-            Generate the negative prompt: {user_prompt}
-            """,
-        "max_tokens": 256,
-        "temperature": 0.7,
-        "top_p": 0.9,
-        "n": 1,
-        "stream": False,
-        "keep_alive": "1h"
-    }
+#             Generate the negative prompt: {user_prompt}
+#             """,
+#         "max_tokens": 256,
+#         "temperature": 0.7,
+#         "top_p": 0.9,
+#         "n": 1,
+#         "stream": False,
+#         "keep_alive": "1h"
+#     }
 
-    logger.info(f"[MV-ADAPTER] negative prompt loading. POST /api/generate to {OLLAMA_URL}")
-    resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload)
-    resp.raise_for_status()
-    refined_prompt = resp.json()['response']
-    logger.info(f"[MV-ADAPTER] negative prompt result: {refined_prompt}")
-    return refined_prompt
+#     logger.info(f"[MV-ADAPTER] negative prompt loading. POST /api/generate to {OLLAMA_URL} (using {MODEL_TEXT})")
+#     resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload)
+#     resp.raise_for_status()
+#     refined_prompt = resp.json()['response']
+#     logger.info(f"[MV-ADAPTER] negative prompt result: {refined_prompt}")
+#     return refined_prompt
 
 def check_views(dir_path, user_prompt):
+    """Usa modelo de VISÃO para análise de imagens"""
     pngs = sorted(glob.glob(os.path.join(dir_path, "*.png")))
 
     prompt_text = f"""
@@ -250,7 +260,7 @@ def check_views(dir_path, user_prompt):
 
 
     payload = {
-        "model": MODEL,
+        "model": MODEL_VISION,  # USA MODELO DE VISÃO
         "prompt": prompt_text,
         "images": [_b64(p) for p in pngs],
         "max_tokens": 256,
@@ -260,6 +270,7 @@ def check_views(dir_path, user_prompt):
         "keep_alive": "1h",
         "format": "json"
     }
+    logger.info(f"[MV-ADAPTER] check_views loading (using {MODEL_VISION})")
     resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=180)
     resp.raise_for_status()
     raw = resp.json()["response"].strip()
@@ -296,11 +307,12 @@ if __name__ == "__main__":
 
 # ----------------- TESTING
 def check_image(image_path):
+    """Usa modelo de VISÃO para análise de imagem única"""
     with open(image_path, "rb") as f:
         b64 = base64.b64encode(f.read()).decode("utf-8")
 
     payload = {
-        "model": MODEL,
+        "model": MODEL_VISION,  # USA MODELO DE VISÃO
         "prompt": "Describe what you see in the image in one concise sentence.",
         "images": [b64],
         "max_tokens": 128,
@@ -309,11 +321,13 @@ def check_image(image_path):
         "stream": False,
         "keep_alive": "1h",
     }
+    logger.info(f"[TESTING] check_image loading (using {MODEL_VISION})")
     resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=120)
     resp.raise_for_status()
     return resp.json()["response"].strip()
 
 def describe_pngs_in_dir(dir_path):
+    """Usa modelo de VISÃO para descrever múltiplas imagens"""
     pngs = sorted(glob.glob(os.path.join(dir_path, "*.png")))
     results = []
     for p in pngs:
