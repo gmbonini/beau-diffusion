@@ -5885,3 +5885,603 @@
 2025-10-30 18:14:12.637 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
 2025-10-30 18:14:44.972 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: orange cute cat
 2025-10-30 18:14:44.972 | INFO     | ollama:prepare_prompts:105 - [OLLAMA] prepare_prompts: preparing prompts for input: orange cute cat
+2025-11-03 14:26:49.208 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 14:26:49.208 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 14:27:19.605 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 14:31:47.500 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 14:31:47.501 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 14:32:19.208 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 14:39:37.401 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 14:39:37.402 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 14:40:07.526 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 14:40:10.608 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 14:43:38.330 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 14:43:38.330 | INFO     | ollama:prepare_prompts:113 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 14:43:38.692 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 14:43:38.692 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 14:43:45.560 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 14:43:46.600 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_7u4pz13d
+2025-11-03 14:43:46.606 | INFO     | ollama:check_views:273 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 14:43:50.496 | INFO     | ollama:check_views:279 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a single object from different angles. The object appears to be a vase with a detailed pattern. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object looks realistic and matches the prompt.', 'negative_prompt': 'none'}
+2025-11-03 14:43:50.497 | INFO     | __main__:check_views_quality:134 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a single object from different angles. The object appears to be a vase with a detailed pattern. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object looks realistic and matches the prompt.', 'negative_prompt': 'none'}
+2025-11-03 14:43:51.840 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: , negative: , eval: The images show a single object from different angles. The object appears to be a vase with a detailed pattern. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object looks realistic and matches the prompt.
+2025-11-03 14:43:51.841 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 14:43:51.842 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 14:43:52.496 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: , negative: , eval: The images show a single object from different angles. The object appears to be a vase with a detailed pattern. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object looks realistic and matches the prompt.
+2025-11-03 14:43:52.499 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 14:43:52.502 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 14:47:37.889 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 14:47:37.891 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 14:48:08.886 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 14:48:12.214 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 14:48:34.309 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 14:48:34.311 | INFO     | ollama:prepare_prompts:113 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 14:48:34.685 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 14:48:34.685 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 14:48:41.507 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 14:48:42.553 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_3_zvpxbb
+2025-11-03 14:48:42.559 | INFO     | ollama:check_views:273 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 14:48:46.493 | INFO     | ollama:check_views:279 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a single object from different angles. The object appears to be a vase with a detailed pattern. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object looks realistic and matches the prompt.', 'negative_prompt': 'none'}
+2025-11-03 14:48:46.495 | INFO     | __main__:check_views_quality:134 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a single object from different angles. The object appears to be a vase with a detailed pattern. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object looks realistic and matches the prompt.', 'negative_prompt': 'none'}
+2025-11-03 14:49:49.818 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: , negative: , eval: The images show a single object from different angles. The object appears to be a vase with a detailed pattern. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object looks realistic and matches the prompt.
+2025-11-03 14:49:49.826 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 14:49:49.827 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 14:49:54.490 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: , negative: , eval: The images show a single object from different angles. The object appears to be a vase with a detailed pattern. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object looks realistic and matches the prompt.
+2025-11-03 14:49:54.490 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 14:49:54.491 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 18:39:52.615 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 18:39:52.615 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 18:42:58.146 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 18:42:58.151 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 18:43:30.826 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 18:43:30.826 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 18:43:31.391 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 18:43:31.391 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 18:43:39.194 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 18:43:40.364 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_p1y15uju
+2025-11-03 18:53:31.595 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 18:53:31.595 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 18:56:47.144 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 18:56:50.159 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 19:12:07.884 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 19:12:07.884 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 19:12:29.284 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 19:12:29.285 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 19:12:49.083 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 19:12:56.795 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_fy6mogla
+2025-11-03 19:12:56.801 | INFO     | ollama:check_views:291 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 19:13:49.085 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 19:13:49.085 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 19:14:23.188 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 19:14:23.189 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 19:14:36.911 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 19:14:44.693 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_dodzcow6
+2025-11-03 19:14:44.699 | INFO     | ollama:check_views:291 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 20:15:55.870 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:15:55.871 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 20:16:24.101 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 20:16:27.612 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 20:19:40.256 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:19:40.256 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 20:19:40.918 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:19:40.919 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 20:19:47.778 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 20:19:48.720 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_lxnqtmyy
+2025-11-03 20:19:48.725 | INFO     | ollama:check_views:291 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 20:24:26.361 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:24:26.361 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 20:24:53.463 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 20:24:56.572 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 20:25:52.856 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:25:52.857 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 20:25:53.583 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:25:53.585 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 20:26:00.438 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 20:26:01.380 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_9yc7llp8
+2025-11-03 20:26:01.385 | INFO     | ollama:check_views:291 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 20:29:41.865 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:29:41.865 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 20:30:11.138 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 20:30:14.260 | INFO     | ollama:start_ollama:79 - [OLLAMA] Model qwen2.5vl:7b loaded successfully
+2025-11-03 20:30:14.261 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 20:31:15.316 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:31:15.316 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 20:31:15.987 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:31:15.987 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 20:31:22.847 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 20:31:23.791 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_mam60_ab
+2025-11-03 20:31:23.795 | INFO     | ollama:check_views:291 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 20:34:46.479 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:34:46.480 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 20:35:16.091 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 20:35:16.427 | INFO     | ollama:start_ollama:79 - [OLLAMA] Model qwen2.5vl:7b loaded successfully
+2025-11-03 20:35:16.427 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 20:35:38.533 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:35:38.534 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 20:35:39.248 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:35:39.248 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 20:35:46.119 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 20:35:47.097 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_wezqlrkx
+2025-11-03 20:35:47.104 | INFO     | ollama:check_views:291 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 20:38:57.782 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:38:57.782 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 20:39:27.982 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 20:39:28.225 | INFO     | ollama:start_ollama:79 - [OLLAMA] Model qwen2.5vl:7b loaded successfully
+2025-11-03 20:39:28.225 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 20:40:03.506 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:40:04.179 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:40:04.179 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 20:40:11.054 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 20:40:12.009 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_2ebuycno
+2025-11-03 20:44:10.677 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:44:10.678 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 20:44:38.931 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 20:44:42.140 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 20:45:01.222 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:45:01.222 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 20:45:01.948 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:45:01.948 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 20:45:08.827 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 20:45:09.767 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_gtzp8ut6
+2025-11-03 20:45:09.772 | INFO     | ollama:check_views:291 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 20:49:08.196 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:49:08.196 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 20:49:37.255 | INFO     | api_stream:load_pipe_trellis:155 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 20:49:37.513 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 20:49:53.372 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:49:53.372 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 20:49:54.094 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:49:54.094 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt:  and neg_prompt:  (API)
+2025-11-03 20:50:00.952 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 20:50:01.878 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_kt8pyx3w
+2025-11-03 20:50:01.883 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 20:50:05.971 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a single object from different angles, but the object appears to be a head or a helmet with a detailed texture. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object has a realistic texture and shape.', 'negative_prompt': 'none'}
+2025-11-03 20:50:05.971 | INFO     | __main__:check_views_quality:134 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a single object from different angles, but the object appears to be a head or a helmet with a detailed texture. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object has a realistic texture and shape.', 'negative_prompt': 'none'}
+2025-11-03 20:50:06.368 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: , negative: , eval: The images show a single object from different angles, but the object appears to be a head or a helmet with a detailed texture. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object has a realistic texture and shape.
+2025-11-03 20:50:06.372 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 20:50:06.374 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 20:50:07.377 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: , negative: , eval: The images show a single object from different angles, but the object appears to be a head or a helmet with a detailed texture. The images are consistent across the multi-views, and there are no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the object stand out. The object has a realistic texture and shape.
+2025-11-03 20:50:07.385 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 20:50:07.386 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 20:50:55.163 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:50:55.166 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 20:51:01.928 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, full body', 'negative': 'blurry, low detail, deformed limbs, extra tails, incorrect scale, incorrect coloration, artifacts, bad lighting'}
+2025-11-03 20:51:02.302 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:51:02.302 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: dog, red, full body and neg_prompt: blurry, low detail, deformed limbs, extra tails, incorrect scale, incorrect coloration, artifacts, bad lighting (API)
+2025-11-03 20:51:08.174 | INFO     | api_stream:t2mv_generate2:133 - [MV-ADAPTER] ZIP created with 6 views
+2025-11-03 20:51:08.644 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_tze96v12
+2025-11-03 20:51:08.648 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 20:51:15.946 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no extra limbs. The color is vibrant and the details are clear. The images are realistic and match the prompt well.', 'negative_prompt': 'none'}
+2025-11-03 20:51:15.947 | INFO     | __main__:check_views_quality:134 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no extra limbs. The color is vibrant and the details are clear. The images are realistic and match the prompt well.', 'negative_prompt': 'none'}
+2025-11-03 20:51:16.393 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: dog, red, full body, negative: blurry, low detail, deformed limbs, extra tails, incorrect scale, incorrect coloration, artifacts, bad lighting, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no extra limbs. The color is vibrant and the details are clear. The images are realistic and match the prompt well.
+2025-11-03 20:51:16.394 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 20:51:16.394 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 20:51:20.347 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: red dog, full body, negative: blurry, low detail, incorrect scale, incorrect coloration, artifacts, bad lighting, excessive shadows, background, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no extra limbs. The color is vibrant and the details are clear. The images are realistic and match the prompt well.
+2025-11-03 20:51:20.347 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 20:51:20.348 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 20:56:14.180 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:56:14.180 | INFO     | api_stream:load_pipe_trellis:154 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 20:56:43.333 | INFO     | api_stream:load_pipe_trellis:157 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 20:56:46.044 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 20:57:05.998 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 20:57:05.998 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 20:57:06.868 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, full body', 'negative': 'low detail, deformed limbs, incorrect proportions, fuzzy fur, unrealistic coloration, sharp edges, lighting, shadows'}
+2025-11-03 20:57:07.232 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 20:57:07.232 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: dog, red, full body and neg_prompt: low detail, deformed limbs, incorrect proportions, fuzzy fur, unrealistic coloration, sharp edges, lighting, shadows (API)
+2025-11-03 20:57:13.152 | INFO     | api_stream:t2mv_generate2:124 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 20:57:13.152 | INFO     | api_stream:t2mv_generate2:127 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 20:57:13.523 | INFO     | api_stream:t2mv_generate2:135 - [MV-ADAPTER] ZIP created in memory with 6 views
+2025-11-03 20:57:13.524 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 20:59:37.453 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 20:59:37.455 | INFO     | api_stream:load_pipe_trellis:154 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 21:00:06.246 | INFO     | api_stream:load_pipe_trellis:157 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 21:00:06.677 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 21:00:27.610 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 21:00:27.611 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 21:00:28.417 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, full body', 'negative': 'low detail, extra limbs, deformed face, incorrect scale, flat fur, artifacts, incorrect posture'}
+2025-11-03 21:00:28.741 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 21:00:28.741 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: dog, red, full body and neg_prompt: low detail, extra limbs, deformed face, incorrect scale, flat fur, artifacts, incorrect posture (API)
+2025-11-03 21:00:34.670 | INFO     | api_stream:t2mv_generate2:124 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:00:34.670 | INFO     | api_stream:t2mv_generate2:127 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:00:35.066 | INFO     | api_stream:t2mv_generate2:135 - [MV-ADAPTER] ZIP created in memory with 6 views
+2025-11-03 21:00:35.066 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:00:36.643 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_g_dcbeye
+2025-11-03 21:00:36.646 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 21:00:44.139 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no extra limbs. The color is vibrant and the details are clear. The images are realistic and match the prompt well.', 'negative_prompt': 'none'}
+2025-11-03 21:00:44.140 | INFO     | __main__:check_views_quality:134 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no extra limbs. The color is vibrant and the details are clear. The images are realistic and match the prompt well.', 'negative_prompt': 'none'}
+2025-11-03 21:00:45.393 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: dog, red, full body, negative: low detail, extra limbs, deformed face, incorrect scale, flat fur, artifacts, incorrect posture, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no extra limbs. The color is vibrant and the details are clear. The images are realistic and match the prompt well.
+2025-11-03 21:00:45.393 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:00:45.395 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:00:49.401 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: dog, red, full body, negative: extra limbs, deformed face, incorrect scale, flat fur, artifacts, incorrect posture, unrealistic lighting, unshaded shadows, background objects, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no extra limbs. The color is vibrant and the details are clear. The images are realistic and match the prompt well.
+2025-11-03 21:00:49.408 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:00:49.409 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:01:08.436 | INFO     | __main__:llm_prompt_processing:80 - [MV-ADAPTER] generating images. prompt to be refined: blue cat
+2025-11-03 21:01:08.437 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: blue cat (using qwen2.5:7b)
+2025-11-03 21:01:09.321 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, blue, detailed fur, full body', 'negative': 'low detail, artifacts, deformed face, extra limbs, bad anatomy, incorrect scale, lighting, shadows'}
+2025-11-03 21:01:09.704 | INFO     | api_stream:t2mv_generate2:106 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 21:01:09.706 | INFO     | api_stream:t2mv_generate2:107 - [MV-ADAPTER] prompt: cat, blue, detailed fur, full body and neg_prompt: low detail, artifacts, deformed face, extra limbs, bad anatomy, incorrect scale, lighting, shadows (API)
+2025-11-03 21:01:15.157 | INFO     | api_stream:t2mv_generate2:124 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:01:15.157 | INFO     | api_stream:t2mv_generate2:127 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:01:15.519 | INFO     | api_stream:t2mv_generate2:135 - [MV-ADAPTER] ZIP created in memory with 6 views
+2025-11-03 21:01:15.519 | INFO     | api_stream:t2mv_generate2:137 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:01:17.805 | INFO     | __main__:generate_images:114 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_3apy1qw1
+2025-11-03 21:01:17.812 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 21:01:25.357 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a blue cat with detailed fur and a full body from different angles. The images are consistent across the views, and there are no visible artifacts or issues in the images.', 'negative_prompt': 'none'}
+2025-11-03 21:01:25.358 | INFO     | __main__:check_views_quality:134 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a blue cat with detailed fur and a full body from different angles. The images are consistent across the views, and there are no visible artifacts or issues in the images.', 'negative_prompt': 'none'}
+2025-11-03 21:01:25.812 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: cat, blue, detailed fur, full body, negative: low detail, artifacts, deformed face, extra limbs, bad anatomy, incorrect scale, lighting, shadows, eval: The images match the prompt well, showing a blue cat with detailed fur and a full body from different angles. The images are consistent across the views, and there are no visible artifacts or issues in the images.
+2025-11-03 21:01:25.812 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:01:25.815 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:01:29.709 | INFO     | __main__:chat_start_fn:48 - [CHAT] starting chat with refined: blue cat, detailed fur, full body, negative: low detail, deformed face, extra limbs, bad anatomy, incorrect scale, lighting, shadows, background, eval: The images match the prompt well, showing a blue cat with detailed fur and a full body from different angles. The images are consistent across the views, and there are no visible artifacts or issues in the images.
+2025-11-03 21:01:29.710 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:01:29.710 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:06:54.858 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 21:06:54.859 | INFO     | api_stream:load_pipe_trellis:195 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 21:07:23.528 | INFO     | api_stream:load_pipe_trellis:198 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 21:07:26.036 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 21:08:01.092 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 21:08:01.092 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 21:08:01.917 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, full body', 'negative': 'low detail, extra limbs, deformed face, incorrect proportions, wrong color distribution, shadow artifacts, lighting issues'}
+2025-11-03 21:08:02.303 | INFO     | __main__:_api_t2mv_generate_fast:89 - [MV-ADAPTER-FAST] Calling fast endpoint...
+2025-11-03 21:08:02.311 | INFO     | api_stream:t2mv_generate_fast:101 - [MV-ADAPTER-FAST] Generating images with seed 1
+2025-11-03 21:08:02.311 | INFO     | api_stream:t2mv_generate_fast:102 - [MV-ADAPTER-FAST] prompt: dog, red, full body | neg: low detail, extra limbs, deformed face, incorrect proportions, wrong color distribution, shadow artifacts, lighting issues
+2025-11-03 21:08:08.223 | INFO     | api_stream:t2mv_generate_fast:120 - [MV-ADAPTER-FAST] Generated 6 views, encoding...
+2025-11-03 21:08:08.603 | INFO     | api_stream:t2mv_generate_fast:131 - [MV-ADAPTER-FAST] Returning 6 encoded views
+2025-11-03 21:08:08.648 | INFO     | __main__:_api_t2mv_generate_fast:105 - [MV-ADAPTER-FAST] Received 6 views, decoding...
+2025-11-03 21:08:08.716 | INFO     | __main__:_api_t2mv_generate_fast:114 - [MV-ADAPTER-FAST] Decoded 6 images successfully
+2025-11-03 21:08:09.087 | INFO     | __main__:generate_images:147 - [MV-ADAPTER/API]: generated 6 views in /tmp/views_9ldjqwte
+2025-11-03 21:08:09.090 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 21:08:16.795 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the background is neutral, which helps the subject stand out. The red color is uniform, and the details in the fur texture are consistent. The images are realistic and match the prompt well.', 'negative_prompt': 'none'}
+2025-11-03 21:08:16.796 | INFO     | __main__:check_views_quality:167 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the background is neutral, which helps the subject stand out. The red color is uniform, and the details in the fur texture are consistent. The images are realistic and match the prompt well.', 'negative_prompt': 'none'}
+2025-11-03 21:08:17.185 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, wrong color distribution, shadow artifacts, lighting issues, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the background is neutral, which helps the subject stand out. The red color is uniform, and the details in the fur texture are consistent. The images are realistic and match the prompt well.
+2025-11-03 21:08:17.190 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:08:17.192 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:08:21.090 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: extra limbs, deformed face, incorrect proportions, wrong color distribution, shadow artifacts, lighting issues, background, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the background is neutral, which helps the subject stand out. The red color is uniform, and the details in the fur texture are consistent. The images are realistic and match the prompt well.
+2025-11-03 21:08:21.090 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:08:21.090 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:22:20.111 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 21:22:20.111 | INFO     | api_stream:load_pipe_trellis:149 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 21:22:49.739 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 21:22:52.430 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 21:37:06.757 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 21:37:06.759 | INFO     | api_stream:load_pipe_trellis:149 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 21:37:36.180 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 21:37:38.950 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 21:38:51.465 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 21:38:51.465 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 21:38:52.304 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, full body', 'negative': 'blurry, low detail, extra limbs, deformed face, incorrect scale, artifacts, lighting, shadows'}
+2025-11-03 21:38:52.675 | INFO     | __main__:generate_images:114 - [MV-ADAPTER] Starting generation...
+2025-11-03 21:38:52.675 | INFO     | __main__:_api_t2mv_generate:87 - [MV-ADAPTER] Calling API...
+2025-11-03 21:38:52.690 | INFO     | api_stream:t2mv_generate2:96 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 21:38:52.692 | INFO     | api_stream:t2mv_generate2:97 - [MV-ADAPTER] prompt: dog, red, full body and neg_prompt: blurry, low detail, extra limbs, deformed face, incorrect scale, artifacts, lighting, shadows (API)
+2025-11-03 21:38:58.607 | INFO     | api_stream:t2mv_generate2:114 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:38:58.998 | INFO     | api_stream:t2mv_generate2:127 - [MV-ADAPTER] ZIP created at /tmp/tmpr6bar4hv.zip
+2025-11-03 21:38:59.008 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] Response received, extracting images...
+2025-11-03 21:38:59.078 | INFO     | __main__:_api_t2mv_generate:106 - [MV-ADAPTER] Extracted 6 images from ZIP
+2025-11-03 21:38:59.079 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Got 6 images from API
+2025-11-03 21:38:59.459 | INFO     | __main__:generate_images:123 - [MV-ADAPTER] Saved to /tmp/views_mh22opud, returning 6 paths
+2025-11-03 21:38:59.463 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 21:39:06.856 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with no visible geometry holes or extra limbs. The colors are vibrant and the lighting is even, with no noticeable artifacts or shadows. The background is neutral, which helps the subject stand out. The images are realistic and match the prompt well.', 'negative_prompt': 'none'}
+2025-11-03 21:39:06.856 | INFO     | __main__:check_views_quality:142 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with no visible geometry holes or extra limbs. The colors are vibrant and the lighting is even, with no noticeable artifacts or shadows. The background is neutral, which helps the subject stand out. The images are realistic and match the prompt well.', 'negative_prompt': 'none'}
+2025-11-03 21:39:07.250 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: blurry, low detail, extra limbs, deformed face, incorrect scale, artifacts, lighting, shadows, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with no visible geometry holes or extra limbs. The colors are vibrant and the lighting is even, with no noticeable artifacts or shadows. The background is neutral, which helps the subject stand out. The images are realistic and match the prompt well.
+2025-11-03 21:39:07.254 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:39:07.254 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:39:11.121 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: blurry, low detail, deformed face, incorrect scale, artifacts, repetitive textures, lighting, shadows, background, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with no visible geometry holes or extra limbs. The colors are vibrant and the lighting is even, with no noticeable artifacts or shadows. The background is neutral, which helps the subject stand out. The images are realistic and match the prompt well.
+2025-11-03 21:39:11.123 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:39:11.123 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:45:50.182 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 21:45:50.184 | INFO     | api_stream:load_pipe_trellis:149 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 21:46:21.893 | INFO     | api_stream:load_pipe_trellis:152 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 21:46:24.530 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 21:47:32.734 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 21:47:32.734 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 21:47:33.571 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, detailed fur, full body', 'negative': 'low detail, deformed limbs, extra tails, incorrect proportions, unrealistic coloration, artifacts, incorrect scale'}
+2025-11-03 21:47:33.946 | INFO     | __main__:generate_images:109 - [MV-ADAPTER] Starting generation...
+2025-11-03 21:47:33.946 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-03 21:47:33.981 | INFO     | api_stream:t2mv_generate2:96 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 21:47:33.981 | INFO     | api_stream:t2mv_generate2:97 - [MV-ADAPTER] prompt: dog, red, detailed fur, full body and neg_prompt: low detail, deformed limbs, extra tails, incorrect proportions, unrealistic coloration, artifacts, incorrect scale (API)
+2025-11-03 21:47:39.974 | INFO     | api_stream:t2mv_generate2:114 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:47:40.388 | INFO     | api_stream:t2mv_generate2:127 - [MV-ADAPTER] ZIP created at /tmp/tmpqs56apft.zip
+2025-11-03 21:47:41.085 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 21:47:45.328 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 21:47:45.330 | INFO     | __main__:check_views_quality:137 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 21:47:53.815 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, deformed limbs, extra tails, incorrect proportions, unrealistic coloration, artifacts, incorrect scale, eval: The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-03 21:47:53.816 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:47:53.816 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:53:46.777 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 21:53:46.777 | INFO     | api_stream:load_pipe_trellis:148 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 21:54:17.292 | INFO     | api_stream:load_pipe_trellis:151 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 21:54:19.942 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 21:54:30.948 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 21:54:30.948 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 21:54:31.871 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, detailed fur, full body', 'negative': 'low detail, extra limbs, deformed face, incorrect proportions, unrealistic color blending, artifacts, lighting, shadows'}
+2025-11-03 21:54:32.217 | INFO     | __main__:generate_images:109 - [MV-ADAPTER] Starting generation...
+2025-11-03 21:54:32.217 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-03 21:54:32.234 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 21:54:32.235 | INFO     | api_stream:t2mv_generate:66 - [MV-ADAPTER] prompt: dog, red, detailed fur, full body and neg_prompt: low detail, extra limbs, deformed face, incorrect proportions, unrealistic color blending, artifacts, lighting, shadows (API)
+2025-11-03 21:54:42.987 | INFO     | api_stream:t2mv_generate:83 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:54:43.487 | INFO     | __main__:_api_t2mv_generate:101 - [MV-ADAPTER] Extracted 6 images from JSON
+2025-11-03 21:54:43.489 | INFO     | __main__:generate_images:113 - [MV-ADAPTER] Got 6 images from API
+2025-11-03 21:54:43.863 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Saved to /tmp/views_kvbcobju, returning 6 paths
+2025-11-03 21:54:43.866 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 21:54:51.131 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 21:54:51.131 | INFO     | __main__:check_views_quality:137 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 21:54:51.628 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, unrealistic color blending, artifacts, lighting, shadows, eval: 
+2025-11-03 21:54:51.628 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:54:51.628 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:54:51.689 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 21:54:55.688 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red fur, detailed fur, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, unrealistic color blending, artifacts, harsh lighting, overcast shadows, background, eval: 
+2025-11-03 21:54:55.688 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:54:55.688 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:55:02.719 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 21:55:02.721 | INFO     | __main__:check_views_quality:137 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 21:55:09.528 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red fur, detailed fur, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, unrealistic color blending, artifacts, harsh lighting, overcast shadows, background, eval: The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-03 21:55:09.529 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:55:09.529 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:57:19.185 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-03 21:57:19.186 | INFO     | api_stream:load_pipe_trellis:161 - [TRELLIS] Pipeline loaded (API)
+2025-11-03 21:57:47.225 | INFO     | api_stream:load_pipe_trellis:164 - [TRELLIS] Pipeline prepared (API)
+2025-11-03 21:57:47.651 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-03 21:59:37.357 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 21:59:37.359 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 21:59:38.186 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, full body', 'negative': 'low detail, extra limbs, deformed face, incorrect proportions, flat fur, bad anatomy, lighting, shadows'}
+2025-11-03 21:59:38.520 | INFO     | __main__:generate_images:111 - [MV-ADAPTER] Starting generation...
+2025-11-03 21:59:38.520 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-03 21:59:38.534 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 21:59:49.259 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 21:59:50.564 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted 6 images from ZIP
+2025-11-03 21:59:50.568 | INFO     | __main__:generate_images:115 - [MV-ADAPTER] Got 6 images from API
+2025-11-03 21:59:50.898 | INFO     | __main__:generate_images:120 - [MV-ADAPTER] Saved to /tmp/views_f8_ay028, returning 6 paths
+2025-11-03 21:59:50.900 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 21:59:58.423 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the subject stand out. The red color is uniform and the details are clear.', 'negative_prompt': 'none'}
+2025-11-03 21:59:58.424 | INFO     | __main__:check_views_quality:139 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the subject stand out. The red color is uniform and the details are clear.', 'negative_prompt': 'none'}
+2025-11-03 21:59:58.867 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, flat fur, bad anatomy, lighting, shadows, eval: 
+2025-11-03 21:59:58.868 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 21:59:58.869 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 21:59:58.874 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 22:00:05.755 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, flat fur, bad anatomy, repetitive patterns, background, eval: 
+2025-11-03 22:00:05.755 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 22:00:05.755 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 22:00:13.219 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the subject stand out. The red color is uniform and the details are clear.', 'negative_prompt': 'none'}
+2025-11-03 22:00:13.222 | INFO     | __main__:check_views_quality:139 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the subject stand out. The red color is uniform and the details are clear.', 'negative_prompt': 'none'}
+2025-11-03 22:00:23.450 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red body, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, flat fur, bad anatomy, repetitive patterns, background, harsh lighting, eval: The images show a red dog from different angles. The dog is consistent in appearance across the views, with a full body and no visible artifacts or geometry holes. The lighting and shadows are even, and the background is neutral, which helps the subject stand out. The red color is uniform and the details are clear.
+2025-11-03 22:00:23.451 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 22:00:23.457 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 22:02:08.766 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-03 22:02:08.767 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-03 22:02:09.644 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, detailed fur, full body', 'negative': 'low detail, extra limbs, deformed face, incorrect proportions, blurred features, lighting, shadows, background'}
+2025-11-03 22:02:10.028 | INFO     | __main__:generate_images:105 - [MV-ADAPTER] Starting generation...
+2025-11-03 22:02:10.028 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-03 22:02:10.033 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-03 22:02:20.261 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-03 22:02:22.018 | INFO     | __main__:_api_t2mv_generate:100 - [MV-ADAPTER] Extracted ZIP to /tmp/views_3zri3vh0
+2025-11-03 22:02:22.019 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_3zri3vh0
+2025-11-03 22:02:22.026 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 22:02:29.490 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 22:02:29.492 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 22:02:29.879 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, blurred features, lighting, shadows, background, eval: 
+2025-11-03 22:02:29.880 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 22:02:29.886 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 22:02:29.938 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-03 22:02:37.128 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: extra limbs, deformed face, incorrect proportions, blurred features, repetitive fur patterns, flat fur texture, lighting, shadows, background, eval: 
+2025-11-03 22:02:37.128 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-03 22:02:37.129 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-03 22:02:44.329 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-03 22:02:44.331 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 00:04:52.055 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: extra limbs, deformed face, incorrect proportions, repetitive fur patterns, flat fur texture, unnatural lighting, harsh shadows, cluttered background, eval: The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 00:04:52.059 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 00:04:52.063 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 00:46:51.398 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-04 00:46:51.400 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-04 00:46:55.285 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, detailed fur, full body', 'negative': 'low detail, extra limbs, deformed face, incorrect proportions, incorrect tail, artifacts, lighting, shadows'}
+2025-11-04 00:46:55.658 | INFO     | __main__:generate_images:105 - [MV-ADAPTER] Starting generation...
+2025-11-04 00:46:55.658 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 00:46:55.665 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 00:47:05.932 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 00:47:07.919 | INFO     | __main__:_api_t2mv_generate:100 - [MV-ADAPTER] Extracted ZIP to /tmp/views_gxhhpiya
+2025-11-04 00:47:07.920 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_gxhhpiya
+2025-11-04 00:47:07.925 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 00:47:16.002 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 00:47:16.004 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 00:47:16.440 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, incorrect tail, artifacts, lighting, shadows, eval: 
+2025-11-04 00:47:16.441 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 00:47:16.441 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 00:47:16.451 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 00:47:23.185 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: extra limbs, deformed face, incorrect proportions, incorrect tail, artifacts, over-exposed areas, under-exposed areas, background, eval: 
+2025-11-04 00:47:23.186 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 00:47:23.187 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 00:47:30.492 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 00:47:30.495 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 00:47:37.390 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: extra limbs, deformed face, incorrect proportions, artifacts, over-exposed areas, under-exposed areas, background, unnatural lighting, eval: The images match the prompt well, showing a red dog with detailed fur and a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 00:47:37.391 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 00:47:37.391 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:04:04.470 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: blue dog
+2025-11-04 01:04:04.471 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: blue dog (using qwen2.5:7b)
+2025-11-04 01:04:08.019 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, blue, full body', 'negative': 'low detail, extra limbs, deformed face, incorrect proportions, artifacts, blocky texture, unrealistic shadows, bad lighting'}
+2025-11-04 01:04:08.382 | INFO     | __main__:generate_images:105 - [MV-ADAPTER] Starting generation...
+2025-11-04 01:04:08.383 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 01:04:08.391 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 01:04:18.658 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 01:04:19.882 | INFO     | __main__:_api_t2mv_generate:100 - [MV-ADAPTER] Extracted ZIP to /tmp/views_34a1gy_2
+2025-11-04 01:04:19.884 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_34a1gy_2
+2025-11-04 01:04:19.887 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 01:04:27.427 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': "The images show a blue dog from different angles. The dog appears consistent across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the colors are vibrant and realistic. The dog's fur texture looks detailed and natural. The background is neutral, which helps the subject stand out.", 'negative_prompt': 'none'}
+2025-11-04 01:04:27.430 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': "The images show a blue dog from different angles. The dog appears consistent across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the colors are vibrant and realistic. The dog's fur texture looks detailed and natural. The background is neutral, which helps the subject stand out.", 'negative_prompt': 'none'}
+2025-11-04 01:04:27.877 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, blue, full body, negative: low detail, extra limbs, deformed face, incorrect proportions, artifacts, blocky texture, unrealistic shadows, bad lighting, eval: 
+2025-11-04 01:04:27.881 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:04:27.884 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:04:27.901 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 01:04:34.918 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, blue, negative: low detail, extra limbs, deformed face, incorrect proportions, artifacts, blocky texture, unrealistic shadows, bad lighting, background, eval: 
+2025-11-04 01:04:34.919 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:04:34.919 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:04:42.275 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': "The images show a blue dog from different angles. The dog appears consistent across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the colors are vibrant and realistic. The dog's fur texture looks detailed and natural. The background is neutral, which helps the subject stand out.", 'negative_prompt': 'none'}
+2025-11-04 01:04:42.280 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': "The images show a blue dog from different angles. The dog appears consistent across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the colors are vibrant and realistic. The dog's fur texture looks detailed and natural. The background is neutral, which helps the subject stand out.", 'negative_prompt': 'none'}
+2025-11-04 01:04:49.361 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, blue, negative: low detail, extra limbs, deformed face, incorrect proportions, artifacts, blocky texture, unrealistic shadows, bad lighting, background, eval: The images show a blue dog from different angles. The dog appears consistent across the views, with no visible geometry holes or extra limbs. The lighting and shadows are well-rendered, and the colors are vibrant and realistic. The dog's fur texture looks detailed and natural. The background is neutral, which helps the subject stand out.
+2025-11-04 01:04:49.361 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:04:49.361 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:13:11.001 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-04 01:13:11.002 | INFO     | api_stream:load_pipe_trellis:161 - [TRELLIS] Pipeline loaded (API)
+2025-11-04 01:13:42.445 | INFO     | api_stream:load_pipe_trellis:164 - [TRELLIS] Pipeline prepared (API)
+2025-11-04 01:13:45.773 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-04 01:15:02.544 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-04 01:15:02.544 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-04 01:15:03.322 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, detailed fur, full body', 'negative': 'low detail, deformed limbs, extra tails, incorrect proportions, flat colors, artifacts, lighting, shadows'}
+2025-11-04 01:15:03.654 | INFO     | __main__:generate_images:105 - [MV-ADAPTER] Starting generation...
+2025-11-04 01:15:03.654 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 01:15:03.662 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 01:15:14.427 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 01:15:14.678 | INFO     | __main__:_api_t2mv_generate:100 - [MV-ADAPTER] Extracted ZIP to /tmp/views_o1ozcais
+2025-11-04 01:15:14.679 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 0 images in /tmp/views_o1ozcais
+2025-11-04 01:15:15.110 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 01:15:15.110 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, deformed limbs, extra tails, incorrect proportions, flat colors, artifacts, lighting, shadows, eval: 
+2025-11-04 01:15:15.113 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:15:15.113 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:15:16.375 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, deformed limbs, extra tails, incorrect proportions, flat colors, artifacts, harsh lighting, dark shadows, background, eval: 
+2025-11-04 01:15:16.375 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:15:16.375 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:15:20.485 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 01:15:20.485 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 01:15:24.429 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red fur, detailed fur, full body, negative: deformed limbs, extra tails, incorrect proportions, flat colors, artifacts, harsh lighting, dark shadows, background, eval: The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-04 01:15:24.431 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:15:24.432 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:53:23.747 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: purple bird
+2025-11-04 01:53:23.747 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: purple bird (using qwen2.5:7b)
+2025-11-04 01:53:27.085 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bird, purple, detailed feathers, full body', 'negative': 'blurry, artifacts, incorrect anatomy, duplicate wings, deformed beak, unrealistic feathering, overly simplified shape, flat coloration, lighting, shadows'}
+2025-11-04 01:53:27.467 | INFO     | __main__:generate_images:105 - [MV-ADAPTER] Starting generation...
+2025-11-04 01:53:27.467 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 01:53:27.475 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 01:53:37.748 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 01:53:38.050 | INFO     | __main__:_api_t2mv_generate:100 - [MV-ADAPTER] Extracted ZIP to /tmp/views_ay_ocb3s
+2025-11-04 01:53:38.051 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 0 images in /tmp/views_ay_ocb3s
+2025-11-04 01:53:38.394 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bird, purple, detailed feathers, full body, negative: blurry, artifacts, incorrect anatomy, duplicate wings, deformed beak, unrealistic feathering, overly simplified shape, flat coloration, lighting, shadows, eval: 
+2025-11-04 01:53:38.399 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:53:38.399 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:53:38.495 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 01:53:39.559 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bird, purple, detailed feathers, full body, negative: flat coloration, unrealistic feathering, overly simplified shape, duplicate wings, deformed beak, repetitive textures, poor lighting, harsh shadows, background, eval: 
+2025-11-04 01:53:39.559 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:53:39.559 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:53:44.101 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a detailed purple bird with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 01:53:44.102 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a detailed purple bird with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 01:53:51.436 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bird, purple, detailed feathers, full body, negative: flat coloration, unrealistic feathering, overly simplified shape, duplicate wings, deformed beak, repetitive textures, poor lighting, harsh shadows, background, eval: The images match the prompt well, showing a detailed purple bird with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-04 01:53:51.442 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:53:51.443 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:57:22.834 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-04 01:57:22.836 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-04 01:57:23.744 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, detailed fur, full body', 'negative': 'low detail, deformed limbs, extra tails, mismatched colors, incorrect proportions, blurred features, lighting, shadows, background'}
+2025-11-04 01:57:24.097 | INFO     | __main__:generate_images:105 - [MV-ADAPTER] Starting generation...
+2025-11-04 01:57:24.098 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 01:57:24.106 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 01:57:34.356 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 01:57:34.593 | INFO     | __main__:_api_t2mv_generate:100 - [MV-ADAPTER] Extracted ZIP to /tmp/views_w1kwkj7p
+2025-11-04 01:57:34.594 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 0 images in /tmp/views_w1kwkj7p
+2025-11-04 01:57:34.943 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, deformed limbs, extra tails, mismatched colors, incorrect proportions, blurred features, lighting, shadows, background, eval: 
+2025-11-04 01:57:34.947 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:57:34.948 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:57:35.044 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 01:57:36.157 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red fur, detailed fur, full body, negative: low detail, deformed limbs, extra tails, mismatched colors, incorrect proportions, unnatural colors, lighting, shadows, background, eval: 
+2025-11-04 01:57:36.157 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:57:36.157 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:57:40.278 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 01:57:40.278 | INFO     | __main__:check_views_quality:131 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 01:57:44.106 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red fur, detailed fur, full body, negative: low detail, deformed limbs, extra tails, mismatched colors, incorrect proportions, unnatural colors, harsh shadows, cluttered background, eval: The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-04 01:57:44.107 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:57:44.108 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:58:42.577 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-04 01:58:42.577 | INFO     | api_stream:load_pipe_trellis:161 - [TRELLIS] Pipeline loaded (API)
+2025-11-04 01:59:12.589 | INFO     | api_stream:load_pipe_trellis:164 - [TRELLIS] Pipeline prepared (API)
+2025-11-04 01:59:13.064 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-04 01:59:34.915 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-04 01:59:34.917 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-04 01:59:35.790 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, full body', 'negative': 'low detail, incorrect limbs, deformed face, extra tails, blurry, artifacts, incorrect scale, lighting, shadows'}
+2025-11-04 01:59:37.990 | INFO     | __main__:generate_images:105 - [MV-ADAPTER] Starting generation...
+2025-11-04 01:59:37.990 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 01:59:38.015 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 01:59:48.766 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 01:59:49.001 | INFO     | __main__:_api_t2mv_generate:100 - [MV-ADAPTER] Extracted ZIP to /tmp/views__hwikpqf
+2025-11-04 01:59:49.002 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 0 images in /tmp/views__hwikpqf
+2025-11-04 01:59:49.398 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: low detail, incorrect limbs, deformed face, extra tails, blurry, artifacts, incorrect scale, lighting, shadows, eval: 
+2025-11-04 01:59:49.399 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 01:59:49.399 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:59:49.400 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:59:50.512 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: low detail, incorrect limbs, deformed face, extra tails, blurry, artifacts, incorrect scale, overcast shadows, eval: 
+2025-11-04 01:59:50.512 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 01:59:50.512 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 01:59:54.941 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a red dog from different angles. The images are consistent across the views, and there are no visible issues or artifacts. The lighting and shadows are realistic, and the colors are accurate.', 'negative_prompt': 'none'}
+2025-11-04 01:59:54.942 | INFO     | __main__:check_views_quality:130 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a red dog from different angles. The images are consistent across the views, and there are no visible issues or artifacts. The lighting and shadows are realistic, and the colors are accurate.', 'negative_prompt': 'none'}
+2025-11-04 02:00:01.859 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, full body, negative: low detail, incorrect limbs, deformed face, extra tails, blurry, artifacts, incorrect scale, overcast shadows, eval: The images match the prompt well, showing a red dog from different angles. The images are consistent across the views, and there are no visible issues or artifacts. The lighting and shadows are realistic, and the colors are accurate.
+2025-11-04 02:00:01.860 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:00:01.860 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:03:26.636 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog
+2025-11-04 02:03:26.636 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog (using qwen2.5:7b)
+2025-11-04 02:03:27.642 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, detailed fur, full body', 'negative': 'low detail, incorrect anatomy, deformed limbs, extra tails, flat ears, wrong coloration, blocky features, lighting, shadows, background'}
+2025-11-04 02:03:28.003 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 02:03:28.004 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 02:03:28.008 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 02:03:38.284 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 02:03:38.550 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 02:03:38.555 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_u7huultd
+2025-11-04 02:03:38.556 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Got 6 images in /tmp/views_u7huultd
+2025-11-04 02:03:39.010 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, incorrect anatomy, deformed limbs, extra tails, flat ears, wrong coloration, blocky features, lighting, shadows, background, eval: 
+2025-11-04 02:03:39.010 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 02:03:39.010 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:03:39.012 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:03:40.330 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red fur, detailed fur, full body, negative: incorrect anatomy, deformed limbs, extra tails, flat ears, wrong fur color, blocky features, unnatural lighting, harsh shadows, background, eval: 
+2025-11-04 02:03:40.332 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:03:40.332 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:03:44.609 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 02:03:44.609 | INFO     | __main__:check_views_quality:123 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 02:03:48.489 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red fur, detailed fur, full body, negative: incorrect anatomy, deformed limbs, extra tails, flat ears, blocky features, unnatural lighting, harsh shadows, background, eval: The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-04 02:03:48.489 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:03:48.490 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:03:59.727 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog 4k realistic, anime, horns, giant fluffy tail
+2025-11-04 02:03:59.727 | INFO     | ollama:prepare_prompts:130 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog 4k realistic, anime, horns, giant fluffy tail (using qwen2.5:7b)
+2025-11-04 02:04:00.583 | INFO     | ollama:prepare_prompts:150 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, detailed fur, full body', 'negative': 'low detail, artifacts, extra limbs, deformed face, incorrect scale, unrealistic color, blurry, lighting'}
+2025-11-04 02:04:00.952 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 02:04:00.953 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 02:04:00.957 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 02:04:11.254 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 02:04:11.512 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 02:04:11.515 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_gmerbul7
+2025-11-04 02:04:11.515 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Got 6 images in /tmp/views_gmerbul7
+2025-11-04 02:04:11.998 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: low detail, artifacts, extra limbs, deformed face, incorrect scale, unrealistic color, blurry, lighting, eval: 
+2025-11-04 02:04:11.999 | INFO     | ollama:check_views:290 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 02:04:12.002 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:04:12.005 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:04:13.265 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: artifacts, extra limbs, deformed face, incorrect scale, unrealistic color, blurry, poor lighting, background, eval: 
+2025-11-04 02:04:13.265 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:04:13.265 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:04:17.709 | INFO     | ollama:check_views:298 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 02:04:17.710 | INFO     | __main__:check_views_quality:123 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 02:04:21.582 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, detailed fur, full body, negative: artifacts, extra limbs, deformed face, incorrect scale, unrealistic color, poor lighting, harsh shadows, background, eval: The images match the prompt well, showing a detailed red dog with full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-04 02:04:21.582 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:04:21.582 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:08:55.481 | INFO     | api_stream:load_pipe_mvadapter:59 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-04 02:08:55.482 | INFO     | api_stream:load_pipe_trellis:161 - [TRELLIS] Pipeline loaded (API)
+2025-11-04 02:09:24.641 | INFO     | api_stream:load_pipe_trellis:164 - [TRELLIS] Pipeline prepared (API)
+2025-11-04 02:09:27.437 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-04 02:11:49.235 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: red dog, 4k, anime style, big fluffy tail, black eyes
+2025-11-04 02:11:49.237 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: red dog, 4k, anime style, big fluffy tail, black eyes (using qwen2.5:7b)
+2025-11-04 02:11:50.081 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, red, 4k realistic, anime style, big fluffy tail, black eyes, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background'}
+2025-11-04 02:11:50.455 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 02:11:50.456 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 02:11:50.470 | INFO     | api_stream:t2mv_generate:65 - [MV-ADAPTER] Generating images with seed 1 (API)
+2025-11-04 02:12:01.288 | INFO     | api_stream:t2mv_generate:82 - [MV-ADAPTER] Images generated 6 views (API)
+2025-11-04 02:12:01.527 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 02:12:01.531 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_phhrw4x7
+2025-11-04 02:12:01.531 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Got 6 images in /tmp/views_phhrw4x7
+2025-11-04 02:12:01.907 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, 4k realistic, anime style, big fluffy tail, black eyes, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: 
+2025-11-04 02:12:01.908 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:12:01.913 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:12:01.957 | INFO     | ollama:check_views:311 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 02:12:03.135 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, 4k realistic, anime style, big fluffy tail, black eyes, full body, negative: low detail, artifacts, bad anatomy, extra limbs, deformed face, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-04 02:12:03.135 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:12:03.135 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:12:07.501 | INFO     | ollama:check_views:319 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a dog with a red coat, big fluffy tail, black eyes, and a full body. The images are consistent across different angles, and there are no visible artifacts or major issues. The lighting and shadows are realistic, and the overall quality is good.', 'negative_prompt': 'none'}
+2025-11-04 02:12:07.502 | INFO     | __main__:check_views_quality:123 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a dog with a red coat, big fluffy tail, black eyes, and a full body. The images are consistent across different angles, and there are no visible artifacts or major issues. The lighting and shadows are realistic, and the overall quality is good.', 'negative_prompt': 'none'}
+2025-11-04 02:12:11.749 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, red, 4k realistic, anime style, big fluffy tail, black eyes, full body, negative: low detail, artifacts, bad anatomy, extra limbs, deformed face, unnatural shadows, unrealistic lighting, cluttered background, eval: The images match the prompt well, showing a dog with a red coat, big fluffy tail, black eyes, and a full body. The images are consistent across different angles, and there are no visible artifacts or major issues. The lighting and shadows are realistic, and the overall quality is good.
+2025-11-04 02:12:11.750 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 02:12:11.750 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 02:13:39.654 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Frame saved on temp_images_path/frame_48f030fe-50e4-4446-bc9b-eb418e3a7f68.jpg
+2025-11-04 02:13:39.656 | INFO     | api_stream:trellis_run:211 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-04 02:13:39.735 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Sizes {'glb': 1602948, 'ply': 30087968, 'mp4': 585775, 'frame': 46254} (API)
+2025-11-04 02:13:40.302 | INFO     | __main__:generate_3d:153 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_48f030fe-50e4-4446-bc9b-eb418e3a7f68.jpg
+2025-11-04 02:13:40.302 | INFO     | __main__:generate_3d:157 - [TRELLIS/API-b64] assets: /tmp/views_phhrw4x7/mesh_48f030fe-50e4-4446-bc9b-eb418e3a7f68.glb, /tmp/views_phhrw4x7/mesh_48f030fe-50e4-4446-bc9b-eb418e3a7f68.ply, /tmp/views_phhrw4x7/preview_48f030fe-50e4-4446-bc9b-eb418e3a7f68.mp4

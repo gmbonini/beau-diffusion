@@ -4,7 +4,7 @@ import tempfile
 import zipfile
 from typing import List, Optional
 from fastapi import FastAPI, UploadFile, File, HTTPException, Depends, Form, BackgroundTasks
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from PIL import Image
 from loguru import logger
 import torch
@@ -47,94 +47,106 @@ def load_pipe_mvadapter():
     pipe_mv, adapters = MVAdapterT2MV.prepare_pipeline(
         base_model="SG161222/RealVisXL_V4.0",
         vae_model="madebyollin/sdxl-vae-fp16-fix",
-        lora_model="guoyww/realismLora",
+        unet_model=None,
+        lora_model=None,
         adapter_path="huanngzh/mv-adapter",
         scheduler="euler_a",
-        dtype=torch.bfloat16,
+        num_views=6,
+        device="cuda" if torch.cuda.is_available() else "cpu",
+        dtype=torch.float16,                    
     )
     print('MV-Adapter pipeline loaded.')
     logger.info("[MV-ADAPTER] Pipeline loaded (API)")
     
 
 @app.post("/t2mv/generate")
-def t2mv_generate(ref_prompt, neg_prompt, randomize:bool = False):
-    seed = -1 if randomize else 42
-    seed = 1
+def t2mv_generate(ref_prompt, neg_prompt, randomize: bool = False, background_tasks: BackgroundTasks = None):
+    seed = -1 if randomize else 1
     logger.info(f"[MV-ADAPTER] Generating images with seed {seed} (API)")
-    logger.info(f"[MV-ADAPTER] prompt: {ref_prompt} and neg_prompt: {neg_prompt} (API)")
     
     global pipe_mv, adapters
-    # load_pipe_mvadapter()
     
     imgs = MVAdapterT2MV.run_pipeline(
         pipe=pipe_mv,
         num_views=6,
         text=ref_prompt,
         height=768, width=768,
-        num_inference_steps=12, # 50 default
+        num_inference_steps=24,
         guidance_scale=7.0,
         seed=seed,
         negative_prompt=neg_prompt,
         device="cuda" if torch.cuda.is_available() else "cpu",
         adapter_name_list=adapters,
-        # azimuth_deg= [270]
-        # azimuth_deg= [315]
-        # azimuth_deg = [45, 180, 315]
-       #  azimuth_deg = [0, 90, 270]
-        # azimuth_deg = [0, 45, 90, 180, 270, 315]
     )
-
+    
     logger.info("[MV-ADAPTER] Images generated {} views (API)".format(len(imgs)))
-    # pipe_mv.to("cpu")-ls
-    # del pipe_mv, adapters
-    # pipe_mv, adapters = None, []
-
-    return {"views": [{"b64png": _pil_to_b64(im)} for im in imgs]}
-
-@app.post("/t2mv/generate2")
-def t2mv_generate2(
-    ref_prompt: str,
-    neg_prompt: str,
-    randomize: bool = False,
-    background_tasks: BackgroundTasks = None
-):
-    seed = -1 if randomize else 42
-    seed = 1
-    logger.info(f"[MV-ADAPTER] Generating images with seed {seed} (API)")
-    logger.info(f"[MV-ADAPTER] prompt: {ref_prompt} and neg_prompt: {neg_prompt} (API)")
-    global pipe_mv, adapters
-    # load_pipe_mvadapter()
     
-    imgs = MVAdapterT2MV.run_pipeline(
-        pipe=pipe_mv,
-        num_views=6,
-        text=ref_prompt,
-        height=768, width=768,
-        num_inference_steps=12, # 50 default
-        guidance_scale=7.0,
-        seed=seed,
-        negative_prompt=neg_prompt,
-        device="cuda" if torch.cuda.is_available() else "cpu",
-        adapter_name_list=adapters,
-    )
-    
-    session_id = str(uuid.uuid4())
-    zip_path = f"/tmp/views_{session_id}.zip"
-    
-    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+    # Criar ZIP em memória
+    zip_buffer = io.BytesIO()
+    with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_STORED) as zipf:
         for i, img in enumerate(imgs):
             buf = io.BytesIO()
-            img.save(buf, format="PNG")
-            zipf.writestr(f"view_{i:02d}.png", buf.getvalue())
+            img.save(buf, format="JPEG")
+            zipf.writestr(f"view_{i:02d}.jpg", buf.getvalue())
     
-    logger.info(f"[MV-ADAPTER] ZIP created with {len(imgs)} views")
-    background_tasks.add_task(os.remove, zip_path)
+    zip_buffer.seek(0)
     
-    return FileResponse(
-        zip_path, 
+    return StreamingResponse(
+        zip_buffer,
         media_type="application/zip",
-        filename=f"views_{session_id}.zip",        
+        headers={"Content-Disposition": "attachment; filename=views.zip"}
     )
+
+# @app.post("/t2mv/generate2")
+# def t2mv_generate2(
+#     ref_prompt: str,
+#     neg_prompt: str,
+#     randomize: bool = False,
+#     background_tasks: BackgroundTasks = None
+# ):
+#     seed = -1 if randomize else 1
+#     logger.info(f"[MV-ADAPTER] Generating images with seed {seed} (API)")
+#     logger.info(f"[MV-ADAPTER] prompt: {ref_prompt} and neg_prompt: {neg_prompt} (API)")
+    
+#     global pipe_mv, adapters
+    
+#     imgs = MVAdapterT2MV.run_pipeline(
+#         pipe=pipe_mv,
+#         num_views=6,
+#         text=ref_prompt,
+#         height=768, width=768,
+#         num_inference_steps=12,
+#         guidance_scale=7.0,
+#         seed=seed,
+#         negative_prompt=neg_prompt,
+#         device="cuda" if torch.cuda.is_available() else "cpu",
+#         adapter_name_list=adapters,
+#     )
+    
+#     logger.info("[MV-ADAPTER] Images generated {} views (API)".format(len(imgs)))
+    
+#     # Cria ZIP em arquivo temporário (não em memória)
+#     temp_zip = tempfile.NamedTemporaryFile(delete=False, suffix=".zip")
+#     zip_path = temp_zip.name
+#     temp_zip.close()
+    
+#     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_STORED) as zipf:
+#         for i, img in enumerate(imgs):
+#             buf = io.BytesIO()
+#             img.save(buf, format="PNG")
+#             zipf.writestr(f"view_{i:02d}.png", buf.getvalue())
+    
+#     logger.info(f"[MV-ADAPTER] ZIP created at {zip_path}")
+    
+#     # Agenda remoção do arquivo após enviar
+#     if background_tasks:
+#         background_tasks.add_task(os.unlink, zip_path)
+    
+#     return FileResponse(
+#         zip_path,
+#         media_type="application/zip",
+#         filename="views.zip"
+#     )
 
 
 # --------- TRELLIS
@@ -152,8 +164,6 @@ def load_pipe_trellis():
     logger.info("[TRELLIS] Pipeline prepared (API)")
     
 
-import uuid
-
 @app.post("/mv2m/generate")
 async def trellis_run(files: List[UploadFile] = File(...)):
     if not files:
@@ -161,17 +171,14 @@ async def trellis_run(files: List[UploadFile] = File(...)):
 
     outdir = None
     try:
-        # uploadfiles > pil files
         views = []
         for uf in files:
             content = await uf.read()
             img = Image.open(io.BytesIO(content)).convert("RGB")
             views.append(img)
 
-        # load_pipe_trellis()
         outputs = pipe_trellis.run_pipeline(views, seed=42)
 
-        # tmp files with uuid
         session_id = str(uuid.uuid4())
         outdir = tempfile.mkdtemp(prefix=f"trellis_{session_id}_")
         glb_path = os.path.join(outdir, f"mesh_{session_id}.glb")
@@ -185,7 +192,6 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         pipe_trellis.save_mesh(outputs, glb_path, ply_path, simplify=0.95, texture_size=1024)
         pipe_trellis.save_video(outputs, filename=mp4_path)
         
-        # extract middle frame
         cap = cv2.VideoCapture(mp4_path)
         if cap.isOpened():
             total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -241,7 +247,6 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         raise HTTPException(status_code=500, detail=str(e))
     
     finally:
-
         if outdir and os.path.exists(outdir):
             shutil.rmtree(outdir, ignore_errors=True)
       
@@ -257,24 +262,16 @@ async def feedback_save(
     step: str = Form(None),
     db: DatabaseConnector = Depends(get_db_connector)
 ):
-    """
-    Save feedback and associated multiview images.
-    Automatically cleans up oldest feedback if more than 100 multiview images exist.
-    """
     if is_positive not in [0, 1]:
         raise HTTPException(status_code=422, detail="'is_positive' must be 0 or 1")
 
     try:
-        
         multiview_count = db.get_multiview_count()
-        
-        
         new_images_count = len(multiview_files) if multiview_files else 0
         
         while multiview_count + new_images_count > 100:
             oldest_feedback = db.get_oldest_feedback_with_multiviews()
             if oldest_feedback:
-                
                 multiview_paths = db.get_multiview_paths(oldest_feedback['id'])
                 for path in multiview_paths:
                     if os.path.exists(path):
@@ -284,18 +281,14 @@ async def feedback_save(
                         except Exception as e:
                             logger.warning(f"[CLEANUP] Failed to delete {path}: {e}")
                 
-                
                 db.delete_multiviews_by_feedback_id(oldest_feedback['id'])
                 db.delete_feedback(oldest_feedback['id'])
                 
                 logger.info(f"[CLEANUP] Deleted oldest feedback (ID: {oldest_feedback['id']}) with {oldest_feedback['multiview_count']} images")
-                
-                
                 multiview_count = db.get_multiview_count()
             else:
                 break
 
-        
         feedback_id = db.save_feedback(
             is_positive=is_positive,
             original_prompt=original_prompt,
@@ -309,7 +302,6 @@ async def feedback_save(
         if multiview_files:
             temp_path = "temp_images_path"
             os.makedirs(temp_path, exist_ok=True)
-                        
             batch_uuid = str(uuid.uuid4())
             
             for idx, uf in enumerate(multiview_files):

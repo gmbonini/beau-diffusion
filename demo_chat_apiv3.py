@@ -13,16 +13,12 @@ from PIL import Image
 
 import requests
 
-# LOCK REGENERATE BUTTON LLM
-# ATT LLM PROMPT WITH CHAT PROMPT
 API_URL = os.getenv("API_URL", "http://127.0.0.1:8081")
 
 logger.add("gradio.log", rotation="1 MB")
 
-# att llm prompt
 def _sync_llm_prompts(cur_ref, cur_neg):
     return gr.update(value=cur_ref, visible=True), gr.update(value=cur_neg, visible=True)
-
 
 def free_vram():
     torch.cuda.empty_cache()
@@ -30,16 +26,14 @@ def free_vram():
     gc.collect()
 
 def _save_images_to_tmp(images):
-    # save pil image list to a temp dir and return the dir
     tmpdir = tempfile.mkdtemp(prefix="views_")
     for i, im in enumerate(images):
-        p = os.path.join(tmpdir, f"view_{i:02d}.png")
+        p = os.path.join(tmpdir, f"view_{i:02d}.jpg")
         im.save(p)
     return tmpdir
 
 def _load_views_from_dir(views_dir):
-    # load and order views by name
-    paths = sorted(glob.glob(os.path.join(views_dir, "*.png")))
+    paths = sorted(glob.glob(os.path.join(views_dir, "*.jpg")))
     imgs = [Image.open(p).convert("RGB") for p in paths]
     return imgs, paths
 
@@ -55,8 +49,8 @@ def chat_start_fn(refined, neg_txt, eval_txt):
         data["refined"],
         data["negative"],
         data["avaliation"],
-        gr.update(value="", interactive=True), # reenable clear input
-        gr.update(visible=False, interactive=False) # hide apply btn
+        gr.update(value="", interactive=True),
+        gr.update(visible=False, interactive=False)
     )
 
 def chat_continue_fn(history, user_text, messages, cur_ref, cur_neg, cur_eval):
@@ -75,55 +69,50 @@ def chat_continue_fn(history, user_text, messages, cur_ref, cur_neg, cur_eval):
 
  # ------------ MV-Adapter ------------
 def llm_prompt_processing(prompt):
-    # ref_prompt = refine_prompt(prompt)
-    # neg_prompt = negative_prompt(ref_prompt)
     logger.info(f"[MV-ADAPTER] generating images. prompt to be refined: {prompt}")
     result = prepare_prompts(prompt)
     ref_prompt = result['refined']
     neg_prompt = result['negative'] or "nothing to change"
-    # logger.info(f"[MV-ADAPTER] refined prompt: {ref_prompt}")
-    # logger.info(f"[MV-ADAPTER] negative prompt: {neg_prompt}")
     return (
-        gr.update(value=ref_prompt, visible=True), # ref_prompt
-        gr.update(value=neg_prompt, visible=True), # neg_prompt
-        ref_prompt, # state_last_prompt
-        neg_prompt # state_neg_prompt
+        gr.update(value=ref_prompt, visible=True),
+        gr.update(value=neg_prompt, visible=True),
+        ref_prompt,
+        neg_prompt
     )
 
 def _api_t2mv_generate(refined_prompt, negative_prompt, randomize):
+    logger.info(f"[MV-ADAPTER] Calling API...")
+    
     resp = requests.post(
-        f"{API_URL}/t2mv/generate2",
+        f"{API_URL}/t2mv/generate",
         params={"ref_prompt": refined_prompt, "neg_prompt": negative_prompt, "randomize": randomize},
         timeout=600,
     )
     resp.raise_for_status()
+    logger.info(f"[MV-ADAPTER] API call successful, processing response...")    
+    views_dir = tempfile.mkdtemp(prefix="views_")
+        
+    with zipfile.ZipFile(io.BytesIO(resp.content), 'r') as zipf:
+        zipf.extractall(views_dir)
     
-    imgs = []
-    with zipfile.ZipFile(io.BytesIO(resp.content)) as zf:
-        for name in sorted(zf.namelist()):
-            with zf.open(name) as f:
-                imgs.append(Image.open(f).convert("RGB"))
-    
-    return imgs
+    logger.info(f"[MV-ADAPTER] Extracted ZIP to {views_dir}")
+    return views_dir
 
 
 def generate_images(refined_prompt, negative_prompt, randomize=False):
-    imgs = _api_t2mv_generate(refined_prompt, negative_prompt, randomize)
-
-    views_dir = _save_images_to_tmp(imgs)
-    logger.info(f"[MV-ADAPTER/API]: generated {len(imgs)} views in {views_dir}")
-
-    paths = sorted(glob.glob(os.path.join(views_dir, "*.png")))
-
-    llm_avaliation, llm_eval_neg_prompt = check_views_quality(views_dir, refined_prompt) # (refined_prompt, views_dir)
+    logger.info(f"[MV-ADAPTER] Starting generation...")
+        
+    views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize)    
+        
+    paths = sorted(glob.glob(os.path.join(views_dir, "*.jpg")))
+    logger.info(f"[MV-ADAPTER] Got {len(paths)} images in {views_dir}")
+            
 
     return (
         paths,
         views_dir,
         gr.update(visible=True),
-        refined_prompt,
-        gr.update(value=llm_avaliation, visible=True),
-        gr.update(value=llm_eval_neg_prompt, visible=True),
+        refined_prompt
     )
 
 def check_views_quality(views_dir, prompt):
@@ -136,42 +125,6 @@ def check_views_quality(views_dir, prompt):
 
  # ------------ TRELLIS ------------
 
-
-# def generate_3d(views_dir):
-#     # global pipe_trellis
-#     # load_pipe_trellis()
-#     # outputs = pipe_trellis.run_pipeline(images, seed=42)
-#     # video, filename = pipe_trellis.save_video(outputs, filename="multiview_gradio.mp4")
-#     # # mesh, filename_mesh = pipe_trellis.save_mesh(outputs, filename="multiview_gradio.obj") # need to check
-
-#     # # pipe_trellis.to("cpu")
-#     # del pipe_trellis
-#     # return video #, filename_mesh
-
-#     # paths = sorted(p for p in (os.path.join(images, f) for f in os.listdir(images)) if p.endswith(".png"))
-#     # images = [Image.open(p).convert("RGB") for p in paths]
-#     # outputs = pipe_trellis.run_pipeline(images, seed=42)
-#     # video_path = pipe_trellis.save_video(outputs, filename=os.path.join(images, "multiview_gradio.mp4"))
-
-#     global pipe_trellis
-#     load_pipe_trellis()
-#     images_list, paths = _load_views_from_dir(views_dir)
-#     logger.info(f"[TRELLIS] received {len(images_list)} views: {paths}")
-
-#     assert len(images_list) >= 2, "need at least 2 views to generate 3D"
-#     outputs = pipe_trellis.run_pipeline(images_list, seed=42)
-
-#     glb_path = os.path.join(views_dir, "mesh.glb")
-#     ply_path = os.path.join(views_dir, "mesh.ply")
-#     out_mp4 = os.path.join(views_dir, "multiview_gradio.mp4")
-
-#     glb_filename, ply_filename = pipe_trellis.save_mesh(outputs, glb_path, ply_path, simplify=0.95, texture_size=1024)
-#     logger.info(f"[TRELLIS] saved glb to {glb_path} and ply to {ply_path}")
-#     video_out, video_filename = pipe_trellis.save_video(outputs, filename=out_mp4)
-
-#     del pipe_trellis
-#     return video_filename, gr.update(value=glb_filename, visible=True), gr.update(value=ply_filename, visible=True),
-
 def _b64_to_file(b64_str: str, path: str):
     with open(path, "wb") as f:
         f.write(base64.b64decode(b64_str))
@@ -180,8 +133,7 @@ def generate_3d(views_dir):
     images_list, paths = _load_views_from_dir(views_dir)
     assert len(images_list) >= 2, "need at least 2 views to generate 3D"
 
-    # multipart with png
-    files = [("files", (os.path.basename(p), open(p, "rb"), "image/png")) for p in paths]
+    files = [("files", (os.path.basename(p), open(p, "rb"), "image/jpeg")) for p in paths]
 
     r = requests.post(f"{API_URL}/mv2m/generate", files=files, timeout=900)
     r.raise_for_status()
@@ -213,37 +165,32 @@ def generate_3d(views_dir):
 
  # ------------ UI helpers ------------
 def _lock_all_buttons():
-
     return (
-        gr.update(interactive=False), # run_btn
-        gr.update(interactive=False), # remake_btn
-        gr.update(interactive=False), # run_trellis_btn
-        gr.update(interactive=False), # apply_chat_btn
-        gr.update(interactive=False), # image_like_btn
-        gr.update(interactive=False), # image_dislike_btn
+        gr.update(interactive=False),
+        gr.update(interactive=False),
+        gr.update(interactive=False),
+        gr.update(interactive=False),
+        gr.update(interactive=False),
+        gr.update(interactive=False),
     )
 
 def _unlock_after_generate():
-    # run + remake + trellis
     return (
-        gr.update(interactive=True),# run_btn
-        gr.update(visible=True, interactive=True), # remake_btn
-        gr.update(visible=True, interactive=True), # run_trellis_btn
-        gr.update(visible=True, interactive=True), # image_like_btn
-        gr.update(visible=True, interactive=True), # image_dislike_btn
+        gr.update(interactive=True),
+        gr.update(visible=True, interactive=True),
+        gr.update(visible=True, interactive=True),
+        gr.update(visible=True, interactive=True),
+        gr.update(visible=True, interactive=True),
     )
 
 def _unlock_after_trellis():
-    # all hab
     return (
-        gr.update(interactive=True), # run_btn
-        gr.update(visible=True, interactive=True),# remake_btn
-        gr.update(visible=True, interactive=True), # run_trellis_btn
-        gr.update(visible=True, interactive=True), # video_like_btn
-        gr.update(visible=True, interactive=True), # video_dislike_btn
+        gr.update(interactive=True),
+        gr.update(visible=True, interactive=True),
+        gr.update(visible=True, interactive=True),
+        gr.update(visible=True, interactive=True),
+        gr.update(visible=True, interactive=True),
     )
-
-
 
 def send_review(
     feedback_type: str,
@@ -284,7 +231,7 @@ def send_review(
     file_handles_to_close = []
 
     if multiview_dir and os.path.exists(multiview_dir):
-        multiview_images = sorted(glob.glob(os.path.join(multiview_dir, "*.png")))
+        multiview_images = sorted(glob.glob(os.path.join(multiview_dir, "*.jpg")))
 
         for file_path in multiview_images:
             file_name = os.path.basename(file_path)
@@ -293,7 +240,7 @@ def send_review(
                 file_handles_to_close.append(file_handle)
 
                 files_list.append(
-                    ("multiview_files", (file_name, file_handle, "image/png"))
+                    ("multiview_files", (file_name, file_handle, "image/jpg"))
                 )
             except IOError as e:
                 logger.error(f"Não foi possível abrir o arquivo multiview {file_path}: {e}")
@@ -322,18 +269,16 @@ def send_review(
 with gr.Blocks() as demo:
     gr.Markdown("llm chat demo")
 
-    # images to generate
-    # state_images = gr.State([])
     state_views_dir = gr.State(value="")
     state_last_prompt = gr.State(value="")
     state_neg_prompt = gr.State(value="")
-    # state_chat_msgs = gr.State(value=None)
     state_chat_msgs = gr.State(value=[])
     state_full_chat = gr.State(value=[])
     state_chat_msgs_before = gr.State(value=[])
     state_eval = gr.State(value="")
     state_frame_path = gr.State(value=None)
     remake_state = gr.State(0)
+    
     prompt = gr.Textbox(label="Prompt")
     run_btn = gr.Button("Generate")
 
@@ -379,7 +324,6 @@ with gr.Blocks() as demo:
                 
             apply_chat_btn = gr.Button("Regenerate images with chat prompts", visible=False)
 
-
     with gr.Accordion("LLM Image Avaliation", open=False):
         llm_avaliation = gr.Textbox(
             label="LLM Image Avaliation",
@@ -396,7 +340,6 @@ with gr.Blocks() as demo:
             lines=2
         )
 
-    # only shows when mv adapter ends
     run_trellis_btn = gr.Button("Generate 3D Mesh", visible=False)
     video = gr.Video(label="Mesh video preview", interactive=False)
 
@@ -411,8 +354,6 @@ with gr.Blocks() as demo:
         interactive=False,
     )
 
-    # download_glb = gr.File(label="Download GLB mesh", visible=False)
-    # download_ply = gr.File(label="Download PLY mesh", visible=False)
     with gr.Row():
         download_glb = gr.DownloadButton(
             label="Download GLB",
@@ -427,42 +368,57 @@ with gr.Blocks() as demo:
             size="sm"
         )
 
-
-    # generate
-    # GENERATE V3 - SHOW LLM FIRST
-    #first step show llm
+    # GENERATE
     run_btn.click(
         fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
     ).then(
-        fn=lambda: (
-            gr.update(value="", visible=False),  # image_review_status
-            gr.update(visible=False),  # image_like_btn
-            gr.update(visible=False),  # image_dislike_btn
-            [],                          # chatbot
-            [],                          # state_chat_msgs
-            [],                          # state_full_chat
-            0                            
+        fn=lambda: ( # Clear UI
+            gr.update(value="", visible=False), gr.update(visible=False), 
+            gr.update(visible=False), [], [], [], 0,
+            gr.update(value="", visible=False), # Clear llm_avaliation
+            gr.update(value="", visible=False)  # Clear llm_eval_neg_prompt
         ),
         inputs=None,
         outputs=[
-            image_review_status, 
-            image_like_btn, 
-            image_dislike_btn,
-            chatbot,                 
-            state_chat_msgs,             
-            state_full_chat,             
-            remake_state
-        ]       
+            image_review_status, image_like_btn, image_dislike_btn,
+            chatbot, state_chat_msgs, state_full_chat, remake_state,
+            llm_avaliation, llm_eval_neg_prompt # Add these
+        ]     
     ).then(
         fn=llm_prompt_processing,
         inputs=prompt,
         outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt],
     ).then(
-        fn=generate_images,
+        # --- THIS IS THE KEY CHANGE ---
+        # Modify generate_images to *only* generate and save images.
+        # Have it return (paths, views_dir, gr.update(visible=True), state_last_prompt)
+        # Remove the check_views_quality call from it.
+        fn=generate_images, # <-- MODIFY THIS FUNCTION
         inputs=[state_last_prompt, state_neg_prompt, gr.State(False)],
-        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
+        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt], # <-- REMOVED LLM OUTPUTS
         queue=True
-    )  
+    ).then(
+        # --- NEW STEP ---
+        # Now that images are visible, run the *first* LLM check
+        # and update its textbox when done.
+        fn=check_views_quality,
+        inputs=[state_views_dir, state_last_prompt],
+        outputs=[llm_avaliation, llm_eval_neg_prompt]
+    ).then(
+        # --- NEW STEP ---
+        # Now run the *second* LLM check (the chat)
+        # and update the chatbot when done.
+        fn=chat_start_fn,
+        inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
+        outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]
+    ).then(
+        fn=lambda new_chat_msgs: new_chat_msgs,
+        inputs=[state_chat_msgs],
+        outputs=[state_full_chat]
+    ).then(
+        # Unlock buttons last
+        fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
+    )
     
     state_views_dir.change(
         fn=lambda: [],
@@ -471,7 +427,6 @@ with gr.Blocks() as demo:
     ).then(
         fn=chat_start_fn,
         inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
-        # inputs=[state_last_prompt, llm_eval_neg_prompt, llm_avaliation],
         outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]
     ).then(
         fn=lambda new_chat_msgs: new_chat_msgs,
@@ -496,7 +451,6 @@ with gr.Blocks() as demo:
         outputs=[state_full_chat]
     )
 
-
     # remake images using chat prompt
     apply_chat_btn.click(
         fn=lambda: 1,
@@ -509,7 +463,6 @@ with gr.Blocks() as demo:
         inputs=[state_last_prompt, state_neg_prompt],
         outputs=[ref_prompt, neg_prompt]
     ).then(
-        # prompt from the chat
         fn=generate_images,
         inputs=[state_last_prompt, state_neg_prompt, gr.State(False)],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
@@ -517,7 +470,6 @@ with gr.Blocks() as demo:
     )
     
     state_views_dir.change(
-        # restart chat
         fn=chat_start_fn,
         inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
         outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]
@@ -526,55 +478,12 @@ with gr.Blocks() as demo:
         inputs=[state_full_chat, state_chat_msgs],
         outputs=[state_full_chat]
     ).then(
-        # Reseta o status de feedback para escondê-lo
         fn=lambda: gr.update(value="", visible=False),
         inputs=None,
         outputs=image_review_status
     ).then(
         fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
     )
-
-
-    def on_accept(cur_ref, cur_neg):
-        return gr.update(value=cur_ref, visible=True), gr.update(value=cur_neg, visible=True)
-
-    # send_btn.click(
-    # fn=chat_continue_fn,
-    # inputs=[chatbot, user_msg, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval],
-    # outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, user_msg],
-    # queue=True
-    # )
-
-
-    # accept_btn.click(
-    #     fn=on_accept,
-    #     inputs=[state_last_prompt, state_neg_prompt],
-    #     outputs=[ref_prompt, neg_prompt],
-    # )
-
-
-    # GENERATE V2
-    # run_btn.click(
-    # fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
-    # ).then(
-    #     fn=llm_prompt_processing, inputs=prompt,
-    #     outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt],
-    # ).then(
-    #     fn=generate_images, inputs=[state_last_prompt, state_neg_prompt, gr.State(False)],
-    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, ref_prompt, neg_prompt, llm_avaliation, llm_eval_neg_prompt]
-    # ).then(
-    #     fn=_unlock_after_generate, inputs=None,
-    #     outputs=[run_btn, remake_btn, run_trellis_btn]
-    # )
-    # GENERATE V1
-    # run_btn.click(
-    #     fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
-    # ).then(
-    #     fn=generate_images, inputs=[prompt, gr.State(False)],
-    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, ref_prompt, neg_prompt, llm_avaliation, llm_eval_neg_prompt]
-    # ).then(
-    #     fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
-    # )
 
     # remake
     remake_btn.click(
@@ -611,15 +520,6 @@ with gr.Blocks() as demo:
         outputs=[run_btn, remake_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
     )
 
-    # remake_btn.click(
-    #     fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
-    # ).then(
-    #     fn=generate_images, inputs=[state_last_prompt, gr.State(True)],
-    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, ref_prompt, neg_prompt, llm_avaliation, llm_eval_neg_prompt]
-    # ).then(
-    #     fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
-    # )
-
     # trellis
     run_trellis_btn.click(
         fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
@@ -629,62 +529,9 @@ with gr.Blocks() as demo:
         fn=_unlock_after_trellis, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, video_like_btn, video_dislike_btn]
     )
 
-    # # trellis
-    # run_trellis_btn.click(
-    #     fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
-    # ).then(
-    #     fn=generate_3d, inputs=state_views_dir, outputs=[video, download_glb, download_ply]
-    # ).then(
-    #     fn=_unlock_after_trellis, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn]
-    # )
-
-
-    # btns
-
-    # # SECOND vers
-    # run_btn.click(
-    #     fn=generate_images,
-    #     inputs=[prompt, gr.State(False)],
-    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt],
-    # ).then(  #show remake btn
-    #     fn=lambda: gr.update(visible=True), inputs=None, outputs=remake_btn
-    # )
-
-    # remake_btn.click(
-    #     fn=generate_images,
-    #     inputs=[state_last_prompt, gr.State(True)],
-    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt],
-    # )
-
-    # run_trellis_btn.click(
-    #     fn=generate_3d,
-    #     inputs=state_views_dir,
-    #     outputs=video,
-    # )
-
-
-    # FIRST VER
-    # run_btn.click(
-    #     fn=generate_images,
-    #     inputs=prompt,
-    #     outputs=[gallery, state_views_dir, run_trellis_btn],
-    # )
-
-    # remake_btn.click(
-    #     fn=generate_images,
-    #     inputs=[state_last_prompt, gr.State(True)],
-    #     outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt],
-    # )
-
-    # run_trellis_btn.click(
-    #     fn=generate_3d,
-    #     inputs=state_views_dir,
-    #     outputs=video,
-    # )
-
+    # feedback
     def _get_feedback_click(feedback_type, step=None, dynamic_step=False):
         def inner(orig, refined, chat, neg, video_path, views_dir, current_remake_value):
-            
             current_step = (                
                 "REGENERATE" if dynamic_step and current_remake_value == 1
                 else ("IMAGE" if dynamic_step else step)
@@ -702,7 +549,7 @@ with gr.Blocks() as demo:
             )
         return inner
 
-    dummy_state = gr.State()  # placeholder for missing input
+    dummy_state = gr.State()
 
     video_like_btn.click(
         fn=_get_feedback_click("like", step="VIDEO"),              
@@ -732,9 +579,5 @@ with gr.Blocks() as demo:
         queue=False
     )
 
-
-
 if __name__ == "__main__":
-    # load_pipe_mvadapter()
-    # load_pipe_trellis()
     demo.launch(share=True, server_port=os.getenv("SERVER_PORT", 8881))
