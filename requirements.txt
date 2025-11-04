@@ -24,3 +24,5 @@ open3d
 plyfile
 utils3d
 nvdiffrast
+peft
+accelerate

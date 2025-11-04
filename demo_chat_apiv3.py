@@ -101,19 +101,34 @@ def _api_t2mv_generate(refined_prompt, negative_prompt, randomize):
 
 def generate_images(refined_prompt, negative_prompt, randomize=False):
     logger.info(f"[MV-ADAPTER] Starting generation...")
+    try:
+        views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize)
+        paths = sorted(glob.glob(os.path.join(views_dir, "*.jpg")))
+        logger.info(f"[MV-ADAPTER] Got {len(paths)} images in {views_dir}")
         
-    views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize)    
-        
-    paths = sorted(glob.glob(os.path.join(views_dir, "*.jpg")))
-    logger.info(f"[MV-ADAPTER] Got {len(paths)} images in {views_dir}")
-            
+        gallery_paths = paths
+                
+        llm_avaliation_update = gr.update(value="", visible=False)
+        llm_eval_neg_prompt_update = gr.update(value="", visible=False)
 
-    return (
-        paths,
-        views_dir,
-        gr.update(visible=True),
-        refined_prompt
-    )
+        return (
+            gallery_paths,                 # gallery
+            views_dir,                     # state_views_dir
+            gr.update(visible=True),       # run_trellis_btn (tornar visível)
+            refined_prompt,                # state_last_prompt
+            llm_avaliation_update,         # llm_avaliation
+            llm_eval_neg_prompt_update     # llm_eval_neg_prompt
+        )
+    except Exception as e:        
+        logger.exception(f"[MV-ADAPTER] Error generating images: {e}")        
+        return (
+            [],                            # gallery vazio
+            "",                            # state_views_dir vazio
+            gr.update(visible=False),      # run_trellis_btn escondido
+            refined_prompt or "",          # state_last_prompt (tentar não perder o prompt)
+            gr.update(value=f"Error: {e}", visible=True),  # llm_avaliation mostra erro
+            gr.update(value="", visible=False)             # llm_eval_neg_prompt
+        )
 
 def check_views_quality(views_dir, prompt):
     result = check_views(views_dir, prompt)
@@ -389,25 +404,15 @@ with gr.Blocks() as demo:
         inputs=prompt,
         outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt],
     ).then(
-        # --- THIS IS THE KEY CHANGE ---
-        # Modify generate_images to *only* generate and save images.
-        # Have it return (paths, views_dir, gr.update(visible=True), state_last_prompt)
-        # Remove the check_views_quality call from it.
-        fn=generate_images, # <-- MODIFY THIS FUNCTION
+        fn=generate_images,
         inputs=[state_last_prompt, state_neg_prompt, gr.State(False)],
-        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt], # <-- REMOVED LLM OUTPUTS
+        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
     ).then(
-        # --- NEW STEP ---
-        # Now that images are visible, run the *first* LLM check
-        # and update its textbox when done.
         fn=check_views_quality,
         inputs=[state_views_dir, state_last_prompt],
         outputs=[llm_avaliation, llm_eval_neg_prompt]
     ).then(
-        # --- NEW STEP ---
-        # Now run the *second* LLM check (the chat)
-        # and update the chatbot when done.
         fn=chat_start_fn,
         inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
         outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]

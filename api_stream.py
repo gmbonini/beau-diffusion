@@ -55,6 +55,10 @@ def load_pipe_mvadapter():
         device="cuda" if torch.cuda.is_available() else "cpu",
         dtype=torch.float16,                    
     )
+    
+    # pipe_mv.load_lora_weights("latent-consistency/lcm-lora-sdxl")
+    
+    # pipe_mv.fuse_lora(lora_scale=0.7)
     print('MV-Adapter pipeline loaded.')
     logger.info("[MV-ADAPTER] Pipeline loaded (API)")
     
@@ -96,57 +100,6 @@ def t2mv_generate(ref_prompt, neg_prompt, randomize: bool = False, background_ta
         media_type="application/zip",
         headers={"Content-Disposition": "attachment; filename=views.zip"}
     )
-
-# @app.post("/t2mv/generate2")
-# def t2mv_generate2(
-#     ref_prompt: str,
-#     neg_prompt: str,
-#     randomize: bool = False,
-#     background_tasks: BackgroundTasks = None
-# ):
-#     seed = -1 if randomize else 1
-#     logger.info(f"[MV-ADAPTER] Generating images with seed {seed} (API)")
-#     logger.info(f"[MV-ADAPTER] prompt: {ref_prompt} and neg_prompt: {neg_prompt} (API)")
-    
-#     global pipe_mv, adapters
-    
-#     imgs = MVAdapterT2MV.run_pipeline(
-#         pipe=pipe_mv,
-#         num_views=6,
-#         text=ref_prompt,
-#         height=768, width=768,
-#         num_inference_steps=12,
-#         guidance_scale=7.0,
-#         seed=seed,
-#         negative_prompt=neg_prompt,
-#         device="cuda" if torch.cuda.is_available() else "cpu",
-#         adapter_name_list=adapters,
-#     )
-    
-#     logger.info("[MV-ADAPTER] Images generated {} views (API)".format(len(imgs)))
-    
-#     # Cria ZIP em arquivo temporário (não em memória)
-#     temp_zip = tempfile.NamedTemporaryFile(delete=False, suffix=".zip")
-#     zip_path = temp_zip.name
-#     temp_zip.close()
-    
-#     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_STORED) as zipf:
-#         for i, img in enumerate(imgs):
-#             buf = io.BytesIO()
-#             img.save(buf, format="PNG")
-#             zipf.writestr(f"view_{i:02d}.png", buf.getvalue())
-    
-#     logger.info(f"[MV-ADAPTER] ZIP created at {zip_path}")
-    
-#     # Agenda remoção do arquivo após enviar
-#     if background_tasks:
-#         background_tasks.add_task(os.unlink, zip_path)
-    
-#     return FileResponse(
-#         zip_path,
-#         media_type="application/zip",
-#         filename="views.zip"
-#     )
 
 
 # --------- TRELLIS
