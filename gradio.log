@@ -805,3 +805,357 @@
 2025-11-04 14:15:21.335 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
 2025-11-04 14:15:21.338 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_saqpej95
 2025-11-04 14:15:21.339 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_saqpej95
+2025-11-04 14:43:37.557 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: person, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: 
+2025-11-04 14:43:37.558 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 14:43:37.558 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 14:43:37.560 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 14:43:38.822 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: person, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-04 14:43:38.822 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 14:43:38.822 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 14:43:42.996 | INFO     | ollama:check_views:225 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full body of a person from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 14:43:42.996 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full body of a person from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 14:43:50.017 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: person, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, unnatural shadows, unrealistic lighting, cluttered background, excessive muscle distortion, disproportionate features, eval: The images match the prompt well, showing a full body of a person from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 14:43:50.017 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 14:43:50.017 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 14:43:57.675 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: obama with white board
+2025-11-04 14:43:57.675 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: obama with white board (using qwen2.5:7b)
+2025-11-04 14:43:58.507 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'obama, full body, holding whiteboard, formal attire, detailed face', 'negative': 'blurry, low detail, artifacts, bad anatomy, deformed features, flat background, shadows, lighting, background'}
+2025-11-04 14:43:58.886 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 14:43:58.886 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 14:44:09.379 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 14:44:09.383 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_snwnjgt7
+2025-11-04 14:44:09.383 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_snwnjgt7
+2025-11-04 14:44:09.776 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: obama, full body, holding whiteboard, formal attire, detailed face, negative: blurry, low detail, artifacts, bad anatomy, deformed features, flat background, shadows, lighting, background, eval: 
+2025-11-04 14:44:09.778 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 14:44:09.778 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 14:44:09.779 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 14:44:11.041 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: obama, full body, holding whiteboard, formal attire, detailed face, negative: artifacts, flat background, unnatural shadows, poor lighting, repetitive patterns, over-saturated colors, excessive details, background, eval: 
+2025-11-04 14:44:11.041 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 14:44:11.041 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 14:44:15.277 | INFO     | ollama:check_views:225 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full body of Obama in formal attire holding a whiteboard. The face is detailed and consistent across the views. There are no visible artifacts or geometry holes, and the lighting and shadows are natural. The images are consistent with each other.', 'negative_prompt': 'none'}
+2025-11-04 14:44:15.277 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full body of Obama in formal attire holding a whiteboard. The face is detailed and consistent across the views. There are no visible artifacts or geometry holes, and the lighting and shadows are natural. The images are consistent with each other.', 'negative_prompt': 'none'}
+2025-11-04 14:44:19.290 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: obama, full body, holding whiteboard, formal attire, detailed face, negative: flat background, unnatural shadows, poor lighting, repetitive patterns, over-saturated colors, excessive details, artifacts, background, eval: The images match the prompt well, showing a full body of Obama in formal attire holding a whiteboard. The face is detailed and consistent across the views. There are no visible artifacts or geometry holes, and the lighting and shadows are natural. The images are consistent with each other.
+2025-11-04 14:44:19.290 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 14:44:19.290 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:08:04.350 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: hallowen air conditioner
+2025-11-04 16:08:04.351 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: hallowen air conditioner (using qwen2.5:7b)
+2025-11-04 16:08:09.001 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'air conditioner, halloween, full body', 'negative': 'blurry, low detail, artifacts, bad proportions, floating objects, shadows, lighting, background'}
+2025-11-04 16:08:09.345 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 16:08:09.345 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 16:08:31.839 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 16:08:31.844 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_j_rqzjl8
+2025-11-04 16:08:31.844 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_j_rqzjl8
+2025-11-04 16:09:39.777 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: air conditioner, halloween, full body, negative: blurry, low detail, artifacts, bad proportions, floating objects, shadows, lighting, background, eval: 
+2025-11-04 16:09:39.777 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 16:09:39.778 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:09:39.779 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:09:41.747 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: air conditioner, halloween, full body, negative: bad proportions, shadow inconsistencies, poor lighting, artifacts, low detail, floating objects, background distractions, eval: 
+2025-11-04 16:09:41.747 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:09:41.748 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:09:45.816 | INFO     | ollama:check_views:225 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full-body air conditioner in a Halloween setting. The multi-views are consistent, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 16:09:45.816 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full-body air conditioner in a Halloween setting. The multi-views are consistent, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 16:09:49.574 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: air conditioner, halloween, full body, negative: bad proportions, shadow inconsistencies, poor lighting, artifacts, low detail, floating objects, background distractions, unrealistic reflections, eval: The images match the prompt well, showing a full-body air conditioner in a Halloween setting. The multi-views are consistent, and there are no visible issues or artifacts.
+2025-11-04 16:09:49.574 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:09:49.574 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:15:13.908 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: obama with white board
+2025-11-04 16:15:13.909 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: obama with white board (using qwen2.5:7b)
+2025-11-04 16:15:17.053 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'obama, full body, standing, white board behind', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background'}
+2025-11-04 16:15:17.400 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 16:15:17.400 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 16:15:27.822 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 16:15:27.826 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_htus25po
+2025-11-04 16:15:27.826 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_htus25po
+2025-11-04 16:15:58.602 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: obama, full body, standing, white board behind, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: 
+2025-11-04 16:15:58.602 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:15:58.602 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 16:15:58.603 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:15:59.767 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: obama, full body, standing, white board behind, negative: artifacts, bad anatomy, extra limbs, deformed face, low detail, shadows, poor lighting, background, eval: 
+2025-11-04 16:15:59.767 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:15:59.767 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:16:03.953 | INFO     | ollama:check_views:225 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full body of Obama standing with a whiteboard behind him. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 16:16:03.954 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full body of Obama standing with a whiteboard behind him. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 16:16:07.919 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: obama, full body, standing, white board behind, negative: artifacts, bad anatomy, extra limbs, deformed face, low detail, harsh shadows, unnatural lighting, cluttered background, eval: The images match the prompt well, showing a full body of Obama standing with a whiteboard behind him. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 16:16:07.919 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:16:07.920 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:19:40.550 | INFO     | __main__:generate_3d:168 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_8fe7e5bd-faf3-4232-8934-e03b4fec97ef.jpg
+2025-11-04 16:19:40.551 | INFO     | __main__:generate_3d:172 - [TRELLIS/API-b64] assets: /tmp/views_htus25po/mesh_8fe7e5bd-faf3-4232-8934-e03b4fec97ef.glb, /tmp/views_htus25po/mesh_8fe7e5bd-faf3-4232-8934-e03b4fec97ef.ply, /tmp/views_htus25po/preview_8fe7e5bd-faf3-4232-8934-e03b4fec97ef.mp4
+2025-11-04 16:22:50.837 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: green bike on street
+2025-11-04 16:22:50.838 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: green bike on street (using qwen2.5:7b)
+2025-11-04 16:22:53.832 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, full body', 'negative': 'blurry, low detail, artifacts, bad proportions, floating objects, shadows, lighting, background'}
+2025-11-04 16:22:54.230 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 16:22:54.230 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 16:23:04.744 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 16:23:04.746 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_m7pn2fdt
+2025-11-04 16:23:04.746 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_m7pn2fdt
+2025-11-04 16:23:05.226 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full body, negative: blurry, low detail, artifacts, bad proportions, floating objects, shadows, lighting, background, eval: 
+2025-11-04 16:23:05.227 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 16:23:05.227 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:23:05.228 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:23:06.399 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full body, negative: bad proportions, poor shadows, blocky textures, unrealistic reflections, over-saturated colors, duplicate objects, background, harsh lighting, eval: 
+2025-11-04 16:23:06.400 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:23:06.400 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 16:23:10.411 | INFO     | ollama:check_views:225 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a green bike from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 16:23:10.412 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a green bike from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 16:23:14.243 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, full body, negative: bad proportions, poor shadows, blocky textures, unrealistic reflections, over-saturated colors, duplicate objects, harsh lighting, unnatural background, eval: The images match the prompt well, showing a green bike from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-04 16:23:14.244 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 16:23:14.244 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:01:55.299 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: blue dragon with red eyes, giant claws, big wings, anime style, 4k
+2025-11-04 17:01:55.300 | INFO     | ollama:prepare_prompts:138 - [OLLAMA] prepare_prompts: preparing prompts for input: blue dragon with red eyes, giant claws, big wings, anime style, 4k (using qwen2.5:7b)
+2025-11-04 17:01:58.397 | INFO     | ollama:prepare_prompts:170 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, blue, red eyes, giant claws, big wings, anime style, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed wings, deformed claws, shadows, lighting, background'}
+2025-11-04 17:04:33.273 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:04:33.273 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:04:46.760 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:04:46.766 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_vtpg_wlr
+2025-11-04 17:04:46.767 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_vtpg_wlr
+2025-11-04 17:05:03.047 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, anime style, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed wings, deformed claws, shadows, lighting, background, eval: 
+2025-11-04 17:05:03.047 | INFO     | ollama:check_views:220 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:05:03.048 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:05:03.049 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:05:04.365 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, flying, anime style, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed wings, deformed claws, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-04 17:05:04.366 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:05:04.366 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:05:08.708 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views result: {'avaliation': "The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The images are consistent across different angles, and the dragon's features are well-defined. The lighting and shadows are natural, and there are no visible artifacts or geometry holes. The colors are vibrant and match the prompt.", 'negative_prompt': 'none'}
+2025-11-04 17:05:08.709 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': "The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The images are consistent across different angles, and the dragon's features are well-defined. The lighting and shadows are natural, and there are no visible artifacts or geometry holes. The colors are vibrant and match the prompt.", 'negative_prompt': 'none'}
+2025-11-04 17:05:12.763 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, flying, anime style, full body, negative: bad anatomy, extra limbs, deformed wings, deformed claws, artifacts, low detail, unnatural shadows, unrealistic lighting, cluttered background, eval: The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The images are consistent across different angles, and the dragon's features are well-defined. The lighting and shadows are natural, and there are no visible artifacts or geometry holes. The colors are vibrant and match the prompt.
+2025-11-04 17:05:12.764 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:05:12.764 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:06:03.502 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: blue dragon with red eyes, giant claws, big wings, anime style, 4k, cute
+2025-11-04 17:06:03.502 | INFO     | ollama:prepare_prompts:138 - [OLLAMA] prepare_prompts: preparing prompts for input: blue dragon with red eyes, giant claws, big wings, anime style, 4k, cute (using qwen2.5:7b)
+2025-11-04 17:06:04.407 | INFO     | ollama:prepare_prompts:170 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, blue, red eyes, giant claws, big wings, anime style, 4k, cute, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background'}
+2025-11-04 17:06:04.763 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:06:04.764 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:06:17.651 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:06:17.656 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_324xpt1d
+2025-11-04 17:06:17.656 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_324xpt1d
+2025-11-04 17:06:18.166 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, anime style, 4k, cute, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: 
+2025-11-04 17:06:18.169 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:06:18.170 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:06:18.170 | INFO     | ollama:check_views:220 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:06:19.382 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, anime style, 4k, cute, full body, negative: bad anatomy, extra limbs, deformed face, low detail, artifacts, shadows, lighting, background, eval: 
+2025-11-04 17:06:19.383 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:06:19.383 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:06:23.564 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The anime style and 4k resolution are consistent across the views. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:06:23.564 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The anime style and 4k resolution are consistent across the views. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:06:27.465 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, anime style, 4k, cute, full body, negative: bad anatomy, extra limbs, deformed face, low detail, artifacts, unnatural shadows, unrealistic lighting, cluttered background, eval: The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The anime style and 4k resolution are consistent across the views. The images are consistent with each other, and there are no visible issues or artifacts.
+2025-11-04 17:06:27.468 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:06:27.470 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:08:36.187 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: blue dragon with red eyes, giant claws, big wings, anime style, 4k, cute, high quality
+2025-11-04 17:08:36.188 | INFO     | ollama:prepare_prompts:138 - [OLLAMA] prepare_prompts: preparing prompts for input: blue dragon with red eyes, giant claws, big wings, anime style, 4k, cute, high quality (using qwen2.5:7b)
+2025-11-04 17:08:36.974 | INFO     | ollama:prepare_prompts:170 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, blue, red eyes, giant claws, big wings, anime style, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed wings, shadows, lighting, background'}
+2025-11-04 17:08:37.349 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:08:37.349 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:08:50.302 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:08:50.304 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_4z_jcv4x
+2025-11-04 17:08:50.304 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_4z_jcv4x
+2025-11-04 17:09:00.574 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, anime style, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed wings, shadows, lighting, background, eval: 
+2025-11-04 17:09:00.577 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:09:00.579 | INFO     | ollama:check_views:220 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:09:00.580 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:09:01.788 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, flying dragon, anime style, full body, negative: bad anatomy, extra limbs, deformed wings, unrealistic shadows, blocky water surface, over-saturated colors, repetitive foliage, background, eval: 
+2025-11-04 17:09:01.789 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:09:01.790 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:09:06.024 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views result: {'avaliation': "The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The images are consistent across different angles, and the dragon's features are well-defined. The lighting and shadows are natural, and there are no visible artifacts or geometry holes. The colors are vibrant and match the prompt.", 'negative_prompt': 'none'}
+2025-11-04 17:09:06.025 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': "The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The images are consistent across different angles, and the dragon's features are well-defined. The lighting and shadows are natural, and there are no visible artifacts or geometry holes. The colors are vibrant and match the prompt.", 'negative_prompt': 'none'}
+2025-11-04 17:09:09.881 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, blue, red eyes, giant claws, big wings, flying dragon, anime style, full body, negative: bad anatomy, extra limbs, deformed wings, unrealistic shadows, blocky textures, over-saturated colors, repetitive foliage, background, eval: The images match the prompt well, with a dragon having blue and red eyes, giant claws, and big wings. The images are consistent across different angles, and the dragon's features are well-defined. The lighting and shadows are natural, and there are no visible artifacts or geometry holes. The colors are vibrant and match the prompt.
+2025-11-04 17:09:09.882 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:09:09.882 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:09:28.814 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: a green bike on street
+2025-11-04 17:09:28.815 | INFO     | ollama:prepare_prompts:138 - [OLLAMA] prepare_prompts: preparing prompts for input: a green bike on street (using qwen2.5:7b)
+2025-11-04 17:09:29.545 | INFO     | ollama:prepare_prompts:170 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background'}
+2025-11-04 17:09:29.878 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:09:29.879 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:09:42.728 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:09:42.729 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_2cz6btmg
+2025-11-04 17:09:42.730 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_2cz6btmg
+2025-11-04 17:09:43.214 | INFO     | ollama:check_views:220 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:09:43.215 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background, eval: 
+2025-11-04 17:09:43.221 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:09:43.223 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:09:44.434 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, negative: bad proportions, deformed parts, unnatural shadows, unrealistic lighting, over-saturated colors, background, artifacts, repetitive textures, eval: 
+2025-11-04 17:09:44.434 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:09:44.435 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:09:48.471 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:09:48.471 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:09:52.279 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: green bike, negative: bad proportions, deformed parts, unnatural shadows, unrealistic lighting, over-saturated colors, background, artifacts, repetitive textures, eval: The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 17:09:52.279 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:09:52.279 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:10:10.261 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: a green bike on a street
+2025-11-04 17:10:10.262 | INFO     | ollama:prepare_prompts:138 - [OLLAMA] prepare_prompts: preparing prompts for input: a green bike on a street (using qwen2.5:7b)
+2025-11-04 17:10:11.002 | INFO     | ollama:prepare_prompts:170 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, floating objects, shadows, lighting, background'}
+2025-11-04 17:10:11.376 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:10:11.376 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:10:24.263 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:10:24.266 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_u107xtnh
+2025-11-04 17:10:24.267 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_u107xtnh
+2025-11-04 17:10:24.854 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: blurry, low detail, artifacts, bad proportions, floating objects, shadows, lighting, background, eval: 
+2025-11-04 17:10:24.856 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:10:24.858 | INFO     | ollama:check_views:220 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:10:24.859 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:10:29.247 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:10:29.247 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:10:33.213 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: blurry, low detail, artifacts, bad proportions, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-04 17:10:33.215 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:10:33.217 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:10:34.373 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: low detail, artifacts, bad proportions, floating objects, unnatural shadows, poor lighting, cluttered background, over-saturated colors, eval: The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 17:10:34.373 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:10:34.373 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:14:43.492 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: a green bike on a street
+2025-11-04 17:14:43.492 | INFO     | ollama:prepare_prompts:138 - [OLLAMA] prepare_prompts: preparing prompts for input: a green bike on a street (using qwen2.5:7b)
+2025-11-04 17:14:44.202 | INFO     | ollama:prepare_prompts:170 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background'}
+2025-11-04 17:14:44.552 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:14:44.552 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:14:57.924 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:14:57.927 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_e37q8oht
+2025-11-04 17:14:57.928 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_e37q8oht
+2025-11-04 17:15:24.084 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background, eval: 
+2025-11-04 17:15:24.085 | INFO     | ollama:check_views:220 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:15:24.085 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:15:24.087 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:15:25.348 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: low detail, bad proportions, deformed parts, shadows, lighting, background, repetitive textures, eval: 
+2025-11-04 17:15:25.348 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:15:25.348 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:15:29.377 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:15:29.378 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:15:33.186 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, negative: low detail, bad proportions, deformed parts, unrealistic shadows, poor lighting, busy background, repetitive textures, eval: The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 17:15:33.186 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:15:33.186 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:17:07.357 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: green bike on street
+2025-11-04 17:17:07.357 | INFO     | ollama:prepare_prompts:138 - [OLLAMA] prepare_prompts: preparing prompts for input: green bike on street (using qwen2.5:7b)
+2025-11-04 17:17:08.090 | INFO     | ollama:prepare_prompts:170 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, on street, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background'}
+2025-11-04 17:17:08.415 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:17:08.416 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:17:21.214 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:17:21.220 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_unvft3rm
+2025-11-04 17:17:21.221 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_unvft3rm
+2025-11-04 17:17:21.602 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, on street, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background, eval: 
+2025-11-04 17:17:21.603 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:17:21.606 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:17:21.703 | INFO     | ollama:check_views:220 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:17:22.864 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, on street, full view, negative: bad proportions, deformed parts, artifacts, over-saturated colors, repetitive textures, flat shadows, harsh lighting, cluttered background, eval: 
+2025-11-04 17:17:22.864 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:17:22.865 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:17:26.826 | INFO     | ollama:check_views:227 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a green bike on a street from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:17:26.826 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a green bike on a street from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:17:30.758 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, on street, full view, negative: bad proportions, deformed parts, artifacts, over-saturated colors, repetitive textures, flat shadows, harsh lighting, cluttered background, eval: The images match the prompt well, showing a green bike on a street from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.
+2025-11-04 17:17:30.758 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:17:30.758 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:17:34.193 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: green bike on city street
+2025-11-04 17:17:34.193 | INFO     | ollama:prepare_prompts:138 - [OLLAMA] prepare_prompts: preparing prompts for input: green bike on city street (using qwen2.5:7b)
+2025-11-04 17:17:34.987 | INFO     | ollama:prepare_prompts:170 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, on street, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, intersecting streets, floating objects, shadows, lighting, background'}
+2025-11-04 17:17:35.354 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:17:35.354 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:17:48.250 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:17:48.251 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views__z5w_0ox
+2025-11-04 17:17:48.252 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views__z5w_0ox
+2025-11-04 17:17:48.688 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, on street, full view, negative: blurry, low detail, artifacts, bad proportions, intersecting streets, floating objects, shadows, lighting, background, eval: 
+2025-11-04 17:17:48.690 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:17:48.690 | INFO     | ollama:check_views:220 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:17:48.692 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:17:49.850 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, on street, full view, negative: bad proportions, inconsistent shadows, blocky surfaces, repetitive textures, intersecting streets, floating objects, harsh lighting, background distractions, eval: 
+2025-11-04 17:17:49.854 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:17:49.855 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:17:53.889 | INFO     | ollama:check_views:227 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a green bike on a street from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:17:53.890 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a green bike on a street from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:17:57.742 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, on street, full view, negative: blocky surfaces, inconsistent shadows, repetitive textures, intersecting streets, floating objects, harsh lighting, background distractions, unnatural colors, eval: The images match the prompt well, showing a green bike on a street from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.
+2025-11-04 17:17:57.745 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:17:57.746 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:18:37.728 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: bike green on street, 4k, realistic, high quality
+2025-11-04 17:18:37.728 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: bike green on street, 4k, realistic, high quality (using qwen2.5:7b)
+2025-11-04 17:18:38.508 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, 4k realistic, detailed tires, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background'}
+2025-11-04 17:18:38.890 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:18:38.891 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:18:51.774 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:18:51.780 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_0vqsgbgk
+2025-11-04 17:18:51.781 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_0vqsgbgk
+2025-11-04 17:18:52.274 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, 4k realistic, detailed tires, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background, eval: 
+2025-11-04 17:18:52.274 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:18:52.274 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:18:52.276 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:18:53.438 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, 4k realistic, detailed tires, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-04 17:18:53.438 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:18:53.439 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:18:57.513 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, with a green bike and detailed tires. The views are consistent, and there are no visible artifacts or issues. The lighting and shadows are realistic.', 'negative_prompt': 'none'}
+2025-11-04 17:18:57.514 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, with a green bike and detailed tires. The views are consistent, and there are no visible artifacts or issues. The lighting and shadows are realistic.', 'negative_prompt': 'none'}
+2025-11-04 17:19:01.569 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, 4k realistic, detailed tires, full view, lush greenery, negative: blurry, low detail, artifacts, bad proportions, deformed parts, unnatural shadows, unrealistic lighting, cluttered background, excessive foliage, eval: The images match the prompt well, with a green bike and detailed tires. The views are consistent, and there are no visible artifacts or issues. The lighting and shadows are realistic.
+2025-11-04 17:19:01.569 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:19:01.569 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:19:16.275 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: bike green on street, 4k, realistic, high quality, detailed bicycle belt
+2025-11-04 17:19:16.276 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: bike green on street, 4k, realistic, high quality, detailed bicycle belt (using qwen2.5:7b)
+2025-11-04 17:19:17.136 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, 4k realistic, high quality, detailed bicycle belt, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background'}
+2025-11-04 17:19:17.541 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:19:17.541 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:19:30.490 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:19:30.492 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_qo3y1n6i
+2025-11-04 17:19:30.493 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_qo3y1n6i
+2025-11-04 17:19:30.974 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, 4k realistic, high quality, detailed bicycle belt, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background, eval: 
+2025-11-04 17:19:30.977 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:19:30.978 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:19:30.979 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:19:32.292 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, 4k realistic, high quality, detailed bicycle belt, full view, green frame, green wheels, negative: blurry, low detail, artifacts, bad proportions, deformed parts, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-04 17:19:32.292 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:19:32.292 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:19:36.205 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a green bicycle with a detailed belt from multiple angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:19:36.206 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a green bicycle with a detailed belt from multiple angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:19:40.413 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, 4k realistic, high quality, detailed bicycle belt, full view, green frame, green wheels, negative: blurry, low detail, artifacts, bad proportions, deformed parts, unnatural shadows, unrealistic lighting, cluttered background, excessive green, under-detailed belt, eval: The images match the prompt well, showing a green bicycle with a detailed belt from multiple angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-04 17:19:40.415 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:19:40.415 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:26:16.204 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: bike green on street
+2025-11-04 17:26:16.204 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: bike green on street (using qwen2.5:7b)
+2025-11-04 17:26:19.328 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, intersecting wheels, floating objects, shadows, lighting, background'}
+2025-11-04 17:26:19.696 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:26:19.697 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:26:32.583 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:26:32.585 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_wvpazmi9
+2025-11-04 17:26:32.585 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_wvpazmi9
+2025-11-04 17:26:33.066 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: blurry, low detail, artifacts, bad proportions, intersecting wheels, floating objects, shadows, lighting, background, eval: 
+2025-11-04 17:26:33.067 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:26:33.069 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:26:33.071 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:26:37.274 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:26:37.275 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:26:41.372 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: low detail, artifacts, bad proportions, intersecting wheels, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-04 17:26:41.374 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:26:41.374 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:26:42.285 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, detailed frame, realistic tires, negative: low detail, artifacts, bad proportions, intersecting wheels, floating objects, unnatural shadows, poor lighting, cluttered background, eval: The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 17:26:42.285 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:26:42.285 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:26:46.675 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: green bike on a road
+2025-11-04 17:26:46.675 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: green bike on a road (using qwen2.5:7b)
+2025-11-04 17:26:47.399 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, intersecting roads, floating objects, shadows, lighting, background'}
+2025-11-04 17:26:47.735 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:26:47.735 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:27:00.641 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:27:00.642 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_1y27wt68
+2025-11-04 17:27:00.642 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_1y27wt68
+2025-11-04 17:27:01.099 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: blurry, low detail, artifacts, bad proportions, intersecting roads, floating objects, shadows, lighting, background, eval: 
+2025-11-04 17:27:01.100 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:27:01.102 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:27:01.104 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:27:02.312 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: low detail, artifacts, bad proportions, intersecting roads, floating objects, unnatural shadows, poor lighting, busy background, eval: 
+2025-11-04 17:27:02.313 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:27:02.313 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:27:06.316 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:27:06.317 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 17:27:13.015 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: bike, green, full view, negative: low detail, artifacts, bad proportions, intersecting roads, floating objects, unnatural shadows, poor lighting, cluttered background, eval: The images match the prompt well, showing a full view of a green bike. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 17:27:13.016 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:27:13.016 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:27:26.266 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute orange cat with big eyes and wings
+2025-11-04 17:27:26.266 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute orange cat with big eyes and wings (using qwen2.5:7b)
+2025-11-04 17:27:27.103 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, cute, orange, detailed fur, big eyes, wings, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background'}
+2025-11-04 17:27:27.478 | INFO     | __main__:generate_images:103 - [MV-ADAPTER] Starting generation...
+2025-11-04 17:27:27.478 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API...
+2025-11-04 17:27:40.390 | INFO     | __main__:_api_t2mv_generate:92 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:27:40.392 | INFO     | __main__:_api_t2mv_generate:98 - [MV-ADAPTER] Extracted ZIP to /tmp/views_eq0w9yjh
+2025-11-04 17:27:40.392 | INFO     | __main__:generate_images:107 - [MV-ADAPTER] Got 6 images in /tmp/views_eq0w9yjh
+2025-11-04 17:27:40.989 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, cute, orange, detailed fur, big eyes, wings, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: 
+2025-11-04 17:27:40.989 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:27:40.990 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:27:40.995 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:27:42.206 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, cute, orange body, detailed fur, big eyes, wings, full body, negative: artifacts, bad anatomy, extra limbs, deformed face, excessive shadows, poor lighting, background, repetitive textures, eval: 
+2025-11-04 17:27:42.208 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:27:42.208 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:27:46.410 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images show a cat with detailed fur and big eyes, but the wings are not consistent across all views. The images are not fully consistent in terms of the presence of wings. The overall quality is good, with realistic fur and eye details.', 'negative_prompt': 'wings, inconsistent, geometry holes'}
+2025-11-04 17:27:46.410 | INFO     | __main__:check_views_quality:138 - [MV-ADAPTER] views quality check: {'avaliation': 'The images show a cat with detailed fur and big eyes, but the wings are not consistent across all views. The images are not fully consistent in terms of the presence of wings. The overall quality is good, with realistic fur and eye details.', 'negative_prompt': 'wings, inconsistent, geometry holes'}
+2025-11-04 17:27:50.250 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, cute, orange body, detailed fur, big eyes, wings, full body, negative: bad anatomy, extra limbs, deformed face, excessive shadows, poor lighting, background, repetitive textures, harsh shadows, eval: The images show a cat with detailed fur and big eyes, but the wings are not consistent across all views. The images are not fully consistent in terms of the presence of wings. The overall quality is good, with realistic fur and eye details.
+2025-11-04 17:27:50.250 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:27:50.250 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b

@@ -80,7 +80,7 @@ def prepare_prompts(user_prompt: str) -> dict:
         - Only ignore clear background/environment details (e.g., "in a park", "on the street"). Focus on the object itself.
         - Use concise, visual attributes, separated by commas.
         - Keep compound phrases together (examples: "red door on the left", "snow-capped mountain").
-        - Add "full body" if the prompt is about an animal or human, unless a specific part is mentioned (e.g., "head of a cat").
+        - Add "full body" if the prompt is about an animal, human or any living creature, unless a specific part is mentioned (e.g., "head of a cat"). If its about an object, place, or landscape, add "full view".
         - Output ONLY the refined prompt.
         - No extra text.
 
@@ -218,7 +218,6 @@ def check_views(dir_path, user_prompt):
     resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=180)
     resp.raise_for_status()
     
-    # FIX: Ollama returns "response" not "choices"
     raw = resp.json()["response"]
     
     data = json.loads(raw)

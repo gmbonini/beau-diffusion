@@ -75,7 +75,7 @@ def t2mv_generate(ref_prompt, neg_prompt, randomize: bool = False, background_ta
         num_views=6,
         text=ref_prompt,
         height=768, width=768,
-        num_inference_steps=24,
+        num_inference_steps=30,
         guidance_scale=7.0,
         seed=seed,
         negative_prompt=neg_prompt,
