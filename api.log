@@ -1266,3 +1266,39 @@
 2025-11-04 18:34:51.956 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
 2025-11-04 18:36:39.921 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed -1 and 29 steps (API)
 2025-11-04 18:36:52.192 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 29 steps - 6 views (API)
+2025-11-04 19:18:45.266 | INFO     | api:load_pipe_mvadapter:57 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-04 19:18:45.266 | INFO     | api:load_pipe_trellis:97 - [TRELLIS] Pipeline loaded (API)
+2025-11-04 19:19:20.223 | INFO     | api:load_pipe_trellis:100 - [TRELLIS] Pipeline prepared (API)
+2025-11-04 19:19:22.738 | INFO     | api:_startup:29 - [STARTUP] loaded pipelines
+2025-11-04 19:21:04.297 | INFO     | api_stream:load_pipe_mvadapter:63 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-04 19:21:04.297 | INFO     | api_stream:load_pipe_trellis:120 - [TRELLIS] Pipeline loaded (API)
+2025-11-04 19:21:33.109 | INFO     | api_stream:load_pipe_trellis:123 - [TRELLIS] Pipeline prepared (API)
+2025-11-04 19:21:33.487 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-04 19:27:22.959 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 19:27:33.705 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 19:28:10.488 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 19:28:24.164 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 19:37:16.674 | INFO     | api_stream:load_pipe_mvadapter:63 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-04 19:37:16.675 | INFO     | api_stream:load_pipe_trellis:120 - [TRELLIS] Pipeline loaded (API)
+2025-11-04 19:37:46.608 | INFO     | api_stream:load_pipe_trellis:123 - [TRELLIS] Pipeline prepared (API)
+2025-11-04 19:37:49.305 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-04 19:38:28.290 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 19:38:39.031 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 19:45:44.084 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 19:45:54.341 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 19:51:38.316 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 19:51:48.625 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 19:56:14.577 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 19:56:24.850 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 19:59:49.991 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-11-04 19:59:50.011 | INFO     | api_stream:feedback_save:275 - [FEEDBACK] Saved feedback (ID: 9) with 6 images
+2025-11-04 19:59:50.013 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-11-04 20:39:38.171 | INFO     | api_stream:load_pipe_mvadapter:63 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-04 20:39:38.172 | INFO     | api_stream:load_pipe_trellis:120 - [TRELLIS] Pipeline loaded (API)
+2025-11-04 20:40:06.203 | INFO     | api_stream:load_pipe_trellis:123 - [TRELLIS] Pipeline prepared (API)
+2025-11-04 20:40:09.001 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-04 20:40:47.180 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 20:40:57.908 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 20:41:06.374 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-11-04 20:41:06.386 | INFO     | api_stream:feedback_save:277 - [FEEDBACK] Saved feedback (ID: 10) with 6 images
+2025-11-04 20:41:06.387 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.

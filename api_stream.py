@@ -68,7 +68,7 @@ def t2mv_generate(
     ref_prompt, 
     neg_prompt, 
     randomize: bool = False, 
-    inference_steps: int = 24,
+    inference_steps: int = 35,
     background_tasks: BackgroundTasks = None
 ):
     seed = -1 if randomize else 1
@@ -219,6 +219,7 @@ async def feedback_save(
     video_frame_path: str = Form(None),
     multiview_files: List[UploadFile] = File(None),
     step: str = Form(None),
+    negative_feedback: str = Form(None),
     db: DatabaseConnector = Depends(get_db_connector)
 ):
     if is_positive not in [0, 1]:
@@ -255,7 +256,8 @@ async def feedback_save(
             chat=chat,
             negative_prompt=negative_prompt,
             video_frame_url=video_frame_path,
-            step=step
+            step=step,
+            negative_feedback=negative_feedback  # Passar o novo parâmetro
         )
 
         if multiview_files:

@@ -39,7 +39,6 @@ class DatabaseConnector:
             cursor.execute(query, params)
 
             if is_select_query:
-                
                 if fetch_one:
                     result = cursor.fetchone()
                 else:
@@ -47,7 +46,7 @@ class DatabaseConnector:
                 return result
             else:                
                 self.connection.commit()
-                return None  
+                return cursor.lastrowid if cursor.lastrowid else None
                 
         except Error as e:
             logger.error(f"[DB] Error executing query: {e}")
@@ -62,21 +61,41 @@ class DatabaseConnector:
             if cursor:
                 cursor.close()
 
-    def save_feedback(self, is_positive, original_prompt, refined_prompt, chat=None, negative_prompt=None, video_frame_url=None, step='IMAGE'):
-        query = """
-            INSERT INTO feedback (is_positive, original_prompt, refined_prompt, chat, negative_prompt, video_frame_url, step)
-            VALUES (%s, %s, %s, %s, %s, %s, %s)
+    def save_feedback(
+        self,
+        is_positive: int,
+        original_prompt: str,
+        refined_prompt: str = None,
+        chat: str = None,
+        negative_prompt: str = None,
+        video_frame_url: str = None,
+        step: str = None,
+        negative_feedback: str = None
+    ):
         """
-        try:
-            cursor = self.connection.cursor()
-            cursor.execute(query, (is_positive, original_prompt, refined_prompt, chat, negative_prompt, video_frame_url, step))
-            self.connection.commit()
-            feedback_id = cursor.lastrowid
-            cursor.close()
-            return feedback_id
-        except Exception as e:
-            logger.error(f"[DB] Failed to save feedback: {e}")
-            raise
+        Salva um novo registro de feedback no banco de dados.
+        """
+        query = """
+            INSERT INTO feedback (
+                is_positive, original_prompt, refined_prompt, chat, 
+                negative_prompt, video_frame_url, step, negative_feedback
+            )
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        """
+        
+        return self.execute_query(
+            query,
+            params=(
+                is_positive,
+                original_prompt,
+                refined_prompt,
+                chat,
+                negative_prompt,
+                video_frame_url,
+                step,
+                negative_feedback
+            )
+        )
 
     def save_multiview(self, feedback_id, image_url):
         query = """

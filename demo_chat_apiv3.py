@@ -212,6 +212,10 @@ def _unlock_after_trellis():
         gr.update(visible=True, interactive=True),
     )
 
+def show_negative_feedback_input():
+    """Show the negative feedback text input and send button"""
+    return gr.update(visible=True, value=""), gr.update(visible=True)
+
 def send_review(
     feedback_type: str,
     original_prompt: str,
@@ -220,7 +224,8 @@ def send_review(
     negative_prompt: str = "",
     video_frame_path: str = None,
     multiview_dir: str = None,
-    step: str = None
+    step: str = None,
+    user_feedback_text: str = ""
 ):
     is_positive_val = 1 if feedback_type.lower() in ["like", "thumbs up", "👍"] else 0
 
@@ -242,6 +247,7 @@ def send_review(
         "original_prompt": original_prompt,
         "refined": refined,
         "chat": chat_text,
+        "negative_feedback": user_feedback_text if not is_positive_val else "",
         "negative_prompt": negative_prompt,
         "video_frame_path": video_frame_path if video_frame_path else "",
         "step" : step
@@ -284,6 +290,8 @@ def send_review(
         gr.update(visible=False),
         gr.update(visible=False),
         gr.update(visible=True, value=message),
+        gr.update(visible=False, value=""),  # Hide and clear feedback input
+        gr.update(visible=False),  # Hide send button
     )
 
 with gr.Blocks() as demo:
@@ -327,12 +335,24 @@ with gr.Blocks() as demo:
             with gr.Row():
                 image_like_btn = gr.Button("👍", visible=False)
                 image_dislike_btn = gr.Button("👎", visible=False)
-                image_review_status = gr.Textbox(
-                    label="Feedback Status",
-                    value="",
+            
+            # Negative feedback text input for images
+            with gr.Row():
+                image_feedback_text = gr.Textbox(
+                    label="What was the problem? (optional)",
+                    placeholder="Describe what was wrong with the images...",
                     visible=False,
-                    interactive=False,
+                    lines=2,
+                    scale=4
                 )
+                image_feedback_send_btn = gr.Button("Send", visible=False, scale=1, size="sm")
+            
+            image_review_status = gr.Textbox(
+                label="Feedback Status",
+                value="",
+                visible=False,
+                interactive=False,
+            )
 
         with gr.Column(scale=1, min_width=360):
             with gr.Accordion("Adjustments Chat", open=True):
@@ -368,6 +388,17 @@ with gr.Blocks() as demo:
         video_like_btn = gr.Button("👍", visible=False)
         video_dislike_btn = gr.Button("👎", visible=False)
 
+    # Negative feedback text input for video
+    with gr.Row():
+        video_feedback_text = gr.Textbox(
+            label="What was the problem? (optional)",
+            placeholder="Describe what was wrong with the 3D mesh...",
+            visible=False,
+            lines=2,
+            scale=4
+        )
+        video_feedback_send_btn = gr.Button("Send", visible=False, scale=1, size="sm")
+    
     review_status = gr.Textbox(
         label="Feedback Status",
         value="Review sent. Thank you!",
@@ -398,14 +429,22 @@ with gr.Blocks() as demo:
         gr.update(visible=False), [], [], [], 0,
         gr.update(value="", visible=False),
         gr.update(value="", visible=False),
-        24
+        24,
+        gr.update(value="", visible=False),  # image_feedback_text
+        gr.update(visible=False),  # image_feedback_send_btn
+        gr.update(value="", visible=False),  # video_feedback_text
+        gr.update(visible=False),  # video_feedback_send_btn
     ),
     inputs=None,
     outputs=[
         image_review_status, image_like_btn, image_dislike_btn,
         chatbot, state_chat_msgs, state_full_chat, remake_state,
         llm_avaliation, llm_eval_neg_prompt,
-        state_inference_steps
+        state_inference_steps,
+        image_feedback_text,
+        image_feedback_send_btn,
+        video_feedback_text,
+        video_feedback_send_btn
     ]     
     ).then(
         fn=llm_prompt_processing,
@@ -413,7 +452,7 @@ with gr.Blocks() as demo:
         outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt],
     ).then(
         fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],  # Add state_inference_steps
+        inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
     ).then(
@@ -429,7 +468,6 @@ with gr.Blocks() as demo:
         inputs=[state_chat_msgs],
         outputs=[state_full_chat]
     ).then(
-        # Unlock buttons last
         fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
     )
     
@@ -479,7 +517,7 @@ with gr.Blocks() as demo:
         outputs=[ref_prompt, neg_prompt]
     ).then(
         fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],  # Add state_inference_steps
+        inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
     )
@@ -502,7 +540,7 @@ with gr.Blocks() as demo:
 
     # remake
     remake_btn.click(
-        fn=lambda remake, current_steps: (1, current_steps + 5),  # Increment by 5
+        fn=lambda remake, current_steps: (1, current_steps + 5),
         inputs=[remake_state, state_inference_steps],
         outputs=[remake_state, state_inference_steps],
     ).then(
@@ -515,7 +553,7 @@ with gr.Blocks() as demo:
         outputs=image_review_status    
     ).then(
         fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(True), state_inference_steps],  # Pass current steps
+        inputs=[state_last_prompt, state_neg_prompt, gr.State(True), state_inference_steps],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt]
     ).then(        
         fn=chat_start_fn, 
@@ -544,9 +582,9 @@ with gr.Blocks() as demo:
         fn=_unlock_after_trellis, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, video_like_btn, video_dislike_btn]
     )
 
-    # feedback
+    # feedback helpers
     def _get_feedback_click(feedback_type, step=None, dynamic_step=False):
-        def inner(orig, refined, chat, neg, video_path, views_dir, current_remake_value):
+        def inner(orig, refined, chat, neg, video_path, views_dir, current_remake_value, feedback_text):
             current_step = (                
                 "REGENERATE" if dynamic_step and current_remake_value == 1
                 else ("IMAGE" if dynamic_step else step)
@@ -560,37 +598,58 @@ with gr.Blocks() as demo:
                 negative_prompt=neg,
                 video_frame_path=video_path,
                 multiview_dir=views_dir,
-                step=current_step
+                step=current_step,
+                user_feedback_text=feedback_text
             )
         return inner
 
     dummy_state = gr.State()
 
+    # VIDEO FEEDBACK
     video_like_btn.click(
         fn=_get_feedback_click("like", step="VIDEO"),              
-        inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, state_frame_path, state_views_dir, dummy_state],
-        outputs=[video_like_btn, video_dislike_btn, review_status],
+        inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, state_frame_path, state_views_dir, dummy_state, gr.State("")],
+        outputs=[video_like_btn, video_dislike_btn, review_status, video_feedback_text, video_feedback_send_btn],
         queue=False
     )
 
+    # Only show input and send button when dislike is clicked, DON'T send feedback yet
     video_dislike_btn.click(
-        fn=_get_feedback_click("dislike", step="VIDEO"),              
-        inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, state_frame_path, state_views_dir, dummy_state],
-        outputs=[video_like_btn, video_dislike_btn, review_status],
+        fn=show_negative_feedback_input,
+        inputs=None,
+        outputs=[video_feedback_text, video_feedback_send_btn],
         queue=False
     )
 
+    # Send feedback when user clicks the Send button
+    video_feedback_send_btn.click(
+        fn=_get_feedback_click("dislike", step="VIDEO"),              
+        inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, state_frame_path, state_views_dir, dummy_state, video_feedback_text],
+        outputs=[video_like_btn, video_dislike_btn, review_status, video_feedback_text, video_feedback_send_btn],
+        queue=False
+    )
+
+    # IMAGE FEEDBACK
     image_like_btn.click(
         fn=_get_feedback_click("like", dynamic_step=True),        
-        inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, dummy_state, state_views_dir, remake_state],
-        outputs=[image_like_btn, image_dislike_btn, image_review_status],
+        inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, dummy_state, state_views_dir, remake_state, gr.State("")],
+        outputs=[image_like_btn, image_dislike_btn, image_review_status, image_feedback_text, image_feedback_send_btn],
         queue=False
     )
 
+    # Only show input and send button when dislike is clicked, DON'T send feedback yet
     image_dislike_btn.click(
+        fn=show_negative_feedback_input,
+        inputs=None,
+        outputs=[image_feedback_text, image_feedback_send_btn],
+        queue=False
+    )
+
+    # Send feedback when user clicks the Send button
+    image_feedback_send_btn.click(
         fn=_get_feedback_click("dislike", dynamic_step=True),        
-        inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, dummy_state, state_views_dir, remake_state],
-        outputs=[image_like_btn, image_dislike_btn, image_review_status],
+        inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, dummy_state, state_views_dir, remake_state, image_feedback_text],
+        outputs=[image_like_btn, image_dislike_btn, image_review_status, image_feedback_text, image_feedback_send_btn],
         queue=False
     )
 
