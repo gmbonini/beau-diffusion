@@ -7530,3 +7530,290 @@
 2025-11-04 17:27:50.250 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, cute, orange body, detailed fur, big eyes, wings, full body, negative: bad anatomy, extra limbs, deformed face, excessive shadows, poor lighting, background, repetitive textures, harsh shadows, eval: The images show a cat with detailed fur and big eyes, but the wings are not consistent across all views. The images are not fully consistent in terms of the presence of wings. The overall quality is good, with realistic fur and eye details.
 2025-11-04 17:27:50.250 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
 2025-11-04 17:27:50.250 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:34:47.583 | INFO     | api_stream:load_pipe_mvadapter:63 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-04 17:34:47.584 | INFO     | api_stream:load_pipe_trellis:120 - [TRELLIS] Pipeline loaded (API)
+2025-11-04 17:35:21.482 | INFO     | api_stream:load_pipe_trellis:123 - [TRELLIS] Pipeline prepared (API)
+2025-11-04 17:35:25.164 | INFO     | api_stream:_startup:31 - [STARTUP] loaded pipelines
+2025-11-04 17:42:41.914 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: giant strong man with axe, horns, big shoulder armor, realistic, 4k, high quality
+2025-11-04 17:42:41.914 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: giant strong man with axe, horns, big shoulder armor, realistic, 4k, high quality (using qwen2.5:7b)
+2025-11-04 17:42:45.162 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'man, giant, strong, axe, horns, big shoulder armor, realistic, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, unrealistic water, shadows, lighting, background'}
+2025-11-04 17:42:45.505 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 17:42:45.505 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 17:42:45.523 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 17:42:56.286 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 17:42:56.525 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:42:56.530 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_yjqkmpvg
+2025-11-04 17:42:56.531 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_yjqkmpvg
+2025-11-04 17:42:57.004 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, realistic, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, unrealistic water, shadows, lighting, background, eval: 
+2025-11-04 17:42:57.005 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:42:57.005 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:42:57.006 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:42:58.270 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, realistic, full body, negative: low detail, artifacts, bad anatomy, extra limbs, deformed face, unrealistic water, harsh shadows, unnatural lighting, cluttered background, eval: 
+2025-11-04 17:42:58.270 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:42:58.270 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:43:02.504 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a man with horns, a strong appearance, and a large axe. The armor and overall body structure are consistent across the views. The lighting and shadows are realistic, and there are no visible artifacts or geometry holes. The images are consistent with each other and the prompt.', 'negative_prompt': 'none'}
+2025-11-04 17:43:02.505 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a man with horns, a strong appearance, and a large axe. The armor and overall body structure are consistent across the views. The lighting and shadows are realistic, and there are no visible artifacts or geometry holes. The images are consistent with each other and the prompt.', 'negative_prompt': 'none'}
+2025-11-04 17:43:06.318 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, realistic, full body, negative: low detail, bad anatomy, extra limbs, deformed face, unrealistic water, harsh shadows, unnatural lighting, cluttered background, eval: The images match the prompt well, showing a man with horns, a strong appearance, and a large axe. The armor and overall body structure are consistent across the views. The lighting and shadows are realistic, and there are no visible artifacts or geometry holes. The images are consistent with each other and the prompt.
+2025-11-04 17:43:06.318 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:43:06.319 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:43:43.140 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 29 inference steps...
+2025-11-04 17:43:43.141 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 29 steps...
+2025-11-04 17:43:43.146 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed -1 and 29 steps (API)
+2025-11-04 17:43:55.475 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 29 steps - 6 views (API)
+2025-11-04 17:43:55.734 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:43:55.738 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_iqp5jtq4
+2025-11-04 17:43:55.738 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_iqp5jtq4
+2025-11-04 17:43:56.224 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, negative: extra limbs, deformed face, unrealistic water, harsh shadows, unnatural lighting, cluttered background, inconsistent shading, background, eval: 
+2025-11-04 17:43:56.225 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:43:56.228 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:43:57.287 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, negative: extra limbs, deformed face, harsh shadows, unnatural lighting, cluttered background, inconsistent shading, blocky water surface, background, eval: 
+2025-11-04 17:43:57.291 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:43:57.292 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:43:58.299 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, negative: extra limbs, deformed face, harsh shadows, unnatural lighting, cluttered background, inconsistent shading, blocky water surface, background, eval: 
+2025-11-04 17:43:58.299 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:43:58.299 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:44:07.928 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 34 inference steps...
+2025-11-04 17:44:07.928 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 34 steps...
+2025-11-04 17:44:07.931 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed -1 and 34 steps (API)
+2025-11-04 17:44:27.327 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 34 steps - 6 views (API)
+2025-11-04 17:44:27.557 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:44:27.561 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_bmimbcht
+2025-11-04 17:44:27.562 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_bmimbcht
+2025-11-04 17:44:35.235 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, negative: extra limbs, deformed face, harsh shadows, unnatural lighting, cluttered background, inconsistent shading, blocky water surface, background, eval: 
+2025-11-04 17:44:35.236 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:44:35.241 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:44:41.424 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, negative: extra limbs, deformed face, harsh shadows, unnatural lighting, cluttered background, inconsistent shading, blocky water surface, background, grounded man, eval: 
+2025-11-04 17:44:41.425 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:44:41.425 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:44:42.844 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: man, giant, strong, axe, horns, big shoulder armor, negative: extra limbs, deformed face, harsh shadows, unnatural lighting, cluttered background, blocky water surface, background, grounded man, eval: 
+2025-11-04 17:44:42.845 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:44:42.845 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:49:13.322 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: Create a indo persian style home
+2025-11-04 17:49:13.324 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: Create a indo persian style home (using qwen2.5:7b)
+2025-11-04 17:49:14.501 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'home, indo persian style, intricate patterns, vibrant colors, detailed arches, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed arches, incorrect color palette, flat walls, unrealistic shadows, lighting, background'}
+2025-11-04 17:49:14.839 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 17:49:14.839 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 17:49:14.844 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 17:49:30.458 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 17:49:30.884 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 17:49:30.890 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_t0txagms
+2025-11-04 17:49:30.891 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_t0txagms
+2025-11-04 17:49:31.315 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: home, indo persian style, intricate patterns, vibrant colors, detailed arches, full view, negative: blurry, low detail, artifacts, bad proportions, deformed arches, incorrect color palette, flat walls, unrealistic shadows, lighting, background, eval: 
+2025-11-04 17:49:31.320 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 17:49:31.322 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:49:31.328 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:49:32.813 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: home, indo persian style, intricate patterns, vibrant colors, detailed arches, full view, negative: deformed arches, flat walls, artifacts, bad proportions, incorrect color palette, unrealistic shadows, over-saturated colors, lighting, background, eval: 
+2025-11-04 17:49:32.816 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:49:32.816 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 17:49:37.612 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, with intricate patterns and vibrant colors. The arches are detailed and consistent across the views. The lighting and shadows are natural. The background is homey and Indo-Persian style. The images are consistent across the multi-views.', 'negative_prompt': 'none'}
+2025-11-04 17:49:37.612 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, with intricate patterns and vibrant colors. The arches are detailed and consistent across the views. The lighting and shadows are natural. The background is homey and Indo-Persian style. The images are consistent across the multi-views.', 'negative_prompt': 'none'}
+2025-11-04 17:49:41.827 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: home, indo persian style, intricate patterns, vibrant colors, detailed arches, full view, negative: deformed arches, flat walls, artifacts, bad proportions, incorrect color palette, unrealistic shadows, over-saturated colors, lighting, background, eval: The images match the prompt well, with intricate patterns and vibrant colors. The arches are detailed and consistent across the views. The lighting and shadows are natural. The background is homey and Indo-Persian style. The images are consistent across the multi-views.
+2025-11-04 17:49:41.827 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 17:49:41.827 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:05:21.374 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: a gray one story ranch style home in austin texas
+2025-11-04 18:05:21.375 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: a gray one story ranch style home in austin texas (using qwen2.5:7b)
+2025-11-04 18:05:24.577 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'house, one-story, ranch style, gray, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, flat facade, incorrect roof design, shadows, lighting, background'}
+2025-11-04 18:05:24.908 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 18:05:24.908 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 18:05:24.915 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 18:05:35.160 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 18:05:35.391 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:05:35.394 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_w6ys8fmo
+2025-11-04 18:05:35.395 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_w6ys8fmo
+2025-11-04 18:05:35.841 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: house, one-story, ranch style, gray, full view, negative: blurry, low detail, artifacts, bad proportions, flat facade, incorrect roof design, shadows, lighting, background, eval: 
+2025-11-04 18:05:35.845 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:05:35.846 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 18:05:35.847 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:05:37.005 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: house, one-story, ranch style, gray, full view, negative: blurry, low detail, artifacts, bad proportions, flat facade, incorrect roof design, unnatural colors, harsh lighting, background, eval: 
+2025-11-04 18:05:37.006 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:05:37.006 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:05:41.346 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a one-story ranch style house in gray. The views are consistent, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 18:05:41.346 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a one-story ranch style house in gray. The views are consistent, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 18:05:45.208 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: house, one-story, ranch style, gray, full view, negative: blurry, low detail, artifacts, bad proportions, flat facade, incorrect roof design, unnatural colors, harsh shadows, background, eval: The images match the prompt well, showing a one-story ranch style house in gray. The views are consistent, and there are no visible issues or artifacts.
+2025-11-04 18:05:45.209 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:05:45.210 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:11:35.331 | INFO     | api_stream:trellis_run:163 - [TRELLIS] Frame saved on temp_images_path/frame_2e06e62e-10b1-48ee-9033-598da1d53658.jpg
+2025-11-04 18:11:35.333 | INFO     | api_stream:trellis_run:170 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-04 18:11:35.393 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Sizes {'glb': 1331336, 'ply': 21471008, 'mp4': 327414, 'frame': 23724} (API)
+2025-11-04 18:11:35.825 | INFO     | __main__:generate_3d:173 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_2e06e62e-10b1-48ee-9033-598da1d53658.jpg
+2025-11-04 18:11:35.827 | INFO     | __main__:generate_3d:177 - [TRELLIS/API-b64] assets: /tmp/views_w6ys8fmo/mesh_2e06e62e-10b1-48ee-9033-598da1d53658.glb, /tmp/views_w6ys8fmo/mesh_2e06e62e-10b1-48ee-9033-598da1d53658.ply, /tmp/views_w6ys8fmo/preview_2e06e62e-10b1-48ee-9033-598da1d53658.mp4
+2025-11-04 18:11:41.566 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: two floor house
+2025-11-04 18:11:41.567 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: two floor house (using qwen2.5:7b)
+2025-11-04 18:11:44.704 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'house, two floors, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background'}
+2025-11-04 18:12:09.146 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 18:12:09.146 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 18:12:09.152 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 18:12:19.458 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 18:12:19.706 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:12:19.708 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_i89ew0zw
+2025-11-04 18:12:19.708 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_i89ew0zw
+2025-11-04 18:12:20.205 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: house, two floors, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, shadows, lighting, background, eval: 
+2025-11-04 18:12:20.205 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 18:12:20.207 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:12:20.211 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:12:21.419 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: house, two floors, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-04 18:12:21.419 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:12:21.420 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:12:25.421 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a two-floor house from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 18:12:25.421 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a two-floor house from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 18:12:29.369 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: house, two floors, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, unnatural shadows, poor lighting, busy background, eval: The images match the prompt well, showing a two-floor house from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-04 18:12:29.370 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:12:29.370 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:24:26.098 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: A golden statue of a cat raising one paw
+2025-11-04 18:24:26.099 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: A golden statue of a cat raising one paw (using qwen2.5:7b)
+2025-11-04 18:24:29.250 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, golden, raising paw, detailed fur, full body', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed paws, flat base, shadows, lighting, background'}
+2025-11-04 18:24:29.593 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 18:24:29.593 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 18:24:29.599 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 18:24:39.863 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 18:24:40.099 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:24:40.102 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_4b6d7s2_
+2025-11-04 18:24:40.103 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_4b6d7s2_
+2025-11-04 18:24:43.464 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising paw, detailed fur, full body, negative: blurry, low detail, artifacts, bad proportions, deformed paws, flat base, shadows, lighting, background, eval: 
+2025-11-04 18:24:43.465 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:24:43.465 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 18:24:43.467 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:24:49.020 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a golden cat with a raised paw and detailed fur. The views are consistent across the multi-views, and there are no visible artifacts or issues in the images.', 'negative_prompt': 'none'}
+2025-11-04 18:24:49.020 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a golden cat with a raised paw and detailed fur. The views are consistent across the multi-views, and there are no visible artifacts or issues in the images.', 'negative_prompt': 'none'}
+2025-11-04 18:24:50.894 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising paw, detailed fur, full body, negative: flat base, deformed paws, artifacts, bad proportions, shadows, lighting, background, excessive shading, eval: The images match the prompt well, showing a golden cat with a raised paw and detailed fur. The views are consistent across the multi-views, and there are no visible artifacts or issues in the images.
+2025-11-04 18:24:50.895 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:24:50.895 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:24:55.052 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising paw, detailed fur, full body, negative: flat base, deformed paws, bad proportions, shadows, lighting, background, excessive shading, eval: The images match the prompt well, showing a golden cat with a raised paw and detailed fur. The views are consistent across the multi-views, and there are no visible artifacts or issues in the images.
+2025-11-04 18:24:55.052 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:24:55.052 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:27:19.687 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: A golden statue of a cat raising one paw, no fur
+2025-11-04 18:27:19.688 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: A golden statue of a cat raising one paw, no fur (using qwen2.5:7b)
+2025-11-04 18:27:20.525 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, golden, raising one paw, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, missing parts, deformed paws, shadows, lighting, background'}
+2025-11-04 18:27:20.900 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 18:27:20.901 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 18:27:20.906 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 18:27:31.158 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 18:27:31.400 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:27:31.402 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views__e09b9d2
+2025-11-04 18:27:31.403 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views__e09b9d2
+2025-11-04 18:27:31.849 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: blurry, low detail, artifacts, bad proportions, missing parts, deformed paws, shadows, lighting, background, eval: 
+2025-11-04 18:27:31.850 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:27:31.855 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:27:31.859 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 18:27:32.966 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: bad proportions, missing parts, deformed paws, artifacts, shadows, lighting, background, repetitive fur patterns, eval: 
+2025-11-04 18:27:32.966 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:27:32.966 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:27:37.158 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a golden cat raising one paw. The views are consistent, and there are no visible artifacts or issues. The lighting and shadows are natural, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-04 18:27:37.158 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a golden cat raising one paw. The views are consistent, and there are no visible artifacts or issues. The lighting and shadows are natural, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-04 18:27:44.008 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: bad proportions, missing parts, deformed paws, artifacts, repetitive fur patterns, unbalanced shadows, poor lighting, cluttered background, eval: The images match the prompt well, showing a golden cat raising one paw. The views are consistent, and there are no visible artifacts or issues. The lighting and shadows are natural, and the colors are realistic.
+2025-11-04 18:27:44.009 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 29 inference steps...
+2025-11-04 18:27:44.011 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:27:44.011 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 29 steps...
+2025-11-04 18:27:44.012 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:27:44.017 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed -1 and 29 steps (API)
+2025-11-04 18:27:57.737 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 29 steps - 6 views (API)
+2025-11-04 18:27:57.952 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:27:57.953 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_1bbc0d9z
+2025-11-04 18:27:57.954 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_1bbc0d9z
+2025-11-04 18:27:58.405 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: bad proportions, missing parts, deformed paws, repetitive fur patterns, unbalanced shadows, poor lighting, cluttered background, unnatural colors, eval: 
+2025-11-04 18:27:58.406 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:27:58.409 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:27:59.368 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: bad proportions, missing parts, deformed paws, repetitive fur patterns, unbalanced shadows, poor lighting, cluttered background, unnatural colors, uneven shadows, eval: 
+2025-11-04 18:27:59.369 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:27:59.369 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:28:00.434 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: bad proportions, missing parts, deformed paws, repetitive fur patterns, unbalanced shadows, poor lighting, cluttered background, unnatural colors, uneven shadows, eval: 
+2025-11-04 18:28:00.434 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:28:00.435 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:28:03.327 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 34 inference steps...
+2025-11-04 18:28:03.327 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 34 steps...
+2025-11-04 18:28:03.333 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed -1 and 34 steps (API)
+2025-11-04 18:28:17.756 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 34 steps - 6 views (API)
+2025-11-04 18:28:17.979 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:28:17.985 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_eeusatob
+2025-11-04 18:28:17.985 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_eeusatob
+2025-11-04 18:28:38.918 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: bad proportions, missing parts, deformed paws, repetitive fur patterns, unbalanced shadows, poor lighting, cluttered background, unnatural colors, uneven shadows, eval: 
+2025-11-04 18:28:38.920 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:28:38.922 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:28:39.986 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: bad proportions, missing parts, deformed paws, repetitive fur patterns, unbalanced shadows, poor lighting, cluttered background, unnatural colors, uneven shadows, eval: 
+2025-11-04 18:28:39.990 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:28:39.992 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:28:41.002 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, raising one paw, full view, negative: bad proportions, missing parts, deformed paws, repetitive fur patterns, unbalanced shadows, poor lighting, cluttered background, unnatural colors, uneven shadows, eval: 
+2025-11-04 18:28:41.002 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:28:41.003 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:30:14.812 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: lucky paw cat
+2025-11-04 18:30:14.812 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: lucky paw cat (using qwen2.5:7b)
+2025-11-04 18:30:15.618 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, lucky, paw, detailed fur, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra paws, deformed face, shadows, lighting, background'}
+2025-11-04 18:30:15.981 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 18:30:15.982 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 18:30:15.987 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 18:30:40.415 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 18:30:40.714 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:30:40.718 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_ncrysoz6
+2025-11-04 18:30:40.719 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_ncrysoz6
+2025-11-04 18:33:06.490 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, lucky, paw, detailed fur, full body, negative: blurry, low detail, artifacts, bad anatomy, extra paws, deformed face, shadows, lighting, background, eval: 
+2025-11-04 18:33:06.497 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:33:06.497 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 18:33:06.498 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:33:07.808 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, lucky, paw, detailed fur, full body, negative: blurry, low detail, artifacts, bad anatomy, extra paws, deformed face, unnatural shadows, unrealistic lighting, background, eval: 
+2025-11-04 18:33:07.809 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:33:07.810 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:33:12.112 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a detailed cat with a lucky paw. The views are consistent, and there are no visible artifacts or issues. The fur appears detailed, and the lighting is even across the views.', 'negative_prompt': 'none'}
+2025-11-04 18:33:12.112 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a detailed cat with a lucky paw. The views are consistent, and there are no visible artifacts or issues. The fur appears detailed, and the lighting is even across the views.', 'negative_prompt': 'none'}
+2025-11-04 18:33:15.994 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, lucky, paw, detailed fur, full body, negative: blurry, low detail, artifacts, bad anatomy, extra paws, deformed face, unnatural shadows, unrealistic lighting, background, repetitive patterns, eval: The images match the prompt well, showing a detailed cat with a lucky paw. The views are consistent, and there are no visible artifacts or issues. The fur appears detailed, and the lighting is even across the views.
+2025-11-04 18:33:15.994 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:33:15.994 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:33:59.050 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: golden lucky paw cat
+2025-11-04 18:33:59.050 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: golden lucky paw cat (using qwen2.5:7b)
+2025-11-04 18:34:00.235 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, golden, lucky, detailed fur, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background'}
+2025-11-04 18:34:00.571 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 18:34:00.571 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 18:34:00.576 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 18:34:15.936 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 18:34:16.206 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:34:16.211 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_f2tszhmy
+2025-11-04 18:34:16.212 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_f2tszhmy
+2025-11-04 18:34:16.706 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, lucky, detailed fur, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: 
+2025-11-04 18:34:16.711 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:34:16.711 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 18:34:16.713 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:34:18.386 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, lucky, detailed fur, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, unnatural colors, repetitive patterns, background, eval: 
+2025-11-04 18:34:18.386 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:34:18.386 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:34:23.293 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a golden cat with detailed fur and a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 18:34:23.294 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a golden cat with detailed fur and a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 18:34:30.080 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, lucky, detailed fur, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, unnatural colors, repetitive patterns, lighting, shadows, background, eval: The images match the prompt well, showing a golden cat with detailed fur and a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-04 18:34:30.083 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:34:30.084 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:34:40.415 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: golden lucky paw cat right hand up
+2025-11-04 18:34:40.415 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: golden lucky paw cat right hand up (using qwen2.5:7b)
+2025-11-04 18:34:41.309 | INFO     | ollama:prepare_prompts:167 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, golden, lucky paw, right hand up, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra paws, deformed face, shadows, lighting, background'}
+2025-11-04 18:34:41.678 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 24 inference steps...
+2025-11-04 18:34:41.679 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 24 steps...
+2025-11-04 18:34:41.682 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed 1 and 24 steps (API)
+2025-11-04 18:34:51.956 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 24 steps - 6 views (API)
+2025-11-04 18:34:52.224 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:34:52.227 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_yzqncbr7
+2025-11-04 18:34:52.228 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_yzqncbr7
+2025-11-04 18:34:52.729 | INFO     | ollama:check_views:217 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-04 18:34:52.730 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden, lucky paw, right hand up, full body, negative: blurry, low detail, artifacts, bad anatomy, extra paws, deformed face, shadows, lighting, background, eval: 
+2025-11-04 18:34:52.738 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:34:52.739 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:34:53.941 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden fur, lucky paw, right hand up, full body, negative: low detail, artifacts, bad anatomy, extra paws, deformed face, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-04 18:34:53.942 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:34:53.942 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:34:58.228 | INFO     | ollama:check_views:224 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a golden cat with a lucky paw and the right hand up. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 18:34:58.228 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a golden cat with a lucky paw and the right hand up. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-04 18:35:02.089 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden fur, lucky paw, right hand up, full body, negative: low detail, artifacts, bad anatomy, extra paws, deformed face, unnatural shadows, poor lighting, cluttered background, eval: The images match the prompt well, showing a golden cat with a lucky paw and the right hand up. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-04 18:35:02.091 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:35:02.094 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:36:39.916 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 29 inference steps...
+2025-11-04 18:36:39.917 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 29 steps...
+2025-11-04 18:36:39.921 | INFO     | api_stream:t2mv_generate:75 - [MV-ADAPTER] Generating images with seed -1 and 29 steps (API)
+2025-11-04 18:36:52.192 | INFO     | api_stream:t2mv_generate:92 - [MV-ADAPTER] Images generated with 29 steps - 6 views (API)
+2025-11-04 18:36:52.416 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-04 18:36:52.421 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_xdrfp7dl
+2025-11-04 18:36:52.422 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_xdrfp7dl
+2025-11-04 18:36:52.914 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden fur, lucky paw, right hand up, full body, negative: low detail, bad anatomy, extra paws, deformed face, unnatural shadows, poor lighting, cluttered background, unbalanced composition, eval: 
+2025-11-04 18:36:52.919 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:36:52.931 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:36:53.980 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden fur, lucky paw, right hand up, full body, negative: low detail, bad anatomy, extra paws, deformed face, unnatural shadows, poor lighting, cluttered background, unbalanced composition, harsh shadows, flat lighting, distracting background, eval: 
+2025-11-04 18:36:53.981 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:36:53.981 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-04 18:36:54.947 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, golden fur, lucky paw, right hand up, full body, negative: low detail, bad anatomy, extra paws, deformed face, unnatural shadows, poor lighting, cluttered background, unbalanced composition, eval: 
+2025-11-04 18:36:54.947 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-04 18:36:54.947 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b

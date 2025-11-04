@@ -64,9 +64,15 @@ def load_pipe_mvadapter():
     
 
 @app.post("/t2mv/generate")
-def t2mv_generate(ref_prompt, neg_prompt, randomize: bool = False, background_tasks: BackgroundTasks = None):
+def t2mv_generate(
+    ref_prompt, 
+    neg_prompt, 
+    randomize: bool = False, 
+    inference_steps: int = 24,
+    background_tasks: BackgroundTasks = None
+):
     seed = -1 if randomize else 1
-    logger.info(f"[MV-ADAPTER] Generating images with seed {seed} (API)")
+    logger.info(f"[MV-ADAPTER] Generating images with seed {seed} and {inference_steps} steps (API)")
     
     global pipe_mv, adapters
     
@@ -75,15 +81,15 @@ def t2mv_generate(ref_prompt, neg_prompt, randomize: bool = False, background_ta
         num_views=6,
         text=ref_prompt,
         height=768, width=768,
-        num_inference_steps=30,
-        guidance_scale=7.0,
+        num_inference_steps=inference_steps,
+        guidance_scale=8.5,
         seed=seed,
         negative_prompt=neg_prompt,
         device="cuda" if torch.cuda.is_available() else "cpu",
         adapter_name_list=adapters,
     )
     
-    logger.info("[MV-ADAPTER] Images generated {} views (API)".format(len(imgs)))
+    logger.info(f"[MV-ADAPTER] Images generated with {inference_steps} steps - {len(imgs)} views (API)")
     
     # Criar ZIP em memória
     zip_buffer = io.BytesIO()

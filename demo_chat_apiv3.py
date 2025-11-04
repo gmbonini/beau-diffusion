@@ -80,12 +80,17 @@ def llm_prompt_processing(prompt):
         neg_prompt
     )
 
-def _api_t2mv_generate(refined_prompt, negative_prompt, randomize):
-    logger.info(f"[MV-ADAPTER] Calling API...")
+def _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps=24):
+    logger.info(f"[MV-ADAPTER] Calling API with {inference_steps} steps...")
     
     resp = requests.post(
         f"{API_URL}/t2mv/generate",
-        params={"ref_prompt": refined_prompt, "neg_prompt": negative_prompt, "randomize": randomize},
+        params={
+            "ref_prompt": refined_prompt, 
+            "neg_prompt": negative_prompt, 
+            "randomize": randomize,
+            "inference_steps": inference_steps
+        },
         timeout=600,
     )
     resp.raise_for_status()
@@ -99,10 +104,10 @@ def _api_t2mv_generate(refined_prompt, negative_prompt, randomize):
     return views_dir
 
 
-def generate_images(refined_prompt, negative_prompt, randomize=False):
-    logger.info(f"[MV-ADAPTER] Starting generation...")
+def generate_images(refined_prompt, negative_prompt, randomize=False, inference_steps=24):
+    logger.info(f"[MV-ADAPTER] Starting generation with {inference_steps} inference steps...")
     try:
-        views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize)
+        views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
         paths = sorted(glob.glob(os.path.join(views_dir, "*.jpg")))
         logger.info(f"[MV-ADAPTER] Got {len(paths)} images in {views_dir}")
         
@@ -284,6 +289,7 @@ def send_review(
 with gr.Blocks() as demo:
     gr.Markdown("llm chat demo")
 
+    state_inference_steps = gr.State(value=24)
     state_views_dir = gr.State(value="")
     state_last_prompt = gr.State(value="")
     state_neg_prompt = gr.State(value="")
@@ -317,7 +323,7 @@ with gr.Blocks() as demo:
 
         with gr.Column(scale=2, min_width=440):
             gallery = gr.Gallery(columns=3, rows=2, height=520)
-            remake_btn = gr.Button("Remake images (same prompt but different seed)", visible=False)
+            remake_btn = gr.Button("Remake images (same prompt but different seed and more steps)", visible=False)
             with gr.Row():
                 image_like_btn = gr.Button("👍", visible=False)
                 image_dislike_btn = gr.Button("👎", visible=False)
@@ -387,25 +393,27 @@ with gr.Blocks() as demo:
     run_btn.click(
         fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
     ).then(
-        fn=lambda: ( # Clear UI
-            gr.update(value="", visible=False), gr.update(visible=False), 
-            gr.update(visible=False), [], [], [], 0,
-            gr.update(value="", visible=False), # Clear llm_avaliation
-            gr.update(value="", visible=False)  # Clear llm_eval_neg_prompt
-        ),
-        inputs=None,
-        outputs=[
-            image_review_status, image_like_btn, image_dislike_btn,
-            chatbot, state_chat_msgs, state_full_chat, remake_state,
-            llm_avaliation, llm_eval_neg_prompt # Add these
-        ]     
+    fn=lambda: (
+        gr.update(value="", visible=False), gr.update(visible=False), 
+        gr.update(visible=False), [], [], [], 0,
+        gr.update(value="", visible=False),
+        gr.update(value="", visible=False),
+        24
+    ),
+    inputs=None,
+    outputs=[
+        image_review_status, image_like_btn, image_dislike_btn,
+        chatbot, state_chat_msgs, state_full_chat, remake_state,
+        llm_avaliation, llm_eval_neg_prompt,
+        state_inference_steps
+    ]     
     ).then(
         fn=llm_prompt_processing,
         inputs=prompt,
         outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt],
     ).then(
         fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(False)],
+        inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],  # Add state_inference_steps
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
     ).then(
@@ -462,14 +470,16 @@ with gr.Blocks() as demo:
         inputs=None,
         outputs=remake_state
     ).then(
-        fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
+        fn=_lock_all_buttons, 
+        inputs=None, 
+        outputs=[run_btn, remake_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
     ).then(
         fn=_sync_llm_prompts,
         inputs=[state_last_prompt, state_neg_prompt],
         outputs=[ref_prompt, neg_prompt]
     ).then(
         fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(False)],
+        inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],  # Add state_inference_steps
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
     )
@@ -492,9 +502,9 @@ with gr.Blocks() as demo:
 
     # remake
     remake_btn.click(
-        fn=lambda remake: 1,
-        inputs=remake_state,
-        outputs=remake_state,
+        fn=lambda remake, current_steps: (1, current_steps + 5),  # Increment by 5
+        inputs=[remake_state, state_inference_steps],
+        outputs=[remake_state, state_inference_steps],
     ).then(
         fn=_lock_all_buttons,
         inputs=None,
@@ -505,7 +515,7 @@ with gr.Blocks() as demo:
         outputs=image_review_status    
     ).then(
         fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(True)],
+        inputs=[state_last_prompt, state_neg_prompt, gr.State(True), state_inference_steps],  # Pass current steps
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt]
     ).then(        
         fn=chat_start_fn, 
