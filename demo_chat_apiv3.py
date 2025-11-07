@@ -83,21 +83,31 @@ def llm_prompt_processing(prompt):
 def _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps=40):
     logger.info(f"[MV-ADAPTER] Calling API with {inference_steps} steps...")
     
-    resp = requests.post(
-        f"{API_URL}/t2mv/generate",
-        params={
-            "ref_prompt": refined_prompt, 
-            "neg_prompt": negative_prompt, 
-            "randomize": randomize,
-            "inference_steps": inference_steps
-        },
-        timeout=600,
-    )
-    resp.raise_for_status()
-    logger.info(f"[MV-ADAPTER] API call successful, processing response...")    
     views_dir = tempfile.mkdtemp(prefix="views_")
-        
-    with zipfile.ZipFile(io.BytesIO(resp.content), 'r') as zipf:
+    zip_path = os.path.join(views_dir, "views.zip")
+
+
+    api_params = {
+        "ref_prompt": refined_prompt,
+        "neg_prompt": negative_prompt,
+        "randomize": randomize,
+        "inference_steps": inference_steps
+    }
+
+    with requests.post(
+        f"{API_URL}/t2mv/generate",
+        params=api_params,
+        timeout=600,
+        stream=True
+    ) as resp:
+        resp.raise_for_status()
+        with open(zip_path, 'wb') as f:
+            for chunk in resp.iter_content(chunk_size=8192):
+                f.write(chunk)
+
+    logger.info(f"[MV-ADAPTER] API call successful, processing response...")
+
+    with zipfile.ZipFile(zip_path, 'r') as zipf:
         zipf.extractall(views_dir)
     
     logger.info(f"[MV-ADAPTER] Extracted ZIP to {views_dir}")
@@ -155,26 +165,49 @@ def generate_3d(views_dir):
 
     files = [("files", (os.path.basename(p), open(p, "rb"), "image/png")) for p in paths]
 
-    r = requests.post(f"{API_URL}/mv2m/generate", files=files, timeout=900)
-    r.raise_for_status()
-    data = r.json()
+    output_zip_path = os.path.join(views_dir, "trellis_output.zip")
 
-    glb_path = os.path.join(views_dir, data["filenames"]["glb"])
-    ply_path = os.path.join(views_dir, data["filenames"]["ply"])
-    mp4_path = os.path.join(views_dir, data["filenames"]["mp4"])
+    try:
+        with requests.post(
+            f"{API_URL}/mv2m/generate", 
+            files=files, 
+            timeout=900,
+            stream=True
+        ) as r:
+            r.raise_for_status()
+            with open(output_zip_path, 'wb') as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
+        
+        logger.info(f"[TRELLIS/API] Saved ZIP to {output_zip_path}")
 
-    _b64_to_file(data["glb_b64"], glb_path)
-    _b64_to_file(data["ply_b64"], ply_path)
-    _b64_to_file(data["mp4_b64"], mp4_path)
+    except Exception as e:
+        logger.error(f"[TRELLIS/API] Failed to download/save ZIP: {e}")
+        raise
+    finally:
+        for _, f_tuple in files:
+            f_tuple[1].close()
 
-    frame_path = data.get("frame_path")
+    with zipfile.ZipFile(output_zip_path, 'r') as zipf:
+        zipf.extractall(views_dir)
+    
+    logger.info(f"[TRELLIS/API] Extracted ZIP to {views_dir}")
+
+    glb_path = next(glob.iglob(os.path.join(views_dir, "*.glb")), None)
+    ply_path = next(glob.iglob(os.path.join(views_dir, "*.ply")), None)
+    mp4_path = next(glob.iglob(os.path.join(views_dir, "preview_*.mp4")), None)
+    frame_path = next(glob.iglob(os.path.join(views_dir, "frame_*.png")), None)
+
+    if not mp4_path or not glb_path or not ply_path:
+        logger.error(f"Could not find extracted mesh/video files in {views_dir}")
+        raise FileNotFoundError(f"Could not find extracted mesh/video files in {views_dir}")
 
     if frame_path:
-        logger.info(f"[TRELLIS/API-path] Frame path received: {frame_path}")
+        logger.info(f"[TRELLIS/API-path] Frame path found: {frame_path}")
     else:
-        logger.warning("[TRELLIS/API-path] No frame path returned from API.")
+        logger.warning("[TRELLIS/API-path] No frame path returned from API zip.")
 
-    logger.info(f"[TRELLIS/API-b64] assets: {glb_path}, {ply_path}, {mp4_path}")
+    logger.info(f"[TRELLIS/API] assets: {glb_path}, {ply_path}, {mp4_path}")
 
     return (
         mp4_path,

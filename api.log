@@ -2158,3 +2158,154 @@ TypeError: 'NoneType' object is not subscriptable
 2025-11-07 13:28:57.398 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Frame saved on temp_images_path/frame_ca166b8a-9730-49d5-9e8c-1437ae6ff398.png
 2025-11-07 13:28:57.401 | INFO     | api_stream:trellis_run:211 - [TRELLIS] Mesh and video saved to tmp (API)
 2025-11-07 13:28:57.440 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Sizes {'glb': 1403736, 'ply': 19201440, 'mp4': 419667, 'frame': 135283} (API)
+2025-11-07 14:13:51.858 | INFO     | api_stream:load_pipe_mvadapter:89 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 14:13:51.859 | INFO     | api_stream:load_pipe_trellis:157 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 14:14:19.774 | INFO     | api_stream:load_pipe_trellis:160 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 14:14:22.445 | INFO     | api_stream:_startup:32 - [STARTUP] loaded pipelines
+2025-11-07 14:14:51.550 | INFO     | api_stream:t2mv_generate:111 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:14:51.551 | INFO     | api_stream:t2mv_generate:112 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, person, full body, game asset
+2025-11-07 14:15:08.685 | INFO     | api_stream:t2mv_generate:129 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:16:03.664 | INFO     | api_stream:trellis_run:195 - [TRELLIS] 6 views received and processed for bg removal (API)
+2025-11-07 14:24:07.879 | INFO     | api_stream:load_pipe_mvadapter:89 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 14:24:07.879 | INFO     | api_stream:load_pipe_trellis:170 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 14:24:37.524 | INFO     | api_stream:load_pipe_trellis:173 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 14:24:40.360 | INFO     | api_stream:_startup:32 - [STARTUP] loaded pipelines
+2025-11-07 14:25:10.953 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:25:10.954 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, cute, full body, game asset
+2025-11-07 14:25:28.077 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:26:14.020 | INFO     | api_stream:trellis_run:188 - [TRELLIS] [<PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251D240>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251CFD0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251D270>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251D2A0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251D2D0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251D300>] views received for processing (API)
+2025-11-07 14:27:14.906 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Frame saved on temp_images_path/frame_7972bffb-3e2d-4c73-8d0c-7a5991ab653f.png
+2025-11-07 14:27:14.909 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 14:27:15.052 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Sizes {'glb': 1707516, 'ply': 61816224, 'mp4': 587021, 'frame': 249098} (API)
+2025-11-07 14:27:44.353 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:27:44.354 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, cat, cute, full body, game asset
+2025-11-07 14:28:01.178 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:28:33.986 | INFO     | api_stream:trellis_run:188 - [TRELLIS] [<PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251CF70>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251C700>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251C9A0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06251C850>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06230AAD0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD062309E40>] views received for processing (API)
+2025-11-07 14:29:09.655 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Frame saved on temp_images_path/frame_44e1c05f-ed1f-4905-aa3c-f4b876f19be1.png
+2025-11-07 14:29:09.659 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 14:29:09.726 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Sizes {'glb': 1434960, 'ply': 28405920, 'mp4': 473622, 'frame': 210466} (API)
+2025-11-07 14:29:31.690 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:29:31.691 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, full body, game asset
+2025-11-07 14:29:48.416 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:30:45.941 | INFO     | api_stream:trellis_run:188 - [TRELLIS] [<PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06230BD60>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06230B370>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06230AE30>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06230ADD0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06230B3A0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FD06230B8B0>] views received for processing (API)
+2025-11-07 14:31:14.648 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Frame saved on temp_images_path/frame_75cbd309-f1c3-4eb3-81de-da7c2a3fa6f5.png
+2025-11-07 14:31:14.651 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 14:31:14.708 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Sizes {'glb': 1555528, 'ply': 22397984, 'mp4': 560977, 'frame': 172626} (API)
+2025-11-07 14:31:54.815 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:31:54.816 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, cute, full body, game asset
+2025-11-07 14:32:11.516 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:33:36.287 | INFO     | api_stream:load_pipe_mvadapter:89 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 14:33:36.287 | INFO     | api_stream:load_pipe_trellis:170 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 14:34:06.074 | INFO     | api_stream:load_pipe_trellis:173 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 14:34:06.451 | INFO     | api_stream:_startup:32 - [STARTUP] loaded pipelines
+2025-11-07 14:34:18.855 | INFO     | api_stream:t2mv_generate:118 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:34:18.855 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, cute, full body, game asset
+2025-11-07 14:34:35.998 | INFO     | api_stream:t2mv_generate:136 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:35:23.915 | INFO     | api_stream:load_pipe_mvadapter:89 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 14:35:23.916 | INFO     | api_stream:load_pipe_trellis:170 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 14:35:52.131 | INFO     | api_stream:load_pipe_trellis:173 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 14:35:52.476 | INFO     | api_stream:_startup:32 - [STARTUP] loaded pipelines
+2025-11-07 14:36:26.225 | INFO     | api_stream:t2mv_generate:118 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:36:26.225 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, cute, full body, game asset
+2025-11-07 14:36:43.376 | INFO     | api_stream:t2mv_generate:136 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:37:15.885 | INFO     | api_stream:t2mv_generate:150 - [MV-ADAPTER] Bg remove finished in 32.51s
+2025-11-07 14:38:16.416 | INFO     | api_stream:t2mv_generate:118 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:38:16.416 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, cute, full body, game asset
+2025-11-07 14:38:33.104 | INFO     | api_stream:t2mv_generate:136 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:39:14.880 | INFO     | api_stream:t2mv_generate:150 - [MV-ADAPTER] Bg remove finished in 41.78s
+2025-11-07 14:43:37.410 | INFO     | api_stream:load_pipe_mvadapter:91 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 14:43:37.411 | INFO     | api_stream:load_pipe_trellis:172 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 14:44:07.326 | INFO     | api_stream:load_pipe_trellis:175 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 14:44:07.683 | INFO     | api_stream:_startup:34 - [STARTUP] loaded pipelines
+2025-11-07 14:45:02.174 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:45:02.174 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, cute, full body, game asset
+2025-11-07 14:45:19.262 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:45:21.041 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 1.78s
+2025-11-07 14:45:33.237 | INFO     | api_stream:trellis_run:190 - [TRELLIS] [<PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A4471B5B0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A4471BEE0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A4471AE30>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A44718EE0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A44719630>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A44718A90>] views received for processing (API)
+2025-11-07 14:46:33.070 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Frame saved on temp_images_path/frame_296bc0c1-6fb0-4c9b-8f7f-7f7c18a6d390.png
+2025-11-07 14:46:33.073 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 14:46:33.237 | INFO     | api_stream:trellis_run:236 - [TRELLIS] Sizes {'glb': 1728500, 'ply': 62092576, 'mp4': 595348, 'frame': 251229} (API)
+2025-11-07 14:47:04.187 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 14:47:04.188 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, shihtzu, cute, full body, game asset
+2025-11-07 14:47:20.883 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 14:47:22.176 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 1.29s
+2025-11-07 14:47:35.942 | INFO     | api_stream:trellis_run:190 - [TRELLIS] [<PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A44766620>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A44764B80>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A4456F460>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A4456C700>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A4456EC80>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7F3A4456C550>] views received for processing (API)
+2025-11-07 14:48:31.677 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Frame saved on temp_images_path/frame_ac1b828c-d801-4353-9e39-e03051c1718b.png
+2025-11-07 14:48:31.679 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 14:48:31.882 | INFO     | api_stream:trellis_run:236 - [TRELLIS] Sizes {'glb': 2569272, 'ply': 96408097, 'mp4': 851140, 'frame': 323034} (API)
+2025-11-07 16:37:41.867 | INFO     | api_stream:load_pipe_mvadapter:91 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 16:37:41.868 | INFO     | api_stream:load_pipe_trellis:172 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 16:38:11.325 | INFO     | api_stream:load_pipe_trellis:175 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 16:38:14.011 | INFO     | api_stream:_startup:34 - [STARTUP] loaded pipelines
+2025-11-07 16:38:49.907 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 16:38:49.908 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, poodle, cute, full body, game asset
+2025-11-07 16:39:07.030 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 16:39:08.623 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 1.59s
+2025-11-07 16:39:38.893 | INFO     | api_stream:trellis_run:190 - [TRELLIS] [<PIL.Image.Image image mode=RGB size=768x768 at 0x7FC9801B97B0>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FC9801B8C10>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FC9801BB790>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FC9801BAF50>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FC9801B9B10>, <PIL.Image.Image image mode=RGB size=768x768 at 0x7FC9801B8160>] views received for processing (API)
+2025-11-07 16:40:31.896 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Frame saved on temp_images_path/frame_f6f1a5a9-be64-4739-a5d2-a8b6c6324c42.png
+2025-11-07 16:40:31.899 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 16:40:32.043 | INFO     | api_stream:trellis_run:236 - [TRELLIS] Sizes {'glb': 1924272, 'ply': 65968032, 'mp4': 822370, 'frame': 247029} (API)
+2025-11-07 16:46:27.954 | INFO     | api_stream:load_pipe_mvadapter:91 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 16:46:27.954 | INFO     | api_stream:load_pipe_trellis:172 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 16:46:57.060 | INFO     | api_stream:load_pipe_trellis:175 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 16:46:59.664 | INFO     | api_stream:_startup:34 - [STARTUP] loaded pipelines
+2025-11-07 16:54:29.577 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 16:54:29.577 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dragon, cute, full body, game asset
+2025-11-07 16:54:46.696 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 16:54:48.231 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 1.53s
+2025-11-07 16:58:50.543 | INFO     | api_stream:trellis_run:191 - [TRELLIS] 6 views received for processing (API)
+2025-11-07 16:59:23.162 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Frame saved on temp_images_path/frame_0ab2ec92-f560-45ad-8453-d051058b9705.png
+2025-11-07 16:59:23.165 | INFO     | api_stream:trellis_run:229 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 16:59:23.301 | INFO     | api_stream:trellis_run:246 - [TRELLIS] Created zip buffer for streaming.
+2025-11-07 17:03:28.802 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed -1 and 45 steps (API)
+2025-11-07 17:03:28.803 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dragon, cute, full body, detailed scales, vibrant colors, game asset
+2025-11-07 17:03:47.498 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 45 steps - 6 views (API)
+2025-11-07 17:03:48.357 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 0.86s
+2025-11-07 17:15:56.650 | INFO     | api_stream:load_pipe_mvadapter:91 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 17:15:56.651 | INFO     | api_stream:load_pipe_trellis:172 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 17:16:25.790 | INFO     | api_stream:load_pipe_trellis:175 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 17:16:28.382 | INFO     | api_stream:_startup:34 - [STARTUP] loaded pipelines
+2025-11-07 17:17:46.958 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 17:17:46.958 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dragon, cute, full body, game asset, good ilumination, bright ilumination
+2025-11-07 17:18:05.907 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 17:18:07.427 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 1.52s
+2025-11-07 17:19:15.495 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 17:19:15.495 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, cute, full body, game asset, good ilumination, bright ilumination
+2025-11-07 17:19:32.136 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 17:19:33.175 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 1.04s
+2025-11-07 17:19:50.921 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 17:19:50.922 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dragon, cute, full body, game asset, good ilumination, bright ilumination
+2025-11-07 17:20:08.677 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 17:20:09.484 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 0.81s
+2025-11-07 17:26:37.168 | INFO     | api_stream:load_pipe_mvadapter:91 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-07 17:26:37.169 | INFO     | api_stream:load_pipe_trellis:172 - [TRELLIS] Pipeline loaded (API)
+2025-11-07 17:27:04.793 | INFO     | api_stream:load_pipe_trellis:175 - [TRELLIS] Pipeline prepared (API)
+2025-11-07 17:27:07.513 | INFO     | api_stream:_startup:34 - [STARTUP] loaded pipelines
+2025-11-07 17:28:00.920 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 17:28:00.920 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dragon, cute, full body, game asset
+2025-11-07 17:28:18.022 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 17:28:19.556 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 1.53s
+2025-11-07 17:31:19.940 | INFO     | api_stream:trellis_run:191 - [TRELLIS] 6 views received for processing (API)
+2025-11-07 17:31:52.155 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Frame saved on temp_images_path/frame_710b81f7-ab1a-40b5-ae64-608d0ec8778b.png
+2025-11-07 17:31:52.158 | INFO     | api_stream:trellis_run:229 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 17:31:52.273 | INFO     | api_stream:trellis_run:246 - [TRELLIS] Created zip buffer for streaming.
+2025-11-07 17:32:42.575 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed -1 and 45 steps (API)
+2025-11-07 17:32:42.576 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dragon, cute, full body, round features, soft fur, game asset
+2025-11-07 17:33:01.301 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 45 steps - 6 views (API)
+2025-11-07 17:33:02.094 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 0.79s
+2025-11-07 17:33:17.543 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 17:33:17.544 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dragoon, cute, full body, game asset
+2025-11-07 17:33:34.268 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 17:33:35.076 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 0.81s
+2025-11-07 17:34:06.231 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 17:34:06.231 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, labubu, full body, game asset
+2025-11-07 17:34:22.897 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 17:34:23.897 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 1.00s
+2025-11-07 17:35:09.928 | INFO     | api_stream:trellis_run:191 - [TRELLIS] 6 views received for processing (API)
+2025-11-07 17:35:42.081 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Frame saved on temp_images_path/frame_b84195ba-8642-4737-a257-d6fbc3c2c7d6.png
+2025-11-07 17:35:42.084 | INFO     | api_stream:trellis_run:229 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-07 17:35:42.282 | INFO     | api_stream:trellis_run:246 - [TRELLIS] Created zip buffer for streaming.
+2025-11-07 17:51:32.704 | INFO     | api_stream:t2mv_generate:123 - [MV-ADAPTER] Generating images with seed 42 and 40 steps (API)
+2025-11-07 17:51:32.704 | INFO     | api_stream:t2mv_generate:124 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, full body, game asset
+2025-11-07 17:51:49.383 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated with 40 steps - 6 views (API)
+2025-11-07 17:51:50.081 | INFO     | api_stream:t2mv_generate:152 - [MV-ADAPTER] Bg remove finished in 0.70s

@@ -544,3 +544,683 @@ requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: 
 2025-11-07 13:28:29.506 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
 2025-11-07 13:28:57.812 | INFO     | __main__:generate_3d:173 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_ca166b8a-9730-49d5-9e8c-1437ae6ff398.png
 2025-11-07 13:28:57.813 | INFO     | __main__:generate_3d:177 - [TRELLIS/API-b64] assets: /tmp/views_emgt3dck/mesh_ca166b8a-9730-49d5-9e8c-1437ae6ff398.glb, /tmp/views_emgt3dck/mesh_ca166b8a-9730-49d5-9e8c-1437ae6ff398.ply, /tmp/views_emgt3dck/preview_ca166b8a-9730-49d5-9e8c-1437ae6ff398.mp4
+2025-11-07 14:14:50.580 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: person
+2025-11-07 14:14:50.581 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: person (using qwen2.5:7b)
+2025-11-07 14:14:51.335 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'person, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:14:51.543 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:14:51.543 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:15:09.812 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 14:15:09.818 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_7bsa0ihx
+2025-11-07 14:15:09.818 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_7bsa0ihx
+2025-11-07 14:15:10.154 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: person, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 14:15:10.155 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:15:10.155 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:15:10.169 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:15:11.469 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: person, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: 
+2025-11-07 14:15:11.470 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:15:11.470 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:15:18.444 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full body of a person from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the background is neutral, which helps focus on the subject.', 'negative_prompt': 'none'}
+2025-11-07 14:15:18.445 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full body of a person from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the background is neutral, which helps focus on the subject.', 'negative_prompt': 'none'}
+2025-11-07 14:15:22.390 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: person, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, harsh shadows, unnatural lighting, cluttered background, eval: The images match the prompt well, showing a full body of a person from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the background is neutral, which helps focus on the subject.
+2025-11-07 14:15:22.390 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:15:22.390 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:25:09.876 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dog
+2025-11-07 14:25:09.877 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dog (using qwen2.5:7b)
+2025-11-07 14:25:10.672 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:25:10.937 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:25:10.937 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:26:07.888 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 14:26:07.897 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_fu3v3y_o
+2025-11-07 14:26:07.898 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_fu3v3y_o
+2025-11-07 14:26:08.237 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 14:26:08.238 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:26:08.238 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:26:08.295 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:26:09.664 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-07 14:26:09.667 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:26:09.668 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:26:19.866 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:26:19.866 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:26:29.838 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, unnatural shadows, unrealistic lighting, cluttered background, eval: The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.
+2025-11-07 14:26:29.839 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:26:29.839 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:27:16.071 | INFO     | __main__:generate_3d:173 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_7972bffb-3e2d-4c73-8d0c-7a5991ab653f.png
+2025-11-07 14:27:16.072 | INFO     | __main__:generate_3d:177 - [TRELLIS/API-b64] assets: /tmp/views_fu3v3y_o/mesh_7972bffb-3e2d-4c73-8d0c-7a5991ab653f.glb, /tmp/views_fu3v3y_o/mesh_7972bffb-3e2d-4c73-8d0c-7a5991ab653f.ply, /tmp/views_fu3v3y_o/preview_7972bffb-3e2d-4c73-8d0c-7a5991ab653f.mp4
+2025-11-07 14:27:43.325 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute cat
+2025-11-07 14:27:43.326 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute cat (using qwen2.5:7b)
+2025-11-07 14:27:44.149 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:27:44.345 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:27:44.346 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:28:29.736 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 14:28:29.742 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_a_tldxto
+2025-11-07 14:28:29.743 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_a_tldxto
+2025-11-07 14:28:30.132 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 14:28:30.132 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:28:30.132 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:28:30.139 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:28:31.459 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-07 14:28:31.461 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:28:31.464 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:28:41.376 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute cat with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the background is clean.', 'negative_prompt': 'none'}
+2025-11-07 14:28:41.376 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute cat with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the background is clean.', 'negative_prompt': 'none'}
+2025-11-07 14:28:49.086 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: cat, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: The images match the prompt well, showing a cute cat with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the background is clean.
+2025-11-07 14:28:49.086 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:28:49.087 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:29:10.209 | INFO     | __main__:generate_3d:173 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_44e1c05f-ed1f-4905-aa3c-f4b876f19be1.png
+2025-11-07 14:29:10.209 | INFO     | __main__:generate_3d:177 - [TRELLIS/API-b64] assets: /tmp/views_a_tldxto/mesh_44e1c05f-ed1f-4905-aa3c-f4b876f19be1.glb, /tmp/views_a_tldxto/mesh_44e1c05f-ed1f-4905-aa3c-f4b876f19be1.ply, /tmp/views_a_tldxto/preview_44e1c05f-ed1f-4905-aa3c-f4b876f19be1.mp4
+2025-11-07 14:29:30.614 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: dog
+2025-11-07 14:29:30.615 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: dog (using qwen2.5:7b)
+2025-11-07 14:29:31.472 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:29:31.682 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:29:31.682 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:30:21.976 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 14:30:21.983 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_5e2hc3bs
+2025-11-07 14:30:21.984 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_5e2hc3bs
+2025-11-07 14:30:22.320 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 14:30:22.321 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:30:22.322 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:30:22.375 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:30:23.895 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: 
+2025-11-07 14:30:23.895 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:30:23.902 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:30:30.891 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full body of a dog from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:30:30.891 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full body of a dog from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:30:34.869 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: The images match the prompt well, showing a full body of a dog from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.
+2025-11-07 14:30:34.870 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:30:34.870 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:31:15.161 | INFO     | __main__:generate_3d:173 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_75cbd309-f1c3-4eb3-81de-da7c2a3fa6f5.png
+2025-11-07 14:31:15.162 | INFO     | __main__:generate_3d:177 - [TRELLIS/API-b64] assets: /tmp/views_5e2hc3bs/mesh_75cbd309-f1c3-4eb3-81de-da7c2a3fa6f5.glb, /tmp/views_5e2hc3bs/mesh_75cbd309-f1c3-4eb3-81de-da7c2a3fa6f5.ply, /tmp/views_5e2hc3bs/preview_75cbd309-f1c3-4eb3-81de-da7c2a3fa6f5.mp4
+2025-11-07 14:31:53.744 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dog
+2025-11-07 14:31:53.744 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dog (using qwen2.5:7b)
+2025-11-07 14:31:54.571 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:31:54.808 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:31:54.808 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:32:43.666 | ERROR    | __main__:generate_images:128 - [MV-ADAPTER] Error generating images: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=dog%2C+cute%2C+full+body&neg_prompt=nsfw%2C+explicit+content%2C+blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=40
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f2a49d22dd0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 139813762909888)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f28f3b91cf0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 139813762909888)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('dog, cute, full body', 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, def...
+             │       │   └ <function generate_images at 0x7f28dc5941f0>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f28dc644580>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('dog, cute, full body', 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, def...
+               └ <function generate_images at 0x7f28efcb5480>
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 110, in generate_images
+    views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                │                  │               │                │          └ 40
+                │                  │               │                └ False
+                │                  │               └ 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, ligh...
+                │                  └ 'dog, cute, full body'
+                └ <function _api_t2mv_generate at 0x7f28efcb53f0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 96, in _api_t2mv_generate
+    resp.raise_for_status()
+    │    └ <function Response.raise_for_status at 0x7f2a48b2c310>
+    └ <Response [500]>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [500]>
+          │         └ '500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=dog%2C+cute%2C+full+body&neg...
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=dog%2C+cute%2C+full+body&neg_prompt=nsfw%2C+explicit+content%2C+blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=40
+2025-11-07 14:32:44.058 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: Error: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=dog%2C+cute%2C+full+body&neg_prompt=nsfw%2C+explicit+content%2C+blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=40
+2025-11-07 14:32:44.059 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:32:44.059 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:32:44.061 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:32:50.305 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, flat water, over-saturated colors, background, eval: Error: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=dog%2C+cute%2C+full+body&neg_prompt=nsfw%2C+explicit+content%2C+blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=40
+2025-11-07 14:32:50.305 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:32:50.305 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:32:54.424 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'the images match the prompt well, showing a cute dog with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 14:32:54.425 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'the images match the prompt well, showing a cute dog with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 14:34:13.870 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, flat water, over-saturated colors, harsh shadows, background, eval: the images match the prompt well, showing a cute dog with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-07 14:34:13.874 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:34:13.879 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:34:17.810 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dog
+2025-11-07 14:34:17.811 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dog (using qwen2.5:7b)
+2025-11-07 14:34:18.590 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:34:18.823 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:34:18.823 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:34:36.000 | ERROR    | __main__:generate_images:128 - [MV-ADAPTER] Error generating images: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=dog%2C+cute%2C+full+body&neg_prompt=nsfw%2C+explicit+content%2C+blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=40
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f2a49d22dd0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 139813771302592)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f28f3b91cf0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 139813771302592)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('dog, cute, full body', 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, def...
+             │       │   └ <function generate_images at 0x7f28dc596f80>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f28dc4dac80>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('dog, cute, full body', 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, def...
+               └ <function generate_images at 0x7f28efcb5480>
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 110, in generate_images
+    views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                │                  │               │                │          └ 40
+                │                  │               │                └ False
+                │                  │               └ 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, ligh...
+                │                  └ 'dog, cute, full body'
+                └ <function _api_t2mv_generate at 0x7f28efcb53f0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 96, in _api_t2mv_generate
+    resp.raise_for_status()
+    │    └ <function Response.raise_for_status at 0x7f2a48b2c310>
+    └ <Response [500]>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [500]>
+          │         └ '500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=dog%2C+cute%2C+full+body&neg...
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=dog%2C+cute%2C+full+body&neg_prompt=nsfw%2C+explicit+content%2C+blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=40
+2025-11-07 14:34:36.169 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:34:40.535 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'the images match the prompt well, showing a cute dog with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 14:34:40.535 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'the images match the prompt well, showing a cute dog with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 14:34:40.777 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: the images match the prompt well, showing a cute dog with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-07 14:34:40.777 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:34:40.777 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:36:25.193 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dog
+2025-11-07 14:36:25.193 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dog (using qwen2.5:7b)
+2025-11-07 14:36:25.971 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:36:26.204 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:36:26.205 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:37:17.275 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 14:37:17.286 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_1t_87kfh
+2025-11-07 14:37:17.287 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_1t_87kfh
+2025-11-07 14:37:17.681 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 14:37:17.684 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:37:17.687 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:37:17.703 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:37:18.996 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: 
+2025-11-07 14:37:18.997 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:37:18.997 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:37:25.759 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:37:25.760 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:37:29.789 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, harsh shadows, unnatural lighting, cluttered background, eval: The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.
+2025-11-07 14:37:29.789 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:37:29.789 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:38:15.395 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dog
+2025-11-07 14:38:15.395 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dog (using qwen2.5:7b)
+2025-11-07 14:38:16.222 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:38:16.410 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:38:16.410 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:39:16.256 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 14:39:16.261 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_rkdzm_j0
+2025-11-07 14:39:16.261 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_rkdzm_j0
+2025-11-07 14:39:16.639 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 14:39:16.639 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:39:16.641 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:39:16.648 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:39:17.918 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-07 14:39:17.918 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:39:17.918 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:39:24.867 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:39:24.868 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:39:28.747 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, unnatural shadows, poor lighting, cluttered background, deformed tail, eval: The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.
+2025-11-07 14:39:28.747 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:39:28.747 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:45:01.142 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dog
+2025-11-07 14:45:01.143 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dog (using qwen2.5:7b)
+2025-11-07 14:45:01.949 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:45:02.156 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:45:02.156 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:45:22.434 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 14:45:22.444 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_gvlw9ezh
+2025-11-07 14:45:22.445 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_gvlw9ezh
+2025-11-07 14:45:22.800 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 14:45:22.803 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:45:22.806 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:45:22.827 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:45:24.123 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-07 14:45:24.123 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:45:24.123 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:45:31.041 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:45:31.042 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:45:37.634 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.
+2025-11-07 14:45:37.634 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:45:37.635 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:46:34.323 | INFO     | __main__:generate_3d:173 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_296bc0c1-6fb0-4c9b-8f7f-7f7c18a6d390.png
+2025-11-07 14:46:34.324 | INFO     | __main__:generate_3d:177 - [TRELLIS/API-b64] assets: /tmp/views_gvlw9ezh/mesh_296bc0c1-6fb0-4c9b-8f7f-7f7c18a6d390.glb, /tmp/views_gvlw9ezh/mesh_296bc0c1-6fb0-4c9b-8f7f-7f7c18a6d390.ply, /tmp/views_gvlw9ezh/preview_296bc0c1-6fb0-4c9b-8f7f-7f7c18a6d390.mp4
+2025-11-07 14:47:03.116 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute shihtzu
+2025-11-07 14:47:03.116 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute shihtzu (using qwen2.5:7b)
+2025-11-07 14:47:03.951 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'shihtzu, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 14:47:04.179 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 14:47:04.180 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 14:47:23.794 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 14:47:23.804 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_9phikx_f
+2025-11-07 14:47:23.805 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_9phikx_f
+2025-11-07 14:47:24.200 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: shihtzu, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 14:47:24.203 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:47:24.204 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:47:24.221 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 14:47:25.469 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: shihtzu, cute, full body, detailed fur, negative: nsfw, explicit content, blurry, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: 
+2025-11-07 14:47:25.471 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:47:25.471 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:47:32.672 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute Shih Tzu from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:47:32.672 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute Shih Tzu from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 14:47:42.336 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: shihtzu, cute, full body, detailed fur, negative: nsfw, explicit content, blurry, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: The images match the prompt well, showing a cute Shih Tzu from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.
+2025-11-07 14:47:42.337 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 14:47:42.337 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 14:48:33.678 | INFO     | __main__:generate_3d:173 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_ac1b828c-d801-4353-9e39-e03051c1718b.png
+2025-11-07 14:48:33.679 | INFO     | __main__:generate_3d:177 - [TRELLIS/API-b64] assets: /tmp/views_9phikx_f/mesh_ac1b828c-d801-4353-9e39-e03051c1718b.glb, /tmp/views_9phikx_f/mesh_ac1b828c-d801-4353-9e39-e03051c1718b.ply, /tmp/views_9phikx_f/preview_ac1b828c-d801-4353-9e39-e03051c1718b.mp4
+2025-11-07 16:38:48.932 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute poodle
+2025-11-07 16:38:48.933 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute poodle (using qwen2.5:7b)
+2025-11-07 16:38:49.670 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'poodle, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 16:38:49.893 | INFO     | __main__:generate_images:108 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 16:38:49.893 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 16:39:10.054 | INFO     | __main__:_api_t2mv_generate:97 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 16:39:10.059 | INFO     | __main__:_api_t2mv_generate:103 - [MV-ADAPTER] Extracted ZIP to /tmp/views_8dj2w269
+2025-11-07 16:39:10.060 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Got 6 images in /tmp/views_8dj2w269
+2025-11-07 16:39:10.451 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: poodle, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 16:39:10.452 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 16:39:10.454 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 16:39:10.467 | INFO     | ollama:check_views:231 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 16:39:11.867 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: poodle, cute, full body, playful stance, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, blocky lighting, cluttered background, eval: 
+2025-11-07 16:39:11.868 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 16:39:11.868 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 16:39:18.666 | INFO     | ollama:check_views:238 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute poodle with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 16:39:18.667 | INFO     | __main__:check_views_quality:143 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute poodle with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 16:39:25.649 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: poodle, cute, full body, playful stance, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, blocky lighting, cluttered background, eval: The images match the prompt well, showing a cute poodle with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-07 16:39:25.650 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 16:39:25.650 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 16:40:33.204 | INFO     | __main__:generate_3d:173 - [TRELLIS/API-path] Frame path received: temp_images_path/frame_f6f1a5a9-be64-4739-a5d2-a8b6c6324c42.png
+2025-11-07 16:40:33.205 | INFO     | __main__:generate_3d:177 - [TRELLIS/API-b64] assets: /tmp/views_8dj2w269/mesh_f6f1a5a9-be64-4739-a5d2-a8b6c6324c42.glb, /tmp/views_8dj2w269/mesh_f6f1a5a9-be64-4739-a5d2-a8b6c6324c42.ply, /tmp/views_8dj2w269/preview_f6f1a5a9-be64-4739-a5d2-a8b6c6324c42.mp4
+2025-11-07 16:47:34.041 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dragon
+2025-11-07 16:47:34.041 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dragon (using qwen2.5:7b)
+2025-11-07 16:47:34.846 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 16:47:35.159 | INFO     | __main__:generate_images:110 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 16:47:35.159 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 16:47:35.160 | ERROR    | __main__:generate_images:130 - [MV-ADAPTER] Error generating images: cannot unpack non-iterable ellipsis object
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f851229ed40>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140203699717824)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f83bc0a1c60>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140203699717824)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('dragon, cute, full body', 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, ...
+             │       │   └ <function generate_images at 0x7f83a6a07400>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f83b4a6b180>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('dragon, cute, full body', 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, ...
+               └ <function generate_images at 0x7f83b81715a0>
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 112, in generate_images
+    views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                │                  │               │                │          └ 40
+                │                  │               │                └ False
+                │                  │               └ 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, ligh...
+                │                  └ 'dragon, cute, full body'
+                └ <function _api_t2mv_generate at 0x7f83b8171510>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 89, in _api_t2mv_generate
+    with requests.post(
+         │        └ <function post at 0x7f85110a60e0>
+         └ <module 'requests' from '/venv/beau/lib/python3.10/site-packages/requests/__init__.py'>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           │               │         │          │       └ {'params': {Ellipsis}, 'timeout': 600, 'stream': True}
+           │               │         │          └ None
+           │               │         └ None
+           │               └ 'http://127.0.0.1:8081/t2mv/generate'
+           └ <function request at 0x7f8511063be0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'data': None, 'json': None, 'params': {Ellipsis}, 'timeout': 600, 'stream': True}
+           │       │              │           └ 'http://127.0.0.1:8081/t2mv/generate'
+           │       │              └ 'post'
+           │       └ <function Session.request at 0x7f85110a56c0>
+           └ <requests.sessions.Session object at 0x7f83a683d990>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           │    │               └ <Request [POST]>
+           │    └ <function Session.prepare_request at 0x7f85110a5630>
+           └ <requests.sessions.Session object at 0x7f83a683d990>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    │ └ <function PreparedRequest.prepare at 0x7f8511077010>
+    └ <PreparedRequest [POST]>
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    │    │           │    └ {Ellipsis}
+    │    │           └ 'http://127.0.0.1:8081/t2mv/generate'
+    │    └ <function PreparedRequest.prepare_url at 0x7f85110772e0>
+    └ <PreparedRequest [POST]>
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 473, in prepare_url
+    enc_params = self._encode_params(params)
+                 │    │              └ {Ellipsis}
+                 │    └ <staticmethod(<function RequestEncodingMixin._encode_params at 0x7f8511076b90>)>
+                 └ <PreparedRequest [POST]>
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 121, in _encode_params
+    for k, vs in to_key_val_list(data):
+                 │               └ {Ellipsis}
+                 └ <function to_key_val_list at 0x7f8511062830>
+
+TypeError: cannot unpack non-iterable ellipsis object
+2025-11-07 16:47:35.512 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 16:47:39.633 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 16:47:39.633 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 16:47:39.862 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-07 16:47:39.862 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 16:47:39.862 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 16:51:14.444 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dragon
+2025-11-07 16:51:14.444 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dragon (using qwen2.5:7b)
+2025-11-07 16:51:15.263 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 16:51:15.454 | INFO     | __main__:generate_images:110 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 16:51:15.455 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 16:51:15.455 | ERROR    | __main__:generate_images:130 - [MV-ADAPTER] Error generating images: cannot unpack non-iterable ellipsis object
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f851229ed40>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140203699717824)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f83bc0a1c60>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140203699717824)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('dragon, cute, full body', 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, ...
+             │       │   └ <function generate_images at 0x7f83a69205e0>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f83b4adc300>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('dragon, cute, full body', 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, ...
+               └ <function generate_images at 0x7f83b81715a0>
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 112, in generate_images
+    views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                │                  │               │                │          └ 40
+                │                  │               │                └ False
+                │                  │               └ 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, ligh...
+                │                  └ 'dragon, cute, full body'
+                └ <function _api_t2mv_generate at 0x7f83b8171510>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 89, in _api_t2mv_generate
+    with requests.post(
+         │        └ <function post at 0x7f85110a60e0>
+         └ <module 'requests' from '/venv/beau/lib/python3.10/site-packages/requests/__init__.py'>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           │               │         │          │       └ {'params': {Ellipsis}, 'timeout': 600, 'stream': True}
+           │               │         │          └ None
+           │               │         └ None
+           │               └ 'http://127.0.0.1:8081/t2mv/generate'
+           └ <function request at 0x7f8511063be0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'data': None, 'json': None, 'params': {Ellipsis}, 'timeout': 600, 'stream': True}
+           │       │              │           └ 'http://127.0.0.1:8081/t2mv/generate'
+           │       │              └ 'post'
+           │       └ <function Session.request at 0x7f85110a56c0>
+           └ <requests.sessions.Session object at 0x7f83a691e920>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           │    │               └ <Request [POST]>
+           │    └ <function Session.prepare_request at 0x7f85110a5630>
+           └ <requests.sessions.Session object at 0x7f83a691e920>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    │ └ <function PreparedRequest.prepare at 0x7f8511077010>
+    └ <PreparedRequest [POST]>
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    │    │           │    └ {Ellipsis}
+    │    │           └ 'http://127.0.0.1:8081/t2mv/generate'
+    │    └ <function PreparedRequest.prepare_url at 0x7f85110772e0>
+    └ <PreparedRequest [POST]>
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 473, in prepare_url
+    enc_params = self._encode_params(params)
+                 │    │              └ {Ellipsis}
+                 │    └ <staticmethod(<function RequestEncodingMixin._encode_params at 0x7f8511076b90>)>
+                 └ <PreparedRequest [POST]>
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 121, in _encode_params
+    for k, vs in to_key_val_list(data):
+                 │               └ {Ellipsis}
+                 └ <function to_key_val_list at 0x7f8511062830>
+
+TypeError: cannot unpack non-iterable ellipsis object
+2025-11-07 16:51:15.759 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 16:51:19.967 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 16:51:19.968 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 16:51:20.208 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-07 16:51:20.209 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 16:51:20.209 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 16:54:26.161 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dragon
+2025-11-07 16:54:26.162 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dragon (using qwen2.5:7b)
+2025-11-07 16:54:29.186 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 16:54:29.559 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 16:54:29.559 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 16:54:49.238 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 16:54:49.243 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_2wtczdsl
+2025-11-07 16:54:49.243 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_2wtczdsl
+2025-11-07 16:54:49.636 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 16:54:49.636 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 16:54:49.636 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 16:54:49.642 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 16:54:51.106 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, detailed scales, vibrant colors, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, unnatural colors, shadows, lighting, background, eval: 
+2025-11-07 16:54:51.107 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 16:54:51.107 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 16:54:57.856 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 16:54:57.858 | INFO     | __main__:check_views_quality:153 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 16:55:02.044 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, detailed scales, vibrant colors, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, unnatural colors, over-saturated colors, shadows, lighting, background, eval: The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-07 16:55:02.044 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 16:55:02.044 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 16:59:29.157 | INFO     | __main__:generate_3d:182 - [TRELLIS/API] Saved ZIP to /tmp/views_2wtczdsl/trellis_output.zip
+2025-11-07 16:59:29.201 | INFO     | __main__:generate_3d:194 - [TRELLIS/API] Extracted ZIP to /tmp/views_2wtczdsl
+2025-11-07 16:59:29.202 | INFO     | __main__:generate_3d:206 - [TRELLIS/API-path] Frame path found: /tmp/views_2wtczdsl/frame_0ab2ec92-f560-45ad-8453-d051058b9705.png
+2025-11-07 16:59:29.202 | INFO     | __main__:generate_3d:210 - [TRELLIS/API] assets: /tmp/views_2wtczdsl/mesh_0ab2ec92-f560-45ad-8453-d051058b9705.glb, /tmp/views_2wtczdsl/mesh_0ab2ec92-f560-45ad-8453-d051058b9705.ply, /tmp/views_2wtczdsl/preview_0ab2ec92-f560-45ad-8453-d051058b9705.mp4
+2025-11-07 17:03:28.793 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 45 inference steps...
+2025-11-07 17:03:28.793 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 45 steps...
+2025-11-07 17:03:49.446 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:03:49.451 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_1799mzw0
+2025-11-07 17:03:49.452 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_1799mzw0
+2025-11-07 17:07:43.764 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, detailed scales, vibrant colors, negative: nsfw, explicit content, blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, unnatural colors, over-saturated colors, shadows, lighting, background, eval: 
+2025-11-07 17:07:43.771 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:07:43.772 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:07:47.570 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, detailed scales, vibrant colors, negative: nsfw, explicit content, blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, unnatural colors, over-saturated colors, poor lighting, shadow artifacts, background, eval: 
+2025-11-07 17:07:47.572 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:07:47.574 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:07:48.680 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, detailed scales, vibrant colors, negative: nsfw, explicit content, blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, unnatural colors, over-saturated colors, poor lighting, shadow artifacts, background, eval: 
+2025-11-07 17:07:48.681 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:07:48.681 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:17:45.935 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dragon
+2025-11-07 17:17:45.936 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dragon (using qwen2.5:7b)
+2025-11-07 17:17:46.733 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 17:17:46.947 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 17:17:46.947 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 17:18:08.509 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:18:08.514 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_aqrks9sg
+2025-11-07 17:18:08.515 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_aqrks9sg
+2025-11-07 17:18:08.864 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 17:18:08.864 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:18:08.867 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:18:08.918 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 17:18:10.284 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, soft features, gentle expression, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: 
+2025-11-07 17:18:10.285 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:18:10.285 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:18:16.885 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 17:18:16.886 | INFO     | __main__:check_views_quality:153 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 17:18:20.909 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, soft features, gentle expression, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-07 17:18:20.909 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:18:20.910 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:19:14.364 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dog
+2025-11-07 17:19:14.365 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dog (using qwen2.5:7b)
+2025-11-07 17:19:15.179 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 17:19:15.492 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 17:19:15.492 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 17:19:34.515 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:19:34.521 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_uqv3wx_e
+2025-11-07 17:19:34.522 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_uqv3wx_e
+2025-11-07 17:19:34.867 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 17:19:34.868 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:19:34.870 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:19:34.876 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 17:19:36.280 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-07 17:19:36.281 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:19:36.281 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:19:39.722 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dragon
+2025-11-07 17:19:39.722 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dragon (using qwen2.5:7b)
+2025-11-07 17:19:43.282 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 17:19:43.284 | INFO     | __main__:check_views_quality:153 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 17:19:50.105 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, unnatural shadows, unrealistic lighting, cluttered background, eval: The images match the prompt well, showing a cute dog from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.
+2025-11-07 17:19:50.107 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:19:50.107 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:19:50.683 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 17:19:50.916 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 17:19:50.916 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 17:20:10.568 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:20:10.573 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_zkpl10ye
+2025-11-07 17:20:10.574 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_zkpl10ye
+2025-11-07 17:20:10.928 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-07 17:20:10.931 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:20:10.933 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:20:10.942 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 17:20:12.091 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, soft features, gentle expression, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, unnatural shadows, unrealistic lighting, cluttered background, repetitive textures, eval: 
+2025-11-07 17:20:12.092 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:20:12.092 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:20:18.848 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 17:20:18.850 | INFO     | __main__:check_views_quality:153 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 17:20:22.848 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, soft features, gentle expression, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, unnatural shadows, unrealistic lighting, repetitive textures, harsh shadows, over-saturated colors, cluttered background, eval: The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-07 17:20:22.849 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:20:22.849 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:27:59.895 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dragon
+2025-11-07 17:27:59.895 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dragon (using qwen2.5:7b)
+2025-11-07 17:28:00.670 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragon, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 17:28:00.907 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 17:28:00.908 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 17:28:20.549 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:28:20.552 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_2ximxj48
+2025-11-07 17:28:20.553 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_2ximxj48
+2025-11-07 17:28:20.932 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 17:28:20.933 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:28:20.934 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:28:20.945 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 17:28:22.352 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, round features, soft fur, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: 
+2025-11-07 17:28:22.353 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:28:22.353 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:28:29.088 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 17:28:29.090 | INFO     | __main__:check_views_quality:153 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-07 17:28:36.208 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, round features, soft fur, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, unbalanced composition, eval: The images match the prompt well, showing a cute dragon with a full body from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-07 17:28:36.209 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:28:36.209 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:31:58.094 | INFO     | __main__:generate_3d:182 - [TRELLIS/API] Saved ZIP to /tmp/views_2ximxj48/trellis_output.zip
+2025-11-07 17:31:58.132 | INFO     | __main__:generate_3d:194 - [TRELLIS/API] Extracted ZIP to /tmp/views_2ximxj48
+2025-11-07 17:31:58.132 | INFO     | __main__:generate_3d:206 - [TRELLIS/API-path] Frame path found: /tmp/views_2ximxj48/frame_710b81f7-ab1a-40b5-ae64-608d0ec8778b.png
+2025-11-07 17:31:58.132 | INFO     | __main__:generate_3d:210 - [TRELLIS/API] assets: /tmp/views_2ximxj48/mesh_710b81f7-ab1a-40b5-ae64-608d0ec8778b.glb, /tmp/views_2ximxj48/mesh_710b81f7-ab1a-40b5-ae64-608d0ec8778b.ply, /tmp/views_2ximxj48/preview_710b81f7-ab1a-40b5-ae64-608d0ec8778b.mp4
+2025-11-07 17:32:42.570 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 45 inference steps...
+2025-11-07 17:32:42.571 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 45 steps...
+2025-11-07 17:33:03.013 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:33:03.018 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_q883b9_r
+2025-11-07 17:33:03.018 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_q883b9_r
+2025-11-07 17:33:03.403 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, round features, soft fur, negative: nsfw, explicit content, blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, unbalanced composition, eval: 
+2025-11-07 17:33:03.404 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:33:03.407 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:33:04.672 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, round features, soft fur, negative: nsfw, explicit content, blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, unbalanced composition, eval: 
+2025-11-07 17:33:04.674 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:33:04.674 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:33:05.890 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragon, cute, full body, rounded features, soft fur, negative: nsfw, explicit content, blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, unbalanced composition, eval: 
+2025-11-07 17:33:05.890 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:33:05.890 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:33:16.474 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: cute dragoon
+2025-11-07 17:33:16.474 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dragoon (using qwen2.5:7b)
+2025-11-07 17:33:17.329 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dragoon, cute, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 17:33:17.536 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 17:33:17.536 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 17:33:36.076 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:33:36.082 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_cna8hu5i
+2025-11-07 17:33:36.082 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_cna8hu5i
+2025-11-07 17:33:36.424 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragoon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 17:33:36.426 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:33:36.427 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:33:36.432 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 17:33:37.789 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragoon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural colors, repetitive textures, blocky surfaces, shadows, lighting, background, eval: 
+2025-11-07 17:33:37.790 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:33:37.790 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:33:44.815 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a dragoon character with a cute appearance and full body. The multi-views are consistent, and there are no visible issues or artifacts. The lighting and shadows are well-balanced.', 'negative_prompt': 'none'}
+2025-11-07 17:33:44.816 | INFO     | __main__:check_views_quality:153 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a dragoon character with a cute appearance and full body. The multi-views are consistent, and there are no visible issues or artifacts. The lighting and shadows are well-balanced.', 'negative_prompt': 'none'}
+2025-11-07 17:33:48.739 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dragoon, cute, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, blocky surfaces, unnatural colors, repetitive textures, shadows, lighting, background, eval: The images match the prompt well, showing a dragoon character with a cute appearance and full body. The multi-views are consistent, and there are no visible issues or artifacts. The lighting and shadows are well-balanced.
+2025-11-07 17:33:48.739 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:33:48.739 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:34:05.159 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: labubu
+2025-11-07 17:34:05.160 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: labubu (using qwen2.5:7b)
+2025-11-07 17:34:05.901 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'labubu, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 17:34:06.226 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 17:34:06.226 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 17:34:24.799 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:34:24.804 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_fdedxn3j
+2025-11-07 17:34:24.804 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_fdedxn3j
+2025-11-07 17:35:02.875 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: labubu, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 17:35:02.876 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:35:02.878 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:35:02.889 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 17:35:04.187 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: labubu, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: 
+2025-11-07 17:35:04.187 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:35:04.187 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:35:13.598 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full-body view of Labubu from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 17:35:13.600 | INFO     | __main__:check_views_quality:153 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full-body view of Labubu from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.', 'negative_prompt': 'none'}
+2025-11-07 17:35:20.672 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: labubu, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, cluttered background, eval: The images match the prompt well, showing a full-body view of Labubu from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the colors are realistic.
+2025-11-07 17:35:20.673 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:35:20.673 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:35:55.397 | INFO     | __main__:generate_3d:182 - [TRELLIS/API] Saved ZIP to /tmp/views_fdedxn3j/trellis_output.zip
+2025-11-07 17:35:55.461 | INFO     | __main__:generate_3d:194 - [TRELLIS/API] Extracted ZIP to /tmp/views_fdedxn3j
+2025-11-07 17:35:55.461 | INFO     | __main__:generate_3d:206 - [TRELLIS/API-path] Frame path found: /tmp/views_fdedxn3j/frame_b84195ba-8642-4737-a257-d6fbc3c2c7d6.png
+2025-11-07 17:35:55.462 | INFO     | __main__:generate_3d:210 - [TRELLIS/API] assets: /tmp/views_fdedxn3j/mesh_b84195ba-8642-4737-a257-d6fbc3c2c7d6.glb, /tmp/views_fdedxn3j/mesh_b84195ba-8642-4737-a257-d6fbc3c2c7d6.ply, /tmp/views_fdedxn3j/preview_b84195ba-8642-4737-a257-d6fbc3c2c7d6.mp4
+2025-11-07 17:51:29.362 | INFO     | __main__:llm_prompt_processing:72 - [MV-ADAPTER] generating images. prompt to be refined: dog
+2025-11-07 17:51:29.362 | INFO     | ollama:prepare_prompts:135 - [OLLAMA] prepare_prompts: preparing prompts for input: dog (using qwen2.5:7b)
+2025-11-07 17:51:32.466 | INFO     | ollama:prepare_prompts:171 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, full body', 'negative': 'nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-07 17:51:32.698 | INFO     | __main__:generate_images:118 - [MV-ADAPTER] Starting generation with 40 inference steps...
+2025-11-07 17:51:32.698 | INFO     | __main__:_api_t2mv_generate:84 - [MV-ADAPTER] Calling API with 40 steps...
+2025-11-07 17:51:51.521 | INFO     | __main__:_api_t2mv_generate:108 - [MV-ADAPTER] API call successful, processing response...
+2025-11-07 17:51:51.525 | INFO     | __main__:_api_t2mv_generate:113 - [MV-ADAPTER] Extracted ZIP to /tmp/views_a25kqunz
+2025-11-07 17:51:51.526 | INFO     | __main__:generate_images:122 - [MV-ADAPTER] Got 6 images in /tmp/views_a25kqunz
+2025-11-07 17:51:51.864 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, full body, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-07 17:51:51.868 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:51:51.869 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:51:51.881 | INFO     | ollama:check_views:230 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-07 17:51:53.180 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, full body, detailed fur, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-07 17:51:53.180 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:51:53.180 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-07 17:52:00.026 | INFO     | ollama:check_views:237 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a full body of a dog from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the details are clear.', 'negative_prompt': 'none'}
+2025-11-07 17:52:00.028 | INFO     | __main__:check_views_quality:153 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a full body of a dog from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the details are clear.', 'negative_prompt': 'none'}
+2025-11-07 17:52:03.983 | INFO     | __main__:chat_start_fn:42 - [CHAT] starting chat with refined: dog, full body, detailed fur, negative: nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: The images match the prompt well, showing a full body of a dog from different angles. The images are consistent across the multi-views, and there are no visible issues or artifacts. The lighting and shadows are well-balanced, and the details are clear.
+2025-11-07 17:52:03.984 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-07 17:52:03.984 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b

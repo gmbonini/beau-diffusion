@@ -13,13 +13,16 @@ import cv2
 from mvadapter_t2mv_sdxl import MVAdapterT2MV
 import traceback
 from ollama import start_ollama
-
+from rembg import remove, new_session
+from concurrent.futures import ThreadPoolExecutor
+import time
 # SQL
 from sql.db_connector import DatabaseConnector, get_db_connector
 import uuid
 
 os.environ["ATTN_BACKEND"] = "xformers"
 
+session_rembg = new_session("u2net", providers=["CUDAExecutionProvider", "CPUExecutionProvider"])
 logger.add("api.log", rotation="1 MB")
 app = FastAPI(title="beau demo API")
 
@@ -86,7 +89,19 @@ def load_pipe_mvadapter():
 
     print('MV-Adapter pipeline loaded.')
     logger.info("[MV-ADAPTER] Pipeline loaded (API)")
-    
+
+def remove_background_batch(imgs):
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        results = list(executor.map(remove_background_rembg, imgs))
+    return results
+
+def remove_background_rembg(pil_img):
+    img_bytes = io.BytesIO()
+    pil_img.save(img_bytes, format="PNG")
+    img_bytes = img_bytes.getvalue()
+
+    output_bytes = remove(img_bytes, session=session_rembg)
+    return Image.open(io.BytesIO(output_bytes)).convert("RGBA")
 
 @app.post("/t2mv/generate")
 def t2mv_generate(
@@ -99,12 +114,10 @@ def t2mv_generate(
 ):
     seed = -1 if randomize else 42
     
-    # Adicionar trigger words do LoRA se solicitado
     enhanced_prompt = ref_prompt
     if use_3d_trigger:
         enhanced_prompt = f"3d style, 3d, {ref_prompt}, game asset"
     
-    # Negative prompt otimizado para game assets
     enhanced_negative = f"{neg_prompt}, blurry, distorted, deformed, ugly, bad geometry, bad topology, watermark, signature" if neg_prompt else "realistic photo, photorealistic, blurry, distorted, deformed, ugly, bad geometry, watermark"
     
     logger.info(f"[MV-ADAPTER] Generating images with seed {seed} and {inference_steps} steps (API)")
@@ -127,13 +140,16 @@ def t2mv_generate(
     
     logger.info(f"[MV-ADAPTER] Images generated with {inference_steps} steps - {len(imgs)} views (API)")
     
-    # Criar ZIP em memória
     zip_buffer = io.BytesIO()
+    start_time = time.time()
     with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_STORED) as zipf:
-        for i, img in enumerate(imgs):
+        processed_imgs = remove_background_batch(imgs)
+        for i, img in enumerate(processed_imgs):
             buf = io.BytesIO()
             img.save(buf, format="PNG")
             zipf.writestr(f"view_{i:02d}.png", buf.getvalue())
+    elapsed_time = time.time() - start_time
+    logger.info(f"[MV-ADAPTER] Bg remove finished in {elapsed_time:.2f}s")
     
     zip_buffer.seek(0)
     
@@ -171,18 +187,25 @@ async def trellis_run(files: List[UploadFile] = File(...)):
             content = await uf.read()
             img = Image.open(io.BytesIO(content)).convert("RGB")
             views.append(img)
-        logger.info(f"[TRELLIS] {views} views received for processing (API)")
+            
+        logger.info(f"[TRELLIS] {len(views)} views received for processing (API)")
         outputs = pipe_trellis.run_pipeline(views, seed=42)
 
         session_id = str(uuid.uuid4())
         outdir = tempfile.mkdtemp(prefix=f"trellis_{session_id}_")
-        glb_path = os.path.join(outdir, f"mesh_{session_id}.glb")
-        ply_path = os.path.join(outdir, f"mesh_{session_id}.ply")
-        mp4_path = os.path.join(outdir, f"preview_{session_id}.mp4")
-                
+        
+        glb_filename = f"mesh_{session_id}.glb"
+        ply_filename = f"mesh_{session_id}.ply"
+        mp4_filename = f"preview_{session_id}.mp4"
+        frame_filename = f"frame_{session_id}.png"
+        
+        glb_path = os.path.join(outdir, glb_filename)
+        ply_path = os.path.join(outdir, ply_filename)
+        mp4_path = os.path.join(outdir, mp4_filename)
+        
         frame_save_dir = "temp_images_path"
         os.makedirs(frame_save_dir, exist_ok=True)
-        frame_path = os.path.join(frame_save_dir, f"frame_{session_id}.png")
+        frame_path = os.path.join(frame_save_dir, frame_filename)
         
         pipe_trellis.save_mesh(outputs, glb_path, ply_path, simplify=0.95, texture_size=1024)
         pipe_trellis.save_video(outputs, filename=mp4_path)
@@ -203,39 +226,30 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         else:
             logger.warning("[TRELLIS] Video not found for frame extraction")
         
-        logger.info("[TRELLIS] Mesh and video saved to tmp (API)")        
+        logger.info("[TRELLIS] Mesh and video saved to tmp (API)")
         
-        glb_b64 = _file_to_b64(glb_path)
-        ply_b64 = _file_to_b64(ply_path)
-        mp4_b64 = _file_to_b64(mp4_path)
         
-        sizes = {
-            "glb": os.path.getsize(glb_path),
-            "ply": os.path.getsize(ply_path),
-            "mp4": os.path.getsize(mp4_path),
-        }
-        if os.path.exists(frame_path):
-            sizes["frame"] = os.path.getsize(frame_path)
-            
-        logger.info("[TRELLIS] Sizes {} (API)".format(sizes))
+        zip_buffer = io.BytesIO()
         
-        result = {
-            "glb_b64": glb_b64,
-            "ply_b64": ply_b64,
-            "mp4_b64": mp4_b64,
-            "filenames": {
-                "glb": f"mesh_{session_id}.glb",
-                "ply": f"mesh_{session_id}.ply",
-                "mp4": f"preview_{session_id}.mp4"
-            },
-            "sizes": sizes,
-        }
+        with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_STORED) as zipf:
+            if os.path.exists(glb_path):
+                zipf.write(glb_path, arcname=glb_filename)
+            if os.path.exists(ply_path):
+                zipf.write(ply_path, arcname=ply_filename)
+            if os.path.exists(mp4_path):
+                zipf.write(mp4_path, arcname=mp4_filename)
+            if os.path.exists(frame_path):
+                zipf.write(frame_path, arcname=frame_filename)
+                
+        zip_buffer.seek(0)
         
-        if os.path.exists(frame_path):
-            result["frame_path"] = frame_path
-            result["filenames"]["frame"] = f"frame_{session_id}.png"
-            
-        return result
+        logger.info("[TRELLIS] Created zip buffer for streaming.")
+        
+        return StreamingResponse(
+            zip_buffer,
+            media_type="application/zip",
+            headers={"Content-Disposition": f"attachment; filename=trellis_output_{session_id}.zip"}
+        )
 
     except Exception as e:
         logger.error("[TRELLIS] FAILED: %s\n%s", e, traceback.format_exc())
