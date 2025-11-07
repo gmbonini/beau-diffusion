@@ -65,14 +65,14 @@ Always have certain if a caracteristic should be in positive or negative. For ex
 - "avoid artifacts" > add to negative
 
 Conversation rule:
-- Always include a short 1–2 sentence natural-language "message" addressing the user. On START: invite edits. On FEEDBACK: acknowledge changes and ask if more tweaks are needed. Keep it concise and friendly.
+- Always include a short 1-2 sentence natural-language "message" addressing the user. On START: invite edits. On FEEDBACK: acknowledge changes and ask if more tweaks are needed. Keep it concise and friendly.
 
 STRICT OUTPUT (JSON ONLY; no extra text):
 {
-  "avaliation": "<1–4 sentences>",
+  "avaliation": "<1-4 sentences>",
   "refined": "<positive prompt, comma-separated>",
-  "negative": "<negative prompt, comma-separated; 6–8 items MAX + lighting, shadows, background>",
-  "message": "<1–2 short sentences to the user>"
+  "negative": "<negative prompt, comma-separated; 6-8 items MAX + lighting, shadows, background>",
+  "message": "<1-2 short sentences to the user>"
 }
 """.strip()
 

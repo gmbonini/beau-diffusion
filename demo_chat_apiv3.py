@@ -25,15 +25,15 @@ def free_vram():
     torch.cuda.ipc_collect()
     gc.collect()
 
-def _save_images_to_tmp(images):
-    tmpdir = tempfile.mkdtemp(prefix="views_")
-    for i, im in enumerate(images):
-        p = os.path.join(tmpdir, f"view_{i:02d}.jpg")
-        im.save(p)
-    return tmpdir
+# def _save_images_to_tmp(images):
+#     tmpdir = tempfile.mkdtemp(prefix="views_")
+#     for i, im in enumerate(images):
+#         p = os.path.join(tmpdir, f"view_{i:02d}.png")
+#         im.save(p)
+#     return tmpdir
 
 def _load_views_from_dir(views_dir):
-    paths = sorted(glob.glob(os.path.join(views_dir, "*.jpg")))
+    paths = sorted(glob.glob(os.path.join(views_dir, "*.png")))
     imgs = [Image.open(p).convert("RGB") for p in paths]
     return imgs, paths
 
@@ -80,7 +80,7 @@ def llm_prompt_processing(prompt):
         neg_prompt
     )
 
-def _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps=24):
+def _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps=40):
     logger.info(f"[MV-ADAPTER] Calling API with {inference_steps} steps...")
     
     resp = requests.post(
@@ -104,11 +104,11 @@ def _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_ste
     return views_dir
 
 
-def generate_images(refined_prompt, negative_prompt, randomize=False, inference_steps=24):
+def generate_images(refined_prompt, negative_prompt, randomize=False, inference_steps=40):
     logger.info(f"[MV-ADAPTER] Starting generation with {inference_steps} inference steps...")
     try:
         views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
-        paths = sorted(glob.glob(os.path.join(views_dir, "*.jpg")))
+        paths = sorted(glob.glob(os.path.join(views_dir, "*.png")))
         logger.info(f"[MV-ADAPTER] Got {len(paths)} images in {views_dir}")
         
         gallery_paths = paths
@@ -153,7 +153,7 @@ def generate_3d(views_dir):
     images_list, paths = _load_views_from_dir(views_dir)
     assert len(images_list) >= 2, "need at least 2 views to generate 3D"
 
-    files = [("files", (os.path.basename(p), open(p, "rb"), "image/jpeg")) for p in paths]
+    files = [("files", (os.path.basename(p), open(p, "rb"), "image/png")) for p in paths]
 
     r = requests.post(f"{API_URL}/mv2m/generate", files=files, timeout=900)
     r.raise_for_status()
@@ -257,7 +257,7 @@ def send_review(
     file_handles_to_close = []
 
     if multiview_dir and os.path.exists(multiview_dir):
-        multiview_images = sorted(glob.glob(os.path.join(multiview_dir, "*.jpg")))
+        multiview_images = sorted(glob.glob(os.path.join(multiview_dir, "*.png")))
 
         for file_path in multiview_images:
             file_name = os.path.basename(file_path)
@@ -266,7 +266,7 @@ def send_review(
                 file_handles_to_close.append(file_handle)
 
                 files_list.append(
-                    ("multiview_files", (file_name, file_handle, "image/jpg"))
+                    ("multiview_files", (file_name, file_handle, "image/png"))
                 )
             except IOError as e:
                 logger.error(f"Não foi possível abrir o arquivo multiview {file_path}: {e}")
@@ -297,7 +297,7 @@ def send_review(
 with gr.Blocks() as demo:
     gr.Markdown("llm chat demo")
 
-    state_inference_steps = gr.State(value=24)
+    state_inference_steps = gr.State(value=40)
     state_views_dir = gr.State(value="")
     state_last_prompt = gr.State(value="")
     state_neg_prompt = gr.State(value="")
@@ -337,15 +337,20 @@ with gr.Blocks() as demo:
                 image_dislike_btn = gr.Button("👎", visible=False)
             
             # Negative feedback text input for images
-            with gr.Row():
+            with gr.Row(equal_height=True):
                 image_feedback_text = gr.Textbox(
                     label="What was the problem? (optional)",
                     placeholder="Describe what was wrong with the images...",
                     visible=False,
                     lines=2,
-                    scale=4
+                    scale=4,
                 )
-                image_feedback_send_btn = gr.Button("Send", visible=False, scale=1, size="sm")
+                image_feedback_send_btn = gr.Button(
+                    "Send",
+                    visible=False,
+                    size="sm",
+                    scale=1,                    
+                )
             
             image_review_status = gr.Textbox(
                 label="Feedback Status",
@@ -429,7 +434,7 @@ with gr.Blocks() as demo:
         gr.update(visible=False), [], [], [], 0,
         gr.update(value="", visible=False),
         gr.update(value="", visible=False),
-        24,
+        40,
         gr.update(value="", visible=False),  # image_feedback_text
         gr.update(visible=False),  # image_feedback_send_btn
         gr.update(value="", visible=False),  # video_feedback_text
@@ -604,48 +609,42 @@ with gr.Blocks() as demo:
         return inner
 
     dummy_state = gr.State()
-
-    # VIDEO FEEDBACK
+    
     video_like_btn.click(
         fn=_get_feedback_click("like", step="VIDEO"),              
         inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, state_frame_path, state_views_dir, dummy_state, gr.State("")],
         outputs=[video_like_btn, video_dislike_btn, review_status, video_feedback_text, video_feedback_send_btn],
         queue=False
     )
-
-    # Only show input and send button when dislike is clicked, DON'T send feedback yet
+    
     video_dislike_btn.click(
         fn=show_negative_feedback_input,
         inputs=None,
         outputs=[video_feedback_text, video_feedback_send_btn],
         queue=False
     )
-
-    # Send feedback when user clicks the Send button
+    
     video_feedback_send_btn.click(
         fn=_get_feedback_click("dislike", step="VIDEO"),              
         inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, state_frame_path, state_views_dir, dummy_state, video_feedback_text],
         outputs=[video_like_btn, video_dislike_btn, review_status, video_feedback_text, video_feedback_send_btn],
         queue=False
     )
-
-    # IMAGE FEEDBACK
+    
     image_like_btn.click(
         fn=_get_feedback_click("like", dynamic_step=True),        
         inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, dummy_state, state_views_dir, remake_state, gr.State("")],
         outputs=[image_like_btn, image_dislike_btn, image_review_status, image_feedback_text, image_feedback_send_btn],
         queue=False
     )
-
-    # Only show input and send button when dislike is clicked, DON'T send feedback yet
+    
     image_dislike_btn.click(
         fn=show_negative_feedback_input,
         inputs=None,
         outputs=[image_feedback_text, image_feedback_send_btn],
         queue=False
     )
-
-    # Send feedback when user clicks the Send button
+    
     image_feedback_send_btn.click(
         fn=_get_feedback_click("dislike", dynamic_step=True),        
         inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, dummy_state, state_views_dir, remake_state, image_feedback_text],
@@ -654,4 +653,4 @@ with gr.Blocks() as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(share=True, server_port=os.getenv("SERVER_PORT", 8881))
+    demo.launch(server_name="0.0.0.0", server_port=8080)

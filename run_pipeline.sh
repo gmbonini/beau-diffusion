@@ -7,4 +7,4 @@ OLLAMA_HOST=127.0.0.1:11200 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NOHISTORY=true OLL
 uvicorn api_stream:app --port 8081 &
 
 # Run demo_chat (foreground)
-python demo_chat.py
+python demo_chat_apiv3.py

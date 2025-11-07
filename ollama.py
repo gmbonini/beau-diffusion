@@ -7,14 +7,9 @@ from loguru import logger
 
 logger.add("ollama.log", rotation="10 MB")
 
-# nsfw checker
-# mesh checker
-
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11200")
 MODEL_TEXT = os.getenv("TEXT_MODEL", "qwen2.5:7b")
 MODEL_VISION = os.getenv("VISION_MODEL", "qwen2.5vl:7b")
-
-# testar com modificadores de qualidade
 
 def _b64(path):
     with open(path, "rb") as f:
@@ -67,60 +62,65 @@ def is_ollama_loaded(model=None):
 def prepare_prompts(user_prompt: str) -> dict:
     """Usa modelo de TEXTO para processar prompts"""
     
-    # --- PROMPT CORRIGIDO ABAIXO ---
+    
     prompt_text = f"""
-        You are a prompt engineer for text-to-3D/multiview generation.
+        You are a prompt formatter for text-to-3D generation.
         YOU HAVE TWO TASKS.
 
         [TASK 1: REFINED POSITIVE PROMPT]
-        Goal: rewrite a messy input into a clean, structured description, PRESERVING all key attributes.
-        Rules:
-        - Start with the object name (singular, lowercase). Example: "red dog..." > start with "dog".
-        - Preserve ALL important object attributes, styles, and features from the input.
-        - Only ignore clear background/environment details (e.g., "in a park", "on the street"). Focus on the object itself.
-        - Use concise, visual attributes, separated by commas.
-        - Keep compound phrases together (examples: "red door on the left", "snow-capped mountain").
-        - Add "full body" if the prompt is about an animal, human or any living creature, unless a specific part is mentioned (e.g., "head of a cat"). If its about an object, place, or landscape, add "full view".
-        - Output ONLY the refined prompt.
-        - No extra text.
+        GOAL: Convert user input into a comma-separated list of keywords AND descriptive phrases.
 
-        Examples:
+        CRITICAL RULES:
+        1.  **PRESERVE PHRASES:** Do NOT split descriptive phrases. Keep attributes, actions, and locations attached to their subjects.
+            * "hat with feathers" MUST remain "hat with feathers".
+            * "riding a skateboard" MUST remain "riding a skateboard".
+            * "with red wheels" MUST remain "with red wheels".
+        2.  **PRESERVE ALL INFO:** You must include every detail from the input.
+        3.  **ADD VIEW:**
+            * If the subject is a person, animal, or creature, add ", full body".
+            * If the subject is an object, building, or scene, add ", full view".
+        4.  **OUTPUT:** Return ONLY the comma-separated list.
+
+        EXAMPLES (Study these carefully):
         Input: "a cute orange cat"
-        Output: "cat, cute, orange, detailed fur, full body"
+        Output: "cat, cute, orange, full body"
         
-        Input: "red dog 4k realistic, anime, horns, giant fluffy tail"
-        Output: "dog, red, 4k realistic, anime, horns, giant fluffy tail, full body"
+        Input: "big red dog riding a skateboard"
+        Output: "dog, big, red, riding a skateboard, full body"
+        
+        Input: "dinosaur wearing a hat with feathers and a trench coat"
+        Output: "dinosaur, wearing a hat with feathers, wearing a trench coat, full body"
+        
+        Input: "purple ferrari with red wheels and a hat"
+        Output: "ferrari, purple, with red wheels, with a hat, full view"
 
-        Input: "a house with a red door on the left and a big tree behind"
-        Output: "house, red door on the left, big tree behind"
-
-        Input: "a big park with trails and trees and a big lake in the middle"
-        Output: "park, big, trails, trees, central lake"
+        Input: "golden knight holding a large sword, riding a black horse, the horse has wings and green eyes"
+        Output: "golden knight, holding a large sword, riding a black horse, black horse with wings, black horse with green eyes, full body"
 
         [TASK 2: NEGATIVE PROMPT]
-        Goal: given the REFINED prompt from TASK 1, generate a concise negative prompt.
-        Rules:
-        - Start with 3-4 general 3D generation issues (e.g., "blurry", "low detail", "artifacts", "geometry holes").
-        - Add 2-3 context-aware attributes related to the *refined positive prompt*.
-          * Humans/animals: "bad anatomy", "extra limbs", "deformed face".
-          * Objects: "bad proportions", "deformed parts".
-          * Landscapes: "flat water", "intersecting trails", "floating objects".
-        - ALWAYS add "shadows", "lighting", "background" at the end (we want to control these separately).
-        - Total list should be 7-10 items, comma-separated on one line.
-        - Do NOT use "incorrect <object>" phrases.
-        - Output ONLY the negative prompt.
-        - No extra text.
+        Goal: Generate a standard negative prompt.
+        
+        MANDATORY ITEMS (always include):
+        - nsfw, explicit content (ALWAYS FIRST)
+        - blurry, low detail, artifacts
+        - shadows, lighting, background (ALWAYS LAST)
+        
+        CONTEXT-AWARE (add 2-3 based on subject):
+        - Humans/animals: bad anatomy, extra limbs, deformed face, missing limbs, deformed tail
+        - Objects/Buildings: bad proportions, deformed parts, floating objects
+        - Landscapes: (ignoring, as requested)
+        
+        Output: Comma-separated, one line.
 
         Examples:
-        Input: "cat, cute, orange, detailed fur, full body"
-        Output: "blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background"
+        Input: "cat, cute, orange, full body"
+        Output: "nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background"
 
-        Input: "park, big, trails, trees, central lake"
-        Output: "blurry, low detail, artifacts, intersecting trails, floating objects, flat water, unrealistic water, shadows, lighting, background"
+        Input: "dinosaur, wearing a hat with feathers, wearing a trench coat, full body"
+        Output: "nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background"
 
-        Input: "dog, red, 4k realistic, anime, horns, giant fluffy tail, full body"
-        Output: "blurry, low detail, artifacts, bad anatomy, extra limbs, deformed horns, deformed tail, shadows, lighting, background"
-
+        Input: "ferrari, purple, with red wheels, with a hat, full view"
+        Output: "nsfw, explicit content, blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background"
 
         RETURN FORMAT (MANDATORY):
         Return ONLY this JSON (no extra text):
@@ -137,31 +137,35 @@ def prepare_prompts(user_prompt: str) -> dict:
     payload = {
         "model": MODEL_TEXT,
         "prompt": prompt_text,
-        "max_tokens": 256,
-        "temperature": 0.3,
+        "max_tokens": 300,
+        "temperature": 0.1,  
         "top_p": 0.9,
         "stream": False,
         "keep_alive": "1h",
         "format": "json"
     }
 
-    resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=(10, 120))
-    resp.raise_for_status()
-    raw = resp.json()["response"]
-
     try:
+        resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=(10, 120))
+        resp.raise_for_status()
+        raw = resp.json()["response"]
+
+        
         json_start = raw.find('{')
         json_end = raw.rfind('}') + 1
         if json_start == -1 or json_end == 0:
             logger.error(f"Resposta da API não continha JSON válido: {raw}")
-            return {"refined": user_prompt, "negative": "blurry, low detail"} # Fallback
+            return {"refined": user_prompt, "negative": "nsfw, explicit content, blurry, low detail"}
 
         clean_raw = raw[json_start:json_end]
         data = json.loads(clean_raw)
         
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Erro de request ao chamar Ollama: {e}")
+        return {"refined": user_prompt, "negative": "nsfw, explicit content, blurry, low detail, artifacts"}
     except json.JSONDecodeError:
         logger.error(f"Falha ao decodificar JSON da resposta: {raw}")
-        return {"refined": user_prompt, "negative": "blurry, low detail, artifacts"}
+        return {"refined": user_prompt, "negative": "nsfw, explicit content, blurry, low detail, artifacts"}
 
     print(data)
     logger.info(f"[MV-ADAPTER] prepare_prompts result: {data}")
@@ -182,13 +186,22 @@ def check_views(dir_path, user_prompt):
 
         You can be critical but not too much in your evaluation. If the images have minor issues but overall look good, say so. If they have major problems, point them out clearly. Only give constructive feedback.
         If the overall quality is good, you don't need to list every small issue and the negative prompt can be "none".
-        The bigger problems are: geometry holes, extra limbs (if the prompt doesn't call for it), deformed face, artifacts, lighting, shadows, background.
-        If the cat has extra limbs, deformed face, a extra tail, say so.
+        
+        CRITICAL ISSUES TO CHECK:
+        - NSFW or explicit content
+        - Geometry holes
+        - Extra limbs (if the prompt doesn't call for it)
+        - Missing body parts
+        - Deformed face
+        - Artifacts
+        - Poor lighting/shadows
+        
+        If the cat has extra limbs, deformed face, an extra tail, say so.
         Return your answer strictly as a JSON object with two fields:
 
         {{
         "avaliation": "<describe if the images match the prompt, consistency, visible issues>",
-        "negative_prompt": "<comma-separated short negative prompt with 6–8 concise unwanted attributes to avoid; if it is good, write 'none'>"
+        "negative_prompt": "<comma-separated short negative prompt with 6–10 concise unwanted attributes to avoid; if it is good, write 'none'; ALWAYS include 'nsfw, explicit content' first if any issues>"
         }}
 
         ONLY AVALIATION and NEGATIVE_PROMPT as keys.
@@ -196,8 +209,8 @@ def check_views(dir_path, user_prompt):
 
         Output format example:
         {{
-        "avaliation": "the cat have a extra tail and a deformed body. The images are not consistent and some views have a extra tail. the face has low detail. the colors are unrealistic and unmatched.",
-        "negative_prompt": "blurry, low detail, artifacts, geometry holes, extra tail"
+        "avaliation": "the cat has an extra tail and a deformed body. The images are not consistent and some views have an extra tail. the face has low detail. the colors are unrealistic and unmatched.",
+        "negative_prompt": "nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body"
         }}
         Return ONLY the JSON, no extra text.
         """.strip()
@@ -206,7 +219,7 @@ def check_views(dir_path, user_prompt):
         "model": MODEL_VISION,
         "prompt": prompt_text,
         "images": [_b64(p) for p in pngs],
-        "max_tokens": 256,
+        "max_tokens": 300,
         "temperature": 0.3,
         "top_p": 0.9,
         "stream": False,
@@ -226,18 +239,18 @@ def check_views(dir_path, user_prompt):
 
 
 if __name__ == "__main__":
-    # print(refine_prompt("a big park with trails and trees and big lake in the middle"))
-    # print(negative_prompt("park, big, trails, trees, central lake"))
-    # describe_pngs_in_dir("/tmp/views_ibp6tnyi/")
-    # result = check_views("/tmp/views_ibp6tnyi/", "a big fat cat with big tail")
-    # print(result)
-    # print(result['avaliation'])
-    prompts = prepare_prompts("a big park with trails and trees and big lake in the middle")
-    print(prompts['refined'])
-    print(prompts['negative'])
+    
+    prompts = prepare_prompts("big red dog, big tail, dark eyes, on a skate")
+    print("Refined:", prompts['refined'])
+    print("Negative:", prompts['negative'])
+    print("\n---\n")
+    
+    prompts2 = prepare_prompts("a big park with trails and trees and big lake in the middle")
+    print("Refined:", prompts2['refined'])
+    print("Negative:", prompts2['negative'])
 
 
-# ----------------- TESTING
+
 def check_image(image_path):
     """Usa modelo de VISÃO para análise de imagem única"""
     with open(image_path, "rb") as f:

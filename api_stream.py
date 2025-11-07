@@ -30,11 +30,6 @@ def _startup():
     start_ollama()
     logger.info("[STARTUP] loaded pipelines")
 
-def _pil_to_b64(img):
-    buf = io.BytesIO()
-    img.save(buf, format="PNG")
-    return base64.b64encode(buf.getvalue()).decode("utf-8")
-
 def _file_to_b64(path: str) -> str:
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
@@ -50,41 +45,82 @@ def load_pipe_mvadapter():
         unet_model=None,
         lora_model=None,
         adapter_path="huanngzh/mv-adapter",
-        scheduler="euler_a",
+        scheduler="dpmpp_karras",
         num_views=6,
         device="cuda" if torch.cuda.is_available() else "cpu",
-        dtype=torch.float16,                    
+        dtype=torch.float16,
     )
-    
-    # pipe_mv.load_lora_weights("latent-consistency/lcm-lora-sdxl")
-    
-    # pipe_mv.fuse_lora(lora_scale=0.7)
+
+    # goofyai/3d_render_style_xl
+    # try:
+    #     print('Loading 3D Render LoRA (goofyai/3d_render_style_xl)...')
+    #     pipe_mv.load_lora_weights(
+    #         "goofyai/3d_render_style_xl"
+    #     )
+
+    #     # Fundir LoRA com peso 0.75 (recomendado para game assets)
+    #     pipe_mv.fuse_lora(lora_scale=0.75)
+
+    #     print('3D Render LoRA (goofyai) loaded and fused.')
+    #     logger.info("[MV-ADAPTER] 3D Render LoRA (goofyai) loaded with scale 0.75")
+
+    # except Exception as e:
+    #     logger.error(f"[MV-ADAPTER] Failed to load LoRA (goofyai): {e}")
+    #     print(f"Warning: Could not load goofyai LoRA - {e}")
+
+    # artificialguybr/3DRedmond-V1
+    """
+    try:
+        print('Loading 3D Render LoRA (artificialguybr/3DRedmond-V1)...')
+        pipe_mv.load_lora_weights(
+            "artificialguybr/3DRedmond-V1",
+            weight_name="3DRedmond-3DRenderStyle-3DRenderAF.safetensors"
+        )
+        pipe_mv.fuse_lora(lora_scale=0.75)
+        print('3D Render LoRA (artificialguybr) loaded and fused.')
+        logger.info("[MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75")
+    except Exception as e:
+        logger.error(f"[MV-ADAPTER] Failed to load LoRA (artificialguybr): {e}")
+        print(f"Warning: Could not load artificialguybr LoRA - {e}")
+    """
+
     print('MV-Adapter pipeline loaded.')
     logger.info("[MV-ADAPTER] Pipeline loaded (API)")
     
 
 @app.post("/t2mv/generate")
 def t2mv_generate(
-    ref_prompt, 
-    neg_prompt, 
+    ref_prompt: str, 
+    neg_prompt: str = "", 
     randomize: bool = False, 
-    inference_steps: int = 35,
+    inference_steps: int = 40,
+    use_3d_trigger: bool = True,
     background_tasks: BackgroundTasks = None
 ):
-    seed = -1 if randomize else 1
+    seed = -1 if randomize else 42
+    
+    # Adicionar trigger words do LoRA se solicitado
+    enhanced_prompt = ref_prompt
+    if use_3d_trigger:
+        enhanced_prompt = f"3d style, 3d, {ref_prompt}, game asset"
+    
+    # Negative prompt otimizado para game assets
+    enhanced_negative = f"{neg_prompt}, blurry, distorted, deformed, ugly, bad geometry, bad topology, watermark, signature" if neg_prompt else "realistic photo, photorealistic, blurry, distorted, deformed, ugly, bad geometry, watermark"
+    
     logger.info(f"[MV-ADAPTER] Generating images with seed {seed} and {inference_steps} steps (API)")
+    logger.info(f"[MV-ADAPTER] Enhanced prompt: {enhanced_prompt}")
     
     global pipe_mv, adapters
     
     imgs = MVAdapterT2MV.run_pipeline(
         pipe=pipe_mv,
         num_views=6,
-        text=ref_prompt,
+        text=enhanced_prompt,
         height=768, width=768,
         num_inference_steps=inference_steps,
-        guidance_scale=8.5,
+        guidance_scale=6.5,
         seed=seed,
-        negative_prompt=neg_prompt,
+        negative_prompt=enhanced_negative,
         device="cuda" if torch.cuda.is_available() else "cpu",
         adapter_name_list=adapters,
     )
@@ -96,8 +132,8 @@ def t2mv_generate(
     with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_STORED) as zipf:
         for i, img in enumerate(imgs):
             buf = io.BytesIO()
-            img.save(buf, format="JPEG")
-            zipf.writestr(f"view_{i:02d}.jpg", buf.getvalue())
+            img.save(buf, format="PNG")
+            zipf.writestr(f"view_{i:02d}.png", buf.getvalue())
     
     zip_buffer.seek(0)
     
@@ -135,7 +171,7 @@ async def trellis_run(files: List[UploadFile] = File(...)):
             content = await uf.read()
             img = Image.open(io.BytesIO(content)).convert("RGB")
             views.append(img)
-
+        logger.info(f"[TRELLIS] {views} views received for processing (API)")
         outputs = pipe_trellis.run_pipeline(views, seed=42)
 
         session_id = str(uuid.uuid4())
@@ -146,7 +182,7 @@ async def trellis_run(files: List[UploadFile] = File(...)):
                 
         frame_save_dir = "temp_images_path"
         os.makedirs(frame_save_dir, exist_ok=True)
-        frame_path = os.path.join(frame_save_dir, f"frame_{session_id}.jpg")
+        frame_path = os.path.join(frame_save_dir, f"frame_{session_id}.png")
         
         pipe_trellis.save_mesh(outputs, glb_path, ply_path, simplify=0.95, texture_size=1024)
         pipe_trellis.save_video(outputs, filename=mp4_path)
@@ -197,7 +233,7 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         
         if os.path.exists(frame_path):
             result["frame_path"] = frame_path
-            result["filenames"]["frame"] = f"frame_{session_id}.jpg"
+            result["filenames"]["frame"] = f"frame_{session_id}.png"
             
         return result
 
@@ -257,7 +293,7 @@ async def feedback_save(
             negative_prompt=negative_prompt,
             video_frame_url=video_frame_path,
             step=step,
-            negative_feedback=negative_feedback  # Passar o novo parâmetro
+            negative_feedback=negative_feedback
         )
 
         if multiview_files:
