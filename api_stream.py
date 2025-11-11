@@ -13,7 +13,6 @@ import cv2
 from mvadapter_t2mv_sdxl import MVAdapterT2MV
 import traceback
 from ollama import start_ollama
-from rembg import remove, new_session
 from concurrent.futures import ThreadPoolExecutor
 import time
 # SQL
@@ -22,7 +21,6 @@ import uuid
 
 os.environ["ATTN_BACKEND"] = "xformers"
 
-session_rembg = new_session("u2net", providers=["CUDAExecutionProvider", "CPUExecutionProvider"])
 logger.add("api.log", rotation="1 MB")
 app = FastAPI(title="beau demo API")
 
@@ -43,36 +41,18 @@ def load_pipe_mvadapter():
     global pipe_mv, adapters
     print('Loading MV-Adapter pipeline...')
     pipe_mv, adapters = MVAdapterT2MV.prepare_pipeline(
-        base_model="SG161222/RealVisXL_V4.0",
+        base_model="SG161222/RealVisXL_V5.0",
         vae_model="madebyollin/sdxl-vae-fp16-fix",
         unet_model=None,
         lora_model=None,
         adapter_path="huanngzh/mv-adapter",
-        scheduler="dpmpp_karras",
+        scheduler="dpmpp_2m",
         num_views=6,
         device="cuda" if torch.cuda.is_available() else "cpu",
         dtype=torch.float16,
     )
 
-    # goofyai/3d_render_style_xl
-    # try:
-    #     print('Loading 3D Render LoRA (goofyai/3d_render_style_xl)...')
-    #     pipe_mv.load_lora_weights(
-    #         "goofyai/3d_render_style_xl"
-    #     )
-
-    #     # Fundir LoRA com peso 0.75 (recomendado para game assets)
-    #     pipe_mv.fuse_lora(lora_scale=0.75)
-
-    #     print('3D Render LoRA (goofyai) loaded and fused.')
-    #     logger.info("[MV-ADAPTER] 3D Render LoRA (goofyai) loaded with scale 0.75")
-
-    # except Exception as e:
-    #     logger.error(f"[MV-ADAPTER] Failed to load LoRA (goofyai): {e}")
-    #     print(f"Warning: Could not load goofyai LoRA - {e}")
-
-    # artificialguybr/3DRedmond-V1
-    """
+    
     try:
         print('Loading 3D Render LoRA (artificialguybr/3DRedmond-V1)...')
         pipe_mv.load_lora_weights(
@@ -85,33 +65,22 @@ def load_pipe_mvadapter():
     except Exception as e:
         logger.error(f"[MV-ADAPTER] Failed to load LoRA (artificialguybr): {e}")
         print(f"Warning: Could not load artificialguybr LoRA - {e}")
-    """
+
 
     print('MV-Adapter pipeline loaded.')
     logger.info("[MV-ADAPTER] Pipeline loaded (API)")
 
-def remove_background_batch(imgs):
-    with ThreadPoolExecutor(max_workers=6) as executor:
-        results = list(executor.map(remove_background_rembg, imgs))
-    return results
-
-def remove_background_rembg(pil_img):
-    img_bytes = io.BytesIO()
-    pil_img.save(img_bytes, format="PNG")
-    img_bytes = img_bytes.getvalue()
-
-    output_bytes = remove(img_bytes, session=session_rembg)
-    return Image.open(io.BytesIO(output_bytes)).convert("RGBA")
 
 @app.post("/t2mv/generate")
 def t2mv_generate(
     ref_prompt: str, 
     neg_prompt: str = "", 
     randomize: bool = False, 
-    inference_steps: int = 40,
+    inference_steps: int = 28,
     use_3d_trigger: bool = True,
     background_tasks: BackgroundTasks = None
 ):
+    start_time = time.time()
     seed = -1 if randomize else 42
     
     enhanced_prompt = ref_prompt
@@ -131,7 +100,7 @@ def t2mv_generate(
         text=enhanced_prompt,
         height=768, width=768,
         num_inference_steps=inference_steps,
-        guidance_scale=6.5,
+        guidance_scale=5.5,
         seed=seed,
         negative_prompt=enhanced_negative,
         device="cuda" if torch.cuda.is_available() else "cpu",
@@ -140,25 +109,19 @@ def t2mv_generate(
     
     logger.info(f"[MV-ADAPTER] Images generated with {inference_steps} steps - {len(imgs)} views (API)")
     
-    zip_buffer = io.BytesIO()
-    start_time = time.time()
-    with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_STORED) as zipf:
-        processed_imgs = remove_background_batch(imgs)
-        for i, img in enumerate(processed_imgs):
-            buf = io.BytesIO()
-            img.save(buf, format="PNG")
-            zipf.writestr(f"view_{i:02d}.png", buf.getvalue())
-    elapsed_time = time.time() - start_time
-    logger.info(f"[MV-ADAPTER] Bg remove finished in {elapsed_time:.2f}s")
+    logger.info(f"[MV-ADAPTER] Images generated, encoding to base64...")
     
-    zip_buffer.seek(0)
-    
-    return StreamingResponse(
-        zip_buffer,
-        media_type="application/zip",
-        headers={"Content-Disposition": "attachment; filename=views.zip"}
-    )
+    b64_images = []
+    for img in imgs:
+        buf = io.BytesIO()
+        img.save(buf, format="JPEG", quality=95)
+        b64_images.append(base64.b64encode(buf.getvalue()).decode("utf-8"))
 
+    elapsed_time = time.time() - start_time
+    logger.info(f"[MV-ADAPTER] Total time (with encoding): {elapsed_time:.2f}s")
+    
+    # Return JSON instead of StreamingResponse
+    return {"images": b64_images}
 
 # --------- TRELLIS
 
@@ -185,7 +148,7 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         views = []
         for uf in files:
             content = await uf.read()
-            img = Image.open(io.BytesIO(content)).convert("RGB")
+            img = Image.open(io.BytesIO(content)) 
             views.append(img)
             
         logger.info(f"[TRELLIS] {len(views)} views received for processing (API)")
@@ -197,50 +160,68 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         glb_filename = f"mesh_{session_id}.glb"
         ply_filename = f"mesh_{session_id}.ply"
         mp4_filename = f"preview_{session_id}.mp4"
-        frame_filename = f"frame_{session_id}.png"
+        frame_filename = f"frame_{session_id}.jpg"
         
         glb_path = os.path.join(outdir, glb_filename)
         ply_path = os.path.join(outdir, ply_filename)
         mp4_path = os.path.join(outdir, mp4_filename)
+        frame_path = os.path.join(outdir, frame_filename)
         
-        frame_save_dir = "temp_images_path"
-        os.makedirs(frame_save_dir, exist_ok=True)
-        frame_path = os.path.join(frame_save_dir, frame_filename)
+        _, _, middle_frame_np = pipe_trellis.save_video(outputs, filename=mp4_path)
         
-        pipe_trellis.save_mesh(outputs, glb_path, ply_path, simplify=0.95, texture_size=1024)
-        pipe_trellis.save_video(outputs, filename=mp4_path)
-        
-        cap = cv2.VideoCapture(mp4_path)
-        if cap.isOpened():
-            total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-            middle_frame = total_frames // 2
-            cap.set(cv2.CAP_PROP_POS_FRAMES, middle_frame)
-            
-            ret, frame = cap.read()
-            if ret:
-                cv2.imwrite(frame_path, frame)
-                logger.info(f"[TRELLIS] Frame saved on {frame_path}")
-            else:
-                logger.warning("[TRELLIS] Error saving frame")
-            cap.release()
-        else:
-            logger.warning("[TRELLIS] Video not found for frame extraction")
+        logger.info(f"[TRELLIS] Saving mesh files to {glb_path} and {ply_path}")
+        pipe_trellis.save_mesh(
+            outputs, 
+            glb_path=glb_path, 
+            ply_path=ply_path,
+            simplify=0.85,
+            texture_size=1024
+        )
+        logger.info("[TRELLIS] Mesh files saved successfully")
+
+        try:
+            middle_frame_bgr = cv2.cvtColor(middle_frame_np, cv2.COLOR_RGB2BGR)
+            cv2.imwrite(frame_path, middle_frame_bgr)
+            logger.info(f"[TRELLIS] Frame saved to {frame_path}")
+        except Exception as e:
+            logger.warning(f"[TRELLIS] Error saving frame: {e}")
         
         logger.info("[TRELLIS] Mesh and video saved to tmp (API)")
         
+        logger.info(f"[TRELLIS] Checking files - GLB exists: {os.path.exists(glb_path)}, PLY exists: {os.path.exists(ply_path)}, MP4 exists: {os.path.exists(mp4_path)}, Frame exists: {os.path.exists(frame_path)}")
         
         zip_buffer = io.BytesIO()
         
         with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_STORED) as zipf:
             if os.path.exists(glb_path):
                 zipf.write(glb_path, arcname=glb_filename)
+                logger.info(f"[TRELLIS] Added {glb_filename} to ZIP")
+            else:
+                logger.error(f"[TRELLIS] GLB file not found at {glb_path}")
+                
             if os.path.exists(ply_path):
                 zipf.write(ply_path, arcname=ply_filename)
+                logger.info(f"[TRELLIS] Added {ply_filename} to ZIP")
+            else:
+                logger.error(f"[TRELLIS] PLY file not found at {ply_path}")
+                
             if os.path.exists(mp4_path):
                 zipf.write(mp4_path, arcname=mp4_filename)
+                logger.info(f"[TRELLIS] Added {mp4_filename} to ZIP")
+            else:
+                logger.error(f"[TRELLIS] MP4 file not found at {mp4_path}")
+                
             if os.path.exists(frame_path):
                 zipf.write(frame_path, arcname=frame_filename)
-                
+                logger.info(f"[TRELLIS] Added {frame_filename} to ZIP")
+            else:
+                logger.warning(f"[TRELLIS] Frame file not found at {frame_path}")
+        
+        zip_buffer.seek(0)
+        
+        zip_buffer_check = io.BytesIO(zip_buffer.getvalue())
+        with zipfile.ZipFile(zip_buffer_check, 'r') as zipf:
+            logger.info(f"[TRELLIS] ZIP contents: {zipf.namelist()}")
         zip_buffer.seek(0)
         
         logger.info("[TRELLIS] Created zip buffer for streaming.")

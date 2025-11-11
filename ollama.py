@@ -68,14 +68,14 @@ def prepare_prompts(user_prompt: str) -> dict:
         YOU HAVE TWO TASKS.
 
         [TASK 1: REFINED POSITIVE PROMPT]
-        GOAL: Convert user input into a comma-separated list of keywords AND descriptive phrases.
+        GOAL: Convert user input into a comma-separated list of keywords AND descriptive phrases, not removing any word wrote by the user.
 
         CRITICAL RULES:
         1.  **PRESERVE PHRASES:** Do NOT split descriptive phrases. Keep attributes, actions, and locations attached to their subjects.
             * "hat with feathers" MUST remain "hat with feathers".
             * "riding a skateboard" MUST remain "riding a skateboard".
             * "with red wheels" MUST remain "with red wheels".
-        2.  **PRESERVE ALL INFO:** You must include every detail from the input.
+        2.  **PRESERVE ALL INFO:** You must include every detail from the user input, do not remove any style, modification, adjective or word added, always keep it everything.
         3.  **ADD VIEW:**
             * If the subject is a person, animal, or creature, add ", full body".
             * If the subject is an object, building, or scene, add ", full view".
@@ -91,11 +91,11 @@ def prepare_prompts(user_prompt: str) -> dict:
         Input: "dinosaur wearing a hat with feathers and a trench coat"
         Output: "dinosaur, wearing a hat with feathers, wearing a trench coat, full body"
         
-        Input: "purple ferrari with red wheels and a hat"
-        Output: "ferrari, purple, with red wheels, with a hat, full view"
+        Input: "purple ferrari with red wheels and a hat, cartoon style"
+        Output: "ferrari, purple, with red wheels, with a hat, full view, cartoon style"
 
-        Input: "golden knight holding a large sword, riding a black horse, the horse has wings and green eyes"
-        Output: "golden knight, holding a large sword, riding a black horse, black horse with wings, black horse with green eyes, full body"
+        Input: "golden knight holding a large sword, riding a black horse, the horse has wings and green eyes, anime style, fantasy style, realistic, 4k, high detail, high quality"
+        Output: "golden knight, holding a large sword, riding a black horse, black horse with wings, black horse with green eyes, full body, anime style, fantasy style, realistic, 4k, high detail, high quality"
 
         [TASK 2: NEGATIVE PROMPT]
         Goal: Generate a standard negative prompt.
