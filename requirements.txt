@@ -25,4 +25,4 @@ plyfile
 utils3d
 nvdiffrast
 peft
-accelerate
+sentencepiece

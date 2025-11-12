@@ -49,8 +49,8 @@ class TrellisMV2M:
             images,
             seed=seed,
             preprocess_image=False,
-            sparse_structure_sampler_params={"steps": 100, "cfg_strength": 7.0},
-            slat_sampler_params={"steps": 70, "cfg_strength": 4.0}
+            sparse_structure_sampler_params={"steps": 12, "cfg_strength": 7.5},
+            slat_sampler_params={"steps": 12, "cfg_strength": 3.0}
         )
         return self.outputs
 

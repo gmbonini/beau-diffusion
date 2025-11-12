@@ -68,7 +68,7 @@ def prepare_prompts(user_prompt: str) -> dict:
         YOU HAVE TWO TASKS.
 
         [TASK 1: REFINED POSITIVE PROMPT]
-        GOAL: Convert user input into a comma-separated list of keywords AND descriptive phrases, not removing any word wrote by the user.
+        GOAL: Convert user input into a comma-separated list of the user prompt keywords AND descriptive phrases, not removing anything.
 
         CRITICAL RULES:
         1.  **PRESERVE PHRASES:** Do NOT split descriptive phrases. Keep attributes, actions, and locations attached to their subjects.
@@ -100,8 +100,6 @@ def prepare_prompts(user_prompt: str) -> dict:
         [TASK 2: NEGATIVE PROMPT]
         Goal: Generate a standard negative prompt.
         
-        MANDATORY ITEMS (always include):
-        - nsfw, explicit content (ALWAYS FIRST)
         - blurry, low detail, artifacts
         - shadows, lighting, background (ALWAYS LAST)
         
@@ -114,13 +112,13 @@ def prepare_prompts(user_prompt: str) -> dict:
 
         Examples:
         Input: "cat, cute, orange, full body"
-        Output: "nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background"
+        Output: "blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background"
 
         Input: "dinosaur, wearing a hat with feathers, wearing a trench coat, full body"
-        Output: "nsfw, explicit content, blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background"
+        Output: "blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background"
 
         Input: "ferrari, purple, with red wheels, with a hat, full view"
-        Output: "nsfw, explicit content, blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background"
+        Output: "blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background"
 
         RETURN FORMAT (MANDATORY):
         Return ONLY this JSON (no extra text):
@@ -280,3 +278,55 @@ def describe_pngs_in_dir(dir_path):
         print(f"{os.path.basename(p)}: {desc}")
         results.append((p, desc))
     return results
+
+
+def choose_generation_model(user_prompt: str) -> str:
+    """Usa LLM para escolher entre 'sd' (multi-view) e 'flux' (single-image)."""
+    
+    prompt_text = f"""
+    You are a model dispatcher. Your job is to select the best model for a user's prompt.
+    You have two choices:
+
+    1.  **sd**: A model that generates 6 views of a 3D object (multi-view). 
+        Use this for: **creatures, objects, simple or small items, game assets, 3D models**, or anything that needs to be seen from all sides. 
+        (Ex: "a dragon", "a sword", "a chair", "a small monster")
+
+    2.  **flux**: A model that generates a single, high-quality 2D image. 
+        Use this for: **constructions, buildings, houses, landscapes, scenes**, complex scenarios, 2D illustrations, logos, or portraits.
+        (Ex: "a modern house", "a forest landscape", "a city scene", "a tall building")
+
+    Analyze the user's prompt and decide which model is more appropriate.
+    
+    RULES:
+    - If the prompt describes a **creature, object, item, or asset** $\rightarrow$ respond "sd".
+    - If the prompt describes a **building, landscape, or scene** $\rightarrow$ respond "flux".
+    - If ambiguous, default to "flux".
+
+    User Prompt: "{user_prompt}"
+
+    Respond with ONLY the chosen model name: "sd" or "flux".
+    """
+    
+    payload = {
+        "model": MODEL_TEXT,
+        "prompt": prompt_text,
+        "max_tokens": 5,
+        "temperature": 0.0,
+        "stream": False,
+        "keep_alive": "1h"
+    }
+    
+    try:
+        resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=(10, 30))
+        resp.raise_for_status()
+        choice = resp.json()["response"].strip().replace('"', '').lower()
+        
+        if "sd" in choice:
+            logger.info(f"[OLLAMA] Model choice for '{user_prompt}': sd")
+            return "sd"
+        
+        logger.info(f"[OLLAMA] Model choice for '{user_prompt}': flux (defaulted or chosen)")
+        return "flux"
+    except Exception as e:
+        logger.error(f"[OLLAMA] Error choosing model: {e}. Defaulting to 'flux'.")
+        return "flux" # Default fallback

@@ -60,7 +60,7 @@ def chat_continue_fn(history, user_text, messages, cur_ref, cur_neg, cur_eval):
         gr.update(visible=finished, interactive=finished)
     )
 
- # ------------ MV-Adapter ------------
+ # ------------ MV-Adapter (SD) ------------
 def llm_prompt_processing(prompt):
     logger.info(f"[MV-ADAPTER] generating images. prompt to be refined: {prompt}")
     result = prepare_prompts(prompt)
@@ -121,12 +121,12 @@ def generate_images(refined_prompt, negative_prompt, randomize=False, inference_
         return (
             pil_images,
             views_dir,
-            gr.update(visible=True),
+            gr.update(visible=True), # run_trellis_btn
             refined_prompt,
             llm_avaliation_update,
             llm_eval_neg_prompt_update
         )
-    except Exception as e:         
+    except Exception as e:      
         logger.exception(f"[MV-ADAPTER] Error generating images: {e}") 
         return (
             [],
@@ -145,6 +145,66 @@ def check_views_quality(views_dir, prompt):
     logger.info(f"[MV-ADAPTER] views quality check: {result}")
     return llm_avaliation, llm_neg_prompt
 
+# ------------ FLUX (Single Image) ------------
+
+def _api_t2i_generate_flux(refined_prompt, negative_prompt, randomize, inference_steps=10):
+    logger.info(f"[FLUX] Calling API with {inference_steps} steps...")
+    api_params = {
+        "ref_prompt": refined_prompt,
+        "neg_prompt": negative_prompt,
+        "randomize": randomize,
+        "inference_steps": inference_steps
+    }
+    response = requests.post(
+        f"{API_URL}/t2i/generate_flux", # Novo endpoint
+        params=api_params,
+        timeout=600
+    )
+    response.raise_for_status()
+    data = response.json()
+    
+    logger.info("[FLUX] API call successful, decoding 1 image...")
+
+    b64_str = data['image'] # API retorna 'image' (singular)
+    img_bytes = base64.b64decode(b64_str)
+    img = Image.open(io.BytesIO(img_bytes))
+    pil_images = [img] # Coloca a imagem única em uma lista para a galeria
+    
+    # Cria um dir temporário para salvar a imagem para o feedback
+    views_dir = tempfile.mkdtemp(prefix="flux_view_")
+    path = os.path.join(views_dir, "view_00.jpg")
+    img.save(path, format="JPEG")
+    
+    logger.info(f"Saved single FLUX image to {views_dir} for feedback")
+    return pil_images, views_dir
+
+def generate_image_flux(refined_prompt, negative_prompt, randomize=False, inference_steps=10):
+    logger.info(f"[FLUX] Starting generation with {inference_steps} inference steps...")
+    try:
+        pil_images, views_dir = _api_t2i_generate_flux(refined_prompt, negative_prompt, randomize, inference_steps)
+        
+        logger.info(f"[FLUX] Got {len(pil_images)} image")
+        
+        # Diferente do generate_images, aqui mantemos o run_trellis_btn invisível
+        return (
+            pil_images,
+            views_dir, # Necessário para o state e feedback
+            gr.update(visible=False), # run_trellis_btn (NÃO MOSTRAR)
+            refined_prompt,
+            gr.update(value="", visible=False), # llm_avaliation
+            gr.update(value="", visible=False)  # llm_eval_neg_prompt
+        )
+    except Exception as e:      
+        logger.exception(f"[FLUX] Error generating image: {e}") 
+        return (
+            [],
+            "",
+            gr.update(visible=False), # run_trellis_btn
+            refined_prompt or "",
+            gr.update(value=f"Error: {e}", visible=True),
+            gr.update(value="", visible=False)
+        )
+
  # ------------ TRELLIS ------------
 
 def _b64_to_file(b64_str: str, path: str):
@@ -153,7 +213,7 @@ def _b64_to_file(b64_str: str, path: str):
 
 def generate_3d(views_dir):
     images_list, paths = _load_views_from_dir(views_dir)
-    assert len(images_list) >= 2, "need at least 2 views to generate 3D"
+    # assert len(images_list) >= 2, "need at least 2 views to generate 3D"
 
     files = [("files", (os.path.basename(p), open(p, "rb"), "image/jpg")) for p in paths]
 
@@ -224,9 +284,86 @@ def generate_3d(views_dir):
     )
 
  # ------------ UI helpers ------------
+ 
+def call_choose_model(prompt):
+    """Calls the API to let the LLM choose the model."""
+    if not prompt or not prompt.strip():
+        logger.warning("[Gradio] Empty prompt, defaulting to 'flux'.")
+        return "flux"
+    
+    logger.info(f"[Gradio] Choosing model for prompt: {prompt}")
+    try:
+        response = requests.post(f"{API_URL}/t2g/choose_model", data={"prompt": prompt}, timeout=60)
+        response.raise_for_status()
+        choice = response.json().get("model_choice", "flux") # Default to flux on error
+        logger.info(f"[Gradio] LLM chose model: {choice}")
+        return choice
+    except Exception as e:
+        logger.error(f"[Gradio] Failed to choose model: {e}. Defaulting to 'flux'.")
+        return "flux"
+
+def _reset_ui_and_set_steps(choice):
+    """Resets UI and sets inference steps based on the chosen model."""
+    steps = 10 if choice == "flux" else 28 # 10 for Flux, 28 for SD
+    logger.info(f"[Gradio] Resetting UI, setting steps to {steps}")
+    return (
+        gr.update(value="", visible=False), # image_review_status
+        gr.update(visible=False), # image_like_btn
+        gr.update(visible=False), # image_dislike_btn
+        [], # chatbot
+        [], # state_chat_msgs
+        [], # state_full_chat
+        0,  # remake_state
+        gr.update(value="", visible=False), # llm_avaliation
+        gr.update(value="", visible=False), # llm_eval_neg_prompt
+        steps, # state_inference_steps
+        gr.update(value="", visible=False),  # image_feedback_text
+        gr.update(visible=False),  # image_feedback_send_btn
+        gr.update(value="", visible=False),  # video_feedback_text
+        gr.update(visible=False),  # video_feedback_send_btn
+    )
+
+def route_generation(choice, refined_prompt, negative_prompt, randomize, inference_steps):
+    """Routes to the correct image generation function based on LLM choice."""
+    logger.info(f"[Gradio] Routing generation to model: {choice} with {inference_steps} steps")
+    if choice == "sd":
+        return generate_images(refined_prompt, negative_prompt, randomize, inference_steps)
+    else: # choice == "flux"
+        return generate_image_flux(refined_prompt, negative_prompt, randomize, inference_steps)
+
+def route_post_processing(choice, views_dir, prompt, ref_prompt, neg_prompt, eval_text):
+    """Routes post-processing (quality check, chat, unlock) based on LLM choice."""
+    if choice == "sd":
+        logger.info("[Gradio] Running SD post-processing (check_views, chat_start)")
+        try:
+            llm_eval, llm_neg = check_views_quality(views_dir, prompt)
+        except Exception as e:
+            logger.error(f"Failed check_views_quality: {e}")
+            llm_eval, llm_neg = f"Error: {e}", ""
+        
+        chat_outputs = chat_start_fn(ref_prompt, neg_prompt, llm_eval)
+        unlock_updates = _unlock_after_generate()
+        
+        return (
+            gr.update(value=llm_eval, visible=True), gr.update(value=llm_neg, visible=True),
+            *chat_outputs,
+            *unlock_updates
+        )
+    else: # choice == "flux"
+        logger.info("[Gradio] Running FLUX post-processing (unlock only)")
+        unlock_updates = _unlock_after_flux()
+        
+        # Return updates for all outputs, but most are "no change" (gr.update())
+        return (
+            gr.update(), gr.update(), # llm_avaliation, llm_eval_neg_prompt
+            # (chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn)
+            gr.update(), gr.update(), gr.update(), gr.update(), gr.update(), gr.update(), gr.update(),
+            *unlock_updates
+        ) 
+
 def _lock_all_buttons():
     return (
-        gr.update(interactive=False), # run_btn
+        gr.update(interactive=False), # run_btn_generate (MODIFIED)
         gr.update(interactive=False), # remake_seed_btn
         gr.update(interactive=False), # remake_steps_btn
         gr.update(interactive=False), # run_trellis_btn
@@ -236,8 +373,9 @@ def _lock_all_buttons():
     )
 
 def _unlock_after_generate():
+    """ Desbloqueia após a geração SD (multi-view) """
     return (
-        gr.update(interactive=True), # run_btn
+        gr.update(interactive=True), # run_btn_generate (MODIFIED)
         gr.update(visible=True, interactive=True), # remake_seed_btn
         gr.update(visible=True, interactive=True), # remake_steps_btn
         gr.update(visible=True, interactive=True), # run_trellis_btn
@@ -245,9 +383,20 @@ def _unlock_after_generate():
         gr.update(visible=True, interactive=True), # image_dislike_btn
     )
 
+def _unlock_after_flux():
+    """ Desbloqueia após a geração FLUX (single-image) """
+    return (
+        gr.update(interactive=True), # run_btn_generate (MODIFIED)
+        gr.update(visible=False, interactive=False), # remake_seed_btn
+        gr.update(visible=False, interactive=False), # remake_steps_btn
+        gr.update(visible=False, interactive=False), # run_trellis_btn
+        gr.update(visible=True, interactive=True), # image_like_btn
+        gr.update(visible=True, interactive=True), # image_dislike_btn
+    )
+
 def _unlock_after_trellis():
     return (
-        gr.update(interactive=True), # run_btn
+        gr.update(interactive=True), # run_btn_generate (MODIFIED)
         gr.update(visible=True, interactive=True), # remake_seed_btn
         gr.update(visible=True, interactive=True), # remake_steps_btn
         gr.update(visible=True, interactive=True), # run_trellls_btn
@@ -281,7 +430,7 @@ def send_review(
             if role == 'user':
                 chat_lines.append(f"User: {content}")
             elif role == 'assistant':
-                chat_lines.append(f"Bot: {content}")            
+                chat_lines.append(f"Bot: {content}")        
         
         chat_text = "\n".join(chat_lines)
 
@@ -349,10 +498,13 @@ with gr.Blocks() as demo:
     state_chat_msgs_before = gr.State(value=[])
     state_eval = gr.State(value="")
     state_frame_path = gr.State(value=None)
+    state_chosen_model = gr.State(value="")
     remake_state = gr.State(0)
     
     prompt = gr.Textbox(label="Prompt")
-    run_btn = gr.Button("Generate")
+    
+    with gr.Row():
+        run_btn_generate = gr.Button("Generate", variant="primary")
 
     with gr.Row(equal_height=True):
         with gr.Column(scale=1, min_width=320):
@@ -471,56 +623,54 @@ with gr.Blocks() as demo:
         )
 
     
-    # GENERATE
-    run_btn.click(
-        fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
-    ).then(
-    fn=lambda: (
-        gr.update(value="", visible=False), gr.update(visible=False), 
-        gr.update(visible=False), [], [], [], 0,
-        gr.update(value="", visible=False),
-        gr.update(value="", visible=False),
-        28,
-        gr.update(value="", visible=False),  # image_feedback_text
-        gr.update(visible=False),  # image_feedback_send_btn
-        gr.update(value="", visible=False),  # video_feedback_text
-        gr.update(visible=False),  # video_feedback_send_btn
-    ),
-    inputs=None,
-    outputs=[
-        image_review_status, image_like_btn, image_dislike_btn,
-        chatbot, state_chat_msgs, state_full_chat, remake_state,
+    lock_outputs = [run_btn_generate, remake_seed_btn, remake_steps_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
+    unlock_gen_outputs = [run_btn_generate, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
+    unlock_flux_outputs = [run_btn_generate, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
+    unlock_trellis_outputs = [run_btn_generate, remake_seed_btn, remake_steps_btn, run_trellis_btn, video_like_btn, video_dislike_btn]
+    
+    post_processing_outputs = [
         llm_avaliation, llm_eval_neg_prompt,
-        state_inference_steps,
-        image_feedback_text,
-        image_feedback_send_btn,
-        video_feedback_text,
-        video_feedback_send_btn
-    ]     
+        chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn,
+        *unlock_gen_outputs
+    ]
+    
+    run_btn_generate.click(
+        fn=_lock_all_buttons, inputs=None, outputs=lock_outputs
+    ).then(
+        fn=call_choose_model,
+        inputs=prompt,
+        outputs=state_chosen_model
+    ).then(
+        fn=_reset_ui_and_set_steps,
+        inputs=state_chosen_model,
+        outputs=[
+            image_review_status, image_like_btn, image_dislike_btn,
+            chatbot, state_chat_msgs, state_full_chat, remake_state,
+            llm_avaliation, llm_eval_neg_prompt,
+            state_inference_steps,
+            image_feedback_text, image_feedback_send_btn,
+            video_feedback_text, video_feedback_send_btn
+        ]
     ).then(
         fn=llm_prompt_processing,
         inputs=prompt,
-        outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt],
+        outputs=[ref_prompt, neg_prompt, state_last_prompt, state_neg_prompt]
     ).then(
-        fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],
+        fn=route_generation,
+        inputs=[state_chosen_model, state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
     ).then(
-        fn=check_views_quality,
-        inputs=[state_views_dir, state_last_prompt],
-        outputs=[llm_avaliation, llm_eval_neg_prompt]
+        fn=route_post_processing,
+        inputs=[state_chosen_model, state_views_dir, prompt, state_last_prompt, state_neg_prompt, llm_avaliation],
+        outputs=post_processing_outputs
     ).then(
-        fn=chat_start_fn,
-        inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
-        outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]
-    ).then(
-        fn=lambda new_chat_msgs: new_chat_msgs,
-        inputs=[state_chat_msgs],
+       
+        fn=lambda new_chat_msgs, choice: new_chat_msgs if choice == 'sd' else [],
+        inputs=[state_chat_msgs, state_chosen_model],
         outputs=[state_full_chat]
-    ).then(
-        fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
     )
+    
     
     state_views_dir.change(
         fn=lambda: [],
@@ -535,7 +685,7 @@ with gr.Blocks() as demo:
         inputs=[state_chat_msgs],
         outputs=[state_full_chat]
     ).then(
-        fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
+        fn=_unlock_after_generate, inputs=None, outputs=unlock_gen_outputs
     )
     
     user_msg.submit(
@@ -561,7 +711,7 @@ with gr.Blocks() as demo:
     ).then(
         fn=_lock_all_buttons, 
         inputs=None, 
-        outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
+        outputs=lock_outputs
     ).then(
         fn=_sync_llm_prompts,
         inputs=[state_last_prompt, state_neg_prompt],
@@ -586,7 +736,7 @@ with gr.Blocks() as demo:
         inputs=None,
         outputs=image_review_status
     ).then(
-        fn=_unlock_after_generate, inputs=None, outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
+        fn=_unlock_after_generate, inputs=None, outputs=unlock_gen_outputs
     )
     
     # remake (seed)
@@ -597,31 +747,28 @@ with gr.Blocks() as demo:
     ).then(
         fn=_lock_all_buttons,
         inputs=None,
-        outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
+        outputs=lock_outputs
     ).then(        
         fn=lambda: gr.update(value="", visible=False),
         inputs=None,
-        outputs=image_review_status    
+        outputs=image_review_status   
     ).then(
-        fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(True), state_inference_steps],
-        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt]
+        fn=route_generation, # <-- CORRIGIDO
+        inputs=[state_chosen_model, state_last_prompt, state_neg_prompt, gr.State(True), state_inference_steps], # Usando o roteador
+        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
+        queue=True
     ).then(        
-        fn=chat_start_fn, 
-        inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
-        outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]
+        fn=route_post_processing, # <-- CORRIGIDO
+        inputs=[state_chosen_model, state_views_dir, prompt, state_last_prompt, state_neg_prompt, llm_avaliation], # Usando o pós-processamento do roteador
+        outputs=post_processing_outputs
     ).then(        
-        fn=lambda full_hist, new_start_msg: full_hist + new_start_msg, 
-        inputs=[state_full_chat, state_chat_msgs],
+        fn=lambda full_hist, new_chat_msgs, choice: (full_hist + new_chat_msgs) if choice == 'sd' else [], # Atualização condicional do chat
+        inputs=[state_full_chat, state_chat_msgs, state_chosen_model],
         outputs=[state_full_chat]
     ).then(
         fn=lambda: gr.update(value="", visible=False),
         inputs=None,
         outputs=image_review_status
-    ).then(
-        fn=_unlock_after_generate,
-        inputs=None,
-        outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
     )
 
     remake_steps_btn.click(
@@ -631,47 +778,43 @@ with gr.Blocks() as demo:
     ).then(
         fn=_lock_all_buttons,
         inputs=None,
-        outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
+        outputs=lock_outputs
     ).then(        
         fn=lambda: gr.update(value="", visible=False),
         inputs=None,
-        outputs=image_review_status    
+        outputs=image_review_status   
     ).then(
-        fn=generate_images,
-        inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],
-        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt]
+        fn=route_generation,
+        inputs=[state_chosen_model, state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],
+        outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
+        queue=True
     ).then(        
-        fn=chat_start_fn, 
-        inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
-        outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]
+        fn=route_post_processing,
+        inputs=[state_chosen_model, state_views_dir, prompt, state_last_prompt, state_neg_prompt, llm_avaliation],
+        outputs=post_processing_outputs
     ).then(        
-        fn=lambda full_hist, new_start_msg: full_hist + new_start_msg, 
-        inputs=[state_full_chat, state_chat_msgs],
+        fn=lambda full_hist, new_chat_msgs, choice: (full_hist + new_chat_msgs) if choice == 'sd' else [],
+        inputs=[state_full_chat, state_chat_msgs, state_chosen_model],
         outputs=[state_full_chat]
     ).then(
         fn=lambda: gr.update(value="", visible=False),
         inputs=None,
         outputs=image_review_status
-    ).then(
-        fn=_unlock_after_generate,
-        inputs=None,
-        outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
     )
-    # --- FIM DA MODIFICAÇÃO ---
 
     # trellis
     run_trellis_btn.click(
-        fn=_lock_all_buttons, inputs=None, outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
+        fn=_lock_all_buttons, inputs=None, outputs=lock_outputs
     ).then(
         fn=generate_3d, inputs=state_views_dir, outputs=[video, download_glb, download_ply, state_frame_path]
     ).then(
-        fn=_unlock_after_trellis, inputs=None, outputs=[run_btn, remake_seed_btn, remake_steps_btn, run_trellis_btn, video_like_btn, video_dislike_btn]
+        fn=_unlock_after_trellis, inputs=None, outputs=unlock_trellis_outputs
     )
 
     # feedback helpers
     def _get_feedback_click(feedback_type, step=None, dynamic_step=False):
         def inner(orig, refined, chat, neg, video_path, views_dir, current_remake_value, feedback_text):
-            current_step = (                
+            current_step = (            
                 "REGENERATE" if dynamic_step and current_remake_value == 1
                 else ("IMAGE" if dynamic_step else step)
             )

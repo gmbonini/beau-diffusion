@@ -9,13 +9,14 @@ from PIL import Image
 from loguru import logger
 import torch
 from trellis_mv2m import TrellisMV2M
+from diffusers import FluxPipeline
 import cv2
 from mvadapter_t2mv_sdxl import MVAdapterT2MV
 import traceback
-from ollama import start_ollama
+from ollama import start_ollama, choose_generation_model
 from concurrent.futures import ThreadPoolExecutor
 import time
-# SQL
+
 from sql.db_connector import DatabaseConnector, get_db_connector
 import uuid
 
@@ -26,6 +27,7 @@ app = FastAPI(title="beau demo API")
 
 @app.on_event("startup")
 def _startup():
+    load_pipe_flux_t2i()
     load_pipe_mvadapter()
     load_pipe_trellis()
     start_ollama()
@@ -51,8 +53,6 @@ def load_pipe_mvadapter():
         device="cuda" if torch.cuda.is_available() else "cpu",
         dtype=torch.float16,
     )
-
-    
     try:
         print('Loading 3D Render LoRA (artificialguybr/3DRedmond-V1)...')
         pipe_mv.load_lora_weights(
@@ -87,7 +87,7 @@ def t2mv_generate(
     if use_3d_trigger:
         enhanced_prompt = f"3d style, 3d, {ref_prompt}, game asset"
     
-    enhanced_negative = f"{neg_prompt}, blurry, distorted, deformed, ugly, bad geometry, bad topology, watermark, signature" if neg_prompt else "realistic photo, photorealistic, blurry, distorted, deformed, ugly, bad geometry, watermark"
+    enhanced_negative = f"{neg_prompt}, blurry, distorted, deformed, ugly, bad geometry, bad topology, watermark, signature, text, words, letters, nsfw, explicit content" if neg_prompt else "realistic photo, photorealistic, blurry, distorted, deformed, ugly, bad geometry, watermark, text, words, letters, nsfw, explicit content"
     
     logger.info(f"[MV-ADAPTER] Generating images with seed {seed} and {inference_steps} steps (API)")
     logger.info(f"[MV-ADAPTER] Enhanced prompt: {enhanced_prompt}")
@@ -120,10 +120,9 @@ def t2mv_generate(
     elapsed_time = time.time() - start_time
     logger.info(f"[MV-ADAPTER] Total time (with encoding): {elapsed_time:.2f}s")
     
-    # Return JSON instead of StreamingResponse
+    
     return {"images": b64_images}
 
-# --------- TRELLIS
 
 pipe_trellis = None
 def load_pipe_trellis():
@@ -310,4 +309,118 @@ async def feedback_save(
 
     except Exception as e:
         logger.error(f"[DB ERROR] {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+pipe_flux_t2i = None
+
+def load_pipe_flux_t2i():
+    """Carrega o pipeline FLUX.1-schnell para T2I (single image)."""
+    global pipe_flux_t2i
+    
+    if not torch.cuda.is_available():
+        logger.warning("[FLUX-T2I] CUDA not available, skipping FLUX load.")
+        return
+
+    logger.info("[FLUX-T2I] Loading FLUX.1-schnell pipeline...")
+    
+    try:
+        
+        pipe_flux_t2i = FluxPipeline.from_pretrained(
+            "black-forest-labs/FLUX.1-schnell", 
+            torch_dtype=torch.bfloat16
+        ).to("cuda")
+        
+        logger.info("[FLUX-T2I] FLUX.1-schnell pipeline loaded.")
+        
+        try:
+            logger.info("[FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...")
+            pipe_flux_t2i.load_lora_weights(
+                "ByteDance/Hyper-SD",
+                weight_name="Hyper-FLUX.1-schnell-8steps-lora.safetensors"
+            )
+            pipe_flux_t2i.fuse_lora(lora_scale=0.125)
+            logger.info("[FLUX-T2I] Hyper-SD LoRA loaded and fused (scale=0.125)")
+        except Exception as e:
+            logger.error(f"[FLUX-T2I] Failed to load Hyper-SD LoRA: {e}")
+
+        
+        try:
+            logger.info("[FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2")
+            pipe_flux_t2i.load_lora_weights(
+                "gokaygokay/Flux-Game-Assets-LoRA-v2",
+                weight_name="game_asst.safetensors"
+            )
+            
+            
+            pipe_flux_t2i.fuse_lora(lora_scale=0.8) 
+            logger.info("[FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.")
+        except Exception as e:
+            
+            logger.error(f"[FLUX-T2I] Failed to load/fuse Game Assets LoRA: {e}\n{traceback.format_exc()}")
+        
+
+    except Exception as e:
+        logger.error(f"[FLUX-T2I] Failed to load FLUX pipeline: {e}\n{traceback.format_exc()}")
+        pipe_flux_t2i = None 
+
+@app.post("/t2i/generate_flux")
+def t2i_generate_flux(
+    ref_prompt: str, 
+    neg_prompt: str = "",
+    randomize: bool = False, 
+    inference_steps: int = 10
+):
+    """Gera uma única imagem usando FLUX."""
+    
+    global pipe_flux_t2i
+    if pipe_flux_t2i is None:
+        logger.error("[FLUX-T2I] Pipeline não está carregado!")
+        raise HTTPException(status_code=503, detail="FLUX pipeline is not loaded or failed to load.")
+
+    start_time = time.time()
+    seed = -1 if randomize else 42
+    
+    generator = torch.Generator(device="cuda").manual_seed(seed) if not randomize else None
+        
+    enhanced_prompt = f"wbgmsst, {ref_prompt}, white background, no text, no words, no letters, isometric view, 3d render, game asset"
+    
+    logger.info(f"[FLUX-T2I] Generating image with seed {seed} and {inference_steps} steps")
+   
+    logger.info(f"[FLUX-T2I] Enhanced Prompt: {enhanced_prompt}")
+
+    try:
+        result = pipe_flux_t2i(
+            prompt=enhanced_prompt,
+            num_inference_steps=inference_steps,
+            guidance_scale=3.5,
+            generator=generator           
+        )
+        img = result.images[0]
+        
+    except Exception as e:
+        logger.error("[FLUX-T2I] FAILED: %s\n%s", e, traceback.format_exc())
+        raise HTTPException(status_code=500, detail=f"Error during FLUX generation: {e}")
+
+    logger.info(f"[FLUX-T2I] Image generated, encoding to base64...")
+    
+    buf = io.BytesIO()
+    img.save(buf, format="JPEG", quality=95)
+    b64_image = base64.b64encode(buf.getvalue()).decode("utf-8")
+
+    elapsed_time = time.time() - start_time
+    logger.info(f"[FLUX-T2I] Total time (with encoding): {elapsed_time:.2f}s")
+    
+    return {"image": b64_image}
+
+@app.post("/t2g/choose_model")
+def t2g_choose_model(prompt: str = Form(...)):
+    """Chama o LLM para escolher entre 'sd' (multi-view) e 'flux' (single-image)."""
+    if not prompt:
+        raise HTTPException(status_code=400, detail="Prompt is required.")
+    
+    try:
+        choice = choose_generation_model(prompt)
+        return {"model_choice": choice}
+    except Exception as e:
+        logger.error(f"[API /t2g/choose_model] FAILED: {e}\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e))
