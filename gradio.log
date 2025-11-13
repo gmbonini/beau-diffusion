@@ -89,3 +89,299 @@
 2025-11-12 18:24:06.877 | INFO     | __main__:generate_3d:259 - [TRELLIS/API-DEBUG] Found frame files: ['frame_26806813-72bf-4cf8-8dac-42450bb1f6cf.jpg']
 2025-11-12 18:24:06.877 | INFO     | __main__:generate_3d:273 - [TRELLIS/API] Frame path found: /tmp/flux_view_d0_a7bmx/frame_26806813-72bf-4cf8-8dac-42450bb1f6cf.jpg
 2025-11-12 18:24:06.877 | INFO     | __main__:generate_3d:277 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_d0_a7bmx/mesh_26806813-72bf-4cf8-8dac-42450bb1f6cf.glb, PLY=/tmp/flux_view_d0_a7bmx/mesh_26806813-72bf-4cf8-8dac-42450bb1f6cf.ply, MP4=/tmp/flux_view_d0_a7bmx/preview_26806813-72bf-4cf8-8dac-42450bb1f6cf.mp4
+2025-11-12 19:23:42.676 | INFO     | __main__:call_choose_model:294 - [Gradio] Choosing model for prompt: house
+2025-11-12 19:23:42.960 | INFO     | __main__:call_choose_model:299 - [Gradio] LLM chose model: flux
+2025-11-12 19:23:43.182 | INFO     | __main__:_reset_ui_and_set_steps:308 - [Gradio] Resetting UI, setting steps to 10
+2025-11-12 19:23:43.483 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: house
+2025-11-12 19:23:43.484 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: house (using qwen2.5:7b)
+2025-11-12 19:23:44.208 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'house, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-12 19:23:44.394 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-12 19:23:44.394 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-12 19:23:44.394 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-12 19:23:49.632 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-12 19:23:49.643 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_1zau3y9a for feedback
+2025-11-12 19:23:49.643 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-12 19:23:55.803 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-12 19:23:55.804 | INFO     | __main__:route_post_processing:353 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-12 19:23:55.804 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-12 19:23:55.809 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-12 19:23:57.119 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, full view, negative: bad proportions, artifacts, shadows, lighting, background, over-saturated colors, repetitive textures, eval: 
+2025-11-12 19:23:57.119 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-12 19:23:57.119 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-12 19:34:00.341 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_1zau3y9a/trellis_output.zip
+2025-11-12 19:34:00.455 | INFO     | __main__:generate_3d:246 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_1zau3y9a
+2025-11-12 19:34:00.455 | INFO     | __main__:generate_3d:249 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_1zau3y9a: ['view_00.jpg', 'trellis_output.zip', 'mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.glb', 'mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.ply', 'preview_85cafcc0-48e4-4263-bcb5-86d5178ba366.mp4', 'frame_85cafcc0-48e4-4263-bcb5-86d5178ba366.jpg']
+2025-11-12 19:34:00.455 | INFO     | __main__:generate_3d:256 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.glb']
+2025-11-12 19:34:00.455 | INFO     | __main__:generate_3d:257 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.ply']
+2025-11-12 19:34:00.456 | INFO     | __main__:generate_3d:258 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_85cafcc0-48e4-4263-bcb5-86d5178ba366.mp4']
+2025-11-12 19:34:00.456 | INFO     | __main__:generate_3d:259 - [TRELLIS/API-DEBUG] Found frame files: ['frame_85cafcc0-48e4-4263-bcb5-86d5178ba366.jpg']
+2025-11-12 19:34:00.456 | INFO     | __main__:generate_3d:273 - [TRELLIS/API] Frame path found: /tmp/flux_view_1zau3y9a/frame_85cafcc0-48e4-4263-bcb5-86d5178ba366.jpg
+2025-11-12 19:34:00.456 | INFO     | __main__:generate_3d:277 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_1zau3y9a/mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.glb, PLY=/tmp/flux_view_1zau3y9a/mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.ply, MP4=/tmp/flux_view_1zau3y9a/preview_85cafcc0-48e4-4263-bcb5-86d5178ba366.mp4
+2025-11-12 19:40:22.216 | INFO     | __main__:call_choose_model:294 - [Gradio] Choosing model for prompt: green water bottle
+2025-11-12 19:40:24.983 | INFO     | __main__:call_choose_model:299 - [Gradio] LLM chose model: sd
+2025-11-12 19:40:25.206 | INFO     | __main__:_reset_ui_and_set_steps:308 - [Gradio] Resetting UI, setting steps to 28
+2025-11-12 19:40:25.561 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: green water bottle
+2025-11-12 19:40:25.561 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: green water bottle (using qwen2.5:7b)
+2025-11-12 19:40:26.313 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'water bottle, green, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-12 19:40:26.524 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-12 19:40:26.524 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-12 19:40:26.524 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-12 19:40:38.428 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-12 19:40:38.455 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_q5vet2u7 for Trellis step
+2025-11-12 19:40:38.455 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-12 19:51:36.295 | INFO     | __main__:route_post_processing:337 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-12 19:51:36.296 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: water bottle, green, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-12 19:51:36.303 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-12 19:51:36.303 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-12 19:51:36.306 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-12 19:51:37.812 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: water bottle, green, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-12 19:51:37.812 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-12 19:51:37.812 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-12 19:51:42.174 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'the images match the prompt well. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-12 19:51:42.174 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'the images match the prompt well. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-12 19:51:42.174 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: water bottle, green, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: the images match the prompt well. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-12 19:51:42.174 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-12 19:51:42.174 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-12 19:52:19.193 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_q5vet2u7/trellis_output.zip
+2025-11-12 19:52:19.226 | INFO     | __main__:generate_3d:246 - [TRELLIS/API] Extracted ZIP to /tmp/views_q5vet2u7
+2025-11-12 19:52:19.226 | INFO     | __main__:generate_3d:249 - [TRELLIS/API-DEBUG] Files in /tmp/views_q5vet2u7: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.glb', 'mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.ply', 'preview_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.mp4', 'frame_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.jpg']
+2025-11-12 19:52:19.227 | INFO     | __main__:generate_3d:256 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.glb']
+2025-11-12 19:52:19.227 | INFO     | __main__:generate_3d:257 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.ply']
+2025-11-12 19:52:19.227 | INFO     | __main__:generate_3d:258 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.mp4']
+2025-11-12 19:52:19.227 | INFO     | __main__:generate_3d:259 - [TRELLIS/API-DEBUG] Found frame files: ['frame_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.jpg']
+2025-11-12 19:52:19.227 | INFO     | __main__:generate_3d:273 - [TRELLIS/API] Frame path found: /tmp/views_q5vet2u7/frame_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.jpg
+2025-11-12 19:52:19.227 | INFO     | __main__:generate_3d:277 - [TRELLIS/API] Assets found: GLB=/tmp/views_q5vet2u7/mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.glb, PLY=/tmp/views_q5vet2u7/mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.ply, MP4=/tmp/views_q5vet2u7/preview_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.mp4
+2025-11-13 11:10:30.546 | INFO     | __main__:call_choose_model:294 - [Gradio] Choosing model for prompt: A small square cabin
+2025-11-13 11:10:33.102 | INFO     | __main__:call_choose_model:299 - [Gradio] LLM chose model: flux
+2025-11-13 11:10:33.334 | INFO     | __main__:_reset_ui_and_set_steps:308 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 11:10:33.487 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: A small square cabin
+2025-11-13 11:10:33.487 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: A small square cabin (using qwen2.5:7b)
+2025-11-13 11:10:34.310 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cabin, small, square, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 11:10:34.451 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 11:10:34.451 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 11:10:34.451 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 11:10:39.403 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 11:10:39.410 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_wenx1us4 for feedback
+2025-11-13 11:10:39.410 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 11:10:39.624 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cabin, small, square, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 11:10:39.624 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:10:39.626 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:10:39.674 | INFO     | __main__:route_post_processing:353 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 11:10:41.046 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cabin, small, square, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-13 11:10:41.046 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:10:41.046 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:10:44.535 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 11:10:44.535 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 11:10:44.535 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 11:10:49.491 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 11:10:49.498 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_hfy4l7j9 for feedback
+2025-11-13 11:10:49.498 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 11:10:49.817 | INFO     | __main__:route_post_processing:353 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 11:10:49.817 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cabin, small, square, full view, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-13 11:10:49.818 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:10:49.819 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:10:50.881 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cabin, small, square, full view, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-13 11:10:50.882 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:10:50.882 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:10:53.872 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: flux with 15 steps
+2025-11-13 11:10:53.872 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 15 inference steps...
+2025-11-13 11:10:53.873 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 15 steps...
+2025-11-13 11:11:01.093 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 11:11:01.099 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_q7k8pon3 for feedback
+2025-11-13 11:11:01.099 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 11:11:01.410 | INFO     | __main__:route_post_processing:353 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 11:11:01.410 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cabin, small, square, full view, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-13 11:11:01.411 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:11:01.411 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:11:02.421 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cabin, small, square, full view, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-13 11:11:02.421 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:11:02.421 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:12:06.034 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_q7k8pon3/trellis_output.zip
+2025-11-13 11:12:06.103 | INFO     | __main__:generate_3d:246 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_q7k8pon3
+2025-11-13 11:12:06.104 | INFO     | __main__:generate_3d:249 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_q7k8pon3: ['view_00.jpg', 'trellis_output.zip', 'mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.glb', 'mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.ply', 'preview_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.mp4', 'frame_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.jpg']
+2025-11-13 11:12:06.104 | INFO     | __main__:generate_3d:256 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.glb']
+2025-11-13 11:12:06.104 | INFO     | __main__:generate_3d:257 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.ply']
+2025-11-13 11:12:06.104 | INFO     | __main__:generate_3d:258 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.mp4']
+2025-11-13 11:12:06.104 | INFO     | __main__:generate_3d:259 - [TRELLIS/API-DEBUG] Found frame files: ['frame_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.jpg']
+2025-11-13 11:12:06.104 | INFO     | __main__:generate_3d:273 - [TRELLIS/API] Frame path found: /tmp/flux_view_q7k8pon3/frame_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.jpg
+2025-11-13 11:12:06.104 | INFO     | __main__:generate_3d:277 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_q7k8pon3/mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.glb, PLY=/tmp/flux_view_q7k8pon3/mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.ply, MP4=/tmp/flux_view_q7k8pon3/preview_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.mp4
+2025-11-13 11:12:14.372 | INFO     | __main__:send_review:473 - [FEEDBACK] Success: Feedback sent!
+2025-11-13 11:13:20.063 | INFO     | __main__:call_choose_model:294 - [Gradio] Choosing model for prompt: A large rabbit with red hair holding a bazooka 
+2025-11-13 11:13:20.401 | INFO     | __main__:call_choose_model:299 - [Gradio] LLM chose model: sd
+2025-11-13 11:13:20.619 | INFO     | __main__:_reset_ui_and_set_steps:308 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 11:13:20.773 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: A large rabbit with red hair holding a bazooka 
+2025-11-13 11:13:20.773 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: A large rabbit with red hair holding a bazooka  (using qwen2.5:7b)
+2025-11-13 11:13:21.638 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'rabbit, large, with red hair, holding a bazooka, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-13 11:13:21.787 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 11:13:21.787 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 11:13:21.788 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 11:13:33.664 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 11:13:33.717 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_xw6x2__7 for Trellis step
+2025-11-13 11:13:33.717 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 11:13:34.040 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, large, with red hair, holding a bazooka, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 11:13:34.042 | INFO     | __main__:route_post_processing:337 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 11:13:34.044 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:13:34.049 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:13:34.051 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 11:13:35.372 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, large, with red hair, holding a bazooka, full body, negative: low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, background, eval: 
+2025-11-13 11:13:35.374 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:13:35.374 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:13:39.671 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a large rabbit with red hair holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 11:13:39.672 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a large rabbit with red hair holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 11:13:39.672 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, large, with red hair, holding a bazooka, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a large rabbit with red hair holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.
+2025-11-13 11:13:39.672 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:13:39.672 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:13:49.180 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 11:13:49.181 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 11:13:49.181 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 11:14:01.089 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 11:14:01.141 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_ft8d9pkq for Trellis step
+2025-11-13 11:14:01.142 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 11:14:01.460 | INFO     | __main__:route_post_processing:337 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 11:14:01.461 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, large, with red hair, holding a bazooka, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive foliage, tiling textures, lighting, shadows, background, eval: 
+2025-11-13 11:14:01.465 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:14:01.466 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 11:14:01.468 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:14:02.829 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, large, with red hair, holding a bazooka, full body, negative: deformed tail, repetitive foliage, tiling textures, unnatural colors, over-saturated colors, flat water, blocky water surface, unrealistic reflections, lighting, shadows, background, eval: 
+2025-11-13 11:14:02.829 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:14:02.829 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:14:07.173 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a large rabbit with red hair holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 11:14:07.174 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a large rabbit with red hair holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 11:14:07.174 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, large, with red hair, holding a bazooka, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive foliage, tiling textures, lighting, shadows, background, eval: The images match the prompt well, showing a large rabbit with red hair holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.
+2025-11-13 11:14:07.174 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:14:07.174 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:56:08.335 | INFO     | __main__:call_choose_model:294 - [Gradio] Choosing model for prompt: cute rabbit holding a bazooka
+2025-11-13 11:56:08.661 | INFO     | __main__:call_choose_model:299 - [Gradio] LLM chose model: sd
+2025-11-13 11:56:08.891 | INFO     | __main__:_reset_ui_and_set_steps:308 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 11:56:09.195 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cute rabbit holding a bazooka
+2025-11-13 11:56:09.196 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cute rabbit holding a bazooka (using qwen2.5:7b)
+2025-11-13 11:56:10.042 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'rabbit, cute, holding a bazooka, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-13 11:56:10.259 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 11:56:10.260 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 11:56:10.260 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 11:56:22.528 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 11:56:22.555 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_wjsv9iid for Trellis step
+2025-11-13 11:56:22.556 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 11:56:22.973 | INFO     | __main__:route_post_processing:337 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 11:56:22.973 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, cute, holding a bazooka, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 11:56:22.974 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:56:22.974 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 11:56:22.974 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:56:24.338 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, cute, holding a bazooka, full body, negative: extra limbs, deformed face, bad anatomy, shadows, lighting, background, unnatural pose, repetitive fur patterns, eval: 
+2025-11-13 11:56:24.338 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:56:24.338 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:56:28.873 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'the rabbit has an extra tail and a deformed body. The images are not consistent and some views have an extra tail. the face has low detail. the colors are unrealistic and unmatched.', 'negative_prompt': 'nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body'}
+2025-11-13 11:56:28.873 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'the rabbit has an extra tail and a deformed body. The images are not consistent and some views have an extra tail. the face has low detail. the colors are unrealistic and unmatched.', 'negative_prompt': 'nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body'}
+2025-11-13 11:56:28.874 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, cute, holding a bazooka, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: the rabbit has an extra tail and a deformed body. The images are not consistent and some views have an extra tail. the face has low detail. the colors are unrealistic and unmatched.
+2025-11-13 11:56:28.874 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:56:28.874 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:57:18.392 | INFO     | __main__:route_generation:328 - [Gradio] Routing generation to model: sd with 33 steps
+2025-11-13 11:57:18.393 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 33 inference steps...
+2025-11-13 11:57:18.393 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 33 steps...
+2025-11-13 11:57:32.231 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 11:57:32.256 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_nkrkzio9 for Trellis step
+2025-11-13 11:57:32.257 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 11:57:35.175 | INFO     | __main__:route_post_processing:337 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 11:57:35.176 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, cute, holding a bazooka, full body, realistic anatomy, negative: extra limbs, deformed face, deformed tail, low detail, artifacts, bad anatomy, unrealistic colors, inconsistent views, shadows, lighting, background, eval: 
+2025-11-13 11:57:35.178 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:57:35.180 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:57:35.181 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 11:57:36.543 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, cute, holding a bazooka, full body, realistic anatomy, negative: extra limbs, deformed face, deformed tail, low detail, artifacts, bad anatomy, unrealistic colors, inconsistent views, grounded rabbit, unnatural shadows, blocky lighting, cluttered background, eval: 
+2025-11-13 11:57:36.543 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:57:36.543 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:57:40.995 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'the rabbit has an extra tail and a deformed body. The images are not consistent and some views have an extra tail. the face has low detail. the colors are unrealistic and unmatched.', 'negative_prompt': 'nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body'}
+2025-11-13 11:57:40.996 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'the rabbit has an extra tail and a deformed body. The images are not consistent and some views have an extra tail. the face has low detail. the colors are unrealistic and unmatched.', 'negative_prompt': 'nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body'}
+2025-11-13 11:57:40.996 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: rabbit, cute, holding a bazooka, full body, realistic anatomy, negative: extra limbs, deformed face, deformed tail, low detail, artifacts, bad anatomy, unrealistic colors, inconsistent views, shadows, lighting, background, eval: the rabbit has an extra tail and a deformed body. The images are not consistent and some views have an extra tail. the face has low detail. the colors are unrealistic and unmatched.
+2025-11-13 11:57:40.996 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 11:57:40.997 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 11:58:36.926 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_nkrkzio9/trellis_output.zip
+2025-11-13 11:58:36.968 | INFO     | __main__:generate_3d:246 - [TRELLIS/API] Extracted ZIP to /tmp/views_nkrkzio9
+2025-11-13 11:58:36.969 | INFO     | __main__:generate_3d:249 - [TRELLIS/API-DEBUG] Files in /tmp/views_nkrkzio9: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb', 'mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply', 'preview_ecdb251f-5370-4487-91f1-b3f258ace39b.mp4', 'frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg']
+2025-11-13 11:58:36.969 | INFO     | __main__:generate_3d:256 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb']
+2025-11-13 11:58:36.969 | INFO     | __main__:generate_3d:257 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply']
+2025-11-13 11:58:36.969 | INFO     | __main__:generate_3d:258 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_ecdb251f-5370-4487-91f1-b3f258ace39b.mp4']
+2025-11-13 11:58:36.969 | INFO     | __main__:generate_3d:259 - [TRELLIS/API-DEBUG] Found frame files: ['frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg']
+2025-11-13 11:58:36.969 | INFO     | __main__:generate_3d:273 - [TRELLIS/API] Frame path found: /tmp/views_nkrkzio9/frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg
+2025-11-13 11:58:36.969 | INFO     | __main__:generate_3d:277 - [TRELLIS/API] Assets found: GLB=/tmp/views_nkrkzio9/mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb, PLY=/tmp/views_nkrkzio9/mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply, MP4=/tmp/views_nkrkzio9/preview_ecdb251f-5370-4487-91f1-b3f258ace39b.mp4
+2025-11-13 12:02:31.520 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_nkrkzio9/trellis_output.zip
+2025-11-13 12:02:31.574 | INFO     | __main__:generate_3d:246 - [TRELLIS/API] Extracted ZIP to /tmp/views_nkrkzio9
+2025-11-13 12:02:31.575 | INFO     | __main__:generate_3d:249 - [TRELLIS/API-DEBUG] Files in /tmp/views_nkrkzio9: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb', 'mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply', 'preview_ecdb251f-5370-4487-91f1-b3f258ace39b.mp4', 'frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg', 'mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.glb', 'mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.ply', 'preview_84db080e-c985-4650-ba42-34d5b1ddbbd5.mp4', 'frame_84db080e-c985-4650-ba42-34d5b1ddbbd5.jpg']
+2025-11-13 12:02:31.575 | INFO     | __main__:generate_3d:256 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb', 'mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.glb']
+2025-11-13 12:02:31.575 | INFO     | __main__:generate_3d:257 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply', 'mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.ply']
+2025-11-13 12:02:31.575 | INFO     | __main__:generate_3d:258 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_ecdb251f-5370-4487-91f1-b3f258ace39b.mp4', 'preview_84db080e-c985-4650-ba42-34d5b1ddbbd5.mp4']
+2025-11-13 12:02:31.575 | INFO     | __main__:generate_3d:259 - [TRELLIS/API-DEBUG] Found frame files: ['frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg', 'frame_84db080e-c985-4650-ba42-34d5b1ddbbd5.jpg']
+2025-11-13 12:02:31.575 | INFO     | __main__:generate_3d:273 - [TRELLIS/API] Frame path found: /tmp/views_nkrkzio9/frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg
+2025-11-13 12:02:31.575 | INFO     | __main__:generate_3d:277 - [TRELLIS/API] Assets found: GLB=/tmp/views_nkrkzio9/mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb, PLY=/tmp/views_nkrkzio9/mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply, MP4=/tmp/views_nkrkzio9/preview_ecdb251f-5370-4487-91f1-b3f258ace39b.mp4
+2025-11-13 12:12:14.068 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: monster bunny holding a bazooka
+2025-11-13 12:12:16.535 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-13 12:12:16.725 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 12:12:17.029 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: monster bunny holding a bazooka
+2025-11-13 12:12:17.030 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: monster bunny holding a bazooka (using qwen2.5:7b)
+2025-11-13 12:12:17.853 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'monster bunny, holding a bazooka, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-13 12:12:18.043 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 12:12:18.044 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 12:12:18.044 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 12:12:29.993 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 12:12:30.029 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_yqo8ekkx for Trellis step
+2025-11-13 12:12:30.029 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 12:12:30.454 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 12:12:30.454 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 12:12:30.455 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:12:30.455 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 12:12:30.455 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:12:31.825 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-13 12:12:31.825 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:12:31.825 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:12:36.145 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 12:12:36.145 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 12:12:36.145 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.
+2025-11-13 12:12:36.145 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:12:36.145 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:15:00.569 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 33 steps
+2025-11-13 12:15:00.569 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 33 inference steps...
+2025-11-13 12:15:00.569 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 33 steps...
+2025-11-13 12:15:14.414 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 12:15:14.463 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_r07ynl_h for Trellis step
+2025-11-13 12:15:14.463 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 12:15:14.978 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 12:15:14.978 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, shadows, lighting, background, eval: 
+2025-11-13 12:15:14.980 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 12:15:14.980 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:15:14.983 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:15:16.094 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: deformed anatomy, repetitive textures, unnatural colors, blocky water surface, flat water, over-saturated colors, shadows, lighting, background, eval: 
+2025-11-13 12:15:16.095 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:15:16.097 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:15:20.521 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 12:15:20.522 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 12:15:20.522 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, shadows, lighting, background, eval: The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.
+2025-11-13 12:15:20.522 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:15:20.522 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:15:24.462 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 33 steps
+2025-11-13 12:15:24.463 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 33 inference steps...
+2025-11-13 12:15:24.463 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 33 steps...
+2025-11-13 12:15:39.499 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 12:15:39.528 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_5t9jmffn for Trellis step
+2025-11-13 12:15:39.529 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 12:15:39.937 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, eval: 
+2025-11-13 12:15:39.937 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 12:15:39.938 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:15:39.941 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:15:39.942 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 12:15:41.105 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, unnatural colors, blocky water surface, lighting inconsistencies, eval: 
+2025-11-13 12:15:41.105 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:15:41.105 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:15:45.373 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 12:15:45.374 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 12:15:45.374 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: monster bunny, holding a bazooka, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive textures, eval: The images match the prompt well, showing a monster bunny holding a bazooka. The images are consistent across different angles, and there are no visible issues or artifacts.
+2025-11-13 12:15:45.374 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 12:15:45.375 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 12:16:30.080 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_5t9jmffn/trellis_output.zip
+2025-11-13 12:16:30.080 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_5t9jmffn
+2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/views_5t9jmffn
+2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/views_5t9jmffn: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_861cab4b-af5d-4962-9158-bba265380968.glb', 'mesh_861cab4b-af5d-4962-9158-bba265380968.ply', 'preview_861cab4b-af5d-4962-9158-bba265380968.mp4', 'frame_861cab4b-af5d-4962-9158-bba265380968.jpg']
+2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_861cab4b-af5d-4962-9158-bba265380968.glb']
+2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_861cab4b-af5d-4962-9158-bba265380968.ply']
+2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_861cab4b-af5d-4962-9158-bba265380968.mp4']
+2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_861cab4b-af5d-4962-9158-bba265380968.jpg']
+2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_5t9jmffn/frame_861cab4b-af5d-4962-9158-bba265380968.jpg
+2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_5t9jmffn/mesh_861cab4b-af5d-4962-9158-bba265380968.glb, PLY=/tmp/views_5t9jmffn/mesh_861cab4b-af5d-4962-9158-bba265380968.ply, MP4=/tmp/views_5t9jmffn/preview_861cab4b-af5d-4962-9158-bba265380968.mp4

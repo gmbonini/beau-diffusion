@@ -4400,3 +4400,229 @@ OSError: gokaygokay/Flux-Game-Assets-LoRA-v2 does not appear to have a file name
 2025-11-12 18:23:55.503 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Added frame_26806813-72bf-4cf8-8dac-42450bb1f6cf.jpg to ZIP
 2025-11-12 18:23:55.504 | INFO     | api_stream:trellis_run:223 - [TRELLIS] ZIP contents: ['mesh_26806813-72bf-4cf8-8dac-42450bb1f6cf.glb', 'mesh_26806813-72bf-4cf8-8dac-42450bb1f6cf.ply', 'preview_26806813-72bf-4cf8-8dac-42450bb1f6cf.mp4', 'frame_26806813-72bf-4cf8-8dac-42450bb1f6cf.jpg']
 2025-11-12 18:23:55.504 | INFO     | api_stream:trellis_run:226 - [TRELLIS] Created zip buffer for streaming.
+2025-11-12 18:49:34.469 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-12 18:49:43.089 | INFO     | api_stream:load_pipe_flux_t2i:417 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-12 18:49:43.089 | INFO     | api_stream:load_pipe_flux_t2i:420 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-12 18:49:43.161 | ERROR    | api_stream:load_pipe_flux_t2i:428 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-12 18:49:43.161 | INFO     | api_stream:load_pipe_flux_t2i:432 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-12 18:49:43.821 | INFO     | api_stream:load_pipe_flux_t2i:440 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-12 18:50:11.625 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-12 18:50:11.625 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-12 18:50:11.625 | INFO     | api_stream:load_pipe_rmbg:89 - [RMBG] Loading Bria RMBG-1.4 model...
+2025-11-12 18:50:27.269 | ERROR    | api_stream:load_pipe_rmbg:102 - [RMBG] Failed to load Bria RMBG-1.4 model: The repository briaai/RMBG-1.4 contains custom code which must be executed to correctly load the model. You can inspect the repository content at https://hf.co/briaai/RMBG-1.4 .
+ You can inspect the repository content at https://hf.co/briaai/RMBG-1.4.
+Please pass the argument `trust_remote_code=True` to allow custom code to be run.
+2025-11-12 18:50:27.270 | INFO     | api_stream:load_pipe_trellis:215 - [TRELLIS] Pipeline loaded (API)
+2025-11-12 18:50:54.156 | INFO     | api_stream:load_pipe_trellis:218 - [TRELLIS] Pipeline prepared (API)
+2025-11-12 18:50:56.723 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-12 18:56:14.212 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-12 18:56:22.693 | INFO     | api_stream:load_pipe_flux_t2i:417 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-12 18:56:22.694 | INFO     | api_stream:load_pipe_flux_t2i:420 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-12 18:56:22.777 | ERROR    | api_stream:load_pipe_flux_t2i:428 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-12 18:56:22.777 | INFO     | api_stream:load_pipe_flux_t2i:432 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-12 18:56:23.457 | INFO     | api_stream:load_pipe_flux_t2i:440 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-12 18:56:48.819 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-12 18:56:48.819 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-12 18:56:48.819 | INFO     | api_stream:load_pipe_rmbg:89 - [RMBG] Loading Bria RMBG-1.4 model...
+2025-11-12 18:57:04.113 | ERROR    | api_stream:load_pipe_rmbg:102 - [RMBG] Failed to load Bria RMBG-1.4 model: The repository briaai/RMBG-1.4 contains custom code which must be executed to correctly load the model. You can inspect the repository content at https://hf.co/briaai/RMBG-1.4 .
+ You can inspect the repository content at https://hf.co/briaai/RMBG-1.4.
+Please pass the argument `trust_remote_code=True` to allow custom code to be run.
+2025-11-12 18:57:04.114 | INFO     | api_stream:load_pipe_trellis:215 - [TRELLIS] Pipeline loaded (API)
+2025-11-12 18:57:31.212 | INFO     | api_stream:load_pipe_trellis:218 - [TRELLIS] Pipeline prepared (API)
+2025-11-12 18:57:33.791 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-12 18:58:23.641 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-12 18:58:32.465 | INFO     | api_stream:load_pipe_flux_t2i:417 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-12 18:58:32.465 | INFO     | api_stream:load_pipe_flux_t2i:420 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-12 18:58:32.544 | ERROR    | api_stream:load_pipe_flux_t2i:428 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-12 18:58:32.544 | INFO     | api_stream:load_pipe_flux_t2i:432 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-12 18:58:33.220 | INFO     | api_stream:load_pipe_flux_t2i:440 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-12 18:58:57.830 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-12 18:58:57.831 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-12 18:58:57.831 | INFO     | api_stream:load_pipe_rmbg:89 - [RMBG] Loading Bria RMBG-1.4 model...
+2025-11-12 18:58:59.134 | ERROR    | api_stream:load_pipe_rmbg:102 - [RMBG] Failed to load Bria RMBG-1.4 model: Unrecognized processing class in briaai/RMBG-1.4. Can't instantiate a processor, a tokenizer, an image processor or a feature extractor for this model. Make sure the repository contains the files of at least one of those processing classes.
+2025-11-12 18:58:59.135 | INFO     | api_stream:load_pipe_trellis:215 - [TRELLIS] Pipeline loaded (API)
+2025-11-12 18:59:29.577 | INFO     | api_stream:load_pipe_trellis:218 - [TRELLIS] Pipeline prepared (API)
+2025-11-12 18:59:30.045 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-12 19:19:30.349 | INFO     | api_stream:load_pipe_flux_t2i:380 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-12 19:19:39.273 | INFO     | api_stream:load_pipe_flux_t2i:389 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-12 19:19:39.274 | INFO     | api_stream:load_pipe_flux_t2i:392 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-12 19:19:39.352 | ERROR    | api_stream:load_pipe_flux_t2i:400 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-12 19:19:39.353 | INFO     | api_stream:load_pipe_flux_t2i:404 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-12 19:19:40.015 | INFO     | api_stream:load_pipe_flux_t2i:412 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-12 19:20:04.931 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-12 19:20:04.932 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-12 19:20:04.932 | INFO     | api_stream:load_pipe_rmbg:89 - [RMBG] Loading Bria RMBG-1.4 model...
+2025-11-12 19:20:06.104 | ERROR    | api_stream:load_pipe_rmbg:102 - [RMBG] Failed to load Bria RMBG-1.4 model: Unrecognized processing class in briaai/RMBG-1.4. Can't instantiate a processor, a tokenizer, an image processor or a feature extractor for this model. Make sure the repository contains the files of at least one of those processing classes.
+2025-11-12 19:20:06.105 | INFO     | api_stream:load_pipe_trellis:187 - [TRELLIS] Pipeline loaded (API)
+2025-11-12 19:20:33.303 | INFO     | api_stream:load_pipe_trellis:190 - [TRELLIS] Pipeline prepared (API)
+2025-11-12 19:20:35.912 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-12 19:22:09.798 | INFO     | api_stream:load_pipe_flux_t2i:354 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-12 19:22:18.804 | INFO     | api_stream:load_pipe_flux_t2i:363 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-12 19:22:18.805 | INFO     | api_stream:load_pipe_flux_t2i:366 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-12 19:22:18.877 | ERROR    | api_stream:load_pipe_flux_t2i:374 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-12 19:22:18.878 | INFO     | api_stream:load_pipe_flux_t2i:378 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-12 19:22:19.574 | INFO     | api_stream:load_pipe_flux_t2i:386 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-12 19:22:47.970 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-12 19:22:47.970 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-12 19:22:47.970 | INFO     | api_stream:load_pipe_trellis:161 - [TRELLIS] Pipeline loaded (API)
+2025-11-12 19:23:17.394 | INFO     | api_stream:load_pipe_trellis:164 - [TRELLIS] Pipeline prepared (API)
+2025-11-12 19:23:17.931 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-12 19:23:42.957 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'house': flux (defaulted or chosen)
+2025-11-12 19:23:44.400 | INFO     | api_stream:t2i_generate_flux:417 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-12 19:23:44.400 | INFO     | api_stream:t2i_generate_flux:419 - [FLUX-T2I] Enhanced Prompt: wbgmsst, house, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-12 19:23:49.620 | INFO     | api_stream:t2i_generate_flux:434 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-12 19:23:49.627 | INFO     | api_stream:t2i_generate_flux:441 - [FLUX-T2I] Total time (with encoding): 5.23s
+2025-11-12 19:32:27.239 | INFO     | api_stream:trellis_run:183 - [TRELLIS] 1 views (BG removed) received for processing (API)
+2025-11-12 19:32:57.653 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Saving mesh files to /tmp/trellis_85cafcc0-48e4-4263-bcb5-86d5178ba366_dv347k30/mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.glb and /tmp/trellis_85cafcc0-48e4-4263-bcb5-86d5178ba366_dv347k30/mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.ply
+2025-11-12 19:33:37.377 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Mesh files saved successfully
+2025-11-12 19:33:37.382 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Frame saved to /tmp/trellis_85cafcc0-48e4-4263-bcb5-86d5178ba366_dv347k30/frame_85cafcc0-48e4-4263-bcb5-86d5178ba366.jpg
+2025-11-12 19:33:37.382 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-12 19:33:37.382 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-12 19:33:37.391 | INFO     | api_stream:trellis_run:227 - [TRELLIS] Added mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.glb to ZIP
+2025-11-12 19:33:37.583 | INFO     | api_stream:trellis_run:233 - [TRELLIS] Added mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.ply to ZIP
+2025-11-12 19:33:37.585 | INFO     | api_stream:trellis_run:239 - [TRELLIS] Added preview_85cafcc0-48e4-4263-bcb5-86d5178ba366.mp4 to ZIP
+2025-11-12 19:33:37.585 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Added frame_85cafcc0-48e4-4263-bcb5-86d5178ba366.jpg to ZIP
+2025-11-12 19:33:37.586 | INFO     | api_stream:trellis_run:253 - [TRELLIS] ZIP contents: ['mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.glb', 'mesh_85cafcc0-48e4-4263-bcb5-86d5178ba366.ply', 'preview_85cafcc0-48e4-4263-bcb5-86d5178ba366.mp4', 'frame_85cafcc0-48e4-4263-bcb5-86d5178ba366.jpg']
+2025-11-12 19:33:37.586 | INFO     | api_stream:trellis_run:256 - [TRELLIS] Created zip buffer for streaming.
+2025-11-12 19:40:24.980 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'green water bottle': sd
+2025-11-12 19:40:26.528 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-12 19:40:26.529 | INFO     | api_stream:t2mv_generate:120 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, water bottle, green, full view, game asset
+2025-11-12 19:40:38.410 | INFO     | api_stream:t2mv_generate:137 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-12 19:40:38.410 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-12 19:40:38.420 | INFO     | api_stream:t2mv_generate:148 - [MV-ADAPTER] Total time (with encoding): 11.89s
+2025-11-12 19:51:46.478 | INFO     | api_stream:trellis_run:183 - [TRELLIS] 6 views (BG removed) received for processing (API)
+2025-11-12 19:51:57.645 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Saving mesh files to /tmp/trellis_94d37d13-acce-4f9f-bebf-b5d3f2d6792a_hbsomukx/mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.glb and /tmp/trellis_94d37d13-acce-4f9f-bebf-b5d3f2d6792a_hbsomukx/mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.ply
+2025-11-12 19:52:14.588 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Mesh files saved successfully
+2025-11-12 19:52:14.591 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Frame saved to /tmp/trellis_94d37d13-acce-4f9f-bebf-b5d3f2d6792a_hbsomukx/frame_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.jpg
+2025-11-12 19:52:14.591 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-12 19:52:14.591 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-12 19:52:14.595 | INFO     | api_stream:trellis_run:227 - [TRELLIS] Added mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.glb to ZIP
+2025-11-12 19:52:14.640 | INFO     | api_stream:trellis_run:233 - [TRELLIS] Added mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.ply to ZIP
+2025-11-12 19:52:14.641 | INFO     | api_stream:trellis_run:239 - [TRELLIS] Added preview_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.mp4 to ZIP
+2025-11-12 19:52:14.642 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Added frame_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.jpg to ZIP
+2025-11-12 19:52:14.642 | INFO     | api_stream:trellis_run:253 - [TRELLIS] ZIP contents: ['mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.glb', 'mesh_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.ply', 'preview_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.mp4', 'frame_94d37d13-acce-4f9f-bebf-b5d3f2d6792a.jpg']
+2025-11-12 19:52:14.642 | INFO     | api_stream:trellis_run:256 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 11:10:33.096 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'A small square cabin': flux (defaulted or chosen)
+2025-11-13 11:10:34.457 | INFO     | api_stream:t2i_generate_flux:417 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 11:10:34.457 | INFO     | api_stream:t2i_generate_flux:419 - [FLUX-T2I] Enhanced Prompt: wbgmsst, cabin, small, square, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 11:10:39.394 | INFO     | api_stream:t2i_generate_flux:434 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 11:10:39.398 | INFO     | api_stream:t2i_generate_flux:441 - [FLUX-T2I] Total time (with encoding): 4.94s
+2025-11-13 11:10:44.544 | INFO     | api_stream:t2i_generate_flux:417 - [FLUX-T2I] Generating image with seed -1 and 10 steps
+2025-11-13 11:10:44.545 | INFO     | api_stream:t2i_generate_flux:419 - [FLUX-T2I] Enhanced Prompt: wbgmsst, cabin, small, square, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 11:10:49.481 | INFO     | api_stream:t2i_generate_flux:434 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 11:10:49.485 | INFO     | api_stream:t2i_generate_flux:441 - [FLUX-T2I] Total time (with encoding): 4.94s
+2025-11-13 11:10:53.883 | INFO     | api_stream:t2i_generate_flux:417 - [FLUX-T2I] Generating image with seed 42 and 15 steps
+2025-11-13 11:10:53.884 | INFO     | api_stream:t2i_generate_flux:419 - [FLUX-T2I] Enhanced Prompt: wbgmsst, cabin, small, square, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 11:11:01.076 | INFO     | api_stream:t2i_generate_flux:434 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 11:11:01.079 | INFO     | api_stream:t2i_generate_flux:441 - [FLUX-T2I] Total time (with encoding): 7.20s
+2025-11-13 11:11:08.900 | INFO     | api_stream:trellis_run:183 - [TRELLIS] 1 views (BG removed) received for processing (API)
+2025-11-13 11:11:19.027 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Saving mesh files to /tmp/trellis_25d58e6a-a0c0-4b42-ad32-f6d533da58cd_fk8km2jk/mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.glb and /tmp/trellis_25d58e6a-a0c0-4b42-ad32-f6d533da58cd_fk8km2jk/mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.ply
+2025-11-13 11:11:55.676 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Mesh files saved successfully
+2025-11-13 11:11:55.679 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Frame saved to /tmp/trellis_25d58e6a-a0c0-4b42-ad32-f6d533da58cd_fk8km2jk/frame_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.jpg
+2025-11-13 11:11:55.679 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 11:11:55.679 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 11:11:55.689 | INFO     | api_stream:trellis_run:227 - [TRELLIS] Added mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.glb to ZIP
+2025-11-13 11:11:55.787 | INFO     | api_stream:trellis_run:233 - [TRELLIS] Added mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.ply to ZIP
+2025-11-13 11:11:55.788 | INFO     | api_stream:trellis_run:239 - [TRELLIS] Added preview_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.mp4 to ZIP
+2025-11-13 11:11:55.788 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Added frame_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.jpg to ZIP
+2025-11-13 11:11:55.788 | INFO     | api_stream:trellis_run:253 - [TRELLIS] ZIP contents: ['mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.glb', 'mesh_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.ply', 'preview_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.mp4', 'frame_25d58e6a-a0c0-4b42-ad32-f6d533da58cd.jpg']
+2025-11-13 11:11:55.788 | INFO     | api_stream:trellis_run:256 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 11:12:14.356 | INFO     | sql.db_connector:__enter__:21 - [DB] Connection established.
+2025-11-13 11:12:14.369 | INFO     | api_stream:feedback_save:337 - [FEEDBACK] Saved feedback (ID: 18) with 2 images
+2025-11-13 11:12:14.372 | INFO     | sql.db_connector:__exit__:30 - [DB] Connection closed.
+2025-11-13 11:13:20.396 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'A large rabbit with red hair holding a bazooka ': sd
+2025-11-13 11:13:21.792 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 11:13:21.793 | INFO     | api_stream:t2mv_generate:120 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, rabbit, large, with red hair, holding a bazooka, full body, game asset
+2025-11-13 11:13:33.629 | INFO     | api_stream:t2mv_generate:137 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 11:13:33.630 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 11:13:33.640 | INFO     | api_stream:t2mv_generate:148 - [MV-ADAPTER] Total time (with encoding): 11.85s
+2025-11-13 11:13:49.191 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Generating images with seed -1 and 28 steps (API)
+2025-11-13 11:13:49.191 | INFO     | api_stream:t2mv_generate:120 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, rabbit, large, with red hair, holding a bazooka, full body, game asset
+2025-11-13 11:14:01.051 | INFO     | api_stream:t2mv_generate:137 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 11:14:01.052 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 11:14:01.062 | INFO     | api_stream:t2mv_generate:148 - [MV-ADAPTER] Total time (with encoding): 11.87s
+2025-11-13 11:54:49.941 | INFO     | api_stream:load_pipe_flux_t2i:349 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-13 11:54:58.266 | INFO     | api_stream:load_pipe_flux_t2i:358 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-13 11:54:58.267 | INFO     | api_stream:load_pipe_flux_t2i:361 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-13 11:54:58.339 | ERROR    | api_stream:load_pipe_flux_t2i:369 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-13 11:54:58.339 | INFO     | api_stream:load_pipe_flux_t2i:373 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-13 11:54:59.006 | INFO     | api_stream:load_pipe_flux_t2i:381 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-13 11:55:24.217 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-13 11:55:24.217 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-13 11:55:24.217 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-11-13 11:55:50.392 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-11-13 11:55:53.031 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-13 11:56:08.657 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'cute rabbit holding a bazooka': sd
+2025-11-13 11:56:10.265 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 11:56:10.265 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, rabbit, cute, holding a bazooka, full body, game asset
+2025-11-13 11:56:22.500 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 11:56:22.501 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 11:56:22.516 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 12.25s
+2025-11-13 11:57:18.398 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 33 steps (API)
+2025-11-13 11:57:18.399 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, rabbit, cute, holding a bazooka, full body, realistic anatomy, game asset
+2025-11-13 11:57:32.210 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 33 steps - 6 views (API)
+2025-11-13 11:57:32.210 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 11:57:32.220 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 13.82s
+2025-11-13 11:57:54.629 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 6 views (BG removed) received for processing (API)
+2025-11-13 11:58:08.961 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_ecdb251f-5370-4487-91f1-b3f258ace39b_b14vnsc6/mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb and /tmp/trellis_ecdb251f-5370-4487-91f1-b3f258ace39b_b14vnsc6/mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply
+2025-11-13 11:58:30.797 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 11:58:30.801 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_ecdb251f-5370-4487-91f1-b3f258ace39b_b14vnsc6/frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg
+2025-11-13 11:58:30.801 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 11:58:30.802 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 11:58:30.804 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb to ZIP
+2025-11-13 11:58:30.868 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply to ZIP
+2025-11-13 11:58:30.869 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_ecdb251f-5370-4487-91f1-b3f258ace39b.mp4 to ZIP
+2025-11-13 11:58:30.869 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg to ZIP
+2025-11-13 11:58:30.870 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.glb', 'mesh_ecdb251f-5370-4487-91f1-b3f258ace39b.ply', 'preview_ecdb251f-5370-4487-91f1-b3f258ace39b.mp4', 'frame_ecdb251f-5370-4487-91f1-b3f258ace39b.jpg']
+2025-11-13 11:58:30.870 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 11:59:17.935 | INFO     | api_stream:load_pipe_flux_t2i:349 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-13 11:59:26.603 | INFO     | api_stream:load_pipe_flux_t2i:358 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-13 11:59:26.604 | INFO     | api_stream:load_pipe_flux_t2i:361 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-13 11:59:26.681 | ERROR    | api_stream:load_pipe_flux_t2i:369 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-13 11:59:26.681 | INFO     | api_stream:load_pipe_flux_t2i:373 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-13 11:59:27.366 | INFO     | api_stream:load_pipe_flux_t2i:381 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-13 11:59:52.731 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-13 11:59:52.731 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-13 11:59:52.731 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-11-13 12:00:19.751 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-11-13 12:00:20.239 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-13 12:01:49.316 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 7 views (BG removed) received for processing (API)
+2025-11-13 12:02:05.250 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_84db080e-c985-4650-ba42-34d5b1ddbbd5_mqj6_jsc/mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.glb and /tmp/trellis_84db080e-c985-4650-ba42-34d5b1ddbbd5_mqj6_jsc/mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.ply
+2025-11-13 12:02:24.209 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 12:02:24.213 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_84db080e-c985-4650-ba42-34d5b1ddbbd5_mqj6_jsc/frame_84db080e-c985-4650-ba42-34d5b1ddbbd5.jpg
+2025-11-13 12:02:24.214 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 12:02:24.214 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 12:02:24.215 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.glb to ZIP
+2025-11-13 12:02:24.296 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.ply to ZIP
+2025-11-13 12:02:24.297 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_84db080e-c985-4650-ba42-34d5b1ddbbd5.mp4 to ZIP
+2025-11-13 12:02:24.297 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_84db080e-c985-4650-ba42-34d5b1ddbbd5.jpg to ZIP
+2025-11-13 12:02:24.298 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.glb', 'mesh_84db080e-c985-4650-ba42-34d5b1ddbbd5.ply', 'preview_84db080e-c985-4650-ba42-34d5b1ddbbd5.mp4', 'frame_84db080e-c985-4650-ba42-34d5b1ddbbd5.jpg']
+2025-11-13 12:02:24.298 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 12:12:16.531 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'monster bunny holding a bazooka': sd
+2025-11-13 12:12:18.050 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 12:12:18.051 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, monster bunny, holding a bazooka, full body, game asset
+2025-11-13 12:12:29.965 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 12:12:29.966 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 12:12:29.977 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.93s
+2025-11-13 12:15:00.576 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 33 steps (API)
+2025-11-13 12:15:00.577 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, monster bunny, holding a bazooka, full body, game asset
+2025-11-13 12:15:14.392 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 33 steps - 6 views (API)
+2025-11-13 12:15:14.393 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 12:15:14.403 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 13.83s
+2025-11-13 12:15:24.471 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed -1 and 33 steps (API)
+2025-11-13 12:15:24.471 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, monster bunny, holding a bazooka, full body, game asset
+2025-11-13 12:15:39.478 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 33 steps - 6 views (API)
+2025-11-13 12:15:39.479 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 12:15:39.489 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 15.02s
+2025-11-13 12:15:52.811 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 6 views (BG removed) received for processing (API)
+2025-11-13 12:16:02.863 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_861cab4b-af5d-4962-9158-bba265380968_3e4_w4_8/mesh_861cab4b-af5d-4962-9158-bba265380968.glb and /tmp/trellis_861cab4b-af5d-4962-9158-bba265380968_3e4_w4_8/mesh_861cab4b-af5d-4962-9158-bba265380968.ply
+2025-11-13 12:16:20.953 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 12:16:20.956 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_861cab4b-af5d-4962-9158-bba265380968_3e4_w4_8/frame_861cab4b-af5d-4962-9158-bba265380968.jpg
+2025-11-13 12:16:20.956 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 12:16:20.956 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 12:16:20.959 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_861cab4b-af5d-4962-9158-bba265380968.glb to ZIP
+2025-11-13 12:16:21.043 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_861cab4b-af5d-4962-9158-bba265380968.ply to ZIP
+2025-11-13 12:16:21.044 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_861cab4b-af5d-4962-9158-bba265380968.mp4 to ZIP
+2025-11-13 12:16:21.045 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_861cab4b-af5d-4962-9158-bba265380968.jpg to ZIP
+2025-11-13 12:16:21.046 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_861cab4b-af5d-4962-9158-bba265380968.glb', 'mesh_861cab4b-af5d-4962-9158-bba265380968.ply', 'preview_861cab4b-af5d-4962-9158-bba265380968.mp4', 'frame_861cab4b-af5d-4962-9158-bba265380968.jpg']
+2025-11-13 12:16:21.046 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.

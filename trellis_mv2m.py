@@ -64,7 +64,7 @@ class TrellisMV2M:
 
         return video, filename, middle_frame_np
 
-    def save_mesh(self, outputs, glb_path, ply_path, simplify=0.85, texture_size=1024):
+    def save_mesh(self, outputs, glb_path, ply_path, simplify=0.95, texture_size=1024):
         glb = postprocessing_utils.to_glb(
             outputs["gaussian"][0],
             outputs["mesh"][0],

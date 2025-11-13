@@ -240,6 +240,21 @@ def generate_3d(views_dir):
         for _, f_tuple in files:
             f_tuple[1].close()
     
+    logger.info(f"[Gradio/Fix] Cleaning old mesh files from {views_dir}")
+    old_files = glob.glob(os.path.join(views_dir, "mesh_*.glb")) + \
+                glob.glob(os.path.join(views_dir, "mesh_*.ply")) + \
+                glob.glob(os.path.join(views_dir, "preview_*.mp4")) + \
+                glob.glob(os.path.join(views_dir, "frame_*.jpg"))
+    
+    for f in old_files:
+        if f == output_zip_path:
+            continue
+        try:
+            os.remove(f)
+            logger.info(f"[Gradio/Fix] Removed old file: {f}")
+        except Exception as e:
+            logger.warning(f"[Gradio/Fix] Failed to remove {f}: {e}")
+
     with zipfile.ZipFile(output_zip_path, 'r') as zipf:
         zipf.extractall(views_dir)
     
@@ -247,7 +262,7 @@ def generate_3d(views_dir):
     
     all_files = os.listdir(views_dir)
     logger.info(f"[TRELLIS/API-DEBUG] Files in {views_dir}: {all_files}")
-    
+
     glb_files = [f for f in all_files if f.endswith('.glb')]
     ply_files = [f for f in all_files if f.endswith('.ply')]
     mp4_files = [f for f in all_files if f.endswith('.mp4')]
@@ -283,7 +298,7 @@ def generate_3d(views_dir):
         frame_path
     )
 
- # ------------ UI helpers ------------
+# ------------ UI helpers ------------
  
 def call_choose_model(prompt):
     """Calls the API to let the LLM choose the model."""

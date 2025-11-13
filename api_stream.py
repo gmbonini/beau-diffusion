@@ -16,7 +16,9 @@ import traceback
 from ollama import start_ollama, choose_generation_model
 from concurrent.futures import ThreadPoolExecutor
 import time
-
+from transformers import AutoModelForImageSegmentation, AutoProcessor
+from PIL import ImageDraw
+from rembg import remove
 from sql.db_connector import DatabaseConnector, get_db_connector
 import uuid
 
@@ -36,7 +38,6 @@ def _startup():
 def _file_to_b64(path: str) -> str:
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
-    
 
 pipe_mv, adapters = None, []
 def load_pipe_mvadapter():
@@ -69,6 +70,27 @@ def load_pipe_mvadapter():
 
     print('MV-Adapter pipeline loaded.')
     logger.info("[MV-ADAPTER] Pipeline loaded (API)")
+
+# rembg
+
+pipe_rmbg_model = None
+pipe_rmbg_processor = None
+rmbg_device = "cuda" if torch.cuda.is_available() else "cpu"
+        
+def _remove_bg_bria(image: Image.Image) -> Image.Image:
+    """Remove o fundo de uma imagem PIL usando a lib rembg."""
+            
+    if image.mode == 'RGBA':
+        image = image.convert("RGB")
+
+    try:                
+        final_image = remove(image)
+        return final_image
+
+    except Exception as e:
+        logger.warning(f"[RMBG] Failed to process image with 'rembg' lib: {e}. Returning original.")        
+        return image
+
 
 
 @app.post("/t2mv/generate")
@@ -147,10 +169,13 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         views = []
         for uf in files:
             content = await uf.read()
-            img = Image.open(io.BytesIO(content)) 
-            views.append(img)
+            img = Image.open(io.BytesIO(content))
+                        
+            img_no_bg = _remove_bg_bria(img)            
             
-        logger.info(f"[TRELLIS] {len(views)} views received for processing (API)")
+            views.append(img_no_bg)
+            
+        logger.info(f"[TRELLIS] {len(views)} views (BG removed) received for processing (API)")
         outputs = pipe_trellis.run_pipeline(views, seed=42)
 
         session_id = str(uuid.uuid4())
@@ -173,8 +198,8 @@ async def trellis_run(files: List[UploadFile] = File(...)):
             outputs, 
             glb_path=glb_path, 
             ply_path=ply_path,
-            simplify=0.85,
-            texture_size=1024
+            simplify=0.95,
+            texture_size=512
         )
         logger.info("[TRELLIS] Mesh files saved successfully")
 
