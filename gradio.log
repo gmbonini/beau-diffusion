@@ -1231,3 +1231,499 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8
 2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg']
 2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_i9jnuj0_/frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg
 2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_i9jnuj0_/mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.glb, PLY=/tmp/views_i9jnuj0_/mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.ply, MP4=/tmp/views_i9jnuj0_/preview_afee9d34-aaed-4bd7-b576-9a52865ba97e.mp4
+2025-11-14 15:57:30.489 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_i9jnuj0_...
+2025-11-14 15:58:31.110 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_i9jnuj0_/trellis_output.zip
+2025-11-14 15:58:31.111 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_i9jnuj0_
+2025-11-14 15:58:31.113 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_i9jnuj0_/mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.glb
+2025-11-14 15:58:31.119 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_i9jnuj0_/mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.ply
+2025-11-14 15:58:31.119 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_i9jnuj0_/preview_afee9d34-aaed-4bd7-b576-9a52865ba97e.mp4
+2025-11-14 15:58:31.120 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_i9jnuj0_/frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg
+2025-11-14 15:58:31.181 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_i9jnuj0_
+2025-11-14 15:58:31.181 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_i9jnuj0_: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.glb', 'mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.ply', 'preview_d87bbaac-a8be-4c85-9644-0a1cac61181f.mp4', 'frame_d87bbaac-a8be-4c85-9644-0a1cac61181f.jpg']
+2025-11-14 15:58:31.182 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.glb']
+2025-11-14 15:58:31.182 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.ply']
+2025-11-14 15:58:31.182 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_d87bbaac-a8be-4c85-9644-0a1cac61181f.mp4']
+2025-11-14 15:58:31.182 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_d87bbaac-a8be-4c85-9644-0a1cac61181f.jpg']
+2025-11-14 15:58:31.182 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_i9jnuj0_/frame_d87bbaac-a8be-4c85-9644-0a1cac61181f.jpg
+2025-11-14 15:58:31.182 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_i9jnuj0_/mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.glb, PLY=/tmp/views_i9jnuj0_/mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.ply, MP4=/tmp/views_i9jnuj0_/preview_d87bbaac-a8be-4c85-9644-0a1cac61181f.mp4
+2025-11-14 16:35:18.525 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: pegasus
+2025-11-14 16:35:21.334 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 16:35:21.564 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 16:35:21.867 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: pegasus
+2025-11-14 16:35:21.867 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: pegasus (using qwen2.5:7b)
+2025-11-14 16:35:22.683 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'pegasus, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 16:35:22.929 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 16:35:22.929 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 16:35:22.929 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 16:35:34.891 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 16:35:34.944 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_h5w54aix for Trellis step
+2025-11-14 16:35:34.944 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 16:35:43.432 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: pegasus, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 16:35:43.433 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 16:35:43.435 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:35:43.443 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 16:35:43.444 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:35:44.948 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: pegasus, full body, flying in air, detailed mane, vibrant wings, negative: extra limbs, deformed face, deformed tail, repetitive textures, flat water, over-saturated colors, background distractions, harsh shadows, eval: 
+2025-11-14 16:35:44.949 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:35:44.949 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:35:49.211 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a pegasus from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:35:49.211 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a pegasus from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:35:49.211 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: pegasus, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a pegasus from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-14 16:35:49.211 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:35:49.212 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:35:56.042 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_h5w54aix...
+2025-11-14 16:36:33.923 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_h5w54aix/trellis_output.zip
+2025-11-14 16:36:33.924 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_h5w54aix
+2025-11-14 16:36:33.958 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_h5w54aix
+2025-11-14 16:36:33.958 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_h5w54aix: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.glb', 'mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.ply', 'preview_dde23f1c-2a1f-487b-b521-533272dcb8d5.mp4', 'frame_dde23f1c-2a1f-487b-b521-533272dcb8d5.jpg']
+2025-11-14 16:36:33.958 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.glb']
+2025-11-14 16:36:33.958 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.ply']
+2025-11-14 16:36:33.959 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_dde23f1c-2a1f-487b-b521-533272dcb8d5.mp4']
+2025-11-14 16:36:33.959 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_dde23f1c-2a1f-487b-b521-533272dcb8d5.jpg']
+2025-11-14 16:36:33.959 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_h5w54aix/frame_dde23f1c-2a1f-487b-b521-533272dcb8d5.jpg
+2025-11-14 16:36:33.959 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_h5w54aix/mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.glb, PLY=/tmp/views_h5w54aix/mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.ply, MP4=/tmp/views_h5w54aix/preview_dde23f1c-2a1f-487b-b521-533272dcb8d5.mp4
+2025-11-14 16:48:56.382 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: naruto
+2025-11-14 16:48:58.942 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 16:48:59.116 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 16:48:59.472 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: naruto
+2025-11-14 16:48:59.473 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: naruto (using qwen2.5:7b)
+2025-11-14 16:49:00.314 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'naruto, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 16:49:00.534 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 16:49:00.535 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 16:49:00.535 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 16:49:12.391 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 16:49:12.418 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_kukdy6de for Trellis step
+2025-11-14 16:49:12.419 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 16:49:12.859 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 16:49:12.866 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:49:12.866 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 16:49:12.867 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:49:12.873 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 16:49:14.327 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural colors, blocky shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-14 16:49:14.327 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:49:14.327 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:49:17.314 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 33 steps
+2025-11-14 16:49:17.314 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 33 inference steps...
+2025-11-14 16:49:17.314 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 33 steps...
+2025-11-14 16:49:19.775 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:49:19.775 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:49:19.776 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.
+2025-11-14 16:49:19.776 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:49:19.776 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:49:35.060 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 16:49:35.106 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_lb67ykna for Trellis step
+2025-11-14 16:49:35.107 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 16:49:36.336 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 16:49:36.336 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, background, eval: 
+2025-11-14 16:49:36.337 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 16:49:36.337 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:49:36.345 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:49:37.301 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: extra limbs, deformed face, bad anatomy, unnatural shadows, unrealistic lighting, background, blocky tail, eval: 
+2025-11-14 16:49:37.302 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:49:37.302 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:49:40.199 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 38 steps
+2025-11-14 16:49:40.199 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 38 inference steps...
+2025-11-14 16:49:40.199 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 38 steps...
+2025-11-14 16:49:42.438 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:49:42.439 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:49:42.439 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, background, eval: The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.
+2025-11-14 16:49:42.439 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:49:42.439 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:49:59.407 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 16:49:59.465 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_864ni5br for Trellis step
+2025-11-14 16:49:59.465 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 16:49:59.883 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, eval: 
+2025-11-14 16:49:59.883 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:49:59.883 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:50:00.290 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 16:50:00.293 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 16:50:00.848 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, repetitive textures, blocky surfaces, eval: 
+2025-11-14 16:50:00.854 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:50:00.859 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:50:05.000 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:50:05.001 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:50:05.001 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, eval: The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.
+2025-11-14 16:50:05.001 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:50:05.001 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:50:06.674 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 43 steps
+2025-11-14 16:50:06.674 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 43 inference steps...
+2025-11-14 16:50:06.675 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 43 steps...
+2025-11-14 16:50:26.983 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 16:50:27.039 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_rvxo961i for Trellis step
+2025-11-14 16:50:27.039 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 16:50:27.472 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 16:50:27.472 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, eval: 
+2025-11-14 16:50:27.478 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:50:27.478 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 16:50:27.480 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:50:28.593 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, repetitive textures, eval: 
+2025-11-14 16:50:28.595 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:50:28.596 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 16:50:32.704 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:50:32.705 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 16:50:32.705 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, eval: The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.
+2025-11-14 16:50:32.705 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 16:50:32.706 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 17:22:49.383 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 48 steps
+2025-11-14 17:22:49.384 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 48 inference steps...
+2025-11-14 17:22:49.384 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 48 steps...
+2025-11-14 17:23:09.246 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 17:23:09.296 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_d5ipu0v4 for Trellis step
+2025-11-14 17:23:09.296 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 17:23:09.722 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 17:23:09.722 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, eval: 
+2025-11-14 17:23:09.723 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 17:23:09.723 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 17:23:09.725 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 17:23:13.588 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 17:23:13.588 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 17:23:13.588 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, eval: The images match the prompt well, showing a single object (Naruto) from different angles. The images are consistent with each other, and there are no visible issues or artifacts.
+2025-11-14 17:23:13.589 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 17:23:13.589 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 17:23:17.498 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: naruto, full body, negative: extra limbs, deformed face, bad anatomy, unnatural shadows, unrealistic lighting, blocky tail, over-saturated colors, background, eval: 
+2025-11-14 17:23:17.498 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 17:23:17.498 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 17:56:30.345 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: goku
+2025-11-14 17:56:33.005 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 17:56:33.229 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 17:56:33.533 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: goku
+2025-11-14 17:56:33.533 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: goku (using qwen2.5:7b)
+2025-11-14 17:56:34.344 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'goku, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 17:56:34.598 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 17:56:34.598 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 17:56:34.598 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 17:56:46.424 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 17:56:46.473 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_k1x93fho for Trellis step
+2025-11-14 17:56:46.473 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 17:56:46.904 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 17:56:46.905 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 17:56:46.909 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 17:56:46.911 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 17:56:46.912 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 17:56:48.274 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: artifacts, harsh shadows, over-saturated colors, repetitive textures, background elements, low detail, bad anatomy, extra limbs, deformed face, deformed tail, eval: 
+2025-11-14 17:56:48.276 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 17:56:48.278 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 17:56:52.296 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 17:56:52.297 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 17:56:52.297 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 17:56:52.297 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 17:56:52.297 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 17:57:01.866 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_k1x93fho...
+2025-11-14 17:57:42.258 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_k1x93fho/trellis_output.zip
+2025-11-14 17:57:42.259 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_k1x93fho
+2025-11-14 17:57:42.301 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_k1x93fho
+2025-11-14 17:57:42.301 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_k1x93fho: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.glb', 'mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.ply', 'preview_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.mp4', 'frame_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.jpg']
+2025-11-14 17:57:42.301 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.glb']
+2025-11-14 17:57:42.301 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.ply']
+2025-11-14 17:57:42.301 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.mp4']
+2025-11-14 17:57:42.301 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.jpg']
+2025-11-14 17:57:42.301 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_k1x93fho/frame_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.jpg
+2025-11-14 17:57:42.301 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_k1x93fho/mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.glb, PLY=/tmp/views_k1x93fho/mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.ply, MP4=/tmp/views_k1x93fho/preview_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.mp4
+2025-11-14 18:51:26.600 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 33 steps
+2025-11-14 18:51:26.601 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 33 inference steps...
+2025-11-14 18:51:26.601 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 33 steps...
+2025-11-14 18:51:40.491 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 18:51:40.544 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_ouw7ku4b for Trellis step
+2025-11-14 18:51:40.544 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 18:51:40.985 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, background, eval: 
+2025-11-14 18:51:40.986 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:51:40.986 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 18:51:40.987 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:51:40.992 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 18:51:44.526 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, background artifacts, unnatural colors, eval: 
+2025-11-14 18:51:44.526 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:51:44.526 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:51:48.536 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:51:48.536 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:51:48.537 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 18:51:48.537 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:51:48.537 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:52:10.831 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_ouw7ku4b...
+2025-11-14 18:52:51.580 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_ouw7ku4b/trellis_output.zip
+2025-11-14 18:52:51.582 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_ouw7ku4b
+2025-11-14 18:52:51.620 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_ouw7ku4b
+2025-11-14 18:52:51.621 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_ouw7ku4b: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.glb', 'mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.ply', 'preview_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.mp4', 'frame_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.jpg']
+2025-11-14 18:52:51.621 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.glb']
+2025-11-14 18:52:51.621 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.ply']
+2025-11-14 18:52:51.621 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.mp4']
+2025-11-14 18:52:51.621 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.jpg']
+2025-11-14 18:52:51.621 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_ouw7ku4b/frame_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.jpg
+2025-11-14 18:52:51.621 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_ouw7ku4b/mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.glb, PLY=/tmp/views_ouw7ku4b/mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.ply, MP4=/tmp/views_ouw7ku4b/preview_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.mp4
+2025-11-14 18:52:56.711 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 38 steps
+2025-11-14 18:52:56.712 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 38 inference steps...
+2025-11-14 18:52:56.712 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 38 steps...
+2025-11-14 18:53:12.588 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 18:53:12.635 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_9o33gqyk for Trellis step
+2025-11-14 18:53:12.635 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 18:53:13.062 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, eval: 
+2025-11-14 18:53:13.065 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 18:53:13.067 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:53:13.070 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:53:13.070 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 18:53:14.030 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, harsh lighting, eval: 
+2025-11-14 18:53:14.031 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:53:14.031 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:53:18.205 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:53:18.205 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:53:18.206 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 18:53:18.206 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:53:18.206 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:53:30.252 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 43 steps
+2025-11-14 18:53:30.252 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 43 inference steps...
+2025-11-14 18:53:30.252 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 43 steps...
+2025-11-14 18:53:48.097 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 18:53:48.149 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_xp5921sd for Trellis step
+2025-11-14 18:53:48.150 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 18:53:48.572 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, eval: 
+2025-11-14 18:53:48.573 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 18:53:48.573 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:53:48.578 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:53:48.585 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 18:53:49.584 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, harsh shadows, unnatural lighting, background, eval: 
+2025-11-14 18:53:49.584 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:53:49.584 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:53:53.716 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:53:53.717 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:53:53.717 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 18:53:53.717 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:53:53.717 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:53:57.537 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_xp5921sd...
+2025-11-14 18:54:37.892 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_xp5921sd/trellis_output.zip
+2025-11-14 18:54:37.893 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_xp5921sd
+2025-11-14 18:54:37.938 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_xp5921sd
+2025-11-14 18:54:37.939 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_xp5921sd: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.glb', 'mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.ply', 'preview_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.mp4', 'frame_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.jpg']
+2025-11-14 18:54:37.939 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.glb']
+2025-11-14 18:54:37.939 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.ply']
+2025-11-14 18:54:37.939 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.mp4']
+2025-11-14 18:54:37.939 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.jpg']
+2025-11-14 18:54:37.939 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_xp5921sd/frame_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.jpg
+2025-11-14 18:54:37.939 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_xp5921sd/mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.glb, PLY=/tmp/views_xp5921sd/mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.ply, MP4=/tmp/views_xp5921sd/preview_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.mp4
+2025-11-14 18:54:48.196 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 43 steps
+2025-11-14 18:54:48.197 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 43 inference steps...
+2025-11-14 18:54:48.197 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 43 steps...
+2025-11-14 18:55:06.090 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 18:55:06.144 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_m2ggc_cr for Trellis step
+2025-11-14 18:55:06.144 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 18:55:06.572 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, eval: 
+2025-11-14 18:55:06.572 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 18:55:06.572 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:55:06.573 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 18:55:06.573 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:55:07.594 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, unnatural colors, background artifacts, eval: 
+2025-11-14 18:55:07.595 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:55:07.595 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:55:11.601 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:55:11.602 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:55:11.602 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 18:55:11.603 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:55:11.603 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:55:24.398 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 43 steps
+2025-11-14 18:55:24.398 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 43 inference steps...
+2025-11-14 18:55:24.398 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 43 steps...
+2025-11-14 18:55:42.288 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 18:55:42.343 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_8j2zyjcp for Trellis step
+2025-11-14 18:55:42.343 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 18:55:42.909 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 18:55:42.909 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, inconsistent shading, unnatural colors, background, eval: 
+2025-11-14 18:55:42.911 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:55:42.915 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 18:55:42.916 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:55:44.075 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, inconsistent shading, unnatural colors, background, flat muscles, eval: 
+2025-11-14 18:55:44.076 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:55:44.076 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:55:46.255 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_8j2zyjcp...
+2025-11-14 18:55:49.300 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:55:49.301 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 18:55:49.301 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, deformed tail, repetitive shadows, unrealistic lighting, inconsistent shading, unnatural colors, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 18:55:49.301 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 18:55:49.302 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 18:56:30.978 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_8j2zyjcp/trellis_output.zip
+2025-11-14 18:56:30.978 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_8j2zyjcp
+2025-11-14 18:56:31.021 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_8j2zyjcp
+2025-11-14 18:56:31.021 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_8j2zyjcp: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.glb', 'mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.ply', 'preview_e97f9947-819b-4593-9fa4-7b33ef55f14c.mp4', 'frame_e97f9947-819b-4593-9fa4-7b33ef55f14c.jpg']
+2025-11-14 18:56:31.022 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.glb']
+2025-11-14 18:56:31.022 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.ply']
+2025-11-14 18:56:31.022 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_e97f9947-819b-4593-9fa4-7b33ef55f14c.mp4']
+2025-11-14 18:56:31.022 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_e97f9947-819b-4593-9fa4-7b33ef55f14c.jpg']
+2025-11-14 18:56:31.022 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_8j2zyjcp/frame_e97f9947-819b-4593-9fa4-7b33ef55f14c.jpg
+2025-11-14 18:56:31.022 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_8j2zyjcp/mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.glb, PLY=/tmp/views_8j2zyjcp/mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.ply, MP4=/tmp/views_8j2zyjcp/preview_e97f9947-819b-4593-9fa4-7b33ef55f14c.mp4
+2025-11-14 19:08:44.336 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: goku
+2025-11-14 19:08:44.688 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 19:08:44.892 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 19:08:45.194 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: goku
+2025-11-14 19:08:45.195 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: goku (using qwen2.5:7b)
+2025-11-14 19:08:45.950 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'goku, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 19:08:46.157 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 19:08:46.157 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 19:08:46.157 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 19:08:58.410 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 19:08:58.456 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_u_1c7m45 for Trellis step
+2025-11-14 19:08:58.456 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 19:08:58.869 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 19:08:58.870 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 19:08:58.873 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:08:58.874 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 19:08:58.874 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:09:00.088 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: bad anatomy, artifacts, extra limbs, deformed face, deformed tail, unnatural colors, over-saturated colors, background, eval: 
+2025-11-14 19:09:00.089 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:09:00.089 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:09:04.164 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:09:04.164 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:09:04.165 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 19:09:04.165 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:09:04.165 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:09:57.476 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_u_1c7m45...
+2025-11-14 19:10:43.507 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_u_1c7m45/trellis_output.zip
+2025-11-14 19:10:43.508 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_u_1c7m45
+2025-11-14 19:10:43.566 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_u_1c7m45
+2025-11-14 19:10:43.566 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_u_1c7m45: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.glb', 'mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.ply', 'preview_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.mp4', 'frame_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.jpg']
+2025-11-14 19:10:43.566 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.glb']
+2025-11-14 19:10:43.567 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.ply']
+2025-11-14 19:10:43.567 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.mp4']
+2025-11-14 19:10:43.567 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.jpg']
+2025-11-14 19:10:43.567 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_u_1c7m45/frame_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.jpg
+2025-11-14 19:10:43.567 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_u_1c7m45/mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.glb, PLY=/tmp/views_u_1c7m45/mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.ply, MP4=/tmp/views_u_1c7m45/preview_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.mp4
+2025-11-14 19:13:35.899 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: goku
+2025-11-14 19:13:36.203 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 19:13:36.405 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 19:13:36.710 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: goku
+2025-11-14 19:13:36.710 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: goku (using qwen2.5:7b)
+2025-11-14 19:13:37.486 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'goku, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 19:13:37.720 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 19:13:37.720 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 19:13:37.720 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 19:13:49.965 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 19:13:50.025 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_ajlw1hke for Trellis step
+2025-11-14 19:13:50.025 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 19:13:50.445 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 19:13:50.446 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 19:13:50.447 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:13:50.451 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 19:13:50.455 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:13:54.648 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:13:54.649 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:13:54.649 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 19:13:54.649 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:13:54.649 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:13:58.547 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-14 19:13:58.547 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:13:58.547 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:14:00.731 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_ajlw1hke...
+2025-11-14 19:14:46.817 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_ajlw1hke/trellis_output.zip
+2025-11-14 19:14:46.818 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_ajlw1hke
+2025-11-14 19:14:46.859 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_ajlw1hke
+2025-11-14 19:14:46.859 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_ajlw1hke: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.glb', 'mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.ply', 'preview_ce710ef3-90b2-4864-9bad-b737a50eb82e.mp4', 'frame_ce710ef3-90b2-4864-9bad-b737a50eb82e.jpg']
+2025-11-14 19:14:46.859 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.glb']
+2025-11-14 19:14:46.859 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.ply']
+2025-11-14 19:14:46.859 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_ce710ef3-90b2-4864-9bad-b737a50eb82e.mp4']
+2025-11-14 19:14:46.860 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_ce710ef3-90b2-4864-9bad-b737a50eb82e.jpg']
+2025-11-14 19:14:46.860 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_ajlw1hke/frame_ce710ef3-90b2-4864-9bad-b737a50eb82e.jpg
+2025-11-14 19:14:46.860 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_ajlw1hke/mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.glb, PLY=/tmp/views_ajlw1hke/mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.ply, MP4=/tmp/views_ajlw1hke/preview_ce710ef3-90b2-4864-9bad-b737a50eb82e.mp4
+2025-11-14 19:17:39.572 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: simple low poly cat
+2025-11-14 19:17:39.878 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 19:17:40.078 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 19:17:40.381 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: simple low poly cat
+2025-11-14 19:17:40.382 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: simple low poly cat (using qwen2.5:7b)
+2025-11-14 19:17:41.242 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, simple, low poly, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 19:17:41.446 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 19:17:41.446 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 19:17:41.446 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 19:17:53.320 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 19:17:53.373 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_ez7v29y2 for Trellis step
+2025-11-14 19:17:53.373 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 19:17:53.753 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 19:17:53.754 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:17:53.756 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:17:53.798 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 19:17:53.799 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 19:17:55.064 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: bad anatomy, extra limbs, deformed face, deformed tail, artifacts, shadows, lighting, background, eval: 
+2025-11-14 19:17:55.065 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:17:55.065 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:17:57.901 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_ez7v29y2...
+2025-11-14 19:17:59.122 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:17:59.122 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:17:59.123 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.
+2025-11-14 19:17:59.123 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:17:59.123 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:18:49.523 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_ez7v29y2/trellis_output.zip
+2025-11-14 19:18:49.524 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_ez7v29y2
+2025-11-14 19:18:49.590 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_ez7v29y2
+2025-11-14 19:18:49.591 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_ez7v29y2: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.glb', 'mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.ply', 'preview_2c294fdc-82bc-4357-bcbb-5f96059a8062.mp4', 'frame_2c294fdc-82bc-4357-bcbb-5f96059a8062.jpg']
+2025-11-14 19:18:49.591 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.glb']
+2025-11-14 19:18:49.591 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.ply']
+2025-11-14 19:18:49.591 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_2c294fdc-82bc-4357-bcbb-5f96059a8062.mp4']
+2025-11-14 19:18:49.591 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_2c294fdc-82bc-4357-bcbb-5f96059a8062.jpg']
+2025-11-14 19:18:49.591 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_ez7v29y2/frame_2c294fdc-82bc-4357-bcbb-5f96059a8062.jpg
+2025-11-14 19:18:49.591 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_ez7v29y2/mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.glb, PLY=/tmp/views_ez7v29y2/mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.ply, MP4=/tmp/views_ez7v29y2/preview_2c294fdc-82bc-4357-bcbb-5f96059a8062.mp4
+2025-11-14 19:31:54.703 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: goku
+2025-11-14 19:31:55.036 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 19:31:55.209 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 19:31:58.428 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: simple low poly cat
+2025-11-14 19:31:58.634 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 19:31:58.883 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 19:31:59.488 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: simple low poly cat
+2025-11-14 19:31:59.488 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: simple low poly cat (using qwen2.5:7b)
+2025-11-14 19:32:00.300 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, simple, low poly, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 19:32:00.305 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: goku
+2025-11-14 19:32:00.310 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: goku (using qwen2.5:7b)
+2025-11-14 19:32:00.709 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 19:32:00.710 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 19:32:00.710 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 19:32:00.981 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'goku, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 19:32:12.994 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 19:32:13.046 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_i54sgttx for Trellis step
+2025-11-14 19:32:13.047 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 19:32:13.407 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 19:32:13.407 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 19:32:13.407 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:32:13.407 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:32:13.409 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 19:32:14.675 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-14 19:32:14.676 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:32:14.676 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:32:17.974 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_i54sgttx...
+2025-11-14 19:32:18.275 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 19:32:18.276 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 19:32:18.276 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 19:32:19.195 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:32:19.195 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:32:19.195 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.
+2025-11-14 19:32:19.195 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:32:19.196 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:33:21.593 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 19:33:21.641 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_8dky2ztr for Trellis step
+2025-11-14 19:33:21.642 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 19:33:22.205 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_i54sgttx/trellis_output.zip
+2025-11-14 19:33:22.205 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_i54sgttx
+2025-11-14 19:33:22.267 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_i54sgttx
+2025-11-14 19:33:22.267 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_i54sgttx: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.glb', 'mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.ply', 'preview_544fc6a8-f56b-486e-9153-f0b956275d5b.mp4', 'frame_544fc6a8-f56b-486e-9153-f0b956275d5b.jpg']
+2025-11-14 19:33:22.267 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.glb']
+2025-11-14 19:33:22.267 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.ply']
+2025-11-14 19:33:22.267 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_544fc6a8-f56b-486e-9153-f0b956275d5b.mp4']
+2025-11-14 19:33:22.267 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_544fc6a8-f56b-486e-9153-f0b956275d5b.jpg']
+2025-11-14 19:33:22.267 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_i54sgttx/frame_544fc6a8-f56b-486e-9153-f0b956275d5b.jpg
+2025-11-14 19:33:22.267 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_i54sgttx/mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.glb, PLY=/tmp/views_i54sgttx/mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.ply, MP4=/tmp/views_i54sgttx/preview_544fc6a8-f56b-486e-9153-f0b956275d5b.mp4
+2025-11-14 19:34:43.506 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 19:34:43.506 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 19:34:43.507 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:34:43.507 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:34:43.507 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 19:34:44.723 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-14 19:34:44.724 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:34:44.726 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:34:46.600 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_8dky2ztr...
+2025-11-14 19:34:49.252 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:34:49.252 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 19:34:49.252 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-14 19:34:49.252 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 19:34:49.253 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 19:35:33.140 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_8dky2ztr/trellis_output.zip
+2025-11-14 19:35:33.141 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_8dky2ztr
+2025-11-14 19:35:33.197 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_8dky2ztr
+2025-11-14 19:35:33.197 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_8dky2ztr: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_277b0b67-c2ab-4ede-b288-592180847eb3.glb', 'mesh_277b0b67-c2ab-4ede-b288-592180847eb3.ply', 'preview_277b0b67-c2ab-4ede-b288-592180847eb3.mp4', 'frame_277b0b67-c2ab-4ede-b288-592180847eb3.jpg']
+2025-11-14 19:35:33.197 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_277b0b67-c2ab-4ede-b288-592180847eb3.glb']
+2025-11-14 19:35:33.197 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_277b0b67-c2ab-4ede-b288-592180847eb3.ply']
+2025-11-14 19:35:33.197 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_277b0b67-c2ab-4ede-b288-592180847eb3.mp4']
+2025-11-14 19:35:33.198 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_277b0b67-c2ab-4ede-b288-592180847eb3.jpg']
+2025-11-14 19:35:33.198 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_8dky2ztr/frame_277b0b67-c2ab-4ede-b288-592180847eb3.jpg
+2025-11-14 19:35:33.198 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_8dky2ztr/mesh_277b0b67-c2ab-4ede-b288-592180847eb3.glb, PLY=/tmp/views_8dky2ztr/mesh_277b0b67-c2ab-4ede-b288-592180847eb3.ply, MP4=/tmp/views_8dky2ztr/preview_277b0b67-c2ab-4ede-b288-592180847eb3.mp4

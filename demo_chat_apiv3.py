@@ -168,7 +168,7 @@ def _api_t2i_generate_flux(refined_prompt, negative_prompt, randomize, inference
     b64_str = data['image'] # API retorna 'image' (singular)
     img_bytes = base64.b64decode(b64_str)
     img = Image.open(io.BytesIO(img_bytes))
-    pil_images = [img] # Coloca a imagem única em uma lista para a galeria
+    pil_images = [img]
     
     # Cria um dir temporário para salvar a imagem para o feedback
     views_dir = tempfile.mkdtemp(prefix="flux_view_")
@@ -185,7 +185,6 @@ def generate_image_flux(refined_prompt, negative_prompt, randomize=False, infere
         
         logger.info(f"[FLUX] Got {len(pil_images)} image")
         
-        # Diferente do generate_images, aqui mantemos o run_trellis_btn invisível
         return (
             pil_images,
             views_dir, # Necessário para o state e feedback

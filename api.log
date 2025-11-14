@@ -5015,3 +5015,574 @@ Please pass the argument `trust_remote_code=True` to allow custom code to be run
 2025-11-14 14:32:30.702 | INFO     | api_stream:trellis_run:296 - [TRELLIS] ZIP validation took 0.000s
 2025-11-14 14:32:30.702 | INFO     | api_stream:trellis_run:303 - [TRELLIS] --- FINISHED REQUEST in 42.744s ---
 2025-11-14 14:32:30.707 | INFO     | api_stream:trellis_run:323 - [TRELLIS] Cleanup finished in 0.005s
+2025-11-14 14:57:57.648 | INFO     | api_stream:load_pipe_flux_t2i:396 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-14 14:58:06.235 | INFO     | api_stream:load_pipe_flux_t2i:405 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-14 14:58:06.236 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-14 14:58:06.314 | ERROR    | api_stream:load_pipe_flux_t2i:416 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-14 14:58:06.314 | INFO     | api_stream:load_pipe_flux_t2i:420 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-14 14:58:06.977 | INFO     | api_stream:load_pipe_flux_t2i:428 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-14 14:58:33.732 | INFO     | api_stream:load_pipe_mvadapter:83 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-14 14:58:33.733 | INFO     | api_stream:load_pipe_mvadapter:90 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-14 14:58:33.733 | INFO     | api_stream:load_pipe_trellis:182 - [TRELLIS] Pipeline loaded (API)
+2025-11-14 14:59:00.996 | INFO     | api_stream:load_pipe_trellis:185 - [TRELLIS] Pipeline prepared (API)
+2025-11-14 14:59:00.996 | INFO     | api_stream:load_pipe_rembg:49 - [RMBG] Loading model 'briaai/RMBG-1.4' into session...
+2025-11-14 14:59:00.996 | ERROR    | api_stream:load_pipe_rembg:53 - [RMBG] Failed to load model 'briaai/RMBG-1.4': name 'new_session' is not defined
+2025-11-14 14:59:03.905 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-14 15:57:30.550 | INFO     | api_stream:trellis_run:195 - [TRELLIS] --- START REQUEST ---
+2025-11-14 15:57:30.550 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 15:57:30.562 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg in 0.012s
+2025-11-14 15:57:30.562 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 15:57:30.563 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 15:57:30.563 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 15:57:30.563 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 15:57:30.563 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 15:57:30.564 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 15:57:30.564 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 15:57:30.564 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 15:57:30.564 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 15:57:30.564 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 15:57:30.564 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 15:57:30.565 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 15:57:30.565 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 15:57:30.565 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 15:57:30.565 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 15:57:30.565 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 15:57:30.566 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 15:57:30.566 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 15:57:30.566 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 15:57:30.566 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 15:57:30.566 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Input preprocessing finished in 0.016s
+2025-11-14 15:57:30.566 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Total views: 7
+2025-11-14 15:57:30.567 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 15:57:46.348 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Trellis pipeline duration: 15.782s
+2025-11-14 15:57:46.349 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 15:57:46.349 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Starting save_video...
+2025-11-14 15:57:52.327 | INFO     | api_stream:trellis_run:242 - [TRELLIS] save_video completed in 5.978s
+2025-11-14 15:57:52.329 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 15:58:20.482 | INFO     | api_stream:trellis_run:253 - [TRELLIS] save_mesh completed in 28.154s
+2025-11-14 15:58:20.483 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Saving middle frame...
+2025-11-14 15:58:20.487 | INFO     | api_stream:trellis_run:260 - [TRELLIS] Frame saved in 0.004s
+2025-11-14 15:58:20.487 | INFO     | api_stream:trellis_run:265 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 15:58:20.490 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.glb (took 0.002s)
+2025-11-14 15:58:20.637 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.ply (took 0.147s)
+2025-11-14 15:58:20.638 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added preview_d87bbaac-a8be-4c85-9644-0a1cac61181f.mp4 (took 0.001s)
+2025-11-14 15:58:20.638 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added frame_d87bbaac-a8be-4c85-9644-0a1cac61181f.jpg (took 0.000s)
+2025-11-14 15:58:20.638 | INFO     | api_stream:trellis_run:282 - [TRELLIS] ZIP creation time: 0.151s
+2025-11-14 15:58:20.639 | INFO     | api_stream:trellis_run:289 - [TRELLIS] ZIP contains: ['mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.glb', 'mesh_d87bbaac-a8be-4c85-9644-0a1cac61181f.ply', 'preview_d87bbaac-a8be-4c85-9644-0a1cac61181f.mp4', 'frame_d87bbaac-a8be-4c85-9644-0a1cac61181f.jpg']
+2025-11-14 15:58:20.639 | INFO     | api_stream:trellis_run:291 - [TRELLIS] ZIP validation took 0.001s
+2025-11-14 15:58:20.639 | INFO     | api_stream:trellis_run:294 - [TRELLIS] --- FINISHED REQUEST in 50.090s ---
+2025-11-14 15:58:20.645 | INFO     | api_stream:trellis_run:311 - [TRELLIS] Cleanup finished in 0.006s
+2025-11-14 16:35:21.330 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'pegasus': sd
+2025-11-14 16:35:22.937 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 16:35:22.937 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, pegasus, full body, game asset
+2025-11-14 16:35:34.867 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 16:35:34.867 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 16:35:34.878 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 11.94s
+2025-11-14 16:35:56.087 | INFO     | api_stream:trellis_run:195 - [TRELLIS] --- START REQUEST ---
+2025-11-14 16:35:56.088 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 16:35:56.088 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 16:35:56.089 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 16:35:56.089 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 16:35:56.089 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 16:35:56.089 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 16:35:56.090 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 16:35:56.090 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 16:35:56.090 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 16:35:56.090 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 16:35:56.090 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 16:35:56.091 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 16:35:56.091 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 16:35:56.091 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 16:35:56.091 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 16:35:56.091 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 16:35:56.092 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 16:35:56.092 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 16:35:56.092 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 16:35:56.092 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Input preprocessing finished in 0.004s
+2025-11-14 16:35:56.092 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Total views: 6
+2025-11-14 16:35:56.092 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 16:36:03.678 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Trellis pipeline duration: 7.586s
+2025-11-14 16:36:03.679 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 16:36:03.679 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Starting save_video...
+2025-11-14 16:36:08.726 | INFO     | api_stream:trellis_run:242 - [TRELLIS] save_video completed in 5.047s
+2025-11-14 16:36:08.727 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 16:36:29.672 | INFO     | api_stream:trellis_run:253 - [TRELLIS] save_mesh completed in 20.945s
+2025-11-14 16:36:29.672 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Saving middle frame...
+2025-11-14 16:36:29.674 | INFO     | api_stream:trellis_run:260 - [TRELLIS] Frame saved in 0.002s
+2025-11-14 16:36:29.674 | INFO     | api_stream:trellis_run:265 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 16:36:29.678 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.glb (took 0.004s)
+2025-11-14 16:36:29.723 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.ply (took 0.045s)
+2025-11-14 16:36:29.732 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added preview_dde23f1c-2a1f-487b-b521-533272dcb8d5.mp4 (took 0.009s)
+2025-11-14 16:36:29.733 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added frame_dde23f1c-2a1f-487b-b521-533272dcb8d5.jpg (took 0.000s)
+2025-11-14 16:36:29.733 | INFO     | api_stream:trellis_run:282 - [TRELLIS] ZIP creation time: 0.059s
+2025-11-14 16:36:29.733 | INFO     | api_stream:trellis_run:289 - [TRELLIS] ZIP contains: ['mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.glb', 'mesh_dde23f1c-2a1f-487b-b521-533272dcb8d5.ply', 'preview_dde23f1c-2a1f-487b-b521-533272dcb8d5.mp4', 'frame_dde23f1c-2a1f-487b-b521-533272dcb8d5.jpg']
+2025-11-14 16:36:29.733 | INFO     | api_stream:trellis_run:291 - [TRELLIS] ZIP validation took 0.000s
+2025-11-14 16:36:29.733 | INFO     | api_stream:trellis_run:294 - [TRELLIS] --- FINISHED REQUEST in 33.646s ---
+2025-11-14 16:36:29.736 | INFO     | api_stream:trellis_run:311 - [TRELLIS] Cleanup finished in 0.002s
+2025-11-14 16:48:58.937 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'naruto': sd
+2025-11-14 16:49:00.539 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 16:49:00.540 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, naruto, full body, game asset
+2025-11-14 16:49:12.371 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 16:49:12.371 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 16:49:12.381 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 11.84s
+2025-11-14 16:49:17.317 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 33 steps (API)
+2025-11-14 16:49:17.317 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, naruto, full body, game asset
+2025-11-14 16:49:35.039 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 33 steps - 6 views (API)
+2025-11-14 16:49:35.040 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 16:49:35.050 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 17.73s
+2025-11-14 16:49:40.204 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 38 steps (API)
+2025-11-14 16:49:40.205 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, naruto, full body, game asset
+2025-11-14 16:49:59.381 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 38 steps - 6 views (API)
+2025-11-14 16:49:59.382 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 16:49:59.391 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 19.19s
+2025-11-14 16:50:06.679 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 43 steps (API)
+2025-11-14 16:50:06.679 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, naruto, full body, game asset
+2025-11-14 16:50:26.956 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 43 steps - 6 views (API)
+2025-11-14 16:50:26.957 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 16:50:26.967 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 20.29s
+2025-11-14 17:22:49.395 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 48 steps (API)
+2025-11-14 17:22:49.396 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, naruto, full body, game asset
+2025-11-14 17:23:09.219 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 48 steps - 6 views (API)
+2025-11-14 17:23:09.219 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 17:23:09.229 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 19.83s
+2025-11-14 17:56:33.002 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'goku': sd
+2025-11-14 17:56:34.603 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 17:56:34.603 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 17:56:46.400 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 17:56:46.401 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 17:56:46.411 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 11.81s
+2025-11-14 17:57:01.926 | INFO     | api_stream:trellis_run:195 - [TRELLIS] --- START REQUEST ---
+2025-11-14 17:57:01.927 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 17:57:01.927 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_00.jpg in 0.001s
+2025-11-14 17:57:01.928 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 17:57:01.928 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 17:57:01.928 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 17:57:01.929 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 17:57:01.929 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 17:57:01.929 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 17:57:01.929 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 17:57:01.930 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 17:57:01.930 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 17:57:01.930 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 17:57:01.930 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 17:57:01.931 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 17:57:01.931 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 17:57:01.931 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 17:57:01.931 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 17:57:01.932 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 17:57:01.932 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 17:57:01.932 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Input preprocessing finished in 0.005s
+2025-11-14 17:57:01.932 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Total views: 6
+2025-11-14 17:57:01.932 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 17:57:08.089 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Trellis pipeline duration: 6.156s
+2025-11-14 17:57:08.089 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 17:57:08.089 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Starting save_video...
+2025-11-14 17:57:12.953 | INFO     | api_stream:trellis_run:242 - [TRELLIS] save_video completed in 4.863s
+2025-11-14 17:57:12.953 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 17:57:35.647 | INFO     | api_stream:trellis_run:253 - [TRELLIS] save_mesh completed in 22.694s
+2025-11-14 17:57:35.647 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Saving middle frame...
+2025-11-14 17:57:35.650 | INFO     | api_stream:trellis_run:260 - [TRELLIS] Frame saved in 0.002s
+2025-11-14 17:57:35.650 | INFO     | api_stream:trellis_run:265 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 17:57:35.655 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.glb (took 0.005s)
+2025-11-14 17:57:35.711 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.ply (took 0.056s)
+2025-11-14 17:57:35.712 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added preview_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.mp4 (took 0.001s)
+2025-11-14 17:57:35.712 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added frame_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.jpg (took 0.000s)
+2025-11-14 17:57:35.712 | INFO     | api_stream:trellis_run:282 - [TRELLIS] ZIP creation time: 0.062s
+2025-11-14 17:57:35.712 | INFO     | api_stream:trellis_run:289 - [TRELLIS] ZIP contains: ['mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.glb', 'mesh_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.ply', 'preview_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.mp4', 'frame_b9b0adab-411c-4f6b-9b2c-cafa6a7b1e62.jpg']
+2025-11-14 17:57:35.712 | INFO     | api_stream:trellis_run:291 - [TRELLIS] ZIP validation took 0.000s
+2025-11-14 17:57:35.712 | INFO     | api_stream:trellis_run:294 - [TRELLIS] --- FINISHED REQUEST in 33.786s ---
+2025-11-14 17:57:35.715 | INFO     | api_stream:trellis_run:311 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-14 18:51:26.610 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 33 steps (API)
+2025-11-14 18:51:26.611 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 18:51:40.463 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 33 steps - 6 views (API)
+2025-11-14 18:51:40.463 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 18:51:40.473 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 13.86s
+2025-11-14 18:52:10.876 | INFO     | api_stream:trellis_run:195 - [TRELLIS] --- START REQUEST ---
+2025-11-14 18:52:10.877 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 18:52:10.878 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_00.jpg in 0.001s
+2025-11-14 18:52:10.878 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:52:10.878 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:52:10.878 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 18:52:10.878 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:52:10.878 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:52:10.879 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 18:52:10.879 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:52:10.879 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:52:10.879 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 18:52:10.879 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:52:10.880 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:52:10.880 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 18:52:10.880 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:52:10.880 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:52:10.880 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 18:52:10.881 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:52:10.881 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:52:10.881 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Input preprocessing finished in 0.004s
+2025-11-14 18:52:10.881 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Total views: 6
+2025-11-14 18:52:10.881 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 18:52:17.041 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Trellis pipeline duration: 6.160s
+2025-11-14 18:52:17.042 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 18:52:17.042 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Starting save_video...
+2025-11-14 18:52:22.032 | INFO     | api_stream:trellis_run:242 - [TRELLIS] save_video completed in 4.990s
+2025-11-14 18:52:22.033 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 18:52:45.133 | INFO     | api_stream:trellis_run:253 - [TRELLIS] save_mesh completed in 23.100s
+2025-11-14 18:52:45.133 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Saving middle frame...
+2025-11-14 18:52:45.135 | INFO     | api_stream:trellis_run:260 - [TRELLIS] Frame saved in 0.002s
+2025-11-14 18:52:45.135 | INFO     | api_stream:trellis_run:265 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 18:52:45.140 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.glb (took 0.005s)
+2025-11-14 18:52:45.191 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.ply (took 0.051s)
+2025-11-14 18:52:45.192 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added preview_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.mp4 (took 0.000s)
+2025-11-14 18:52:45.192 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added frame_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.jpg (took 0.000s)
+2025-11-14 18:52:45.192 | INFO     | api_stream:trellis_run:282 - [TRELLIS] ZIP creation time: 0.057s
+2025-11-14 18:52:45.193 | INFO     | api_stream:trellis_run:289 - [TRELLIS] ZIP contains: ['mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.glb', 'mesh_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.ply', 'preview_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.mp4', 'frame_f9c4cb89-7961-4685-9aee-1d5467b9d5a3.jpg']
+2025-11-14 18:52:45.193 | INFO     | api_stream:trellis_run:291 - [TRELLIS] ZIP validation took 0.000s
+2025-11-14 18:52:45.193 | INFO     | api_stream:trellis_run:294 - [TRELLIS] --- FINISHED REQUEST in 34.316s ---
+2025-11-14 18:52:45.196 | INFO     | api_stream:trellis_run:311 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-14 18:52:56.719 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 38 steps (API)
+2025-11-14 18:52:56.720 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 18:53:12.562 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 38 steps - 6 views (API)
+2025-11-14 18:53:12.563 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 18:53:12.573 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 15.85s
+2025-11-14 18:53:30.259 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 43 steps (API)
+2025-11-14 18:53:30.260 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 18:53:48.072 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 43 steps - 6 views (API)
+2025-11-14 18:53:48.072 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 18:53:48.082 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 17.82s
+2025-11-14 18:53:57.597 | INFO     | api_stream:trellis_run:195 - [TRELLIS] --- START REQUEST ---
+2025-11-14 18:53:57.598 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 18:53:57.598 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 18:53:57.599 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:53:57.599 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:53:57.599 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 18:53:57.599 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:53:57.599 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:53:57.599 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 18:53:57.600 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:53:57.600 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:53:57.600 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 18:53:57.600 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:53:57.600 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:53:57.601 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 18:53:57.601 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:53:57.601 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:53:57.601 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 18:53:57.601 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:53:57.601 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:53:57.602 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Input preprocessing finished in 0.004s
+2025-11-14 18:53:57.602 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Total views: 6
+2025-11-14 18:53:57.602 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 18:54:04.679 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Trellis pipeline duration: 7.078s
+2025-11-14 18:54:04.680 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 18:54:04.680 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Starting save_video...
+2025-11-14 18:54:09.723 | INFO     | api_stream:trellis_run:242 - [TRELLIS] save_video completed in 5.043s
+2025-11-14 18:54:09.725 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 18:54:31.402 | INFO     | api_stream:trellis_run:253 - [TRELLIS] save_mesh completed in 21.678s
+2025-11-14 18:54:31.403 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Saving middle frame...
+2025-11-14 18:54:31.405 | INFO     | api_stream:trellis_run:260 - [TRELLIS] Frame saved in 0.002s
+2025-11-14 18:54:31.405 | INFO     | api_stream:trellis_run:265 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 18:54:31.411 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.glb (took 0.005s)
+2025-11-14 18:54:31.461 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.ply (took 0.050s)
+2025-11-14 18:54:31.462 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added preview_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.mp4 (took 0.000s)
+2025-11-14 18:54:31.462 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added frame_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.jpg (took 0.000s)
+2025-11-14 18:54:31.462 | INFO     | api_stream:trellis_run:282 - [TRELLIS] ZIP creation time: 0.057s
+2025-11-14 18:54:31.462 | INFO     | api_stream:trellis_run:289 - [TRELLIS] ZIP contains: ['mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.glb', 'mesh_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.ply', 'preview_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.mp4', 'frame_965b36b3-b6e5-48eb-92e8-b8c4d7ec31c8.jpg']
+2025-11-14 18:54:31.462 | INFO     | api_stream:trellis_run:291 - [TRELLIS] ZIP validation took 0.000s
+2025-11-14 18:54:31.462 | INFO     | api_stream:trellis_run:294 - [TRELLIS] --- FINISHED REQUEST in 33.865s ---
+2025-11-14 18:54:31.466 | INFO     | api_stream:trellis_run:311 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-14 18:54:48.207 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed -1 and 43 steps (API)
+2025-11-14 18:54:48.208 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 18:55:06.061 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 43 steps - 6 views (API)
+2025-11-14 18:55:06.064 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 18:55:06.074 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 17.87s
+2025-11-14 18:55:24.404 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed -1 and 43 steps (API)
+2025-11-14 18:55:24.405 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 18:55:42.261 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 43 steps - 6 views (API)
+2025-11-14 18:55:42.261 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 18:55:42.272 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 17.87s
+2025-11-14 18:55:46.299 | INFO     | api_stream:trellis_run:195 - [TRELLIS] --- START REQUEST ---
+2025-11-14 18:55:46.299 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 18:55:46.300 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 18:55:46.300 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:55:46.300 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:55:46.300 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 18:55:46.300 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:55:46.300 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:55:46.300 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 18:55:46.300 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:55:46.300 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:55:46.301 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 18:55:46.301 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:55:46.301 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:55:46.301 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 18:55:46.301 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:55:46.301 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:55:46.301 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 18:55:46.301 | WARNING  | api_stream:_remove_bg_bria:105 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 18:55:46.301 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 18:55:46.301 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Input preprocessing finished in 0.002s
+2025-11-14 18:55:46.301 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Total views: 6
+2025-11-14 18:55:46.302 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 18:55:54.606 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Trellis pipeline duration: 8.305s
+2025-11-14 18:55:54.607 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 18:55:54.607 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Starting save_video...
+2025-11-14 18:56:00.273 | INFO     | api_stream:trellis_run:242 - [TRELLIS] save_video completed in 5.665s
+2025-11-14 18:56:00.274 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 18:56:23.204 | INFO     | api_stream:trellis_run:253 - [TRELLIS] save_mesh completed in 22.930s
+2025-11-14 18:56:23.204 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Saving middle frame...
+2025-11-14 18:56:23.206 | INFO     | api_stream:trellis_run:260 - [TRELLIS] Frame saved in 0.002s
+2025-11-14 18:56:23.206 | INFO     | api_stream:trellis_run:265 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 18:56:23.212 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.glb (took 0.006s)
+2025-11-14 18:56:23.276 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.ply (took 0.064s)
+2025-11-14 18:56:23.277 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added preview_e97f9947-819b-4593-9fa4-7b33ef55f14c.mp4 (took 0.001s)
+2025-11-14 18:56:23.277 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added frame_e97f9947-819b-4593-9fa4-7b33ef55f14c.jpg (took 0.000s)
+2025-11-14 18:56:23.277 | INFO     | api_stream:trellis_run:282 - [TRELLIS] ZIP creation time: 0.071s
+2025-11-14 18:56:23.278 | INFO     | api_stream:trellis_run:289 - [TRELLIS] ZIP contains: ['mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.glb', 'mesh_e97f9947-819b-4593-9fa4-7b33ef55f14c.ply', 'preview_e97f9947-819b-4593-9fa4-7b33ef55f14c.mp4', 'frame_e97f9947-819b-4593-9fa4-7b33ef55f14c.jpg']
+2025-11-14 18:56:23.278 | INFO     | api_stream:trellis_run:291 - [TRELLIS] ZIP validation took 0.000s
+2025-11-14 18:56:23.278 | INFO     | api_stream:trellis_run:294 - [TRELLIS] --- FINISHED REQUEST in 36.979s ---
+2025-11-14 18:56:23.281 | INFO     | api_stream:trellis_run:311 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-14 19:07:21.967 | INFO     | api_stream:load_pipe_flux_t2i:396 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-14 19:07:30.508 | INFO     | api_stream:load_pipe_flux_t2i:405 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-14 19:07:30.509 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-14 19:07:30.691 | ERROR    | api_stream:load_pipe_flux_t2i:416 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-14 19:07:30.691 | INFO     | api_stream:load_pipe_flux_t2i:420 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-14 19:07:31.350 | INFO     | api_stream:load_pipe_flux_t2i:428 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-14 19:07:59.921 | INFO     | api_stream:load_pipe_mvadapter:79 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-14 19:07:59.921 | INFO     | api_stream:load_pipe_mvadapter:86 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-14 19:07:59.921 | INFO     | api_stream:load_pipe_trellis:182 - [TRELLIS] Pipeline loaded (API)
+2025-11-14 19:08:29.005 | INFO     | api_stream:load_pipe_trellis:185 - [TRELLIS] Pipeline prepared (API)
+2025-11-14 19:08:29.006 | INFO     | api_stream:load_pipe_rembg:45 - [RMBG] Loading model 'u2net' into session...
+2025-11-14 19:08:29.006 | ERROR    | api_stream:load_pipe_rembg:49 - [RMBG] Failed to load model 'u2net': name 'new_session' is not defined
+2025-11-14 19:08:31.791 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-14 19:08:44.685 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'goku': sd
+2025-11-14 19:08:46.163 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 19:08:46.164 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 19:08:58.383 | INFO     | api_stream:t2mv_generate:158 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 19:08:58.383 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 19:08:58.396 | INFO     | api_stream:t2mv_generate:169 - [MV-ADAPTER] Total time (with encoding): 12.23s
+2025-11-14 19:09:57.516 | INFO     | api_stream:trellis_run:195 - [TRELLIS] --- START REQUEST ---
+2025-11-14 19:09:57.516 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 19:09:57.516 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 19:09:57.516 | WARNING  | api_stream:_remove_bg_bria:100 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 19:09:57.516 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 19:09:57.517 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 19:09:57.517 | WARNING  | api_stream:_remove_bg_bria:100 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 19:09:57.517 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 19:09:57.517 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 19:09:57.517 | WARNING  | api_stream:_remove_bg_bria:100 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 19:09:57.517 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 19:09:57.518 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 19:09:57.518 | WARNING  | api_stream:_remove_bg_bria:100 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 19:09:57.518 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 19:09:57.518 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 19:09:57.518 | WARNING  | api_stream:_remove_bg_bria:100 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 19:09:57.518 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 19:09:57.518 | INFO     | api_stream:trellis_run:206 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 19:09:57.518 | WARNING  | api_stream:_remove_bg_bria:100 - [RMBG] Session not loaded. Returning original image.
+2025-11-14 19:09:57.519 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Removed BG in 0.000s
+2025-11-14 19:09:57.519 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Input preprocessing finished in 0.003s
+2025-11-14 19:09:57.519 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Total views: 6
+2025-11-14 19:09:57.519 | INFO     | api_stream:trellis_run:218 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 19:10:07.465 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Trellis pipeline duration: 9.946s
+2025-11-14 19:10:07.466 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 19:10:07.466 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Starting save_video...
+2025-11-14 19:10:12.477 | INFO     | api_stream:trellis_run:242 - [TRELLIS] save_video completed in 5.011s
+2025-11-14 19:10:12.478 | INFO     | api_stream:trellis_run:245 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 19:10:36.993 | INFO     | api_stream:trellis_run:253 - [TRELLIS] save_mesh completed in 24.515s
+2025-11-14 19:10:36.993 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Saving middle frame...
+2025-11-14 19:10:36.997 | INFO     | api_stream:trellis_run:260 - [TRELLIS] Frame saved in 0.004s
+2025-11-14 19:10:36.997 | INFO     | api_stream:trellis_run:265 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 19:10:37.001 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.glb (took 0.003s)
+2025-11-14 19:10:37.074 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.ply (took 0.073s)
+2025-11-14 19:10:37.075 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added preview_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.mp4 (took 0.001s)
+2025-11-14 19:10:37.075 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Added frame_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.jpg (took 0.000s)
+2025-11-14 19:10:37.075 | INFO     | api_stream:trellis_run:282 - [TRELLIS] ZIP creation time: 0.078s
+2025-11-14 19:10:37.076 | INFO     | api_stream:trellis_run:289 - [TRELLIS] ZIP contains: ['mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.glb', 'mesh_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.ply', 'preview_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.mp4', 'frame_b65a7ec4-6380-4dcd-8b1e-c43fc3e379ce.jpg']
+2025-11-14 19:10:37.076 | INFO     | api_stream:trellis_run:291 - [TRELLIS] ZIP validation took 0.001s
+2025-11-14 19:10:37.076 | INFO     | api_stream:trellis_run:294 - [TRELLIS] --- FINISHED REQUEST in 39.561s ---
+2025-11-14 19:10:37.080 | INFO     | api_stream:trellis_run:311 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-14 19:12:25.904 | INFO     | api_stream:load_pipe_flux_t2i:370 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-14 19:12:34.352 | INFO     | api_stream:load_pipe_flux_t2i:379 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-14 19:12:34.352 | INFO     | api_stream:load_pipe_flux_t2i:382 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-14 19:12:34.450 | ERROR    | api_stream:load_pipe_flux_t2i:390 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-14 19:12:34.450 | INFO     | api_stream:load_pipe_flux_t2i:394 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-14 19:12:35.129 | INFO     | api_stream:load_pipe_flux_t2i:402 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-14 19:12:58.404 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-14 19:12:58.405 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-14 19:12:58.405 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-11-14 19:13:26.060 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-11-14 19:13:26.476 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-14 19:13:36.201 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'goku': sd
+2025-11-14 19:13:37.726 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 19:13:37.726 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 19:13:49.942 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 19:13:49.942 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 19:13:49.956 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 12.23s
+2025-11-14 19:14:00.785 | INFO     | api_stream:trellis_run:169 - [TRELLIS] --- START REQUEST ---
+2025-11-14 19:14:00.785 | INFO     | api_stream:trellis_run:175 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 19:14:00.785 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 19:14:02.485 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.700s
+2025-11-14 19:14:02.486 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-14 19:14:03.709 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.223s
+2025-11-14 19:14:03.710 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-14 19:14:04.757 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.047s
+2025-11-14 19:14:04.759 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 19:14:05.854 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.095s
+2025-11-14 19:14:05.855 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-14 19:14:06.871 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.016s
+2025-11-14 19:14:06.872 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-14 19:14:07.911 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.039s
+2025-11-14 19:14:07.912 | INFO     | api_stream:trellis_run:188 - [TRELLIS] Input preprocessing finished in 7.127s
+2025-11-14 19:14:07.912 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Total views: 6
+2025-11-14 19:14:07.912 | INFO     | api_stream:trellis_run:192 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 19:14:17.880 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Trellis pipeline duration: 9.968s
+2025-11-14 19:14:17.882 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 19:14:17.882 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Starting save_video...
+2025-11-14 19:14:22.955 | INFO     | api_stream:trellis_run:216 - [TRELLIS] save_video completed in 5.073s
+2025-11-14 19:14:22.956 | INFO     | api_stream:trellis_run:219 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 19:14:41.786 | INFO     | api_stream:trellis_run:227 - [TRELLIS] save_mesh completed in 18.830s
+2025-11-14 19:14:41.787 | INFO     | api_stream:trellis_run:231 - [TRELLIS] Saving middle frame...
+2025-11-14 19:14:41.792 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Frame saved in 0.005s
+2025-11-14 19:14:41.792 | INFO     | api_stream:trellis_run:239 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 19:14:41.795 | INFO     | api_stream:trellis_run:252 - [TRELLIS] Added mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.glb (took 0.003s)
+2025-11-14 19:14:41.859 | INFO     | api_stream:trellis_run:252 - [TRELLIS] Added mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.ply (took 0.064s)
+2025-11-14 19:14:41.860 | INFO     | api_stream:trellis_run:252 - [TRELLIS] Added preview_ce710ef3-90b2-4864-9bad-b737a50eb82e.mp4 (took 0.001s)
+2025-11-14 19:14:41.860 | INFO     | api_stream:trellis_run:252 - [TRELLIS] Added frame_ce710ef3-90b2-4864-9bad-b737a50eb82e.jpg (took 0.000s)
+2025-11-14 19:14:41.860 | INFO     | api_stream:trellis_run:256 - [TRELLIS] ZIP creation time: 0.069s
+2025-11-14 19:14:41.861 | INFO     | api_stream:trellis_run:263 - [TRELLIS] ZIP contains: ['mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.glb', 'mesh_ce710ef3-90b2-4864-9bad-b737a50eb82e.ply', 'preview_ce710ef3-90b2-4864-9bad-b737a50eb82e.mp4', 'frame_ce710ef3-90b2-4864-9bad-b737a50eb82e.jpg']
+2025-11-14 19:14:41.861 | INFO     | api_stream:trellis_run:265 - [TRELLIS] ZIP validation took 0.001s
+2025-11-14 19:14:41.861 | INFO     | api_stream:trellis_run:268 - [TRELLIS] --- FINISHED REQUEST in 41.077s ---
+2025-11-14 19:14:41.864 | INFO     | api_stream:trellis_run:285 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-14 19:17:39.875 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'simple low poly cat': sd
+2025-11-14 19:17:41.450 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 19:17:41.450 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, cat, simple, low poly, full body, game asset
+2025-11-14 19:17:53.294 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 19:17:53.295 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 19:17:53.305 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.86s
+2025-11-14 19:17:57.926 | INFO     | api_stream:trellis_run:169 - [TRELLIS] --- START REQUEST ---
+2025-11-14 19:17:57.926 | INFO     | api_stream:trellis_run:175 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 19:17:57.927 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 19:17:59.224 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.298s
+2025-11-14 19:17:59.225 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 19:18:00.334 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.109s
+2025-11-14 19:18:00.335 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 19:18:01.399 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.064s
+2025-11-14 19:18:01.399 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 19:18:02.468 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.068s
+2025-11-14 19:18:02.469 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-14 19:18:03.752 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.282s
+2025-11-14 19:18:03.753 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-14 19:18:05.185 | INFO     | api_stream:trellis_run:184 - [TRELLIS] Removed BG in 1.431s
+2025-11-14 19:18:05.185 | INFO     | api_stream:trellis_run:188 - [TRELLIS] Input preprocessing finished in 7.259s
+2025-11-14 19:18:05.185 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Total views: 6
+2025-11-14 19:18:05.185 | INFO     | api_stream:trellis_run:192 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 19:18:11.440 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Trellis pipeline duration: 6.255s
+2025-11-14 19:18:11.441 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 19:18:11.442 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Starting save_video...
+2025-11-14 19:18:16.736 | INFO     | api_stream:trellis_run:216 - [TRELLIS] save_video completed in 5.294s
+2025-11-14 19:18:16.736 | INFO     | api_stream:trellis_run:219 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 19:18:40.269 | INFO     | api_stream:trellis_run:227 - [TRELLIS] save_mesh completed in 23.532s
+2025-11-14 19:18:40.269 | INFO     | api_stream:trellis_run:231 - [TRELLIS] Saving middle frame...
+2025-11-14 19:18:40.272 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Frame saved in 0.003s
+2025-11-14 19:18:40.272 | INFO     | api_stream:trellis_run:239 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 19:18:40.283 | INFO     | api_stream:trellis_run:252 - [TRELLIS] Added mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.glb (took 0.010s)
+2025-11-14 19:18:40.483 | INFO     | api_stream:trellis_run:252 - [TRELLIS] Added mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.ply (took 0.199s)
+2025-11-14 19:18:40.484 | INFO     | api_stream:trellis_run:252 - [TRELLIS] Added preview_2c294fdc-82bc-4357-bcbb-5f96059a8062.mp4 (took 0.001s)
+2025-11-14 19:18:40.484 | INFO     | api_stream:trellis_run:252 - [TRELLIS] Added frame_2c294fdc-82bc-4357-bcbb-5f96059a8062.jpg (took 0.000s)
+2025-11-14 19:18:40.484 | INFO     | api_stream:trellis_run:256 - [TRELLIS] ZIP creation time: 0.212s
+2025-11-14 19:18:40.484 | INFO     | api_stream:trellis_run:263 - [TRELLIS] ZIP contains: ['mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.glb', 'mesh_2c294fdc-82bc-4357-bcbb-5f96059a8062.ply', 'preview_2c294fdc-82bc-4357-bcbb-5f96059a8062.mp4', 'frame_2c294fdc-82bc-4357-bcbb-5f96059a8062.jpg']
+2025-11-14 19:18:40.484 | INFO     | api_stream:trellis_run:265 - [TRELLIS] ZIP validation took 0.000s
+2025-11-14 19:18:40.485 | INFO     | api_stream:trellis_run:268 - [TRELLIS] --- FINISHED REQUEST in 42.558s ---
+2025-11-14 19:18:40.489 | INFO     | api_stream:trellis_run:285 - [TRELLIS] Cleanup finished in 0.005s
+2025-11-14 19:30:48.734 | INFO     | api_stream:load_pipe_flux_t2i:375 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-14 19:30:57.294 | INFO     | api_stream:load_pipe_flux_t2i:384 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-14 19:30:57.294 | INFO     | api_stream:load_pipe_flux_t2i:387 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-14 19:30:57.378 | ERROR    | api_stream:load_pipe_flux_t2i:395 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-14 19:30:57.378 | INFO     | api_stream:load_pipe_flux_t2i:399 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-14 19:30:58.047 | INFO     | api_stream:load_pipe_flux_t2i:407 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-14 19:31:18.132 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-14 19:31:18.132 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-14 19:31:18.132 | INFO     | api_stream:load_pipe_trellis:161 - [TRELLIS] Pipeline loaded (API)
+2025-11-14 19:31:49.508 | INFO     | api_stream:load_pipe_trellis:164 - [TRELLIS] Pipeline prepared (API)
+2025-11-14 19:31:52.222 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-14 19:31:55.034 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'goku': sd
+2025-11-14 19:31:58.632 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'simple low poly cat': sd
+2025-11-14 19:32:00.716 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 19:32:00.716 | INFO     | api_stream:t2mv_generate:120 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, cat, simple, low poly, full body, game asset
+2025-11-14 19:32:12.968 | INFO     | api_stream:t2mv_generate:137 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 19:32:12.968 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 19:32:12.981 | INFO     | api_stream:t2mv_generate:148 - [MV-ADAPTER] Total time (with encoding): 12.27s
+2025-11-14 19:32:18.016 | INFO     | api_stream:trellis_run:174 - [TRELLIS] --- START REQUEST ---
+2025-11-14 19:32:18.017 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 19:32:18.017 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 19:32:20.175 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 2.157s
+2025-11-14 19:32:20.176 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 19:32:21.652 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.477s
+2025-11-14 19:32:21.653 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 19:32:23.274 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.621s
+2025-11-14 19:32:23.275 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 19:32:25.035 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.760s
+2025-11-14 19:32:25.036 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 19:32:26.715 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.679s
+2025-11-14 19:32:26.715 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 19:32:28.378 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.662s
+2025-11-14 19:32:28.379 | INFO     | api_stream:trellis_run:193 - [TRELLIS] Input preprocessing finished in 10.362s
+2025-11-14 19:32:28.379 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Total views: 6
+2025-11-14 19:32:28.379 | INFO     | api_stream:trellis_run:197 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 19:32:40.451 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Trellis pipeline duration: 12.072s
+2025-11-14 19:32:40.452 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 19:32:40.452 | INFO     | api_stream:trellis_run:219 - [TRELLIS] Starting save_video...
+2025-11-14 19:32:46.056 | INFO     | api_stream:trellis_run:221 - [TRELLIS] save_video completed in 5.604s
+2025-11-14 19:32:46.057 | INFO     | api_stream:trellis_run:224 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 19:33:09.329 | INFO     | api_stream:trellis_run:232 - [TRELLIS] save_mesh completed in 23.271s
+2025-11-14 19:33:09.329 | INFO     | api_stream:trellis_run:236 - [TRELLIS] Saving middle frame...
+2025-11-14 19:33:09.333 | INFO     | api_stream:trellis_run:239 - [TRELLIS] Frame saved in 0.004s
+2025-11-14 19:33:09.333 | INFO     | api_stream:trellis_run:244 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 19:33:09.336 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.glb (took 0.003s)
+2025-11-14 19:33:09.446 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.ply (took 0.110s)
+2025-11-14 19:33:09.447 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added preview_544fc6a8-f56b-486e-9153-f0b956275d5b.mp4 (took 0.001s)
+2025-11-14 19:33:09.447 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added frame_544fc6a8-f56b-486e-9153-f0b956275d5b.jpg (took 0.000s)
+2025-11-14 19:33:09.447 | INFO     | api_stream:trellis_run:261 - [TRELLIS] ZIP creation time: 0.114s
+2025-11-14 19:33:09.448 | INFO     | api_stream:trellis_run:268 - [TRELLIS] ZIP contains: ['mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.glb', 'mesh_544fc6a8-f56b-486e-9153-f0b956275d5b.ply', 'preview_544fc6a8-f56b-486e-9153-f0b956275d5b.mp4', 'frame_544fc6a8-f56b-486e-9153-f0b956275d5b.jpg']
+2025-11-14 19:33:09.448 | INFO     | api_stream:trellis_run:270 - [TRELLIS] ZIP validation took 0.001s
+2025-11-14 19:33:09.448 | INFO     | api_stream:trellis_run:273 - [TRELLIS] --- FINISHED REQUEST in 51.432s ---
+2025-11-14 19:33:09.453 | INFO     | api_stream:trellis_run:290 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-14 19:33:09.458 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 19:33:09.458 | INFO     | api_stream:t2mv_generate:120 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-14 19:33:21.567 | INFO     | api_stream:t2mv_generate:137 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 19:33:21.568 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 19:33:21.579 | INFO     | api_stream:t2mv_generate:148 - [MV-ADAPTER] Total time (with encoding): 12.12s
+2025-11-14 19:34:46.648 | INFO     | api_stream:trellis_run:174 - [TRELLIS] --- START REQUEST ---
+2025-11-14 19:34:46.648 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 19:34:46.648 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 19:34:48.681 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 2.033s
+2025-11-14 19:34:48.682 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 19:34:50.264 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.582s
+2025-11-14 19:34:50.264 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 19:34:51.770 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.505s
+2025-11-14 19:34:51.771 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 19:34:53.357 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.587s
+2025-11-14 19:34:53.358 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-14 19:34:54.758 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.399s
+2025-11-14 19:34:54.759 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 19:34:56.311 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.552s
+2025-11-14 19:34:56.312 | INFO     | api_stream:trellis_run:193 - [TRELLIS] Input preprocessing finished in 9.664s
+2025-11-14 19:34:56.312 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Total views: 6
+2025-11-14 19:34:56.312 | INFO     | api_stream:trellis_run:197 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 19:35:04.250 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Trellis pipeline duration: 7.938s
+2025-11-14 19:35:04.251 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 19:35:04.251 | INFO     | api_stream:trellis_run:219 - [TRELLIS] Starting save_video...
+2025-11-14 19:35:09.012 | INFO     | api_stream:trellis_run:221 - [TRELLIS] save_video completed in 4.761s
+2025-11-14 19:35:09.013 | INFO     | api_stream:trellis_run:224 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 19:35:27.788 | INFO     | api_stream:trellis_run:232 - [TRELLIS] save_mesh completed in 18.775s
+2025-11-14 19:35:27.789 | INFO     | api_stream:trellis_run:236 - [TRELLIS] Saving middle frame...
+2025-11-14 19:35:27.791 | INFO     | api_stream:trellis_run:239 - [TRELLIS] Frame saved in 0.002s
+2025-11-14 19:35:27.791 | INFO     | api_stream:trellis_run:244 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 19:35:27.797 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added mesh_277b0b67-c2ab-4ede-b288-592180847eb3.glb (took 0.006s)
+2025-11-14 19:35:27.879 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added mesh_277b0b67-c2ab-4ede-b288-592180847eb3.ply (took 0.082s)
+2025-11-14 19:35:27.880 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added preview_277b0b67-c2ab-4ede-b288-592180847eb3.mp4 (took 0.001s)
+2025-11-14 19:35:27.880 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added frame_277b0b67-c2ab-4ede-b288-592180847eb3.jpg (took 0.000s)
+2025-11-14 19:35:27.880 | INFO     | api_stream:trellis_run:261 - [TRELLIS] ZIP creation time: 0.090s
+2025-11-14 19:35:27.881 | INFO     | api_stream:trellis_run:268 - [TRELLIS] ZIP contains: ['mesh_277b0b67-c2ab-4ede-b288-592180847eb3.glb', 'mesh_277b0b67-c2ab-4ede-b288-592180847eb3.ply', 'preview_277b0b67-c2ab-4ede-b288-592180847eb3.mp4', 'frame_277b0b67-c2ab-4ede-b288-592180847eb3.jpg']
+2025-11-14 19:35:27.881 | INFO     | api_stream:trellis_run:270 - [TRELLIS] ZIP validation took 0.000s
+2025-11-14 19:35:27.881 | INFO     | api_stream:trellis_run:273 - [TRELLIS] --- FINISHED REQUEST in 41.233s ---
+2025-11-14 19:35:27.884 | INFO     | api_stream:trellis_run:290 - [TRELLIS] Cleanup finished in 0.003s

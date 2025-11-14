@@ -77,14 +77,19 @@ pipe_rmbg_model = None
 pipe_rmbg_processor = None
 rmbg_device = "cuda" if torch.cuda.is_available() else "cpu"
         
-def _remove_bg_bria(image: Image.Image) -> Image.Image:
+def _remove_bg(image: Image.Image) -> Image.Image:
     """Remove o fundo de uma imagem PIL usando a lib rembg."""
             
     if image.mode == 'RGBA':
         image = image.convert("RGB")
 
-    try:                
-        final_image = remove(image)
+    try:
+        
+        final_image = remove(
+            image,
+            alpha_matting=True,
+            alpha_matting_erode_size=5
+        )
         return final_image
 
     except Exception as e:
@@ -180,7 +185,7 @@ async def trellis_run(files: List[UploadFile] = File(...)):
             logger.info(f"[TRELLIS] Loaded image {uf.filename} in {time.time()-t_file:.3f}s")
 
             t_bg = time.time()
-            img_no_bg = _remove_bg_bria(img)            
+            img_no_bg = _remove_bg(img)            
             logger.info(f"[TRELLIS] Removed BG in {time.time()-t_bg:.3f}s")
 
             views.append(img_no_bg)
