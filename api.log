@@ -4626,3 +4626,392 @@ Please pass the argument `trust_remote_code=True` to allow custom code to be run
 2025-11-13 12:16:21.045 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_861cab4b-af5d-4962-9158-bba265380968.jpg to ZIP
 2025-11-13 12:16:21.046 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_861cab4b-af5d-4962-9158-bba265380968.glb', 'mesh_861cab4b-af5d-4962-9158-bba265380968.ply', 'preview_861cab4b-af5d-4962-9158-bba265380968.mp4', 'frame_861cab4b-af5d-4962-9158-bba265380968.jpg']
 2025-11-13 12:16:21.046 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 14:20:00.231 | INFO     | api_stream:load_pipe_flux_t2i:349 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-13 14:20:08.632 | INFO     | api_stream:load_pipe_flux_t2i:358 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-13 14:20:08.632 | INFO     | api_stream:load_pipe_flux_t2i:361 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-13 14:20:08.802 | ERROR    | api_stream:load_pipe_flux_t2i:369 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-13 14:20:08.802 | INFO     | api_stream:load_pipe_flux_t2i:373 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-13 14:20:09.511 | INFO     | api_stream:load_pipe_flux_t2i:381 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-13 14:20:34.125 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-13 14:20:34.125 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-13 14:20:34.125 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-11-13 14:21:02.263 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-11-13 14:21:04.829 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-13 14:23:52.229 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'two floors house catching on fire': flux (defaulted or chosen)
+2025-11-13 14:23:53.783 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 14:23:53.784 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, house, two floors, catching on fire, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 14:23:58.984 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 14:23:58.994 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 5.21s
+2025-11-13 14:24:28.268 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'flooded 3 floors house': flux (defaulted or chosen)
+2025-11-13 14:24:29.820 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 14:24:29.820 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, house, flooded, 3 floors, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 14:24:34.715 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 14:24:34.719 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.90s
+2025-11-13 14:24:43.243 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 1 views (BG removed) received for processing (API)
+2025-11-13 14:25:07.530 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_76fc8da3-b7cb-4c25-afa1-724e96b49357_rpv7u4ps/mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.glb and /tmp/trellis_76fc8da3-b7cb-4c25-afa1-724e96b49357_rpv7u4ps/mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.ply
+2025-11-13 14:25:31.295 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 14:25:31.300 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_76fc8da3-b7cb-4c25-afa1-724e96b49357_rpv7u4ps/frame_76fc8da3-b7cb-4c25-afa1-724e96b49357.jpg
+2025-11-13 14:25:31.300 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 14:25:31.300 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 14:25:31.302 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.glb to ZIP
+2025-11-13 14:25:31.577 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.ply to ZIP
+2025-11-13 14:25:31.578 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_76fc8da3-b7cb-4c25-afa1-724e96b49357.mp4 to ZIP
+2025-11-13 14:25:31.578 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_76fc8da3-b7cb-4c25-afa1-724e96b49357.jpg to ZIP
+2025-11-13 14:25:31.579 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.glb', 'mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.ply', 'preview_76fc8da3-b7cb-4c25-afa1-724e96b49357.mp4', 'frame_76fc8da3-b7cb-4c25-afa1-724e96b49357.jpg']
+2025-11-13 14:25:31.579 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 15:26:59.940 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed -1 and 10 steps
+2025-11-13 15:26:59.941 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, house, flooded, 3 floors, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 15:27:04.916 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 15:27:04.921 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.98s
+2025-11-13 15:27:17.482 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'house cracked in half': flux (defaulted or chosen)
+2025-11-13 15:27:19.088 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 15:27:19.088 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, house, cracked in half, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 15:27:23.982 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 15:27:23.985 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.90s
+2025-11-13 15:28:47.059 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed -1 and 10 steps
+2025-11-13 15:28:47.060 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, house, cracked in half, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 15:28:51.959 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 15:28:51.964 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.90s
+2025-11-13 15:29:03.324 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed -1 and 10 steps
+2025-11-13 15:29:03.325 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, house, cracked in half, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 15:29:08.245 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 15:29:08.249 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.92s
+2025-11-13 15:29:19.016 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'gas station': flux (defaulted or chosen)
+2025-11-13 15:29:20.474 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 15:29:20.475 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, gas station, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 15:29:25.375 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 15:29:25.378 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.90s
+2025-11-13 15:29:57.626 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'gas station catching fire': flux (defaulted or chosen)
+2025-11-13 15:29:59.179 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 15:29:59.179 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, gas station, catching fire, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 15:30:04.075 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 15:30:04.078 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.90s
+2025-11-13 15:30:20.603 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'dog knight': sd
+2025-11-13 15:30:22.077 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 15:30:22.077 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, knight, full body, game asset
+2025-11-13 15:30:33.956 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 15:30:33.956 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 15:30:33.967 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.89s
+2025-11-13 15:40:20.032 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'cat knight': sd
+2025-11-13 15:40:35.711 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 15:40:35.712 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, cat, knight, full body, game asset
+2025-11-13 15:40:47.522 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 15:40:47.523 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 15:40:47.533 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.82s
+2025-11-13 15:54:18.175 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'river between trees': flux (defaulted or chosen)
+2025-11-13 15:54:19.689 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 15:54:19.689 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, river, between trees, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 15:54:24.589 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 15:54:24.594 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.91s
+2025-11-13 15:54:31.238 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 1 views (BG removed) received for processing (API)
+2025-11-13 15:54:42.183 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_253e756c-bfe7-445f-b1fd-558e60cf8cb8_z0kj6t8d/mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.glb and /tmp/trellis_253e756c-bfe7-445f-b1fd-558e60cf8cb8_z0kj6t8d/mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.ply
+2025-11-13 15:55:12.084 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 15:55:12.089 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_253e756c-bfe7-445f-b1fd-558e60cf8cb8_z0kj6t8d/frame_253e756c-bfe7-445f-b1fd-558e60cf8cb8.jpg
+2025-11-13 15:55:12.089 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 15:55:12.089 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 15:55:12.093 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.glb to ZIP
+2025-11-13 15:55:12.284 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.ply to ZIP
+2025-11-13 15:55:12.288 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_253e756c-bfe7-445f-b1fd-558e60cf8cb8.mp4 to ZIP
+2025-11-13 15:55:12.288 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_253e756c-bfe7-445f-b1fd-558e60cf8cb8.jpg to ZIP
+2025-11-13 15:55:12.289 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.glb', 'mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.ply', 'preview_253e756c-bfe7-445f-b1fd-558e60cf8cb8.mp4', 'frame_253e756c-bfe7-445f-b1fd-558e60cf8cb8.jpg']
+2025-11-13 15:55:12.289 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 17:52:57.877 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'cute dog': sd
+2025-11-13 17:53:02.136 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 17:53:02.136 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, cute, full body, game asset
+2025-11-13 17:53:14.003 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 17:53:14.004 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 17:53:14.015 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.88s
+2025-11-13 17:53:51.192 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 6 views (BG removed) received for processing (API)
+2025-11-13 17:54:02.054 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_fa482743-968f-4a2d-b041-89c7e3df88bb_gw5xhi26/mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.glb and /tmp/trellis_fa482743-968f-4a2d-b041-89c7e3df88bb_gw5xhi26/mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.ply
+2025-11-13 17:54:35.097 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 17:54:35.100 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_fa482743-968f-4a2d-b041-89c7e3df88bb_gw5xhi26/frame_fa482743-968f-4a2d-b041-89c7e3df88bb.jpg
+2025-11-13 17:54:35.100 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 17:54:35.100 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 17:54:35.103 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.glb to ZIP
+2025-11-13 17:54:35.370 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.ply to ZIP
+2025-11-13 17:54:35.371 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_fa482743-968f-4a2d-b041-89c7e3df88bb.mp4 to ZIP
+2025-11-13 17:54:35.372 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_fa482743-968f-4a2d-b041-89c7e3df88bb.jpg to ZIP
+2025-11-13 17:54:35.372 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.glb', 'mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.ply', 'preview_fa482743-968f-4a2d-b041-89c7e3df88bb.mp4', 'frame_fa482743-968f-4a2d-b041-89c7e3df88bb.jpg']
+2025-11-13 17:54:35.372 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 17:57:00.361 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'gas station': flux (defaulted or chosen)
+2025-11-13 17:57:01.867 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 17:57:01.867 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, gas station, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 17:57:06.806 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 17:57:06.809 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.94s
+2025-11-13 17:58:18.728 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 10 steps (API)
+2025-11-13 17:58:18.729 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, gas station, full view, modern design, well-lit, clear signage, on fire, game asset
+2025-11-13 17:58:23.390 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 10 steps - 6 views (API)
+2025-11-13 17:58:23.391 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 17:58:23.405 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 4.68s
+2025-11-13 17:58:46.842 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'gas station': flux (defaulted or chosen)
+2025-11-13 17:58:48.412 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 17:58:48.413 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, gas station, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 17:58:53.312 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 17:58:53.315 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.90s
+2025-11-13 19:21:54.330 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'green bike': sd
+2025-11-13 19:21:55.815 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 19:21:55.815 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, bike, green, full view, game asset
+2025-11-13 19:22:07.618 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 19:22:07.619 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 19:22:07.630 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.81s
+2025-11-13 19:22:33.320 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 6 views (BG removed) received for processing (API)
+2025-11-13 19:22:43.922 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_37027340-2ac8-456f-950a-78ada4a07dea_y5vvc656/mesh_37027340-2ac8-456f-950a-78ada4a07dea.glb and /tmp/trellis_37027340-2ac8-456f-950a-78ada4a07dea_y5vvc656/mesh_37027340-2ac8-456f-950a-78ada4a07dea.ply
+2025-11-13 19:23:01.545 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 19:23:01.550 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_37027340-2ac8-456f-950a-78ada4a07dea_y5vvc656/frame_37027340-2ac8-456f-950a-78ada4a07dea.jpg
+2025-11-13 19:23:01.550 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 19:23:01.550 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 19:23:01.555 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_37027340-2ac8-456f-950a-78ada4a07dea.glb to ZIP
+2025-11-13 19:23:01.688 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_37027340-2ac8-456f-950a-78ada4a07dea.ply to ZIP
+2025-11-13 19:23:01.689 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_37027340-2ac8-456f-950a-78ada4a07dea.mp4 to ZIP
+2025-11-13 19:23:01.690 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_37027340-2ac8-456f-950a-78ada4a07dea.jpg to ZIP
+2025-11-13 19:23:01.690 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_37027340-2ac8-456f-950a-78ada4a07dea.glb', 'mesh_37027340-2ac8-456f-950a-78ada4a07dea.ply', 'preview_37027340-2ac8-456f-950a-78ada4a07dea.mp4', 'frame_37027340-2ac8-456f-950a-78ada4a07dea.jpg']
+2025-11-13 19:23:01.690 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 19:44:43.842 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'river between trees': flux (defaulted or chosen)
+2025-11-13 19:45:06.152 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 19:45:06.152 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, river, between trees, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 19:45:11.136 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 19:45:11.143 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.99s
+2025-11-13 19:45:17.708 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 1 views (BG removed) received for processing (API)
+2025-11-13 19:45:27.491 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_5406073f-5c42-4e9a-b03d-f136dbd14931_eixh88th/mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.glb and /tmp/trellis_5406073f-5c42-4e9a-b03d-f136dbd14931_eixh88th/mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.ply
+2025-11-13 19:45:56.986 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 19:45:56.992 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_5406073f-5c42-4e9a-b03d-f136dbd14931_eixh88th/frame_5406073f-5c42-4e9a-b03d-f136dbd14931.jpg
+2025-11-13 19:45:56.992 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 19:45:56.992 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 19:45:56.999 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.glb to ZIP
+2025-11-13 19:45:57.095 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.ply to ZIP
+2025-11-13 19:45:57.098 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_5406073f-5c42-4e9a-b03d-f136dbd14931.mp4 to ZIP
+2025-11-13 19:45:57.099 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_5406073f-5c42-4e9a-b03d-f136dbd14931.jpg to ZIP
+2025-11-13 19:45:57.099 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.glb', 'mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.ply', 'preview_5406073f-5c42-4e9a-b03d-f136dbd14931.mp4', 'frame_5406073f-5c42-4e9a-b03d-f136dbd14931.jpg']
+2025-11-13 19:45:57.099 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 19:55:02.967 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'river between trees': flux (defaulted or chosen)
+2025-11-13 19:55:04.556 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-13 19:55:04.556 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, river, between trees, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-13 19:55:09.502 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-13 19:55:09.507 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.95s
+2025-11-13 19:55:19.842 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 1 views (BG removed) received for processing (API)
+2025-11-13 19:55:29.529 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_d29b21b9-c167-41f5-92a5-f6ab26d4e72d_s4bkuts1/mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.glb and /tmp/trellis_d29b21b9-c167-41f5-92a5-f6ab26d4e72d_s4bkuts1/mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.ply
+2025-11-13 19:56:03.502 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 19:56:03.507 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_d29b21b9-c167-41f5-92a5-f6ab26d4e72d_s4bkuts1/frame_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.jpg
+2025-11-13 19:56:03.507 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 19:56:03.507 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 19:56:03.513 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.glb to ZIP
+2025-11-13 19:56:03.590 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.ply to ZIP
+2025-11-13 19:56:03.592 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.mp4 to ZIP
+2025-11-13 19:56:03.593 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.jpg to ZIP
+2025-11-13 19:56:03.593 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.glb', 'mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.ply', 'preview_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.mp4', 'frame_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.jpg']
+2025-11-13 19:56:03.593 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 19:56:52.767 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'dog knight': sd
+2025-11-13 19:56:54.308 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 19:56:54.309 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, knight, full body, game asset
+2025-11-13 19:57:06.175 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 19:57:06.176 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 19:57:06.186 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.88s
+2025-11-13 19:57:18.843 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 6 views (BG removed) received for processing (API)
+2025-11-13 19:57:29.041 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_cc212b96-1e1f-4073-8fcf-90b5567eb98b_1fy12flp/mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.glb and /tmp/trellis_cc212b96-1e1f-4073-8fcf-90b5567eb98b_1fy12flp/mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.ply
+2025-11-13 19:57:53.318 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 19:57:53.323 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_cc212b96-1e1f-4073-8fcf-90b5567eb98b_1fy12flp/frame_cc212b96-1e1f-4073-8fcf-90b5567eb98b.jpg
+2025-11-13 19:57:53.323 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 19:57:53.324 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 19:57:53.327 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.glb to ZIP
+2025-11-13 19:57:53.396 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.ply to ZIP
+2025-11-13 19:57:53.397 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_cc212b96-1e1f-4073-8fcf-90b5567eb98b.mp4 to ZIP
+2025-11-13 19:57:53.397 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_cc212b96-1e1f-4073-8fcf-90b5567eb98b.jpg to ZIP
+2025-11-13 19:57:53.398 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.glb', 'mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.ply', 'preview_cc212b96-1e1f-4073-8fcf-90b5567eb98b.mp4', 'frame_cc212b96-1e1f-4073-8fcf-90b5567eb98b.jpg']
+2025-11-13 19:57:53.398 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-13 19:59:19.889 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'dog knight': sd
+2025-11-13 19:59:21.425 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-13 19:59:21.426 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, knight, full body, game asset
+2025-11-13 19:59:33.300 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-13 19:59:33.301 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-13 19:59:33.311 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.89s
+2025-11-13 19:59:54.944 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 6 views (BG removed) received for processing (API)
+2025-11-13 20:00:04.631 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_0983b189-a8f4-4165-9e56-0f97949f1589_c40j46bn/mesh_0983b189-a8f4-4165-9e56-0f97949f1589.glb and /tmp/trellis_0983b189-a8f4-4165-9e56-0f97949f1589_c40j46bn/mesh_0983b189-a8f4-4165-9e56-0f97949f1589.ply
+2025-11-13 20:00:26.322 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-13 20:00:26.326 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_0983b189-a8f4-4165-9e56-0f97949f1589_c40j46bn/frame_0983b189-a8f4-4165-9e56-0f97949f1589.jpg
+2025-11-13 20:00:26.327 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-13 20:00:26.327 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-13 20:00:26.330 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_0983b189-a8f4-4165-9e56-0f97949f1589.glb to ZIP
+2025-11-13 20:00:26.398 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_0983b189-a8f4-4165-9e56-0f97949f1589.ply to ZIP
+2025-11-13 20:00:26.399 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_0983b189-a8f4-4165-9e56-0f97949f1589.mp4 to ZIP
+2025-11-13 20:00:26.399 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_0983b189-a8f4-4165-9e56-0f97949f1589.jpg to ZIP
+2025-11-13 20:00:26.399 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_0983b189-a8f4-4165-9e56-0f97949f1589.glb', 'mesh_0983b189-a8f4-4165-9e56-0f97949f1589.ply', 'preview_0983b189-a8f4-4165-9e56-0f97949f1589.mp4', 'frame_0983b189-a8f4-4165-9e56-0f97949f1589.jpg']
+2025-11-13 20:00:26.400 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-14 11:48:33.679 | INFO     | api_stream:load_pipe_flux_t2i:349 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-14 11:48:42.102 | INFO     | api_stream:load_pipe_flux_t2i:358 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-14 11:48:42.102 | INFO     | api_stream:load_pipe_flux_t2i:361 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-14 11:48:42.172 | ERROR    | api_stream:load_pipe_flux_t2i:369 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-14 11:48:42.172 | INFO     | api_stream:load_pipe_flux_t2i:373 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-14 11:48:42.835 | INFO     | api_stream:load_pipe_flux_t2i:381 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-14 11:49:08.516 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-14 11:49:08.516 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-14 11:49:08.516 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-11-14 11:49:36.453 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-11-14 11:49:36.853 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-14 11:52:24.744 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'dog knight': sd
+2025-11-14 11:52:26.441 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 11:52:26.441 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, dog, knight, full body, game asset
+2025-11-14 11:52:38.710 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 11:52:38.711 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 11:52:38.726 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 12.29s
+2025-11-14 11:52:55.254 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'river between trees': flux (defaulted or chosen)
+2025-11-14 11:53:32.824 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-14 11:53:32.824 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, river, between trees, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-14 11:53:37.833 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-14 11:53:37.838 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 5.01s
+2025-11-14 11:53:56.108 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 1 views (BG removed) received for processing (API)
+2025-11-14 11:54:15.823 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_99ef51f8-9c04-41e9-bf3a-7b27085d09c5_g1uylwed/mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.glb and /tmp/trellis_99ef51f8-9c04-41e9-bf3a-7b27085d09c5_g1uylwed/mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.ply
+2025-11-14 11:54:48.423 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-14 11:54:48.429 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_99ef51f8-9c04-41e9-bf3a-7b27085d09c5_g1uylwed/frame_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.jpg
+2025-11-14 11:54:48.429 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-14 11:54:48.429 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-14 11:54:48.434 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.glb to ZIP
+2025-11-14 11:54:48.575 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.ply to ZIP
+2025-11-14 11:54:48.578 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.mp4 to ZIP
+2025-11-14 11:54:48.578 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.jpg to ZIP
+2025-11-14 11:54:48.579 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.glb', 'mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.ply', 'preview_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.mp4', 'frame_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.jpg']
+2025-11-14 11:54:48.579 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-14 12:04:49.673 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'river between trees': flux (defaulted or chosen)
+2025-11-14 12:04:51.235 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-14 12:04:51.236 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, river, between trees, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-14 12:04:56.159 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-14 12:04:56.164 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.93s
+2025-11-14 12:04:56.640 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'river between trees': flux (defaulted or chosen)
+2025-11-14 12:04:58.161 | INFO     | api_stream:t2i_generate_flux:412 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-14 12:04:58.161 | INFO     | api_stream:t2i_generate_flux:414 - [FLUX-T2I] Enhanced Prompt: wbgmsst, river, between trees, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-14 12:05:03.059 | INFO     | api_stream:t2i_generate_flux:429 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-14 12:05:03.064 | INFO     | api_stream:t2i_generate_flux:436 - [FLUX-T2I] Total time (with encoding): 4.90s
+2025-11-14 12:05:08.389 | INFO     | api_stream:trellis_run:178 - [TRELLIS] 1 views (BG removed) received for processing (API)
+2025-11-14 12:05:18.663 | INFO     | api_stream:trellis_run:196 - [TRELLIS] Saving mesh files to /tmp/trellis_99f8b386-0ded-4e2a-aeb1-3df543e7bc13_jbttm3yb/mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.glb and /tmp/trellis_99f8b386-0ded-4e2a-aeb1-3df543e7bc13_jbttm3yb/mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.ply
+2025-11-14 12:05:48.816 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Mesh files saved successfully
+2025-11-14 12:05:48.821 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Frame saved to /tmp/trellis_99f8b386-0ded-4e2a-aeb1-3df543e7bc13_jbttm3yb/frame_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.jpg
+2025-11-14 12:05:48.821 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Mesh and video saved to tmp (API)
+2025-11-14 12:05:48.822 | INFO     | api_stream:trellis_run:215 - [TRELLIS] Checking files - GLB exists: True, PLY exists: True, MP4 exists: True, Frame exists: True
+2025-11-14 12:05:48.825 | INFO     | api_stream:trellis_run:222 - [TRELLIS] Added mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.glb to ZIP
+2025-11-14 12:05:49.065 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Added mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.ply to ZIP
+2025-11-14 12:05:49.068 | INFO     | api_stream:trellis_run:234 - [TRELLIS] Added preview_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.mp4 to ZIP
+2025-11-14 12:05:49.068 | INFO     | api_stream:trellis_run:240 - [TRELLIS] Added frame_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.jpg to ZIP
+2025-11-14 12:05:49.069 | INFO     | api_stream:trellis_run:248 - [TRELLIS] ZIP contents: ['mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.glb', 'mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.ply', 'preview_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.mp4', 'frame_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.jpg']
+2025-11-14 12:05:49.069 | INFO     | api_stream:trellis_run:251 - [TRELLIS] Created zip buffer for streaming.
+2025-11-14 12:14:07.220 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-14 12:14:15.886 | INFO     | api_stream:load_pipe_flux_t2i:417 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-14 12:14:15.886 | INFO     | api_stream:load_pipe_flux_t2i:420 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-14 12:14:15.962 | ERROR    | api_stream:load_pipe_flux_t2i:428 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-14 12:14:15.962 | INFO     | api_stream:load_pipe_flux_t2i:432 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-14 12:14:16.624 | INFO     | api_stream:load_pipe_flux_t2i:440 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-14 12:14:41.315 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-14 12:14:41.315 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-14 12:14:41.315 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-11-14 12:15:13.832 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-11-14 12:15:16.393 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-14 12:16:52.989 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'river between trees': flux (defaulted or chosen)
+2025-11-14 12:16:54.581 | INFO     | api_stream:t2i_generate_flux:471 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-14 12:16:54.581 | INFO     | api_stream:t2i_generate_flux:473 - [FLUX-T2I] Enhanced Prompt: wbgmsst, river, between trees, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-14 12:16:59.783 | INFO     | api_stream:t2i_generate_flux:488 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-14 12:16:59.791 | INFO     | api_stream:t2i_generate_flux:495 - [FLUX-T2I] Total time (with encoding): 5.21s
+2025-11-14 12:17:10.953 | INFO     | api_stream:trellis_run:169 - [TRELLIS] --- START REQUEST ---
+2025-11-14 12:17:10.953 | INFO     | api_stream:trellis_run:178 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 12:17:10.954 | INFO     | api_stream:trellis_run:183 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 12:17:12.475 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Removed BG in 1.521s
+2025-11-14 12:17:12.475 | INFO     | api_stream:trellis_run:191 - [TRELLIS] Input preprocessing finished in 1.522s
+2025-11-14 12:17:12.475 | INFO     | api_stream:trellis_run:192 - [TRELLIS] Total views: 1
+2025-11-14 12:17:12.475 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 12:17:24.575 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Trellis pipeline duration: 12.099s
+2025-11-14 12:17:24.576 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 12:17:24.576 | INFO     | api_stream:trellis_run:229 - [TRELLIS] Starting save_video...
+2025-11-14 12:17:31.123 | INFO     | api_stream:trellis_run:231 - [TRELLIS] save_video completed in 6.546s
+2025-11-14 12:17:31.123 | INFO     | api_stream:trellis_run:238 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 12:18:03.386 | INFO     | api_stream:trellis_run:246 - [TRELLIS] save_mesh completed in 32.263s
+2025-11-14 12:18:03.387 | INFO     | api_stream:trellis_run:254 - [TRELLIS] Saving middle frame...
+2025-11-14 12:18:03.392 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Frame saved in 0.005s
+2025-11-14 12:18:03.392 | INFO     | api_stream:trellis_run:266 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 12:18:03.394 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.glb (took 0.002s)
+2025-11-14 12:18:03.583 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.ply (took 0.189s)
+2025-11-14 12:18:03.585 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added preview_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.mp4 (took 0.002s)
+2025-11-14 12:18:03.586 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added frame_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.jpg (took 0.000s)
+2025-11-14 12:18:03.586 | INFO     | api_stream:trellis_run:283 - [TRELLIS] ZIP creation time: 0.194s
+2025-11-14 12:18:03.586 | INFO     | api_stream:trellis_run:294 - [TRELLIS] ZIP contains: ['mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.glb', 'mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.ply', 'preview_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.mp4', 'frame_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.jpg']
+2025-11-14 12:18:03.587 | INFO     | api_stream:trellis_run:296 - [TRELLIS] ZIP validation took 0.001s
+2025-11-14 12:18:03.587 | INFO     | api_stream:trellis_run:303 - [TRELLIS] --- FINISHED REQUEST in 52.634s ---
+2025-11-14 12:18:03.593 | INFO     | api_stream:trellis_run:323 - [TRELLIS] Cleanup finished in 0.006s
+2025-11-14 14:16:35.002 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-14 14:16:43.712 | INFO     | api_stream:load_pipe_flux_t2i:417 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-14 14:16:43.712 | INFO     | api_stream:load_pipe_flux_t2i:420 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-14 14:16:43.779 | ERROR    | api_stream:load_pipe_flux_t2i:428 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-14 14:16:43.780 | INFO     | api_stream:load_pipe_flux_t2i:432 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-14 14:16:44.434 | INFO     | api_stream:load_pipe_flux_t2i:440 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-14 14:17:09.247 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-14 14:17:09.248 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-14 14:17:09.248 | INFO     | api_stream:load_pipe_trellis:156 - [TRELLIS] Pipeline loaded (API)
+2025-11-14 14:17:39.466 | INFO     | api_stream:load_pipe_trellis:159 - [TRELLIS] Pipeline prepared (API)
+2025-11-14 14:17:42.138 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-14 14:21:02.279 | INFO     | ollama:choose_generation_model:328 - [OLLAMA] Model choice for 'river between trees': flux (defaulted or chosen)
+2025-11-14 14:21:03.864 | INFO     | api_stream:t2i_generate_flux:471 - [FLUX-T2I] Generating image with seed 42 and 10 steps
+2025-11-14 14:21:03.864 | INFO     | api_stream:t2i_generate_flux:473 - [FLUX-T2I] Enhanced Prompt: wbgmsst, river, between trees, full view, white background, no text, no words, no letters, isometric view, 3d render, game asset
+2025-11-14 14:21:09.063 | INFO     | api_stream:t2i_generate_flux:488 - [FLUX-T2I] Image generated, encoding to base64...
+2025-11-14 14:21:09.077 | INFO     | api_stream:t2i_generate_flux:495 - [FLUX-T2I] Total time (with encoding): 5.21s
+2025-11-14 14:23:47.567 | INFO     | api_stream:trellis_run:169 - [TRELLIS] --- START REQUEST ---
+2025-11-14 14:23:47.568 | INFO     | api_stream:trellis_run:178 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 14:23:47.568 | INFO     | api_stream:trellis_run:183 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 14:23:49.382 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Removed BG in 1.814s
+2025-11-14 14:23:49.382 | INFO     | api_stream:trellis_run:191 - [TRELLIS] Input preprocessing finished in 1.814s
+2025-11-14 14:23:49.382 | INFO     | api_stream:trellis_run:192 - [TRELLIS] Total views: 1
+2025-11-14 14:23:49.382 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 14:24:04.986 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Trellis pipeline duration: 15.604s
+2025-11-14 14:24:04.987 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Output directory prepared in 0.001s
+2025-11-14 14:24:04.988 | INFO     | api_stream:trellis_run:229 - [TRELLIS] Starting save_video...
+2025-11-14 14:24:12.263 | INFO     | api_stream:trellis_run:231 - [TRELLIS] save_video completed in 7.276s
+2025-11-14 14:24:12.264 | INFO     | api_stream:trellis_run:238 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 14:27:12.616 | INFO     | api_stream:trellis_run:246 - [TRELLIS] save_mesh completed in 180.352s
+2025-11-14 14:27:12.617 | INFO     | api_stream:trellis_run:254 - [TRELLIS] Saving middle frame...
+2025-11-14 14:27:12.621 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Frame saved in 0.004s
+2025-11-14 14:27:12.621 | INFO     | api_stream:trellis_run:266 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 14:27:12.633 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.glb (took 0.012s)
+2025-11-14 14:27:12.781 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.ply (took 0.148s)
+2025-11-14 14:27:12.785 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added preview_7877a05a-1eea-4693-aecd-e9a86eb7ca53.mp4 (took 0.003s)
+2025-11-14 14:27:12.785 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added frame_7877a05a-1eea-4693-aecd-e9a86eb7ca53.jpg (took 0.000s)
+2025-11-14 14:27:12.785 | INFO     | api_stream:trellis_run:283 - [TRELLIS] ZIP creation time: 0.164s
+2025-11-14 14:27:12.786 | INFO     | api_stream:trellis_run:294 - [TRELLIS] ZIP contains: ['mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.glb', 'mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.ply', 'preview_7877a05a-1eea-4693-aecd-e9a86eb7ca53.mp4', 'frame_7877a05a-1eea-4693-aecd-e9a86eb7ca53.jpg']
+2025-11-14 14:27:12.786 | INFO     | api_stream:trellis_run:296 - [TRELLIS] ZIP validation took 0.001s
+2025-11-14 14:27:12.786 | INFO     | api_stream:trellis_run:303 - [TRELLIS] --- FINISHED REQUEST in 205.219s ---
+2025-11-14 14:27:12.794 | INFO     | api_stream:trellis_run:323 - [TRELLIS] Cleanup finished in 0.007s
+2025-11-14 14:28:31.936 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'simple low poly cat': sd
+2025-11-14 14:28:33.530 | INFO     | api_stream:t2mv_generate:114 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-14 14:28:33.531 | INFO     | api_stream:t2mv_generate:115 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, cat, simple, low poly, full body, game asset
+2025-11-14 14:28:45.412 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-14 14:28:45.413 | INFO     | api_stream:t2mv_generate:134 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-14 14:28:45.423 | INFO     | api_stream:t2mv_generate:143 - [MV-ADAPTER] Total time (with encoding): 11.89s
+2025-11-14 14:31:47.957 | INFO     | api_stream:trellis_run:169 - [TRELLIS] --- START REQUEST ---
+2025-11-14 14:31:47.958 | INFO     | api_stream:trellis_run:178 - [TRELLIS] Starting input decode + BG removal
+2025-11-14 14:31:47.958 | INFO     | api_stream:trellis_run:183 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-14 14:31:49.285 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Removed BG in 1.326s
+2025-11-14 14:31:49.285 | INFO     | api_stream:trellis_run:183 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-14 14:31:50.362 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Removed BG in 1.077s
+2025-11-14 14:31:50.363 | INFO     | api_stream:trellis_run:183 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-14 14:31:51.337 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Removed BG in 0.974s
+2025-11-14 14:31:51.338 | INFO     | api_stream:trellis_run:183 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-14 14:31:52.467 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Removed BG in 1.129s
+2025-11-14 14:31:52.468 | INFO     | api_stream:trellis_run:183 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-14 14:31:53.547 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Removed BG in 1.079s
+2025-11-14 14:31:53.548 | INFO     | api_stream:trellis_run:183 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-14 14:31:54.654 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Removed BG in 1.106s
+2025-11-14 14:31:54.654 | INFO     | api_stream:trellis_run:191 - [TRELLIS] Input preprocessing finished in 6.696s
+2025-11-14 14:31:54.654 | INFO     | api_stream:trellis_run:192 - [TRELLIS] Total views: 6
+2025-11-14 14:31:54.654 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Running Trellis pipeline...
+2025-11-14 14:32:00.841 | INFO     | api_stream:trellis_run:201 - [TRELLIS] Trellis pipeline duration: 6.187s
+2025-11-14 14:32:00.842 | INFO     | api_stream:trellis_run:210 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-14 14:32:00.842 | INFO     | api_stream:trellis_run:229 - [TRELLIS] Starting save_video...
+2025-11-14 14:32:06.532 | INFO     | api_stream:trellis_run:231 - [TRELLIS] save_video completed in 5.689s
+2025-11-14 14:32:06.533 | INFO     | api_stream:trellis_run:238 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-14 14:32:30.547 | INFO     | api_stream:trellis_run:246 - [TRELLIS] save_mesh completed in 24.014s
+2025-11-14 14:32:30.547 | INFO     | api_stream:trellis_run:254 - [TRELLIS] Saving middle frame...
+2025-11-14 14:32:30.550 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Frame saved in 0.003s
+2025-11-14 14:32:30.551 | INFO     | api_stream:trellis_run:266 - [TRELLIS] Creating ZIP buffer...
+2025-11-14 14:32:30.555 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.glb (took 0.004s)
+2025-11-14 14:32:30.700 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.ply (took 0.145s)
+2025-11-14 14:32:30.701 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added preview_afee9d34-aaed-4bd7-b576-9a52865ba97e.mp4 (took 0.001s)
+2025-11-14 14:32:30.701 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Added frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg (took 0.000s)
+2025-11-14 14:32:30.701 | INFO     | api_stream:trellis_run:283 - [TRELLIS] ZIP creation time: 0.151s
+2025-11-14 14:32:30.701 | INFO     | api_stream:trellis_run:294 - [TRELLIS] ZIP contains: ['mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.glb', 'mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.ply', 'preview_afee9d34-aaed-4bd7-b576-9a52865ba97e.mp4', 'frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg']
+2025-11-14 14:32:30.702 | INFO     | api_stream:trellis_run:296 - [TRELLIS] ZIP validation took 0.000s
+2025-11-14 14:32:30.702 | INFO     | api_stream:trellis_run:303 - [TRELLIS] --- FINISHED REQUEST in 42.744s ---
+2025-11-14 14:32:30.707 | INFO     | api_stream:trellis_run:323 - [TRELLIS] Cleanup finished in 0.005s

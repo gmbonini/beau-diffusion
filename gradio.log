@@ -385,3 +385,849 @@
 2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_861cab4b-af5d-4962-9158-bba265380968.jpg']
 2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_5t9jmffn/frame_861cab4b-af5d-4962-9158-bba265380968.jpg
 2025-11-13 12:16:30.134 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_5t9jmffn/mesh_861cab4b-af5d-4962-9158-bba265380968.glb, PLY=/tmp/views_5t9jmffn/mesh_861cab4b-af5d-4962-9158-bba265380968.ply, MP4=/tmp/views_5t9jmffn/preview_861cab4b-af5d-4962-9158-bba265380968.mp4
+2025-11-13 14:23:51.898 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: two floors house catching on fire
+2025-11-13 14:23:52.231 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 14:23:52.454 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 14:23:52.807 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: two floors house catching on fire
+2025-11-13 14:23:52.807 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: two floors house catching on fire (using qwen2.5:7b)
+2025-11-13 14:23:53.595 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'house, two floors, catching on fire, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 14:23:53.777 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 14:23:53.777 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 14:23:53.777 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 14:23:59.000 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 14:23:59.009 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_hyk9p5rj for feedback
+2025-11-13 14:23:59.009 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 14:23:59.434 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, two floors, catching on fire, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 14:23:59.435 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 14:23:59.435 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 14:23:59.435 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 14:24:00.804 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, two floors, catching on fire, full view, negative: bad proportions, deformed parts, floating objects, harsh shadows, unrealistic lighting, blocky textures, background distractions, duplicate elements, eval: 
+2025-11-13 14:24:00.805 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 14:24:00.805 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 14:24:27.938 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: flooded 3 floors house
+2025-11-13 14:24:28.270 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 14:24:28.497 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 14:24:28.800 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: flooded 3 floors house
+2025-11-13 14:24:28.800 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: flooded 3 floors house (using qwen2.5:7b)
+2025-11-13 14:24:29.600 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'house, flooded, 3 floors, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 14:24:29.814 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 14:24:29.814 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 14:24:29.814 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 14:24:34.724 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 14:24:34.733 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_00xw7sp_ for feedback
+2025-11-13 14:24:34.733 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 14:24:35.157 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, flooded, 3 floors, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 14:24:35.157 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 14:24:35.158 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 14:24:35.159 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 14:24:36.374 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, flooded, 3 floors, full view, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-13 14:24:36.375 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 14:24:36.375 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 14:25:48.399 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_00xw7sp_/trellis_output.zip
+2025-11-13 14:25:48.400 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_00xw7sp_
+2025-11-13 14:25:48.493 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_00xw7sp_
+2025-11-13 14:25:48.493 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_00xw7sp_: ['view_00.jpg', 'trellis_output.zip', 'mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.glb', 'mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.ply', 'preview_76fc8da3-b7cb-4c25-afa1-724e96b49357.mp4', 'frame_76fc8da3-b7cb-4c25-afa1-724e96b49357.jpg']
+2025-11-13 14:25:48.493 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.glb']
+2025-11-13 14:25:48.493 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.ply']
+2025-11-13 14:25:48.493 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_76fc8da3-b7cb-4c25-afa1-724e96b49357.mp4']
+2025-11-13 14:25:48.493 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_76fc8da3-b7cb-4c25-afa1-724e96b49357.jpg']
+2025-11-13 14:25:48.493 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_00xw7sp_/frame_76fc8da3-b7cb-4c25-afa1-724e96b49357.jpg
+2025-11-13 14:25:48.493 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_00xw7sp_/mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.glb, PLY=/tmp/flux_view_00xw7sp_/mesh_76fc8da3-b7cb-4c25-afa1-724e96b49357.ply, MP4=/tmp/flux_view_00xw7sp_/preview_76fc8da3-b7cb-4c25-afa1-724e96b49357.mp4
+2025-11-13 15:26:59.915 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 15:26:59.916 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 15:26:59.916 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 15:27:04.936 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 15:27:04.955 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_lyft4rov for feedback
+2025-11-13 15:27:04.956 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 15:27:05.379 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 15:27:05.379 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, flooded, 3 floors, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-13 15:27:05.380 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:27:05.381 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:27:08.982 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, flooded, 3 floors, negative: artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, blocky water surface, eval: 
+2025-11-13 15:27:08.982 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:27:08.983 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:27:17.148 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: house cracked in half
+2025-11-13 15:27:17.485 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 15:27:17.706 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 15:27:18.059 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: house cracked in half
+2025-11-13 15:27:18.059 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: house cracked in half (using qwen2.5:7b)
+2025-11-13 15:27:18.843 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'house, cracked in half, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 15:27:19.082 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 15:27:19.083 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 15:27:19.083 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 15:27:23.996 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 15:27:24.006 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_b_m42gje for feedback
+2025-11-13 15:27:24.006 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 15:27:24.430 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, cracked in half, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 15:27:24.430 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 15:27:24.588 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:27:24.590 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:27:25.800 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, cracked in half, full view, negative: bad proportions, deformed parts, artifacts, low detail, blurry, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-13 15:27:25.802 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:27:25.802 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:28:47.052 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 15:28:47.052 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 15:28:47.053 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 15:28:51.974 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 15:28:51.981 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_q17y4ca0 for feedback
+2025-11-13 15:28:51.982 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 15:28:58.168 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, cracked in half, full view, negative: bad proportions, deformed parts, artifacts, low detail, blurry, floating objects, unnatural shadows, poor lighting, eval: 
+2025-11-13 15:28:58.168 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 15:28:58.171 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:28:58.175 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:28:59.130 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, cracked in half, full view, negative: bad proportions, deformed parts, artifacts, low detail, blurry, floating objects, unnatural shadows, poor lighting, overcast sky, eval: 
+2025-11-13 15:28:59.130 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:28:59.130 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:29:03.317 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 15:29:03.317 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 15:29:03.317 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 15:29:08.258 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 15:29:08.272 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_dycv5eh3 for feedback
+2025-11-13 15:29:08.272 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 15:29:12.568 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 15:29:12.568 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, cracked in half, full view, negative: bad proportions, deformed parts, artifacts, low detail, blurry, floating objects, unnatural shadows, poor lighting, eval: 
+2025-11-13 15:29:12.572 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:29:12.573 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:29:13.585 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: house, cracked in half, full view, negative: bad proportions, deformed parts, artifacts, low detail, blurry, floating objects, unnatural shadows, poor lighting, inconsistent cracks, eval: 
+2025-11-13 15:29:13.585 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:29:13.585 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:29:18.690 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: gas station
+2025-11-13 15:29:19.018 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 15:29:19.247 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 15:29:19.500 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: gas station
+2025-11-13 15:29:19.501 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: gas station (using qwen2.5:7b)
+2025-11-13 15:29:20.278 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'gas station, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 15:29:20.468 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 15:29:20.468 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 15:29:20.469 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 15:29:25.387 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 15:29:25.405 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_c7237m73 for feedback
+2025-11-13 15:29:25.406 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 15:29:25.772 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 15:29:25.773 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 15:29:25.773 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:29:25.775 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:29:26.990 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, full view, negative: bad proportions, deformed parts, artifacts, low detail, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-13 15:29:26.991 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:29:26.991 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:29:57.300 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: gas station catching fire
+2025-11-13 15:29:57.629 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 15:29:57.859 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 15:29:58.212 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: gas station catching fire
+2025-11-13 15:29:58.212 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: gas station catching fire (using qwen2.5:7b)
+2025-11-13 15:29:58.972 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'gas station, catching fire, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 15:29:59.173 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 15:29:59.173 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 15:29:59.174 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 15:30:04.088 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 15:30:04.096 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_cr37k6_2 for feedback
+2025-11-13 15:30:04.096 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 15:30:04.515 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, catching fire, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 15:30:04.516 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 15:30:04.516 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:30:04.519 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:30:05.936 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, catching fire, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, incorrect lighting, cluttered background, eval: 
+2025-11-13 15:30:05.937 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:30:05.937 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:30:20.294 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: dog knight
+2025-11-13 15:30:20.607 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-13 15:30:20.800 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 15:30:21.103 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: dog knight
+2025-11-13 15:30:21.103 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: dog knight (using qwen2.5:7b)
+2025-11-13 15:30:21.888 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, knight, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-13 15:30:22.070 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 15:30:22.070 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 15:30:22.070 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 15:30:33.992 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 15:30:34.019 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_1x9smcwl for Trellis step
+2025-11-13 15:30:34.020 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 15:30:34.446 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 15:30:34.446 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 15:30:34.449 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:30:34.451 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:30:34.451 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 15:30:38.916 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 15:30:38.917 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 15:30:38.917 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-13 15:30:38.919 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:30:38.919 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:30:45.620 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, full body knight, negative: artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 15:30:45.625 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:30:45.626 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:40:17.507 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: cat knight
+2025-11-13 15:40:20.036 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-13 15:40:34.330 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 15:40:34.637 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cat knight
+2025-11-13 15:40:34.637 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cat knight (using qwen2.5:7b)
+2025-11-13 15:40:35.497 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, knight, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-13 15:40:35.703 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 15:40:35.704 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 15:40:35.704 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 15:40:47.558 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 15:40:47.617 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_3c8430gf for Trellis step
+2025-11-13 15:40:47.618 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 15:40:48.444 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 15:40:48.444 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 15:40:48.449 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:40:48.452 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:40:48.453 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 15:40:49.710 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, knight, full body, negative: artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 15:40:49.713 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:40:49.718 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:40:54.140 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': "The images match the prompt well, showing a cat in a knight's outfit from different angles. The images are consistent across the views, and there are no visible issues or artifacts.", 'negative_prompt': 'none'}
+2025-11-13 15:40:54.140 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': "The images match the prompt well, showing a cat in a knight's outfit from different angles. The images are consistent across the views, and there are no visible issues or artifacts.", 'negative_prompt': 'none'}
+2025-11-13 15:40:54.140 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a cat in a knight's outfit from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-13 15:40:54.140 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:40:54.140 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:54:15.685 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river between trees
+2025-11-13 15:54:18.179 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 15:54:18.370 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 15:54:18.673 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-13 15:54:18.673 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-13 15:54:19.452 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 15:54:19.684 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 15:54:19.684 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 15:54:19.684 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 15:54:24.610 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 15:54:24.636 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_0oyw1ize for feedback
+2025-11-13 15:54:24.636 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 15:54:25.082 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 15:54:25.082 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 15:54:25.083 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:54:25.084 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:54:26.452 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: bad proportions, artifacts, deformed parts, floating objects, unnatural shadows, poor lighting, blocky water surface, background, eval: 
+2025-11-13 15:54:26.452 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 15:54:26.453 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 15:55:23.766 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_0oyw1ize/trellis_output.zip
+2025-11-13 15:55:23.767 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_0oyw1ize
+2025-11-13 15:55:23.834 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_0oyw1ize
+2025-11-13 15:55:23.834 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_0oyw1ize: ['view_00.jpg', 'trellis_output.zip', 'mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.glb', 'mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.ply', 'preview_253e756c-bfe7-445f-b1fd-558e60cf8cb8.mp4', 'frame_253e756c-bfe7-445f-b1fd-558e60cf8cb8.jpg']
+2025-11-13 15:55:23.834 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.glb']
+2025-11-13 15:55:23.834 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.ply']
+2025-11-13 15:55:23.835 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_253e756c-bfe7-445f-b1fd-558e60cf8cb8.mp4']
+2025-11-13 15:55:23.835 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_253e756c-bfe7-445f-b1fd-558e60cf8cb8.jpg']
+2025-11-13 15:55:23.835 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_0oyw1ize/frame_253e756c-bfe7-445f-b1fd-558e60cf8cb8.jpg
+2025-11-13 15:55:23.835 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_0oyw1ize/mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.glb, PLY=/tmp/flux_view_0oyw1ize/mesh_253e756c-bfe7-445f-b1fd-558e60cf8cb8.ply, MP4=/tmp/flux_view_0oyw1ize/preview_253e756c-bfe7-445f-b1fd-558e60cf8cb8.mp4
+2025-11-13 17:52:55.409 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: cute dog
+2025-11-13 17:52:57.883 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-13 17:53:00.814 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 17:53:01.117 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cute dog
+2025-11-13 17:53:01.118 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cute dog (using qwen2.5:7b)
+2025-11-13 17:53:01.946 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-13 17:53:02.130 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 17:53:02.130 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 17:53:02.131 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 17:53:14.034 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 17:53:14.060 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_k_p3zqvd for Trellis step
+2025-11-13 17:53:14.060 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 17:53:14.481 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 17:53:14.482 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, cute, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 17:53:14.483 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 17:53:14.483 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:53:14.489 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:53:15.800 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, cute, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-13 17:53:15.804 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:53:15.805 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:53:19.990 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'the images match the prompt well. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 17:53:19.991 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'the images match the prompt well. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 17:53:19.991 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, cute, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: the images match the prompt well. The images are consistent across different angles, and there are no visible issues or artifacts.
+2025-11-13 17:53:19.991 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:53:19.991 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:54:50.395 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_k_p3zqvd/trellis_output.zip
+2025-11-13 17:54:50.396 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_k_p3zqvd
+2025-11-13 17:54:50.486 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/views_k_p3zqvd
+2025-11-13 17:54:50.486 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/views_k_p3zqvd: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.glb', 'mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.ply', 'preview_fa482743-968f-4a2d-b041-89c7e3df88bb.mp4', 'frame_fa482743-968f-4a2d-b041-89c7e3df88bb.jpg']
+2025-11-13 17:54:50.486 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.glb']
+2025-11-13 17:54:50.486 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.ply']
+2025-11-13 17:54:50.486 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_fa482743-968f-4a2d-b041-89c7e3df88bb.mp4']
+2025-11-13 17:54:50.486 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_fa482743-968f-4a2d-b041-89c7e3df88bb.jpg']
+2025-11-13 17:54:50.486 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_k_p3zqvd/frame_fa482743-968f-4a2d-b041-89c7e3df88bb.jpg
+2025-11-13 17:54:50.486 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_k_p3zqvd/mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.glb, PLY=/tmp/views_k_p3zqvd/mesh_fa482743-968f-4a2d-b041-89c7e3df88bb.ply, MP4=/tmp/views_k_p3zqvd/preview_fa482743-968f-4a2d-b041-89c7e3df88bb.mp4
+2025-11-13 17:57:00.040 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: gas station
+2025-11-13 17:57:00.364 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 17:57:00.596 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 17:57:00.900 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: gas station
+2025-11-13 17:57:00.900 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: gas station (using qwen2.5:7b)
+2025-11-13 17:57:01.678 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'gas station, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 17:57:01.862 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 17:57:01.862 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 17:57:01.862 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 17:57:06.813 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 17:57:06.820 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_g4txq_ek for feedback
+2025-11-13 17:57:06.821 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 17:57:07.241 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 17:57:07.242 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 17:57:07.242 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:57:07.244 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:57:08.407 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-13 17:57:08.407 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:57:08.407 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:58:11.150 | INFO     | ollama_chat:continue_chat_with_feedback:125 - [CHAT] User feedback: on fire
+2025-11-13 17:58:11.151 | INFO     | ollama_chat:continue_chat_with_feedback:126 - [CHAT] Messages: [{'role': 'system', 'content': 'You are a prompt engineer and image reviewer for text-to-3D/multiview generation.\n\nYou will receive:\n- an image avaliation (text),\n- the current positive prompt (refined),\n- the current negative prompt.\nAvaliation:\n- Compare the image quality to the prompts.\n- You can be critical but not too much in your evaluation. If the images have minor issues but overall look good, say so. If they have major problems, point them out clearly. Only give constructive feedback.\n- If the overall quality is good, you don\'t need to list every small issue and the negative prompt can be the same negative prompt received.\n- The bigger problems are: geometry holes, extra limbs (if the prompt doesn\'t call for it), deformed face, artifacts, lighting, shadows, background.\n- Example: if the input is "a cat", the images should look like a real cat from different angles. If the cat has extra limbs, deformed face, a extra tail, say so.\n\nBehaviors:\n- On START: return the three fields in the strict JSON format (you may lightly polish wording).\n- On FEEDBACK: YOU MUST APPLY the client\'s requests by EDITING the prompts.\n  - If the user asks to ADD or EMPHASIZE something > add concise tokens to the POSITIVE.\n  - If the user asks to REDUCE/REMOVE or MITIGATE errors/artifacts > add/adjust constraints in the NEGATIVE (and optionally remove tokens from POSITIVE if conflicting).\n  - If the user complain about something he saw, interpret it and add/remove/modify tokens accordingly on negative/positive. Example: it doesn\'t look natural > add "unnatural colors" to negative; it has too many trees > add "excessive trees" to negative; the dragon is not flying how i asked on the prompt > add "flying dragon" to positive and "grounded dragon" to negative.\n  - Never return unchanged prompts when edits were requested.\n- Never ignore the user\'s requests. Insert the changes based on the user\'s feedback and don\'t ignore the user\'s requests.\n- Specify the chacteristics in the prompts using concise, specific tokens (no vague or generic terms). For example, if it says "cat with full orange body", specify "orange body", "orange members", "orange head", "orange tail", etc. But you don\'t need to be exhaustive.\n\nPositive rules:\n- Object-first (singular), concise attributes, preserve multi-word spatial relations; comma-separated.\n- If the user wants to add something, add it to the positive prompt.\n- Use concrete, visual tokens (avoid vague phrasing).\n- Examples:\n  * "more water" > add "dominant lake", "expanded water surface"\n  * "increase detail on water surface" > add "detailed water surface"\n  * "natural look" > add "natural colors", "moderate saturation"\n  * "center the lake" > add "central lake", "lake in center"\n  * "more green" > add "lush greenery", "vibrant foliage"\n\n* "less trees" > remove objects or caracteristics if present; do NOT add to positive. Mitigate or remove in negative.\n\nNegative rules:\n- 6-8 items MAX (do not exceed); focus on artifacts/geometry/texture; comma-separated.\n-If the user wants to mitigate/reduce/remove something, add it to the negative prompt.\n- Map mitigation requests to negatives, examle.:\n  * less trees > "excessive trees", "overcrowded foliage", "duplicate trees"\n  * avoid repetitive foliage > "repetitive foliage", "tiling textures"\n  * flat water > "flat water", "blocky water surface", "unrealistic reflections"\n  * reduce saturation > "over-saturated colors"\n  * remove background > keep "background" in negative\n- ALWAYS append (even beyond the 8 cap): lighting, shadows, background.\n\n- If the user complaint about something he saw or missed on the image, interpret it and add/remove/modify tokens accordingly on negative/positive.\nAlways have certain if a caracteristic should be in positive or negative. For example:\n- "more trees" > add to positive\n- "less trees" > mitigate/remove in negative (do NOT add to positive)\n- "more detail" > add to positive\n- "reduce detail" > mitigate/remove in negative (do NOT add to positive)\n- "natural look" > add to positive\n- "avoid artifacts" > add to negative\n\nConversation rule:\n- Always include a short 1-2 sentence natural-language "message" addressing the user. On START: invite edits. On FEEDBACK: acknowledge changes and ask if more tweaks are needed. Keep it concise and friendly.\n\nSTRICT OUTPUT (JSON ONLY; no extra text):\n{\n  "avaliation": "<1-4 sentences>",\n  "refined": "<positive prompt, comma-separated>",\n  "negative": "<negative prompt, comma-separated; 6-8 items MAX + lighting, shadows, background>",\n  "message": "<1-2 short sentences to the user>"\n}'}, {'role': 'user', 'content': 'START. Use the provided avaliation and current prompts; return ONLY the strict JSON.\n\n- avaliation: \n- Current positive: gas station, full view\n- Current negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background\n'}, {'role': 'assistant', 'content': '{"avaliation": "The current prompts are good but could benefit from more details and specific attributes.", "refined": "gas station, full view, modern design, well-lit, clear signage", "negative": "blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background", "message": "I\'ve added some specific attributes to the positive prompt. Let me know if you need any further adjustments!"}'}]
+2025-11-13 17:58:11.151 | INFO     | ollama_chat:continue_chat_with_feedback:148 - [CHAT] continue_chat_with_feedback (using qwen2.5:7b)
+2025-11-13 17:58:11.151 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:58:15.189 | INFO     | ollama_chat:continue_chat_with_feedback:125 - [CHAT] User feedback: ok
+2025-11-13 17:58:15.189 | INFO     | ollama_chat:continue_chat_with_feedback:126 - [CHAT] Messages: [{'role': 'system', 'content': 'You are a prompt engineer and image reviewer for text-to-3D/multiview generation.\n\nYou will receive:\n- an image avaliation (text),\n- the current positive prompt (refined),\n- the current negative prompt.\nAvaliation:\n- Compare the image quality to the prompts.\n- You can be critical but not too much in your evaluation. If the images have minor issues but overall look good, say so. If they have major problems, point them out clearly. Only give constructive feedback.\n- If the overall quality is good, you don\'t need to list every small issue and the negative prompt can be the same negative prompt received.\n- The bigger problems are: geometry holes, extra limbs (if the prompt doesn\'t call for it), deformed face, artifacts, lighting, shadows, background.\n- Example: if the input is "a cat", the images should look like a real cat from different angles. If the cat has extra limbs, deformed face, a extra tail, say so.\n\nBehaviors:\n- On START: return the three fields in the strict JSON format (you may lightly polish wording).\n- On FEEDBACK: YOU MUST APPLY the client\'s requests by EDITING the prompts.\n  - If the user asks to ADD or EMPHASIZE something > add concise tokens to the POSITIVE.\n  - If the user asks to REDUCE/REMOVE or MITIGATE errors/artifacts > add/adjust constraints in the NEGATIVE (and optionally remove tokens from POSITIVE if conflicting).\n  - If the user complain about something he saw, interpret it and add/remove/modify tokens accordingly on negative/positive. Example: it doesn\'t look natural > add "unnatural colors" to negative; it has too many trees > add "excessive trees" to negative; the dragon is not flying how i asked on the prompt > add "flying dragon" to positive and "grounded dragon" to negative.\n  - Never return unchanged prompts when edits were requested.\n- Never ignore the user\'s requests. Insert the changes based on the user\'s feedback and don\'t ignore the user\'s requests.\n- Specify the chacteristics in the prompts using concise, specific tokens (no vague or generic terms). For example, if it says "cat with full orange body", specify "orange body", "orange members", "orange head", "orange tail", etc. But you don\'t need to be exhaustive.\n\nPositive rules:\n- Object-first (singular), concise attributes, preserve multi-word spatial relations; comma-separated.\n- If the user wants to add something, add it to the positive prompt.\n- Use concrete, visual tokens (avoid vague phrasing).\n- Examples:\n  * "more water" > add "dominant lake", "expanded water surface"\n  * "increase detail on water surface" > add "detailed water surface"\n  * "natural look" > add "natural colors", "moderate saturation"\n  * "center the lake" > add "central lake", "lake in center"\n  * "more green" > add "lush greenery", "vibrant foliage"\n\n* "less trees" > remove objects or caracteristics if present; do NOT add to positive. Mitigate or remove in negative.\n\nNegative rules:\n- 6-8 items MAX (do not exceed); focus on artifacts/geometry/texture; comma-separated.\n-If the user wants to mitigate/reduce/remove something, add it to the negative prompt.\n- Map mitigation requests to negatives, examle.:\n  * less trees > "excessive trees", "overcrowded foliage", "duplicate trees"\n  * avoid repetitive foliage > "repetitive foliage", "tiling textures"\n  * flat water > "flat water", "blocky water surface", "unrealistic reflections"\n  * reduce saturation > "over-saturated colors"\n  * remove background > keep "background" in negative\n- ALWAYS append (even beyond the 8 cap): lighting, shadows, background.\n\n- If the user complaint about something he saw or missed on the image, interpret it and add/remove/modify tokens accordingly on negative/positive.\nAlways have certain if a caracteristic should be in positive or negative. For example:\n- "more trees" > add to positive\n- "less trees" > mitigate/remove in negative (do NOT add to positive)\n- "more detail" > add to positive\n- "reduce detail" > mitigate/remove in negative (do NOT add to positive)\n- "natural look" > add to positive\n- "avoid artifacts" > add to negative\n\nConversation rule:\n- Always include a short 1-2 sentence natural-language "message" addressing the user. On START: invite edits. On FEEDBACK: acknowledge changes and ask if more tweaks are needed. Keep it concise and friendly.\n\nSTRICT OUTPUT (JSON ONLY; no extra text):\n{\n  "avaliation": "<1-4 sentences>",\n  "refined": "<positive prompt, comma-separated>",\n  "negative": "<negative prompt, comma-separated; 6-8 items MAX + lighting, shadows, background>",\n  "message": "<1-2 short sentences to the user>"\n}'}, {'role': 'user', 'content': 'START. Use the provided avaliation and current prompts; return ONLY the strict JSON.\n\n- avaliation: \n- Current positive: gas station, full view\n- Current negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background\n'}, {'role': 'assistant', 'content': '{"avaliation": "The current prompts are good but could benefit from more details and specific attributes.", "refined": "gas station, full view, modern design, well-lit, clear signage", "negative": "blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background", "message": "I\'ve added some specific attributes to the positive prompt. Let me know if you need any further adjustments!"}'}, {'role': 'user', 'content': "FEEDBACK. Apply the client's requests by editing the prompts (add/remove/modify tokens). Return ONLY the strict JSON. Do not keep prompts unchanged if edits were requested.\n\n- Client feedback: on fire\n- Current avaliation: The current prompts are good but could benefit from more details and specific attributes.\n- Current positive: gas station, full view, modern design, well-lit, clear signage\n- Current negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background\n"}, {'role': 'assistant', 'content': '{"avaliation": "Added \'on fire\' to the positive prompt for more detail.", "refined": "gas station, full view, modern design, well-lit, clear signage, on fire", "negative": "blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, excessive flames, incorrect fire effects", "message": "I\'ve added \'on fire\' to the positive prompt and mitigated potential issues with fire in the negative. Let me know if you need further adjustments!"}'}]
+2025-11-13 17:58:18.719 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 10 inference steps...
+2025-11-13 17:58:18.720 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 10 steps...
+2025-11-13 17:58:23.425 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 17:58:23.454 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_u2ffouxx for Trellis step
+2025-11-13 17:58:23.454 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 17:58:23.823 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, full view, modern design, well-lit, clear signage, on fire, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, excessive flames, incorrect fire effects, eval: 
+2025-11-13 17:58:23.823 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:58:23.823 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:58:25.153 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, full view, modern design, well-lit, clear signage, burning, negative: artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, excessive flames, incorrect fire effects, harsh shadows, over-saturated colors, background elements, eval: 
+2025-11-13 17:58:25.153 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:58:25.154 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:58:46.535 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: gas station
+2025-11-13 17:58:46.845 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 17:58:47.093 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 17:58:47.446 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: gas station
+2025-11-13 17:58:47.447 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: gas station (using qwen2.5:7b)
+2025-11-13 17:58:48.173 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'gas station, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 17:58:48.409 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 17:58:48.409 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 17:58:48.409 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 17:58:53.320 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 17:58:53.330 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_6yv_vgjz for feedback
+2025-11-13 17:58:53.330 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 17:58:53.747 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 17:58:53.899 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 17:58:53.899 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:58:53.899 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 17:58:55.170 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: gas station, full view, negative: bad proportions, artifacts, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, excessive textures, eval: 
+2025-11-13 17:58:55.176 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 17:58:55.177 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:21:51.860 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: green bike
+2025-11-13 19:21:54.332 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-13 19:21:54.547 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 19:21:54.899 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: green bike
+2025-11-13 19:21:54.900 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: green bike (using qwen2.5:7b)
+2025-11-13 19:21:55.620 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'bike, green, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 19:21:55.812 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 19:21:55.812 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 19:21:55.812 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 19:22:07.666 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 19:22:07.692 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_xic197c2 for Trellis step
+2025-11-13 19:22:07.692 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 19:22:15.558 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 19:22:15.558 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: bike, green, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 19:22:15.559 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:22:15.559 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 19:22:15.559 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:22:16.886 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: bike, green, full view, negative: low detail, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, background elements, repetitive textures, eval: 
+2025-11-13 19:22:16.886 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:22:16.886 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:22:21.243 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a green bike from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 19:22:21.244 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a green bike from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 19:22:21.244 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: bike, green, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: The images match the prompt well, showing a green bike from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-13 19:22:21.244 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:22:21.245 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:23:09.141 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_xic197c2/trellis_output.zip
+2025-11-13 19:23:09.142 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_xic197c2
+2025-11-13 19:23:09.208 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/views_xic197c2
+2025-11-13 19:23:09.208 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/views_xic197c2: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_37027340-2ac8-456f-950a-78ada4a07dea.glb', 'mesh_37027340-2ac8-456f-950a-78ada4a07dea.ply', 'preview_37027340-2ac8-456f-950a-78ada4a07dea.mp4', 'frame_37027340-2ac8-456f-950a-78ada4a07dea.jpg']
+2025-11-13 19:23:09.208 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_37027340-2ac8-456f-950a-78ada4a07dea.glb']
+2025-11-13 19:23:09.208 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_37027340-2ac8-456f-950a-78ada4a07dea.ply']
+2025-11-13 19:23:09.209 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_37027340-2ac8-456f-950a-78ada4a07dea.mp4']
+2025-11-13 19:23:09.209 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_37027340-2ac8-456f-950a-78ada4a07dea.jpg']
+2025-11-13 19:23:09.209 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_xic197c2/frame_37027340-2ac8-456f-950a-78ada4a07dea.jpg
+2025-11-13 19:23:09.209 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_xic197c2/mesh_37027340-2ac8-456f-950a-78ada4a07dea.glb, PLY=/tmp/views_xic197c2/mesh_37027340-2ac8-456f-950a-78ada4a07dea.ply, MP4=/tmp/views_xic197c2/preview_37027340-2ac8-456f-950a-78ada4a07dea.mp4
+2025-11-13 19:44:41.309 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river between trees
+2025-11-13 19:44:43.846 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 19:44:44.046 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 19:44:44.400 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-13 19:44:44.400 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-13 19:44:45.182 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 19:45:06.147 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 19:45:06.148 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 19:45:06.148 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 19:45:11.153 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 19:45:11.175 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_10ccuwew for feedback
+2025-11-13 19:45:11.176 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 19:45:11.646 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 19:45:11.647 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:45:11.648 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 19:45:11.649 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:45:12.911 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-13 19:45:12.912 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:45:12.912 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:46:07.927 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_10ccuwew/trellis_output.zip
+2025-11-13 19:46:07.928 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_10ccuwew
+2025-11-13 19:46:08.016 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_10ccuwew
+2025-11-13 19:46:08.016 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_10ccuwew: ['view_00.jpg', 'trellis_output.zip', 'mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.glb', 'mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.ply', 'preview_5406073f-5c42-4e9a-b03d-f136dbd14931.mp4', 'frame_5406073f-5c42-4e9a-b03d-f136dbd14931.jpg']
+2025-11-13 19:46:08.017 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.glb']
+2025-11-13 19:46:08.017 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.ply']
+2025-11-13 19:46:08.017 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_5406073f-5c42-4e9a-b03d-f136dbd14931.mp4']
+2025-11-13 19:46:08.017 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_5406073f-5c42-4e9a-b03d-f136dbd14931.jpg']
+2025-11-13 19:46:08.017 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_10ccuwew/frame_5406073f-5c42-4e9a-b03d-f136dbd14931.jpg
+2025-11-13 19:46:08.017 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_10ccuwew/mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.glb, PLY=/tmp/flux_view_10ccuwew/mesh_5406073f-5c42-4e9a-b03d-f136dbd14931.ply, MP4=/tmp/flux_view_10ccuwew/preview_5406073f-5c42-4e9a-b03d-f136dbd14931.mp4
+2025-11-13 19:55:00.449 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river between trees
+2025-11-13 19:55:02.969 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-13 19:55:03.182 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-13 19:55:03.536 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-13 19:55:03.536 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-13 19:55:04.339 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-13 19:55:04.551 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-13 19:55:04.551 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-13 19:55:04.551 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-13 19:55:09.518 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-13 19:55:09.543 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_3_4i0uzb for feedback
+2025-11-13 19:55:09.544 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-13 19:55:09.994 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-13 19:55:09.998 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-13 19:55:09.998 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:55:10.004 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:55:11.361 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: bad proportions, deformed parts, artifacts, low detail, shadows, lighting, background, floating objects, eval: 
+2025-11-13 19:55:11.361 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:55:11.362 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:56:18.363 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_3_4i0uzb/trellis_output.zip
+2025-11-13 19:56:18.364 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_3_4i0uzb
+2025-11-13 19:56:18.450 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_3_4i0uzb
+2025-11-13 19:56:18.450 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_3_4i0uzb: ['view_00.jpg', 'trellis_output.zip', 'mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.glb', 'mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.ply', 'preview_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.mp4', 'frame_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.jpg']
+2025-11-13 19:56:18.450 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.glb']
+2025-11-13 19:56:18.450 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.ply']
+2025-11-13 19:56:18.450 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.mp4']
+2025-11-13 19:56:18.450 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.jpg']
+2025-11-13 19:56:18.451 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_3_4i0uzb/frame_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.jpg
+2025-11-13 19:56:18.451 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_3_4i0uzb/mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.glb, PLY=/tmp/flux_view_3_4i0uzb/mesh_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.ply, MP4=/tmp/flux_view_3_4i0uzb/preview_d29b21b9-c167-41f5-92a5-f6ab26d4e72d.mp4
+2025-11-13 19:56:52.481 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: dog knight
+2025-11-13 19:56:52.770 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-13 19:56:52.986 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 19:56:53.289 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: dog knight
+2025-11-13 19:56:53.289 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: dog knight (using qwen2.5:7b)
+2025-11-13 19:56:54.065 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, knight, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-13 19:56:54.302 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 19:56:54.303 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 19:56:54.303 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 19:57:06.205 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 19:57:06.260 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_hr4z_uqx for Trellis step
+2025-11-13 19:57:06.260 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 19:57:06.698 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 19:57:06.698 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 19:57:06.699 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:57:06.700 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:57:06.700 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 19:57:08.170 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-13 19:57:08.170 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:57:08.171 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:57:12.527 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 19:57:12.528 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 19:57:12.528 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-13 19:57:12.528 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:57:12.528 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:58:03.155 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_hr4z_uqx/trellis_output.zip
+2025-11-13 19:58:03.156 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_hr4z_uqx
+2025-11-13 19:58:03.238 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/views_hr4z_uqx
+2025-11-13 19:58:03.239 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/views_hr4z_uqx: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.glb', 'mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.ply', 'preview_cc212b96-1e1f-4073-8fcf-90b5567eb98b.mp4', 'frame_cc212b96-1e1f-4073-8fcf-90b5567eb98b.jpg']
+2025-11-13 19:58:03.239 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.glb']
+2025-11-13 19:58:03.239 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.ply']
+2025-11-13 19:58:03.239 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_cc212b96-1e1f-4073-8fcf-90b5567eb98b.mp4']
+2025-11-13 19:58:03.239 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_cc212b96-1e1f-4073-8fcf-90b5567eb98b.jpg']
+2025-11-13 19:58:03.239 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_hr4z_uqx/frame_cc212b96-1e1f-4073-8fcf-90b5567eb98b.jpg
+2025-11-13 19:58:03.239 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_hr4z_uqx/mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.glb, PLY=/tmp/views_hr4z_uqx/mesh_cc212b96-1e1f-4073-8fcf-90b5567eb98b.ply, MP4=/tmp/views_hr4z_uqx/preview_cc212b96-1e1f-4073-8fcf-90b5567eb98b.mp4
+2025-11-13 19:59:19.538 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: dog knight
+2025-11-13 19:59:19.892 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-13 19:59:20.096 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-13 19:59:20.399 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: dog knight
+2025-11-13 19:59:20.400 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: dog knight (using qwen2.5:7b)
+2025-11-13 19:59:21.188 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, knight, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-13 19:59:21.419 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-13 19:59:21.419 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-13 19:59:21.420 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-13 19:59:33.329 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-13 19:59:33.381 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_t9khy0_7 for Trellis step
+2025-11-13 19:59:33.382 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-13 19:59:33.765 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-13 19:59:33.766 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-13 19:59:33.767 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:59:33.767 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-13 19:59:33.768 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:59:34.974 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, full body knight, negative: low detail, artifacts, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: 
+2025-11-13 19:59:34.974 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:59:34.975 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 19:59:39.260 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 19:59:39.261 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-13 19:59:39.261 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-13 19:59:39.261 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-13 19:59:39.261 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-13 20:00:36.225 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_t9khy0_7/trellis_output.zip
+2025-11-13 20:00:36.226 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_t9khy0_7
+2025-11-13 20:00:36.317 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/views_t9khy0_7
+2025-11-13 20:00:36.317 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/views_t9khy0_7: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_0983b189-a8f4-4165-9e56-0f97949f1589.glb', 'mesh_0983b189-a8f4-4165-9e56-0f97949f1589.ply', 'preview_0983b189-a8f4-4165-9e56-0f97949f1589.mp4', 'frame_0983b189-a8f4-4165-9e56-0f97949f1589.jpg']
+2025-11-13 20:00:36.318 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_0983b189-a8f4-4165-9e56-0f97949f1589.glb']
+2025-11-13 20:00:36.318 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_0983b189-a8f4-4165-9e56-0f97949f1589.ply']
+2025-11-13 20:00:36.318 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_0983b189-a8f4-4165-9e56-0f97949f1589.mp4']
+2025-11-13 20:00:36.318 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_0983b189-a8f4-4165-9e56-0f97949f1589.jpg']
+2025-11-13 20:00:36.318 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_t9khy0_7/frame_0983b189-a8f4-4165-9e56-0f97949f1589.jpg
+2025-11-13 20:00:36.318 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_t9khy0_7/mesh_0983b189-a8f4-4165-9e56-0f97949f1589.glb, PLY=/tmp/views_t9khy0_7/mesh_0983b189-a8f4-4165-9e56-0f97949f1589.ply, MP4=/tmp/views_t9khy0_7/preview_0983b189-a8f4-4165-9e56-0f97949f1589.mp4
+2025-11-14 11:49:18.870 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: dog knight
+2025-11-14 11:49:18.873 | ERROR    | __main__:call_choose_model:317 - [Gradio] Failed to choose model: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2g/choose_model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff33ed5aaa0>: Failed to establish a new connection: [Errno 111] Connection refused')). Defaulting to 'flux'.
+2025-11-14 11:49:19.223 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-14 11:49:19.526 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: dog knight
+2025-11-14 11:49:19.526 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: dog knight (using qwen2.5:7b)
+2025-11-14 11:49:22.797 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, knight, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 11:49:23.011 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-14 11:49:23.011 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-14 11:49:23.012 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-14 11:49:23.014 | ERROR    | __main__:generate_image_flux:198 - [FLUX] Error generating image: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2i/generate_flux?ref_prompt=dog%2C+knight%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=10 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x7ff4a7d8d090>
+           └ <module 'urllib3.util.connection' from '/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py'>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+          └ None
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+    │    │       └ ('127.0.0.1', 8081)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+
+ConnectionRefusedError: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x7ff4a79cdf30>
+               └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7ff32fb23d90>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+    │    └ <function HTTPConnection.request at 0x7ff4a79ba440>
+    └ <urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+    │    └ <function HTTPConnection.endheaders at 0x7ff4a8676f80>
+    └ <urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    │    │            │                            └ False
+    │    │            └ None
+    │    └ <function HTTPConnection._send_output at 0x7ff4a8676b90>
+    └ <urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+    │    │    └ b'POST /t2i/generate_flux?ref_prompt=dog%2C+knight%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2...
+    │    └ <function HTTPConnection.send at 0x7ff4a86769e0>
+    └ <urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>
+  File "/venv/beau/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+    │    └ <function HTTPConnection.connect at 0x7ff4a79b9f30>
+    └ <urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+    │    │      │    └ <function HTTPConnection._new_conn at 0x7ff4a79b9cf0>
+    │    │      └ <urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>
+    │    └ None
+    └ <urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+          └ <class 'urllib3.exceptions.NewConnectionError'>
+
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7ff4a79ce0e0>
+           └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7ff32fb23d90>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7ff4a85c9630>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>: Failed to establish a new connection: [Errn...
+          │             │      │    └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>: Failed to establish a new connection: [Errn...
+          │             │      └ '/t2i/generate_flux?ref_prompt=dog%2C+knight%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extr...
+          │             └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7ff32fb23d90>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2i/generate_flux?ref_prompt=dog%2C+knight%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=10 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7ff4a874f010>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140682444871360)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7ff34d09b1c0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140682444871360)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('flux', 'dog, knight, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, sh...
+             │       │   └ <function route_generation at 0x7ff33edcc790>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7ff33ed4eb00>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('flux', 'dog, knight, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, sh...
+               └ <function route_generation at 0x7ff35261a4d0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 347, in route_generation
+    return generate_image_flux(refined_prompt, negative_prompt, randomize, inference_steps)
+           │                   │               │                │          └ 10
+           │                   │               │                └ False
+           │                   │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+           │                   └ 'dog, knight, full body'
+           └ <function generate_image_flux at 0x7ff35261a200>
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 184, in generate_image_flux
+    pil_images, views_dir = _api_t2i_generate_flux(refined_prompt, negative_prompt, randomize, inference_steps)
+                            │                      │               │                │          └ 10
+                            │                      │               │                └ False
+                            │                      │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+                            │                      └ 'dog, knight, full body'
+                            └ <function _api_t2i_generate_flux at 0x7ff35261a170>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 158, in _api_t2i_generate_flux
+    response = requests.post(
+               │        └ <function post at 0x7ff4a75563b0>
+               └ <module 'requests' from '/venv/beau/lib/python3.10/site-packages/requests/__init__.py'>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           │               │         │          │       └ {'params': {'ref_prompt': 'dog, knight, full body', 'neg_prompt': 'blurry, low detail, artifacts, bad anatomy, extra limbs, d...
+           │               │         │          └ None
+           │               │         └ None
+           │               └ 'http://127.0.0.1:8081/t2i/generate_flux'
+           └ <function request at 0x7ff4a7513eb0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'data': None, 'json': None, 'params': {'ref_prompt': 'dog, knight, full body', 'neg_prompt': 'blurry, low detail, artifacts,...
+           │       │              │           └ 'http://127.0.0.1:8081/t2i/generate_flux'
+           │       │              └ 'post'
+           │       └ <function Session.request at 0x7ff4a7555990>
+           └ <requests.sessions.Session object at 0x7ff33ed5a860>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 600, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x7ff4a7555e10>
+           └ <requests.sessions.Session object at 0x7ff33ed5a860>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 600, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x7ff4a75552d0>
+        └ <requests.adapters.HTTPAdapter object at 0x7ff33ed5a7a0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2i/generate_flux?ref_prompt=dog%2C+knight%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=10 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff33edc8bb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-11-14 11:49:23.315 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-14 11:52:24.407 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: dog knight
+2025-11-14 11:52:24.747 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-14 11:52:25.066 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 11:52:25.419 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: dog knight
+2025-11-14 11:52:25.419 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: dog knight (using qwen2.5:7b)
+2025-11-14 11:52:26.186 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, knight, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 11:52:26.433 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 11:52:26.434 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 11:52:26.434 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 11:52:38.737 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 11:52:38.767 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_i1chtmeo for Trellis step
+2025-11-14 11:52:38.768 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 11:52:39.189 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 11:52:39.189 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 11:52:39.190 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 11:52:39.190 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 11:52:39.192 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 11:52:40.456 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-14 11:52:40.456 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 11:52:40.456 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 11:52:44.730 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 11:52:44.731 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 11:52:44.731 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, knight, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a dog knight from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-14 11:52:44.731 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 11:52:44.731 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 11:52:54.972 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river between trees
+2025-11-14 11:52:55.256 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-14 11:52:55.477 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-14 11:52:55.779 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-14 11:52:55.779 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-14 11:52:56.528 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-14 11:53:32.819 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-14 11:53:32.820 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-14 11:53:32.820 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-14 11:53:37.850 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-14 11:53:37.867 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_66p6stlf for feedback
+2025-11-14 11:53:37.868 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-14 11:53:38.314 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-14 11:53:38.315 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-14 11:53:38.319 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 11:53:38.321 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 11:53:39.682 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-14 11:53:39.683 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 11:53:39.683 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 11:54:59.877 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_66p6stlf/trellis_output.zip
+2025-11-14 11:54:59.878 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_66p6stlf
+2025-11-14 11:54:59.946 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_66p6stlf
+2025-11-14 11:54:59.946 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_66p6stlf: ['view_00.jpg', 'trellis_output.zip', 'mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.glb', 'mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.ply', 'preview_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.mp4', 'frame_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.jpg']
+2025-11-14 11:54:59.946 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.glb']
+2025-11-14 11:54:59.946 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.ply']
+2025-11-14 11:54:59.946 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.mp4']
+2025-11-14 11:54:59.946 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.jpg']
+2025-11-14 11:54:59.946 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_66p6stlf/frame_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.jpg
+2025-11-14 11:54:59.946 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_66p6stlf/mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.glb, PLY=/tmp/flux_view_66p6stlf/mesh_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.ply, MP4=/tmp/flux_view_66p6stlf/preview_99ef51f8-9c04-41e9-bf3a-7b27085d09c5.mp4
+2025-11-14 12:04:31.437 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in ...
+2025-11-14 12:04:31.449 | ERROR    | __main__:generate_3d:238 - [TRELLIS/API] Failed to download/save ZIP: 422 Client Error: Unprocessable Entity for url: http://127.0.0.1:8081/mv2m/generate
+2025-11-14 12:04:47.123 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: river between trees
+2025-11-14 12:04:49.676 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: flux
+2025-11-14 12:04:49.915 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 10
+2025-11-14 12:04:50.217 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-14 12:04:50.218 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-14 12:04:51.040 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-14 12:04:51.229 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-14 12:04:51.230 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-14 12:04:51.230 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-14 12:04:56.173 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-14 12:04:56.198 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_7vaaf_we for feedback
+2025-11-14 12:04:56.199 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-14 12:04:56.340 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: river between trees
+2025-11-14 12:04:56.641 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: flux
+2025-11-14 12:04:56.895 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 10
+2025-11-14 12:04:57.197 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-14 12:04:57.197 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-14 12:04:57.939 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-14 12:04:58.157 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-14 12:04:58.157 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-14 12:04:58.157 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-14 12:05:03.075 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-14 12:05:03.092 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_w0433e7z for feedback
+2025-11-14 12:05:03.092 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-14 12:05:03.491 | INFO     | __main__:route_post_processing:369 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-14 12:05:03.491 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-14 12:05:03.493 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 12:05:03.494 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 12:05:04.657 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-14 12:05:04.657 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 12:05:04.657 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 12:05:06.735 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_w0433e7z...
+2025-11-14 12:06:00.984 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_w0433e7z/trellis_output.zip
+2025-11-14 12:06:00.984 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_w0433e7z
+2025-11-14 12:06:01.070 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_w0433e7z
+2025-11-14 12:06:01.070 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_w0433e7z: ['view_00.jpg', 'trellis_output.zip', 'mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.glb', 'mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.ply', 'preview_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.mp4', 'frame_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.jpg']
+2025-11-14 12:06:01.070 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.glb']
+2025-11-14 12:06:01.070 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.ply']
+2025-11-14 12:06:01.070 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.mp4']
+2025-11-14 12:06:01.070 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.jpg']
+2025-11-14 12:06:01.070 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/flux_view_w0433e7z/frame_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.jpg
+2025-11-14 12:06:01.070 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_w0433e7z/mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.glb, PLY=/tmp/flux_view_w0433e7z/mesh_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.ply, MP4=/tmp/flux_view_w0433e7z/preview_99f8b386-0ded-4e2a-aeb1-3df543e7bc13.mp4
+2025-11-14 12:16:52.695 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: river between trees
+2025-11-14 12:16:52.992 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: flux
+2025-11-14 12:16:53.301 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 10
+2025-11-14 12:16:53.656 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-14 12:16:53.657 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-14 12:16:54.353 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-14 12:16:54.574 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-14 12:16:54.574 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-14 12:16:54.574 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-14 12:16:59.802 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-14 12:16:59.823 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_000do2dq for feedback
+2025-11-14 12:16:59.823 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-14 12:17:00.270 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-14 12:17:00.270 | INFO     | __main__:route_post_processing:369 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-14 12:17:00.271 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 12:17:00.272 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 12:17:01.491 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural colors, repetitive foliage, lighting, shadows, background, eval: 
+2025-11-14 12:17:01.491 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 12:17:01.491 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 12:17:10.925 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_000do2dq...
+2025-11-14 12:18:14.584 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_000do2dq/trellis_output.zip
+2025-11-14 12:18:14.585 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_000do2dq
+2025-11-14 12:18:14.649 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_000do2dq
+2025-11-14 12:18:14.650 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_000do2dq: ['view_00.jpg', 'trellis_output.zip', 'mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.glb', 'mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.ply', 'preview_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.mp4', 'frame_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.jpg']
+2025-11-14 12:18:14.650 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.glb']
+2025-11-14 12:18:14.650 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.ply']
+2025-11-14 12:18:14.650 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.mp4']
+2025-11-14 12:18:14.650 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.jpg']
+2025-11-14 12:18:14.650 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/flux_view_000do2dq/frame_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.jpg
+2025-11-14 12:18:14.650 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_000do2dq/mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.glb, PLY=/tmp/flux_view_000do2dq/mesh_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.ply, MP4=/tmp/flux_view_000do2dq/preview_5a2ccf79-ca53-4cb1-9366-15e992c7d6b0.mp4
+2025-11-14 14:21:01.932 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: river between trees
+2025-11-14 14:21:02.282 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: flux
+2025-11-14 14:21:02.489 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 10
+2025-11-14 14:21:02.841 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-14 14:21:02.841 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-14 14:21:03.622 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-14 14:21:03.856 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-14 14:21:03.856 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-14 14:21:03.856 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-14 14:21:09.085 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-14 14:21:09.111 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_3_anqsxz for feedback
+2025-11-14 14:21:09.111 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-14 14:21:09.553 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-14 14:21:09.553 | INFO     | __main__:route_post_processing:369 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-14 14:21:09.554 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 14:21:09.556 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 14:21:10.818 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: river, between trees, full view, negative: low detail, artifacts, bad proportions, deformed parts, floating objects, unnatural shadows, poor lighting, cluttered background, eval: 
+2025-11-14 14:21:10.819 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 14:21:10.819 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 14:23:47.551 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_3_anqsxz...
+2025-11-14 14:27:25.984 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_3_anqsxz/trellis_output.zip
+2025-11-14 14:27:25.985 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_3_anqsxz
+2025-11-14 14:27:26.053 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_3_anqsxz
+2025-11-14 14:27:26.054 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_3_anqsxz: ['view_00.jpg', 'trellis_output.zip', 'mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.glb', 'mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.ply', 'preview_7877a05a-1eea-4693-aecd-e9a86eb7ca53.mp4', 'frame_7877a05a-1eea-4693-aecd-e9a86eb7ca53.jpg']
+2025-11-14 14:27:26.054 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.glb']
+2025-11-14 14:27:26.054 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.ply']
+2025-11-14 14:27:26.054 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_7877a05a-1eea-4693-aecd-e9a86eb7ca53.mp4']
+2025-11-14 14:27:26.054 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_7877a05a-1eea-4693-aecd-e9a86eb7ca53.jpg']
+2025-11-14 14:27:26.054 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/flux_view_3_anqsxz/frame_7877a05a-1eea-4693-aecd-e9a86eb7ca53.jpg
+2025-11-14 14:27:26.054 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_3_anqsxz/mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.glb, PLY=/tmp/flux_view_3_anqsxz/mesh_7877a05a-1eea-4693-aecd-e9a86eb7ca53.ply, MP4=/tmp/flux_view_3_anqsxz/preview_7877a05a-1eea-4693-aecd-e9a86eb7ca53.mp4
+2025-11-14 14:28:29.431 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: simple low poly cat
+2025-11-14 14:28:31.939 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-14 14:28:32.109 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-14 14:28:32.461 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: simple low poly cat
+2025-11-14 14:28:32.462 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: simple low poly cat (using qwen2.5:7b)
+2025-11-14 14:28:33.302 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, simple, low poly, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-14 14:28:33.525 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-14 14:28:33.526 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-14 14:28:33.526 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-14 14:28:45.438 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-14 14:28:45.469 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_i9jnuj0_ for Trellis step
+2025-11-14 14:28:45.469 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-14 14:28:45.898 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-14 14:28:45.898 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-14 14:28:45.899 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 14:28:45.899 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 14:28:45.899 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-14 14:28:47.212 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-14 14:28:47.212 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 14:28:47.212 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 14:28:51.610 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 14:28:51.611 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-14 14:28:51.611 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, simple, low poly, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a simple low poly cat from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.
+2025-11-14 14:28:51.611 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-14 14:28:51.611 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-14 14:31:47.931 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_i9jnuj0_...
+2025-11-14 14:32:39.376 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_i9jnuj0_/trellis_output.zip
+2025-11-14 14:32:39.377 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_i9jnuj0_
+2025-11-14 14:32:39.427 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_i9jnuj0_
+2025-11-14 14:32:39.427 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_i9jnuj0_: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.glb', 'mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.ply', 'preview_afee9d34-aaed-4bd7-b576-9a52865ba97e.mp4', 'frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg']
+2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.glb']
+2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.ply']
+2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_afee9d34-aaed-4bd7-b576-9a52865ba97e.mp4']
+2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg']
+2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_i9jnuj0_/frame_afee9d34-aaed-4bd7-b576-9a52865ba97e.jpg
+2025-11-14 14:32:39.428 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_i9jnuj0_/mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.glb, PLY=/tmp/views_i9jnuj0_/mesh_afee9d34-aaed-4bd7-b576-9a52865ba97e.ply, MP4=/tmp/views_i9jnuj0_/preview_afee9d34-aaed-4bd7-b576-9a52865ba97e.mp4

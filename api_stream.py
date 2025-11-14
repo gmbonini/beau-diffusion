@@ -165,91 +165,109 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         raise HTTPException(status_code=400, detail="Files not found.")
 
     outdir = None
+    t_total_start = time.time()
+    logger.info("[TRELLIS] --- START REQUEST ---")
+
     try:
+        t_step = time.time()
         views = []
+
+        logger.info("[TRELLIS] Starting input decode + BG removal")
         for uf in files:
+            t_file = time.time()
             content = await uf.read()
             img = Image.open(io.BytesIO(content))
-                        
-            img_no_bg = _remove_bg_bria(img)            
-            
-            views.append(img_no_bg)
-            
-        logger.info(f"[TRELLIS] {len(views)} views (BG removed) received for processing (API)")
-        outputs = pipe_trellis.run_pipeline(views, seed=42)
+            logger.info(f"[TRELLIS] Loaded image {uf.filename} in {time.time()-t_file:.3f}s")
 
+            t_bg = time.time()
+            img_no_bg = _remove_bg_bria(img)            
+            logger.info(f"[TRELLIS] Removed BG in {time.time()-t_bg:.3f}s")
+
+            views.append(img_no_bg)
+
+        logger.info(f"[TRELLIS] Input preprocessing finished in {time.time()-t_step:.3f}s")
+        logger.info(f"[TRELLIS] Total views: {len(views)}")
+
+        t_step = time.time()
+        logger.info("[TRELLIS] Running Trellis pipeline...")
+        outputs = pipe_trellis.run_pipeline(views, seed=42)
+        logger.info(f"[TRELLIS] Trellis pipeline duration: {time.time()-t_step:.3f}s")
+
+        t_step = time.time()
         session_id = str(uuid.uuid4())
         outdir = tempfile.mkdtemp(prefix=f"trellis_{session_id}_")
-        
+        logger.info(f"[TRELLIS] Output directory prepared in {time.time()-t_step:.3f}s")
+
+
+        # File paths
         glb_filename = f"mesh_{session_id}.glb"
         ply_filename = f"mesh_{session_id}.ply"
         mp4_filename = f"preview_{session_id}.mp4"
         frame_filename = f"frame_{session_id}.jpg"
-        
+
         glb_path = os.path.join(outdir, glb_filename)
         ply_path = os.path.join(outdir, ply_filename)
         mp4_path = os.path.join(outdir, mp4_filename)
         frame_path = os.path.join(outdir, frame_filename)
-        
+
+        t_step = time.time()
+        logger.info("[TRELLIS] Starting save_video...")
         _, _, middle_frame_np = pipe_trellis.save_video(outputs, filename=mp4_path)
-        
-        logger.info(f"[TRELLIS] Saving mesh files to {glb_path} and {ply_path}")
+        logger.info(f"[TRELLIS] save_video completed in {time.time()-t_step:.3f}s")
+
+        t_step = time.time()
+        logger.info("[TRELLIS] Starting save_mesh (this can be slow)...")
         pipe_trellis.save_mesh(
             outputs, 
             glb_path=glb_path, 
             ply_path=ply_path,
-            simplify=0.95,
-            texture_size=512
+            simplify=0.80,
+            texture_size=1024
         )
-        logger.info("[TRELLIS] Mesh files saved successfully")
+        logger.info(f"[TRELLIS] save_mesh completed in {time.time()-t_step:.3f}s")
 
+        t_step = time.time()
         try:
+            logger.info("[TRELLIS] Saving middle frame...")
             middle_frame_bgr = cv2.cvtColor(middle_frame_np, cv2.COLOR_RGB2BGR)
             cv2.imwrite(frame_path, middle_frame_bgr)
-            logger.info(f"[TRELLIS] Frame saved to {frame_path}")
+            logger.info(f"[TRELLIS] Frame saved in {time.time()-t_step:.3f}s")
         except Exception as e:
-            logger.warning(f"[TRELLIS] Error saving frame: {e}")
-        
-        logger.info("[TRELLIS] Mesh and video saved to tmp (API)")
-        
-        logger.info(f"[TRELLIS] Checking files - GLB exists: {os.path.exists(glb_path)}, PLY exists: {os.path.exists(ply_path)}, MP4 exists: {os.path.exists(mp4_path)}, Frame exists: {os.path.exists(frame_path)}")
-        
+            logger.warning(f"[TRELLIS] Frame save ERROR in {time.time()-t_step:.3f}s: {e}")
+
+        t_step = time.time()
+        logger.info("[TRELLIS] Creating ZIP buffer...")
         zip_buffer = io.BytesIO()
-        
+
         with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_STORED) as zipf:
-            if os.path.exists(glb_path):
-                zipf.write(glb_path, arcname=glb_filename)
-                logger.info(f"[TRELLIS] Added {glb_filename} to ZIP")
-            else:
-                logger.error(f"[TRELLIS] GLB file not found at {glb_path}")
-                
-            if os.path.exists(ply_path):
-                zipf.write(ply_path, arcname=ply_filename)
-                logger.info(f"[TRELLIS] Added {ply_filename} to ZIP")
-            else:
-                logger.error(f"[TRELLIS] PLY file not found at {ply_path}")
-                
-            if os.path.exists(mp4_path):
-                zipf.write(mp4_path, arcname=mp4_filename)
-                logger.info(f"[TRELLIS] Added {mp4_filename} to ZIP")
-            else:
-                logger.error(f"[TRELLIS] MP4 file not found at {mp4_path}")
-                
-            if os.path.exists(frame_path):
-                zipf.write(frame_path, arcname=frame_filename)
-                logger.info(f"[TRELLIS] Added {frame_filename} to ZIP")
-            else:
-                logger.warning(f"[TRELLIS] Frame file not found at {frame_path}")
-        
+            for file_path, file_name in [
+                (glb_path, glb_filename),
+                (ply_path, ply_filename),
+                (mp4_path, mp4_filename),
+                (frame_path, frame_filename)
+            ]:
+                if os.path.exists(file_path):
+                    t_zip_item = time.time()
+                    zipf.write(file_path, arcname=file_name)
+                    logger.info(f"[TRELLIS] Added {file_name} (took {time.time()-t_zip_item:.3f}s)")
+                else:
+                    logger.error(f"[TRELLIS] MISSING: {file_name} not found!")
+
+        logger.info(f"[TRELLIS] ZIP creation time: {time.time()-t_step:.3f}s")
+
+        t_step = time.time()
         zip_buffer.seek(0)
-        
         zip_buffer_check = io.BytesIO(zip_buffer.getvalue())
+
         with zipfile.ZipFile(zip_buffer_check, 'r') as zipf:
-            logger.info(f"[TRELLIS] ZIP contents: {zipf.namelist()}")
+            logger.info(f"[TRELLIS] ZIP contains: {zipf.namelist()}")
+
+        logger.info(f"[TRELLIS] ZIP validation took {time.time()-t_step:.3f}s")
+
+        total_time = time.time() - t_total_start
+        logger.info(f"[TRELLIS] --- FINISHED REQUEST in {total_time:.3f}s ---")
+
         zip_buffer.seek(0)
-        
-        logger.info("[TRELLIS] Created zip buffer for streaming.")
-        
         return StreamingResponse(
             zip_buffer,
             media_type="application/zip",
@@ -259,10 +277,13 @@ async def trellis_run(files: List[UploadFile] = File(...)):
     except Exception as e:
         logger.error("[TRELLIS] FAILED: %s\n%s", e, traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(e))
-    
+
     finally:
+        t_cleanup = time.time()
         if outdir and os.path.exists(outdir):
             shutil.rmtree(outdir, ignore_errors=True)
+        logger.info(f"[TRELLIS] Cleanup finished in {time.time()-t_cleanup:.3f}s")
+
       
 @app.post("/feedback/save")
 async def feedback_save(

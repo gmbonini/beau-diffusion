@@ -212,6 +212,7 @@ def _b64_to_file(b64_str: str, path: str):
         f.write(base64.b64decode(b64_str))
 
 def generate_3d(views_dir):
+    logger.info(f"[TRELLIS] Starting 3D generation for views in {views_dir}...")
     images_list, paths = _load_views_from_dir(views_dir)
     # assert len(images_list) >= 2, "need at least 2 views to generate 3D"
 
@@ -310,12 +311,12 @@ def call_choose_model(prompt):
     try:
         response = requests.post(f"{API_URL}/t2g/choose_model", data={"prompt": prompt}, timeout=60)
         response.raise_for_status()
-        choice = response.json().get("model_choice", "flux") # Default to flux on error
+        choice = response.json().get("model_choice", "sd") # Default to flux on error
         logger.info(f"[Gradio] LLM chose model: {choice}")
         return choice
     except Exception as e:
-        logger.error(f"[Gradio] Failed to choose model: {e}. Defaulting to 'flux'.")
-        return "flux"
+        logger.error(f"[Gradio] Failed to choose model: {e}. Defaulting to 'sd'.")
+        return "sd"
 
 def _reset_ui_and_set_steps(choice):
     """Resets UI and sets inference steps based on the chosen model."""
@@ -768,16 +769,16 @@ with gr.Blocks() as demo:
         inputs=None,
         outputs=image_review_status   
     ).then(
-        fn=route_generation, # <-- CORRIGIDO
-        inputs=[state_chosen_model, state_last_prompt, state_neg_prompt, gr.State(True), state_inference_steps], # Usando o roteador
+        fn=route_generation,
+        inputs=[state_chosen_model, state_last_prompt, state_neg_prompt, gr.State(True), state_inference_steps],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
     ).then(        
-        fn=route_post_processing, # <-- CORRIGIDO
-        inputs=[state_chosen_model, state_views_dir, prompt, state_last_prompt, state_neg_prompt, llm_avaliation], # Usando o pós-processamento do roteador
+        fn=route_post_processing,
+        inputs=[state_chosen_model, state_views_dir, prompt, state_last_prompt, state_neg_prompt, llm_avaliation],
         outputs=post_processing_outputs
     ).then(        
-        fn=lambda full_hist, new_chat_msgs, choice: (full_hist + new_chat_msgs) if choice == 'sd' else [], # Atualização condicional do chat
+        fn=lambda full_hist, new_chat_msgs, choice: (full_hist + new_chat_msgs) if choice == 'sd' else [],
         inputs=[state_full_chat, state_chat_msgs, state_chosen_model],
         outputs=[state_full_chat]
     ).then(
