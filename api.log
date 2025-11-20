@@ -5586,3 +5586,1144 @@ Please pass the argument `trust_remote_code=True` to allow custom code to be run
 2025-11-14 19:35:27.881 | INFO     | api_stream:trellis_run:270 - [TRELLIS] ZIP validation took 0.000s
 2025-11-14 19:35:27.881 | INFO     | api_stream:trellis_run:273 - [TRELLIS] --- FINISHED REQUEST in 41.233s ---
 2025-11-14 19:35:27.884 | INFO     | api_stream:trellis_run:290 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-14 20:00:08.451 | INFO     | api_stream:load_pipe_flux_t2i:426 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-14 20:00:16.855 | INFO     | api_stream:load_pipe_flux_t2i:435 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-14 20:00:16.856 | INFO     | api_stream:load_pipe_flux_t2i:438 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-14 20:00:16.930 | ERROR    | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-14 20:00:16.930 | INFO     | api_stream:load_pipe_flux_t2i:450 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-14 20:00:17.584 | INFO     | api_stream:load_pipe_flux_t2i:458 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-14 20:00:40.202 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-14 20:00:40.202 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-14 20:00:40.202 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-14 20:01:07.252 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-14 20:01:10.003 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 11:35:28.787 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'goku': sd
+2025-11-17 11:35:30.255 | INFO     | api_stream:t2mv_generate:121 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-17 11:35:30.256 | INFO     | api_stream:t2mv_generate:122 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-17 11:35:42.849 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-17 11:35:42.850 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-17 11:35:42.865 | INFO     | api_stream:t2mv_generate:150 - [MV-ADAPTER] Total time (with encoding): 12.61s
+2025-11-17 11:35:47.646 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 11:35:47.646 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 11:35:47.647 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 11:35:47.653 | ERROR    | api_stream:trellis_run:335 - [TRELIS] FAILED: %s
+%s
+2025-11-17 11:35:47.654 | INFO     | api_stream:trellis_run:342 - [TRELLIS] Cleanup finished in 0.000s
+2025-11-17 11:38:17.798 | INFO     | api_stream:load_pipe_flux_t2i:426 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 11:38:27.682 | INFO     | api_stream:load_pipe_flux_t2i:435 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 11:38:27.682 | INFO     | api_stream:load_pipe_flux_t2i:438 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 11:38:27.761 | ERROR    | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 11:38:27.761 | INFO     | api_stream:load_pipe_flux_t2i:450 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 11:38:28.480 | INFO     | api_stream:load_pipe_flux_t2i:458 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 11:38:52.016 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 11:38:52.016 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 11:38:52.016 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 11:39:19.065 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 11:39:19.412 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 11:40:12.256 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 11:40:12.256 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 11:40:12.266 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.010s
+2025-11-17 11:40:17.754 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.488s
+2025-11-17 11:40:17.755 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 11:40:22.838 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.082s
+2025-11-17 11:40:22.839 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 11:40:28.263 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.424s
+2025-11-17 11:40:28.264 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 11:40:33.626 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.361s
+2025-11-17 11:40:33.627 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 11:40:38.363 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.736s
+2025-11-17 11:40:38.364 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 11:40:43.339 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.975s
+2025-11-17 11:40:43.339 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 31.083s
+2025-11-17 11:40:43.339 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 6
+2025-11-17 11:40:43.339 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 11:40:54.328 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.989s
+2025-11-17 11:40:54.329 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 11:40:54.329 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 11:41:00.031 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 5.702s
+2025-11-17 11:41:00.033 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 11:41:53.370 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 53.337s
+2025-11-17 11:41:53.370 | INFO     | api_stream:trellis_run:240 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 11:41:53.370 | INFO     | api_stream:trellis_run:244 - [PyMeshLab] Loading raw mesh: /tmp/trellis_4c564238-e062-41a6-a0b7-b21a39fcdf2e_ow3gsx3f/mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.ply
+2025-11-17 11:41:53.371 | ERROR    | api_stream:trellis_run:279 - [PyMeshLab] FAILED: Unknown format for load: ply. O mesh GLB original será usado.
+2025-11-17 11:41:53.371 | INFO     | api_stream:trellis_run:288 - [TRELLIS] Saving middle frame...
+2025-11-17 11:41:53.375 | INFO     | api_stream:trellis_run:291 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 11:41:53.375 | INFO     | api_stream:trellis_run:296 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 11:41:53.390 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.glb (took 0.015s)
+2025-11-17 11:41:53.431 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.ply (took 0.040s)
+2025-11-17 11:41:53.432 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added preview_4c564238-e062-41a6-a0b7-b21a39fcdf2e.mp4 (took 0.001s)
+2025-11-17 11:41:53.432 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added frame_4c564238-e062-41a6-a0b7-b21a39fcdf2e.jpg (took 0.000s)
+2025-11-17 11:41:53.432 | INFO     | api_stream:trellis_run:313 - [TRELLIS] ZIP creation time: 0.057s
+2025-11-17 11:41:53.433 | INFO     | api_stream:trellis_run:320 - [TRELIS] ZIP contains: ['mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.glb', 'mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.ply', 'preview_4c564238-e062-41a6-a0b7-b21a39fcdf2e.mp4', 'frame_4c564238-e062-41a6-a0b7-b21a39fcdf2e.jpg']
+2025-11-17 11:41:53.433 | INFO     | api_stream:trellis_run:322 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 11:41:53.433 | INFO     | api_stream:trellis_run:325 - [TRELLIS] --- FINISHED REQUEST in 101.177s ---
+2025-11-17 11:41:53.437 | INFO     | api_stream:trellis_run:342 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 11:56:12.761 | INFO     | api_stream:load_pipe_flux_t2i:426 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 11:56:22.669 | INFO     | api_stream:load_pipe_flux_t2i:435 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 11:56:22.670 | INFO     | api_stream:load_pipe_flux_t2i:438 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 11:56:22.745 | ERROR    | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 11:56:22.745 | INFO     | api_stream:load_pipe_flux_t2i:450 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 11:56:23.435 | INFO     | api_stream:load_pipe_flux_t2i:458 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 11:56:45.924 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 11:56:45.924 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 11:56:45.924 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 11:57:10.847 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 11:57:13.797 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 11:57:32.425 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 11:57:32.425 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 11:57:32.435 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_4c564238-e062-41a6-a0b7-b21a39fcdf2e.jpg in 0.010s
+2025-11-17 11:57:38.037 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.602s
+2025-11-17 11:57:38.038 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 11:57:43.298 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.260s
+2025-11-17 11:57:43.300 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-17 11:57:48.458 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.158s
+2025-11-17 11:57:48.459 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 11:57:53.654 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.195s
+2025-11-17 11:57:53.655 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-17 11:57:58.736 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.081s
+2025-11-17 11:57:58.737 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 11:58:04.057 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.320s
+2025-11-17 11:58:04.059 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 11:58:08.934 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.875s
+2025-11-17 11:58:08.934 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 36.509s
+2025-11-17 11:58:08.934 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 11:58:08.934 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 11:58:19.916 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.981s
+2025-11-17 11:58:19.917 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 11:58:19.917 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 11:58:25.676 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 5.759s
+2025-11-17 11:58:25.677 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 11:59:29.148 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 63.471s
+2025-11-17 11:59:29.148 | INFO     | api_stream:trellis_run:240 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 11:59:29.149 | INFO     | api_stream:trellis_run:244 - [PyMeshLab] Loading raw mesh: /tmp/trellis_254c33ab-4767-4af2-8250-f607a546288d_ygwxcsim/mesh_254c33ab-4767-4af2-8250-f607a546288d.ply
+2025-11-17 11:59:29.214 | INFO     | api_stream:trellis_run:248 - [PyMeshLab] Applying Taubin smoothing...
+2025-11-17 11:59:29.215 | ERROR    | api_stream:trellis_run:279 - [PyMeshLab] FAILED: Failed to apply filter: taubin_smoothing_matrix
+Filter does not exists. Take a look at MeshSet.print_filter_list function.. O mesh GLB original será usado.
+2025-11-17 11:59:29.215 | INFO     | api_stream:trellis_run:288 - [TRELLIS] Saving middle frame...
+2025-11-17 11:59:29.219 | INFO     | api_stream:trellis_run:291 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 11:59:29.219 | INFO     | api_stream:trellis_run:296 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 11:59:29.237 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added mesh_254c33ab-4767-4af2-8250-f607a546288d.glb (took 0.018s)
+2025-11-17 11:59:29.281 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added mesh_254c33ab-4767-4af2-8250-f607a546288d.ply (took 0.044s)
+2025-11-17 11:59:29.282 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added preview_254c33ab-4767-4af2-8250-f607a546288d.mp4 (took 0.001s)
+2025-11-17 11:59:29.283 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added frame_254c33ab-4767-4af2-8250-f607a546288d.jpg (took 0.000s)
+2025-11-17 11:59:29.283 | INFO     | api_stream:trellis_run:313 - [TRELLIS] ZIP creation time: 0.064s
+2025-11-17 11:59:29.283 | INFO     | api_stream:trellis_run:320 - [TRELIS] ZIP contains: ['mesh_254c33ab-4767-4af2-8250-f607a546288d.glb', 'mesh_254c33ab-4767-4af2-8250-f607a546288d.ply', 'preview_254c33ab-4767-4af2-8250-f607a546288d.mp4', 'frame_254c33ab-4767-4af2-8250-f607a546288d.jpg']
+2025-11-17 11:59:29.283 | INFO     | api_stream:trellis_run:322 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 11:59:29.283 | INFO     | api_stream:trellis_run:325 - [TRELLIS] --- FINISHED REQUEST in 116.859s ---
+2025-11-17 11:59:29.287 | INFO     | api_stream:trellis_run:342 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-17 12:13:30.914 | INFO     | api_stream:load_pipe_flux_t2i:426 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 12:13:40.382 | INFO     | api_stream:load_pipe_flux_t2i:435 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 12:13:40.383 | INFO     | api_stream:load_pipe_flux_t2i:438 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 12:13:40.456 | ERROR    | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 12:13:40.457 | INFO     | api_stream:load_pipe_flux_t2i:450 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 12:13:41.156 | INFO     | api_stream:load_pipe_flux_t2i:458 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 12:14:02.313 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 12:14:02.313 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 12:14:02.313 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 12:14:27.674 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 12:14:31.011 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 12:21:03.131 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 12:21:03.132 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 12:21:03.142 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_254c33ab-4767-4af2-8250-f607a546288d.jpg in 0.010s
+2025-11-17 12:21:08.990 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.847s
+2025-11-17 12:21:08.990 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 12:21:14.471 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.480s
+2025-11-17 12:21:14.472 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-17 12:21:19.710 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.237s
+2025-11-17 12:21:19.710 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 12:21:25.168 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.457s
+2025-11-17 12:21:25.169 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 12:21:30.483 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.313s
+2025-11-17 12:21:30.484 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 12:21:35.833 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.349s
+2025-11-17 12:21:35.834 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 12:21:41.260 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.426s
+2025-11-17 12:21:41.261 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 38.129s
+2025-11-17 12:21:41.261 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 12:21:41.261 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 12:21:51.886 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.626s
+2025-11-17 12:21:51.887 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 12:21:51.887 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 12:21:57.122 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 5.234s
+2025-11-17 12:21:57.122 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 12:22:52.652 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 55.529s
+2025-11-17 12:22:52.652 | INFO     | api_stream:trellis_run:240 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 12:22:52.652 | INFO     | api_stream:trellis_run:244 - [PyMeshLab] Loading raw mesh: /tmp/trellis_cffe3bd9-c73a-485f-a282-16131f170040__7ll1oby/mesh_cffe3bd9-c73a-485f-a282-16131f170040.ply
+2025-11-17 12:22:52.722 | INFO     | api_stream:trellis_run:248 - [PyMeshLab] Applying Taubin smoothing...
+2025-11-17 12:22:52.723 | ERROR    | api_stream:trellis_run:279 - [PyMeshLab] FAILED: Failed to apply filter: taubin_smoothing_matrix
+Filter does not exists. Take a look at MeshSet.print_filter_list function.. O mesh GLB original será usado.
+2025-11-17 12:22:52.723 | INFO     | api_stream:trellis_run:288 - [TRELLIS] Saving middle frame...
+2025-11-17 12:22:52.727 | INFO     | api_stream:trellis_run:291 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 12:22:52.727 | INFO     | api_stream:trellis_run:296 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 12:22:52.748 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added mesh_cffe3bd9-c73a-485f-a282-16131f170040.glb (took 0.021s)
+2025-11-17 12:22:52.796 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added mesh_cffe3bd9-c73a-485f-a282-16131f170040.ply (took 0.048s)
+2025-11-17 12:22:52.797 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added preview_cffe3bd9-c73a-485f-a282-16131f170040.mp4 (took 0.001s)
+2025-11-17 12:22:52.797 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Added frame_cffe3bd9-c73a-485f-a282-16131f170040.jpg (took 0.000s)
+2025-11-17 12:22:52.797 | INFO     | api_stream:trellis_run:313 - [TRELLIS] ZIP creation time: 0.070s
+2025-11-17 12:22:52.798 | INFO     | api_stream:trellis_run:320 - [TRELIS] ZIP contains: ['mesh_cffe3bd9-c73a-485f-a282-16131f170040.glb', 'mesh_cffe3bd9-c73a-485f-a282-16131f170040.ply', 'preview_cffe3bd9-c73a-485f-a282-16131f170040.mp4', 'frame_cffe3bd9-c73a-485f-a282-16131f170040.jpg']
+2025-11-17 12:22:52.798 | INFO     | api_stream:trellis_run:322 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 12:22:52.798 | INFO     | api_stream:trellis_run:325 - [TRELLIS] --- FINISHED REQUEST in 109.667s ---
+2025-11-17 12:22:52.802 | INFO     | api_stream:trellis_run:342 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-17 12:28:11.556 | INFO     | api_stream:load_pipe_flux_t2i:434 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 12:28:21.592 | INFO     | api_stream:load_pipe_flux_t2i:443 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 12:28:21.592 | INFO     | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 12:28:21.675 | ERROR    | api_stream:load_pipe_flux_t2i:454 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 12:28:21.675 | INFO     | api_stream:load_pipe_flux_t2i:458 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 12:28:22.346 | INFO     | api_stream:load_pipe_flux_t2i:466 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 12:28:40.728 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 12:28:40.728 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 12:28:40.728 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 12:29:06.739 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 12:29:09.972 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 12:29:14.206 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 12:29:14.206 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 12:29:14.213 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_cffe3bd9-c73a-485f-a282-16131f170040.jpg in 0.006s
+2025-11-17 12:29:19.655 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.442s
+2025-11-17 12:29:19.656 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 12:29:24.643 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.987s
+2025-11-17 12:29:24.644 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-17 12:29:29.945 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.300s
+2025-11-17 12:29:29.945 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-17 12:29:35.168 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.222s
+2025-11-17 12:29:35.169 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 12:29:39.845 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.675s
+2025-11-17 12:29:39.845 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 12:29:44.638 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.792s
+2025-11-17 12:29:44.639 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 12:29:49.547 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.908s
+2025-11-17 12:29:49.548 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 35.342s
+2025-11-17 12:29:49.548 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 12:29:49.548 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 12:30:00.170 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.622s
+2025-11-17 12:30:00.171 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 12:30:00.171 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 12:30:06.071 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 5.900s
+2025-11-17 12:30:06.072 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 12:31:06.960 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 60.888s
+2025-11-17 12:31:06.960 | INFO     | api_stream:trellis_run:240 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 12:31:06.960 | INFO     | api_stream:trellis_run:244 - [PyMeshLab] Loading raw mesh: /tmp/trellis_c16ce720-d828-489a-8bda-8b23caecf0d3_1jud813n/mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.ply
+2025-11-17 12:31:07.024 | INFO     | api_stream:trellis_run:247 - [PyMeshLab] PRINTING AVAILABLE FILTERS...
+2025-11-17 12:31:07.024 | WARNING  | api_stream:trellis_run:252 - [PyMeshLab] Could not print filter list: 'pymeshlab.pmeshlab.MeshSet' object has no attribute 'print_filter_list'
+2025-11-17 12:31:07.024 | INFO     | api_stream:trellis_run:253 - [PyMeshLab] --- END OF FILTER LIST ---
+2025-11-17 12:31:07.024 | INFO     | api_stream:trellis_run:256 - [PyMeshLab] Applying Taubin smoothing...
+2025-11-17 12:31:07.025 | ERROR    | api_stream:trellis_run:287 - [PyMeshLab] FAILED: Failed to apply filter: taubin_smoothing_matrix
+Filter does not exists. Take a look at MeshSet.print_filter_list function.. O mesh GLB original será usado.
+2025-11-17 12:31:07.025 | INFO     | api_stream:trellis_run:296 - [TRELLIS] Saving middle frame...
+2025-11-17 12:31:07.028 | INFO     | api_stream:trellis_run:299 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 12:31:07.028 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 12:31:07.043 | INFO     | api_stream:trellis_run:317 - [TRELLIS] Added mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.glb (took 0.014s)
+2025-11-17 12:31:07.092 | INFO     | api_stream:trellis_run:317 - [TRELLIS] Added mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.ply (took 0.049s)
+2025-11-17 12:31:07.092 | INFO     | api_stream:trellis_run:317 - [TRELLIS] Added preview_c16ce720-d828-489a-8bda-8b23caecf0d3.mp4 (took 0.001s)
+2025-11-17 12:31:07.093 | INFO     | api_stream:trellis_run:317 - [TRELLIS] Added frame_c16ce720-d828-489a-8bda-8b23caecf0d3.jpg (took 0.000s)
+2025-11-17 12:31:07.093 | INFO     | api_stream:trellis_run:321 - [TRELLIS] ZIP creation time: 0.065s
+2025-11-17 12:31:07.093 | INFO     | api_stream:trellis_run:328 - [TRELIS] ZIP contains: ['mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.glb', 'mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.ply', 'preview_c16ce720-d828-489a-8bda-8b23caecf0d3.mp4', 'frame_c16ce720-d828-489a-8bda-8b23caecf0d3.jpg']
+2025-11-17 12:31:07.094 | INFO     | api_stream:trellis_run:330 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 12:31:07.094 | INFO     | api_stream:trellis_run:333 - [TRELLIS] --- FINISHED REQUEST in 112.888s ---
+2025-11-17 12:31:07.097 | INFO     | api_stream:trellis_run:350 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 12:35:42.258 | INFO     | api_stream:load_pipe_flux_t2i:423 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 12:35:51.869 | INFO     | api_stream:load_pipe_flux_t2i:432 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 12:35:51.869 | INFO     | api_stream:load_pipe_flux_t2i:435 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 12:35:51.942 | ERROR    | api_stream:load_pipe_flux_t2i:443 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 12:35:51.942 | INFO     | api_stream:load_pipe_flux_t2i:447 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 12:35:52.625 | INFO     | api_stream:load_pipe_flux_t2i:455 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 12:36:12.882 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 12:36:12.882 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 12:36:12.882 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 12:36:38.730 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 12:36:41.933 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 12:37:33.245 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 12:37:33.246 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 12:37:33.255 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_c16ce720-d828-489a-8bda-8b23caecf0d3.jpg in 0.009s
+2025-11-17 12:37:39.186 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.931s
+2025-11-17 12:37:39.188 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 12:37:44.226 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.038s
+2025-11-17 12:37:44.227 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 12:37:49.300 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.073s
+2025-11-17 12:37:49.301 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 12:37:54.334 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.032s
+2025-11-17 12:37:54.335 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 12:37:59.379 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.043s
+2025-11-17 12:37:59.380 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 12:38:04.566 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.186s
+2025-11-17 12:38:04.567 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 12:38:09.804 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.237s
+2025-11-17 12:38:09.804 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 36.559s
+2025-11-17 12:38:09.804 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 12:38:09.804 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 12:38:20.721 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.917s
+2025-11-17 12:38:20.722 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 12:38:20.722 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 12:38:26.667 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 5.945s
+2025-11-17 12:38:26.668 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 12:39:17.390 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 50.722s
+2025-11-17 12:39:17.390 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 12:39:17.390 | INFO     | api_stream:trellis_run:243 - [PyMeshLab] Loading raw mesh: /tmp/trellis_5fe3d4d0-d148-4d40-b370-333896432f95_vcz4hotk/mesh_5fe3d4d0-d148-4d40-b370-333896432f95.ply
+2025-11-17 12:39:17.457 | INFO     | api_stream:trellis_run:247 - [PyMeshLab] Applying Taubin smoothing...
+2025-11-17 12:39:17.458 | ERROR    | api_stream:trellis_run:278 - [PyMeshLab] FAILED: Failed to apply filter: taubin_smooth
+Filter does not exists. Take a look at MeshSet.print_filter_list function.. O mesh GLB original será usado.
+2025-11-17 12:39:17.458 | INFO     | api_stream:trellis_run:285 - [TRELLIS] Saving middle frame...
+2025-11-17 12:39:17.461 | INFO     | api_stream:trellis_run:288 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 12:39:17.461 | INFO     | api_stream:trellis_run:293 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 12:39:17.479 | INFO     | api_stream:trellis_run:306 - [TRELLIS] Added mesh_5fe3d4d0-d148-4d40-b370-333896432f95.glb (took 0.018s)
+2025-11-17 12:39:17.523 | INFO     | api_stream:trellis_run:306 - [TRELLIS] Added mesh_5fe3d4d0-d148-4d40-b370-333896432f95.ply (took 0.044s)
+2025-11-17 12:39:17.524 | INFO     | api_stream:trellis_run:306 - [TRELLIS] Added preview_5fe3d4d0-d148-4d40-b370-333896432f95.mp4 (took 0.001s)
+2025-11-17 12:39:17.524 | INFO     | api_stream:trellis_run:306 - [TRELLIS] Added frame_5fe3d4d0-d148-4d40-b370-333896432f95.jpg (took 0.000s)
+2025-11-17 12:39:17.524 | INFO     | api_stream:trellis_run:310 - [TRELLIS] ZIP creation time: 0.063s
+2025-11-17 12:39:17.525 | INFO     | api_stream:trellis_run:317 - [TRELIS] ZIP contains: ['mesh_5fe3d4d0-d148-4d40-b370-333896432f95.glb', 'mesh_5fe3d4d0-d148-4d40-b370-333896432f95.ply', 'preview_5fe3d4d0-d148-4d40-b370-333896432f95.mp4', 'frame_5fe3d4d0-d148-4d40-b370-333896432f95.jpg']
+2025-11-17 12:39:17.525 | INFO     | api_stream:trellis_run:319 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 12:39:17.525 | INFO     | api_stream:trellis_run:322 - [TRELLIS] --- FINISHED REQUEST in 104.280s ---
+2025-11-17 12:39:17.529 | INFO     | api_stream:trellis_run:339 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-17 12:45:44.573 | INFO     | api_stream:load_pipe_flux_t2i:422 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 12:45:54.799 | INFO     | api_stream:load_pipe_flux_t2i:431 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 12:45:54.799 | INFO     | api_stream:load_pipe_flux_t2i:434 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 12:45:54.874 | ERROR    | api_stream:load_pipe_flux_t2i:442 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 12:45:54.874 | INFO     | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 12:45:55.563 | INFO     | api_stream:load_pipe_flux_t2i:454 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 12:46:17.908 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 12:46:17.908 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 12:46:17.908 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 12:46:43.327 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 12:46:46.398 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 12:50:52.982 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 12:50:52.982 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 12:50:52.991 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_5fe3d4d0-d148-4d40-b370-333896432f95.jpg in 0.009s
+2025-11-17 12:50:58.737 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.746s
+2025-11-17 12:50:58.738 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.001s
+2025-11-17 12:51:04.331 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.593s
+2025-11-17 12:51:04.332 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-17 12:51:09.517 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.184s
+2025-11-17 12:51:09.518 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 12:51:14.464 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.946s
+2025-11-17 12:51:14.465 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-17 12:51:19.467 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.001s
+2025-11-17 12:51:19.468 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 12:51:24.883 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.414s
+2025-11-17 12:51:24.885 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 12:51:30.136 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.250s
+2025-11-17 12:51:30.136 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 37.154s
+2025-11-17 12:51:30.136 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 12:51:30.136 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 12:51:41.077 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.941s
+2025-11-17 12:51:41.078 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.001s
+2025-11-17 12:51:41.078 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 12:51:46.992 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 5.914s
+2025-11-17 12:51:46.993 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 12:52:57.960 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 70.967s
+2025-11-17 12:52:57.960 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 12:52:57.961 | INFO     | api_stream:trellis_run:243 - [PyMeshLab] Loading raw mesh: /tmp/trellis_1de1b6cb-889b-4b19-b36d-473eb23127dc_n7k2ozhf/mesh_1de1b6cb-889b-4b19-b36d-473eb23127dc.ply
+2025-11-17 12:52:58.023 | INFO     | api_stream:trellis_run:248 - [PyMeshLab] Applying Taubin smoothing (direct call)...
+2025-11-17 12:52:58.025 | ERROR    | api_stream:trellis_run:278 - [PyMeshLab] FAILED: Failed to apply filter:  'apply_coord_taubin_smoothing. Current mesh does not have Any Faces.. O mesh GLB original será usado.
+2025-11-17 12:52:58.025 | INFO     | api_stream:trellis_run:284 - [TRELLIS] Saving middle frame...
+2025-11-17 12:52:58.028 | INFO     | api_stream:trellis_run:287 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 12:52:58.028 | INFO     | api_stream:trellis_run:292 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 12:52:58.043 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_1de1b6cb-889b-4b19-b36d-473eb23127dc.glb (took 0.015s)
+2025-11-17 12:52:58.072 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_1de1b6cb-889b-4b19-b36d-473eb23127dc.ply (took 0.029s)
+2025-11-17 12:52:58.073 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added preview_1de1b6cb-889b-4b19-b36d-473eb23127dc.mp4 (took 0.001s)
+2025-11-17 12:52:58.073 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added frame_1de1b6cb-889b-4b19-b36d-473eb23127dc.jpg (took 0.000s)
+2025-11-17 12:52:58.073 | INFO     | api_stream:trellis_run:309 - [TRELLIS] ZIP creation time: 0.045s
+2025-11-17 12:52:58.074 | INFO     | api_stream:trellis_run:316 - [TRELIS] ZIP contains: ['mesh_1de1b6cb-889b-4b19-b36d-473eb23127dc.glb', 'mesh_1de1b6cb-889b-4b19-b36d-473eb23127dc.ply', 'preview_1de1b6cb-889b-4b19-b36d-473eb23127dc.mp4', 'frame_1de1b6cb-889b-4b19-b36d-473eb23127dc.jpg']
+2025-11-17 12:52:58.074 | INFO     | api_stream:trellis_run:318 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 12:52:58.074 | INFO     | api_stream:trellis_run:321 - [TRELLIS] --- FINISHED REQUEST in 125.092s ---
+2025-11-17 12:52:58.078 | INFO     | api_stream:trellis_run:338 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 12:52:58.091 | INFO     | api_stream:t2mv_generate:121 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-17 12:52:58.092 | INFO     | api_stream:t2mv_generate:122 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-17 12:52:58.427 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'goku': sd
+2025-11-17 12:53:11.538 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-17 12:53:11.539 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-17 12:53:11.549 | INFO     | api_stream:t2mv_generate:150 - [MV-ADAPTER] Total time (with encoding): 13.46s
+2025-11-17 12:53:45.169 | INFO     | api_stream:load_pipe_flux_t2i:422 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 12:53:54.802 | INFO     | api_stream:load_pipe_flux_t2i:431 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 12:53:54.802 | INFO     | api_stream:load_pipe_flux_t2i:434 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 12:53:54.883 | ERROR    | api_stream:load_pipe_flux_t2i:442 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 12:53:54.883 | INFO     | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 12:53:55.571 | INFO     | api_stream:load_pipe_flux_t2i:454 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 12:54:15.520 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 12:54:15.520 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 12:54:15.520 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 12:54:41.742 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 12:54:42.101 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 12:55:01.399 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'goku': sd
+2025-11-17 12:55:02.861 | INFO     | api_stream:t2mv_generate:121 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-17 12:55:02.861 | INFO     | api_stream:t2mv_generate:122 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goku, full body, game asset
+2025-11-17 12:55:15.534 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-17 12:55:15.534 | INFO     | api_stream:t2mv_generate:141 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-17 12:55:15.547 | INFO     | api_stream:t2mv_generate:150 - [MV-ADAPTER] Total time (with encoding): 12.69s
+2025-11-17 12:59:02.605 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 12:59:02.606 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 12:59:02.606 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 12:59:04.445 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 1.839s
+2025-11-17 12:59:04.446 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 12:59:05.945 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 1.499s
+2025-11-17 12:59:05.945 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-17 12:59:07.442 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 1.497s
+2025-11-17 12:59:07.443 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-17 12:59:08.929 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 1.485s
+2025-11-17 12:59:08.930 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 12:59:10.465 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 1.535s
+2025-11-17 12:59:10.467 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 12:59:11.967 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 1.500s
+2025-11-17 12:59:11.967 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 9.362s
+2025-11-17 12:59:11.967 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 6
+2025-11-17 12:59:11.967 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 12:59:22.882 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.915s
+2025-11-17 12:59:22.884 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 12:59:22.884 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 12:59:28.133 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 5.249s
+2025-11-17 12:59:28.134 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 13:00:19.397 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 51.264s
+2025-11-17 13:00:19.398 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 13:00:19.398 | INFO     | api_stream:trellis_run:243 - [PyMeshLab] Loading raw mesh: /tmp/trellis_1be27df6-1245-4b12-b2b5-b2cc43ca161e_bn8ibxzh/mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.ply
+2025-11-17 13:00:19.461 | INFO     | api_stream:trellis_run:248 - [PyMeshLab] Applying Taubin smoothing (direct call)...
+2025-11-17 13:00:19.463 | ERROR    | api_stream:trellis_run:278 - [PyMeshLab] FAILED: Failed to apply filter:  'apply_coord_taubin_smoothing. Current mesh does not have Any Faces.. O mesh GLB original será usado.
+2025-11-17 13:00:19.463 | INFO     | api_stream:trellis_run:284 - [TRELLIS] Saving middle frame...
+2025-11-17 13:00:19.466 | INFO     | api_stream:trellis_run:287 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 13:00:19.466 | INFO     | api_stream:trellis_run:292 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 13:00:19.479 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.glb (took 0.013s)
+2025-11-17 13:00:19.542 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.ply (took 0.062s)
+2025-11-17 13:00:19.543 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added preview_1be27df6-1245-4b12-b2b5-b2cc43ca161e.mp4 (took 0.001s)
+2025-11-17 13:00:19.544 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added frame_1be27df6-1245-4b12-b2b5-b2cc43ca161e.jpg (took 0.000s)
+2025-11-17 13:00:19.544 | INFO     | api_stream:trellis_run:309 - [TRELLIS] ZIP creation time: 0.078s
+2025-11-17 13:00:19.544 | INFO     | api_stream:trellis_run:316 - [TRELIS] ZIP contains: ['mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.glb', 'mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.ply', 'preview_1be27df6-1245-4b12-b2b5-b2cc43ca161e.mp4', 'frame_1be27df6-1245-4b12-b2b5-b2cc43ca161e.jpg']
+2025-11-17 13:00:19.545 | INFO     | api_stream:trellis_run:318 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 13:00:19.545 | INFO     | api_stream:trellis_run:321 - [TRELLIS] --- FINISHED REQUEST in 76.939s ---
+2025-11-17 13:00:19.548 | INFO     | api_stream:trellis_run:338 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 13:17:54.342 | INFO     | api_stream:load_pipe_flux_t2i:422 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 13:18:04.569 | INFO     | api_stream:load_pipe_flux_t2i:431 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 13:18:04.569 | INFO     | api_stream:load_pipe_flux_t2i:434 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 13:18:04.641 | ERROR    | api_stream:load_pipe_flux_t2i:442 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 13:18:04.641 | INFO     | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 13:18:05.323 | INFO     | api_stream:load_pipe_flux_t2i:454 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 13:18:26.818 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 13:18:26.818 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 13:18:26.818 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 13:18:51.172 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 13:18:54.472 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 13:20:19.666 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 13:20:19.667 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 13:20:19.671 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_1be27df6-1245-4b12-b2b5-b2cc43ca161e.jpg in 0.005s
+2025-11-17 13:20:24.879 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.207s
+2025-11-17 13:20:24.879 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.001s
+2025-11-17 13:20:29.947 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.068s
+2025-11-17 13:20:29.948 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 13:20:34.901 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.952s
+2025-11-17 13:20:34.902 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 13:20:40.223 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.321s
+2025-11-17 13:20:40.224 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-17 13:20:45.246 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.021s
+2025-11-17 13:20:45.247 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 13:20:50.153 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.906s
+2025-11-17 13:20:50.154 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 13:20:55.162 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.008s
+2025-11-17 13:20:55.164 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 35.497s
+2025-11-17 13:20:55.164 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 13:20:55.164 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 13:21:05.865 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.701s
+2025-11-17 13:21:05.866 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 13:21:05.867 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 13:21:12.196 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 6.330s
+2025-11-17 13:21:12.197 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 13:22:10.870 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 58.673s
+2025-11-17 13:22:10.871 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 13:22:10.871 | INFO     | api_stream:trellis_run:243 - [PyMeshLab] Loading raw mesh: /tmp/trellis_494fc81c-c25f-46d4-9cc7-283db9d13782_z46qtm2f/mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.ply
+2025-11-17 13:22:10.937 | INFO     | api_stream:trellis_run:257 - [PyMeshLab] Applying Isotropic Remeshing (direct call)...
+2025-11-17 13:22:10.938 | ERROR    | api_stream:trellis_run:278 - [PyMeshLab] FAILED: Parameter remeshsubdiv not found for filter meshing_isotropic_explicit_remeshing. Please check the documentation.. O mesh GLB original será usado.
+2025-11-17 13:22:10.939 | INFO     | api_stream:trellis_run:284 - [TRELLIS] Saving middle frame...
+2025-11-17 13:22:10.942 | INFO     | api_stream:trellis_run:287 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 13:22:10.942 | INFO     | api_stream:trellis_run:292 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 13:22:10.957 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.glb (took 0.015s)
+2025-11-17 13:22:11.010 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.ply (took 0.053s)
+2025-11-17 13:22:11.011 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added preview_494fc81c-c25f-46d4-9cc7-283db9d13782.mp4 (took 0.001s)
+2025-11-17 13:22:11.011 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added frame_494fc81c-c25f-46d4-9cc7-283db9d13782.jpg (took 0.000s)
+2025-11-17 13:22:11.011 | INFO     | api_stream:trellis_run:309 - [TRELLIS] ZIP creation time: 0.069s
+2025-11-17 13:22:11.012 | INFO     | api_stream:trellis_run:316 - [TRELIS] ZIP contains: ['mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.glb', 'mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.ply', 'preview_494fc81c-c25f-46d4-9cc7-283db9d13782.mp4', 'frame_494fc81c-c25f-46d4-9cc7-283db9d13782.jpg']
+2025-11-17 13:22:11.012 | INFO     | api_stream:trellis_run:318 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 13:22:11.012 | INFO     | api_stream:trellis_run:321 - [TRELLIS] --- FINISHED REQUEST in 111.345s ---
+2025-11-17 13:22:11.016 | INFO     | api_stream:trellis_run:338 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 13:25:23.508 | INFO     | api_stream:load_pipe_flux_t2i:421 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 13:25:33.611 | INFO     | api_stream:load_pipe_flux_t2i:430 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 13:25:33.611 | INFO     | api_stream:load_pipe_flux_t2i:433 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 13:25:33.700 | ERROR    | api_stream:load_pipe_flux_t2i:441 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 13:25:33.700 | INFO     | api_stream:load_pipe_flux_t2i:445 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 13:25:34.416 | INFO     | api_stream:load_pipe_flux_t2i:453 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 13:25:55.613 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 13:25:55.613 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 13:25:55.613 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 13:26:21.299 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 13:26:24.321 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 13:27:38.630 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 13:27:38.630 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 13:27:38.641 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_494fc81c-c25f-46d4-9cc7-283db9d13782.jpg in 0.011s
+2025-11-17 13:27:43.713 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.071s
+2025-11-17 13:27:43.714 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 13:27:48.650 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.936s
+2025-11-17 13:27:48.653 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-17 13:27:53.830 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.177s
+2025-11-17 13:27:53.832 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 13:27:59.260 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.428s
+2025-11-17 13:27:59.261 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 13:28:04.497 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.235s
+2025-11-17 13:28:04.497 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 13:28:09.334 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.837s
+2025-11-17 13:28:09.338 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 13:28:14.225 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.887s
+2025-11-17 13:28:14.225 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 35.595s
+2025-11-17 13:28:14.225 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 13:28:14.225 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 13:28:25.029 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.804s
+2025-11-17 13:28:25.029 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 13:28:25.030 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 13:28:31.516 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 6.486s
+2025-11-17 13:28:31.516 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 13:29:35.157 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 63.640s
+2025-11-17 13:29:35.157 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 13:29:35.157 | INFO     | api_stream:trellis_run:243 - [PyMeshLab] Loading raw mesh: /tmp/trellis_ee2cce3b-52fa-458d-bf25-0f946a2101ea_6obm2gkx/mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.ply
+2025-11-17 13:29:35.222 | INFO     | api_stream:trellis_run:248 - [PyMeshLab] Applying Taubin smoothing (direct call)...
+2025-11-17 13:29:35.224 | ERROR    | api_stream:trellis_run:277 - [PyMeshLab] FAILED: Parameter smoothlambda not found for filter apply_coord_taubin_smoothing. Please check the documentation.. O mesh GLB original será usado.
+2025-11-17 13:29:35.224 | INFO     | api_stream:trellis_run:283 - [TRELLIS] Saving middle frame...
+2025-11-17 13:29:35.227 | INFO     | api_stream:trellis_run:286 - [TRELLIS] Frame saved in 0.004s
+2025-11-17 13:29:35.228 | INFO     | api_stream:trellis_run:291 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 13:29:35.243 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Added mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.glb (took 0.016s)
+2025-11-17 13:29:35.297 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Added mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.ply (took 0.054s)
+2025-11-17 13:29:35.298 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Added preview_ee2cce3b-52fa-458d-bf25-0f946a2101ea.mp4 (took 0.001s)
+2025-11-17 13:29:35.299 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Added frame_ee2cce3b-52fa-458d-bf25-0f946a2101ea.jpg (took 0.000s)
+2025-11-17 13:29:35.299 | INFO     | api_stream:trellis_run:308 - [TRELLIS] ZIP creation time: 0.071s
+2025-11-17 13:29:35.299 | INFO     | api_stream:trellis_run:315 - [TRELIS] ZIP contains: ['mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.glb', 'mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.ply', 'preview_ee2cce3b-52fa-458d-bf25-0f946a2101ea.mp4', 'frame_ee2cce3b-52fa-458d-bf25-0f946a2101ea.jpg']
+2025-11-17 13:29:35.299 | INFO     | api_stream:trellis_run:317 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 13:29:35.300 | INFO     | api_stream:trellis_run:320 - [TRELLIS] --- FINISHED REQUEST in 116.670s ---
+2025-11-17 13:29:35.303 | INFO     | api_stream:trellis_run:337 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 13:39:42.020 | INFO     | api_stream:load_pipe_flux_t2i:419 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 13:39:52.605 | INFO     | api_stream:load_pipe_flux_t2i:428 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 13:39:52.605 | INFO     | api_stream:load_pipe_flux_t2i:431 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 13:39:52.702 | ERROR    | api_stream:load_pipe_flux_t2i:439 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 13:39:52.702 | INFO     | api_stream:load_pipe_flux_t2i:443 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 13:39:53.447 | INFO     | api_stream:load_pipe_flux_t2i:451 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 13:40:17.887 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 13:40:17.888 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 13:40:17.888 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 13:40:44.930 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 13:40:48.368 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 13:40:51.583 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 13:40:51.584 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 13:40:51.590 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_ee2cce3b-52fa-458d-bf25-0f946a2101ea.jpg in 0.007s
+2025-11-17 13:40:57.136 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.546s
+2025-11-17 13:40:57.137 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.001s
+2025-11-17 13:41:02.276 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.139s
+2025-11-17 13:41:02.277 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 13:41:07.515 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.238s
+2025-11-17 13:41:07.517 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.002s
+2025-11-17 13:41:12.259 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.742s
+2025-11-17 13:41:12.261 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 13:41:17.147 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.886s
+2025-11-17 13:41:17.148 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 13:41:22.268 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.121s
+2025-11-17 13:41:22.269 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 13:41:27.710 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.440s
+2025-11-17 13:41:27.711 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 36.127s
+2025-11-17 13:41:27.711 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 13:41:27.711 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 13:41:38.030 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.319s
+2025-11-17 13:41:38.031 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 13:41:38.031 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 13:41:43.252 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 5.221s
+2025-11-17 13:41:43.253 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 13:42:38.084 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 54.831s
+2025-11-17 13:42:38.084 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 13:42:38.085 | INFO     | api_stream:trellis_run:243 - [PyMeshLab] Loading raw mesh: /tmp/trellis_294d4817-d342-4ace-a5a3-37a9b38fa7aa_37_ecjqu/mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.ply
+2025-11-17 13:42:38.152 | INFO     | api_stream:trellis_run:248 - [PyMeshLab] Applying Taubin smoothing (direct call)...
+2025-11-17 13:42:38.154 | ERROR    | api_stream:trellis_run:275 - [PyMeshLab] FAILED: Failed to apply filter:  'apply_coord_taubin_smoothing. Current mesh does not have Any Faces.. O mesh GLB original será usado.
+2025-11-17 13:42:38.154 | INFO     | api_stream:trellis_run:281 - [TRELLIS] Saving middle frame...
+2025-11-17 13:42:38.158 | INFO     | api_stream:trellis_run:284 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 13:42:38.158 | INFO     | api_stream:trellis_run:289 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 13:42:38.179 | INFO     | api_stream:trellis_run:302 - [TRELLIS] Added mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.glb (took 0.021s)
+2025-11-17 13:42:38.236 | INFO     | api_stream:trellis_run:302 - [TRELLIS] Added mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.ply (took 0.057s)
+2025-11-17 13:42:38.237 | INFO     | api_stream:trellis_run:302 - [TRELLIS] Added preview_294d4817-d342-4ace-a5a3-37a9b38fa7aa.mp4 (took 0.001s)
+2025-11-17 13:42:38.237 | INFO     | api_stream:trellis_run:302 - [TRELLIS] Added frame_294d4817-d342-4ace-a5a3-37a9b38fa7aa.jpg (took 0.000s)
+2025-11-17 13:42:38.237 | INFO     | api_stream:trellis_run:306 - [TRELLIS] ZIP creation time: 0.080s
+2025-11-17 13:42:38.238 | INFO     | api_stream:trellis_run:313 - [TRELIS] ZIP contains: ['mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.glb', 'mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.ply', 'preview_294d4817-d342-4ace-a5a3-37a9b38fa7aa.mp4', 'frame_294d4817-d342-4ace-a5a3-37a9b38fa7aa.jpg']
+2025-11-17 13:42:38.238 | INFO     | api_stream:trellis_run:315 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 13:42:38.238 | INFO     | api_stream:trellis_run:318 - [TRELLIS] --- FINISHED REQUEST in 106.655s ---
+2025-11-17 13:42:38.242 | INFO     | api_stream:trellis_run:335 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 13:52:53.312 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 13:52:53.313 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 13:52:53.313 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_294d4817-d342-4ace-a5a3-37a9b38fa7aa.jpg in 0.000s
+2025-11-17 13:52:58.644 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.330s
+2025-11-17 13:52:58.644 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 13:53:03.839 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.194s
+2025-11-17 13:53:03.839 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 13:53:08.874 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.035s
+2025-11-17 13:53:08.875 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-17 13:53:13.614 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.739s
+2025-11-17 13:53:13.615 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-17 13:53:18.147 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.532s
+2025-11-17 13:53:18.148 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 13:53:22.846 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.698s
+2025-11-17 13:53:22.847 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 13:53:27.923 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.076s
+2025-11-17 13:53:27.923 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 34.610s
+2025-11-17 13:53:27.923 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 13:53:27.923 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 13:53:34.927 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 7.003s
+2025-11-17 13:53:34.928 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.001s
+2025-11-17 13:53:34.928 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 13:53:41.525 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 6.597s
+2025-11-17 13:53:41.526 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 13:54:34.505 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 52.979s
+2025-11-17 13:54:34.506 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 13:54:34.506 | INFO     | api_stream:trellis_run:243 - [PyMeshLab] Loading raw mesh: /tmp/trellis_c9c3e313-5527-4dcb-a689-f84678ace3de_82hoddh2/mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.ply
+2025-11-17 13:54:34.570 | INFO     | api_stream:trellis_run:248 - [PyMeshLab] Applying Taubin smoothing (direct call)...
+2025-11-17 13:54:34.572 | ERROR    | api_stream:trellis_run:275 - [PyMeshLab] FAILED: Failed to apply filter:  'apply_coord_taubin_smoothing. Current mesh does not have Any Faces.. O mesh GLB original será usado.
+2025-11-17 13:54:34.572 | INFO     | api_stream:trellis_run:281 - [TRELLIS] Saving middle frame...
+2025-11-17 13:54:34.574 | INFO     | api_stream:trellis_run:284 - [TRELLIS] Frame saved in 0.002s
+2025-11-17 13:54:34.574 | INFO     | api_stream:trellis_run:289 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 13:54:34.596 | INFO     | api_stream:trellis_run:302 - [TRELLIS] Added mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.glb (took 0.022s)
+2025-11-17 13:54:34.702 | INFO     | api_stream:trellis_run:302 - [TRELLIS] Added mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.ply (took 0.105s)
+2025-11-17 13:54:34.703 | INFO     | api_stream:trellis_run:302 - [TRELLIS] Added preview_c9c3e313-5527-4dcb-a689-f84678ace3de.mp4 (took 0.001s)
+2025-11-17 13:54:34.703 | INFO     | api_stream:trellis_run:302 - [TRELLIS] Added frame_c9c3e313-5527-4dcb-a689-f84678ace3de.jpg (took 0.000s)
+2025-11-17 13:54:34.703 | INFO     | api_stream:trellis_run:306 - [TRELLIS] ZIP creation time: 0.129s
+2025-11-17 13:54:34.704 | INFO     | api_stream:trellis_run:313 - [TRELIS] ZIP contains: ['mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.glb', 'mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.ply', 'preview_c9c3e313-5527-4dcb-a689-f84678ace3de.mp4', 'frame_c9c3e313-5527-4dcb-a689-f84678ace3de.jpg']
+2025-11-17 13:54:34.704 | INFO     | api_stream:trellis_run:315 - [TRELLIS] ZIP validation took 0.000s
+2025-11-17 13:54:34.704 | INFO     | api_stream:trellis_run:318 - [TRELLIS] --- FINISHED REQUEST in 101.391s ---
+2025-11-17 13:54:34.708 | INFO     | api_stream:trellis_run:335 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 14:04:55.963 | INFO     | api_stream:load_pipe_flux_t2i:418 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 14:05:05.532 | INFO     | api_stream:load_pipe_flux_t2i:427 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 14:05:05.532 | INFO     | api_stream:load_pipe_flux_t2i:430 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 14:05:05.605 | ERROR    | api_stream:load_pipe_flux_t2i:438 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 14:05:05.605 | INFO     | api_stream:load_pipe_flux_t2i:442 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 14:05:06.395 | INFO     | api_stream:load_pipe_flux_t2i:450 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 14:05:29.425 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 14:05:29.425 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 14:05:29.425 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 14:05:56.395 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 14:05:59.414 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 14:07:35.931 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 14:07:35.931 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 14:07:35.941 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_c9c3e313-5527-4dcb-a689-f84678ace3de.jpg in 0.009s
+2025-11-17 14:07:41.636 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.695s
+2025-11-17 14:07:41.637 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 14:07:46.867 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.230s
+2025-11-17 14:07:46.867 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 14:07:51.771 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.904s
+2025-11-17 14:07:51.772 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 14:07:56.655 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.882s
+2025-11-17 14:07:56.656 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 14:08:01.477 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.822s
+2025-11-17 14:08:01.478 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 14:08:06.533 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.054s
+2025-11-17 14:08:06.534 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 14:08:11.537 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.003s
+2025-11-17 14:08:11.538 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 35.607s
+2025-11-17 14:08:11.538 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 14:08:11.538 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 14:08:22.613 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 11.075s
+2025-11-17 14:08:22.614 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 14:08:22.614 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 14:08:29.429 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 6.815s
+2025-11-17 14:08:29.430 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 14:09:27.470 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 58.040s
+2025-11-17 14:09:27.470 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 14:09:27.471 | INFO     | api_stream:trellis_run:246 - [PyMeshLab] Loading raw mesh: /tmp/trellis_db8c25f8-ff1b-4eea-809a-f3c57ea044d4_qtedjlu_/mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.glb
+2025-11-17 14:09:27.565 | INFO     | api_stream:trellis_run:250 - [PyMeshLab] Applying Taubin smoothing (direct call)...
+2025-11-17 14:09:27.734 | INFO     | api_stream:trellis_run:254 - [PyMeshLab] Applying Isotropic Remeshing (direct call)...
+2025-11-17 14:09:37.995 | INFO     | api_stream:trellis_run:260 - [PyMeshLab] Applying Simplification (direct call)...
+2025-11-17 14:09:38.281 | INFO     | api_stream:trellis_run:268 - [PyMeshLab] Saving cleaned mesh to: /tmp/trellis_db8c25f8-ff1b-4eea-809a-f3c57ea044d4_qtedjlu_/mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.glb
+2025-11-17 14:09:38.281 | ERROR    | api_stream:trellis_run:274 - [PyMeshLab] FAILED: Unknown format for save: glb. O mesh GLB original será usado.
+2025-11-17 14:09:38.282 | INFO     | api_stream:trellis_run:280 - [TRELLIS] Saving middle frame...
+2025-11-17 14:09:38.285 | INFO     | api_stream:trellis_run:283 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 14:09:38.285 | INFO     | api_stream:trellis_run:288 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 14:09:38.297 | INFO     | api_stream:trellis_run:301 - [TRELLIS] Added mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.glb (took 0.012s)
+2025-11-17 14:09:38.359 | INFO     | api_stream:trellis_run:301 - [TRELLIS] Added mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.ply (took 0.062s)
+2025-11-17 14:09:38.360 | INFO     | api_stream:trellis_run:301 - [TRELLIS] Added preview_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.mp4 (took 0.001s)
+2025-11-17 14:09:38.360 | INFO     | api_stream:trellis_run:301 - [TRELLIS] Added frame_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.jpg (took 0.000s)
+2025-11-17 14:09:38.360 | INFO     | api_stream:trellis_run:305 - [TRELLIS] ZIP creation time: 0.075s
+2025-11-17 14:09:38.361 | INFO     | api_stream:trellis_run:312 - [TRELIS] ZIP contains: ['mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.glb', 'mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.ply', 'preview_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.mp4', 'frame_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.jpg']
+2025-11-17 14:09:38.361 | INFO     | api_stream:trellis_run:314 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 14:09:38.361 | INFO     | api_stream:trellis_run:317 - [TRELLIS] --- FINISHED REQUEST in 122.430s ---
+2025-11-17 14:09:38.364 | INFO     | api_stream:trellis_run:334 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-17 14:22:47.357 | INFO     | api_stream:load_pipe_flux_t2i:421 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 14:22:57.061 | INFO     | api_stream:load_pipe_flux_t2i:430 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 14:22:57.062 | INFO     | api_stream:load_pipe_flux_t2i:433 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 14:22:57.156 | ERROR    | api_stream:load_pipe_flux_t2i:441 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 14:22:57.156 | INFO     | api_stream:load_pipe_flux_t2i:445 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 14:22:57.874 | INFO     | api_stream:load_pipe_flux_t2i:453 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 14:23:24.412 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 14:23:24.412 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 14:23:24.412 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 14:23:50.911 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 14:23:54.631 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 14:24:28.944 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 14:24:28.944 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 14:24:28.954 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.jpg in 0.009s
+2025-11-17 14:24:34.434 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.480s
+2025-11-17 14:24:34.435 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 14:24:39.564 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.129s
+2025-11-17 14:24:39.565 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 14:24:44.350 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.786s
+2025-11-17 14:24:44.351 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 14:24:49.033 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.681s
+2025-11-17 14:24:49.034 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 14:24:54.153 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.118s
+2025-11-17 14:24:54.154 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-17 14:24:59.199 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.045s
+2025-11-17 14:24:59.200 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 14:25:04.462 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.262s
+2025-11-17 14:25:04.462 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 35.518s
+2025-11-17 14:25:04.462 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 14:25:04.462 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 14:25:15.528 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 11.065s
+2025-11-17 14:25:15.529 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 14:25:15.529 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 14:25:21.921 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 6.392s
+2025-11-17 14:25:21.922 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 14:26:20.625 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 58.702s
+2025-11-17 14:26:20.625 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 14:26:20.625 | INFO     | api_stream:trellis_run:246 - [PyMeshLab] Loading raw mesh: /tmp/trellis_aba22c2a-0724-4405-a15d-9a26c015500b_al_wabxa/mesh_aba22c2a-0724-4405-a15d-9a26c015500b.glb
+2025-11-17 14:26:20.728 | INFO     | api_stream:trellis_run:250 - [PyMeshLab] Applying Taubin smoothing (direct call)...
+2025-11-17 14:26:20.917 | INFO     | api_stream:trellis_run:254 - [PyMeshLab] Applying Isotropic Remeshing (direct call)...
+2025-11-17 14:26:31.441 | INFO     | api_stream:trellis_run:260 - [PyMeshLab] Applying Simplification (direct call)...
+2025-11-17 14:26:31.740 | INFO     | api_stream:trellis_run:268 - [PyMeshLab] Saving cleaned mesh to: /tmp/trellis_aba22c2a-0724-4405-a15d-9a26c015500b_al_wabxa/mesh_aba22c2a-0724-4405-a15d-9a26c015500b.glb
+2025-11-17 14:26:31.741 | ERROR    | api_stream:trellis_run:277 - [PyMeshLab] FAILED: Unknown format for save: glb. O mesh GLB original será usado.
+2025-11-17 14:26:31.741 | INFO     | api_stream:trellis_run:283 - [TRELLIS] Saving middle frame...
+2025-11-17 14:26:31.745 | INFO     | api_stream:trellis_run:286 - [TRELLIS] Frame saved in 0.004s
+2025-11-17 14:26:31.745 | INFO     | api_stream:trellis_run:291 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 14:26:31.756 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Added mesh_aba22c2a-0724-4405-a15d-9a26c015500b.glb (took 0.011s)
+2025-11-17 14:26:31.831 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Added mesh_aba22c2a-0724-4405-a15d-9a26c015500b.ply (took 0.074s)
+2025-11-17 14:26:31.832 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Added preview_aba22c2a-0724-4405-a15d-9a26c015500b.mp4 (took 0.001s)
+2025-11-17 14:26:31.832 | INFO     | api_stream:trellis_run:304 - [TRELLIS] Added frame_aba22c2a-0724-4405-a15d-9a26c015500b.jpg (took 0.000s)
+2025-11-17 14:26:31.832 | INFO     | api_stream:trellis_run:308 - [TRELLIS] ZIP creation time: 0.087s
+2025-11-17 14:26:31.833 | INFO     | api_stream:trellis_run:315 - [TRELIS] ZIP contains: ['mesh_aba22c2a-0724-4405-a15d-9a26c015500b.glb', 'mesh_aba22c2a-0724-4405-a15d-9a26c015500b.ply', 'preview_aba22c2a-0724-4405-a15d-9a26c015500b.mp4', 'frame_aba22c2a-0724-4405-a15d-9a26c015500b.jpg']
+2025-11-17 14:26:31.833 | INFO     | api_stream:trellis_run:317 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 14:26:31.833 | INFO     | api_stream:trellis_run:320 - [TRELLIS] --- FINISHED REQUEST in 122.889s ---
+2025-11-17 14:26:31.837 | INFO     | api_stream:trellis_run:337 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-17 14:37:01.064 | INFO     | api_stream:load_pipe_flux_t2i:422 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 14:37:11.145 | INFO     | api_stream:load_pipe_flux_t2i:431 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 14:37:11.145 | INFO     | api_stream:load_pipe_flux_t2i:434 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 14:37:11.225 | ERROR    | api_stream:load_pipe_flux_t2i:442 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 14:37:11.225 | INFO     | api_stream:load_pipe_flux_t2i:446 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 14:37:11.935 | INFO     | api_stream:load_pipe_flux_t2i:454 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 14:37:34.700 | INFO     | api_stream:load_pipe_mvadapter:67 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 14:37:34.700 | INFO     | api_stream:load_pipe_mvadapter:74 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 14:37:34.700 | INFO     | api_stream:load_pipe_trellis:163 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 14:38:01.342 | INFO     | api_stream:load_pipe_trellis:166 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 14:38:04.375 | INFO     | api_stream:_startup:38 - [STARTUP] loaded pipelines
+2025-11-17 14:41:50.042 | INFO     | api_stream:trellis_run:176 - [TRELLIS] --- START REQUEST ---
+2025-11-17 14:41:50.042 | INFO     | api_stream:trellis_run:182 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 14:41:50.048 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image frame_aba22c2a-0724-4405-a15d-9a26c015500b.jpg in 0.006s
+2025-11-17 14:41:55.643 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.594s
+2025-11-17 14:41:55.643 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 14:42:00.944 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.300s
+2025-11-17 14:42:00.945 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-17 14:42:08.760 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 7.814s
+2025-11-17 14:42:08.762 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_02.jpg in 0.002s
+2025-11-17 14:42:14.175 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.413s
+2025-11-17 14:42:14.176 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 14:42:19.218 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.041s
+2025-11-17 14:42:19.219 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 14:42:24.041 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 4.822s
+2025-11-17 14:42:24.042 | INFO     | api_stream:trellis_run:187 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 14:42:29.159 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Removed BG in 5.117s
+2025-11-17 14:42:29.159 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Input preprocessing finished in 39.117s
+2025-11-17 14:42:29.159 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Total views: 7
+2025-11-17 14:42:29.159 | INFO     | api_stream:trellis_run:202 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 14:42:40.147 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Trellis pipeline duration: 10.988s
+2025-11-17 14:42:40.148 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 14:42:40.148 | INFO     | api_stream:trellis_run:223 - [TRELLIS] Starting save_video...
+2025-11-17 14:42:46.842 | INFO     | api_stream:trellis_run:225 - [TRELLIS] save_video completed in 6.693s
+2025-11-17 14:42:46.843 | INFO     | api_stream:trellis_run:228 - [TRELLIS] Starting save_mesh (raw)...
+2025-11-17 14:43:48.628 | INFO     | api_stream:trellis_run:236 - [TRELLIS] save_mesh (raw) completed in 61.785s
+2025-11-17 14:43:48.628 | INFO     | api_stream:trellis_run:239 - [PyMeshLab] Starting mesh post-processing...
+2025-11-17 14:43:48.629 | INFO     | api_stream:trellis_run:249 - [PyMeshLab] Loading PLY mesh: /tmp/trellis_1758b04c-c7db-4c12-99c5-01c294c4b5bf_4nbs9gi9/mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.ply
+2025-11-17 14:43:48.704 | INFO     | api_stream:trellis_run:253 - [PyMeshLab] Applying Taubin smoothing...
+2025-11-17 14:43:48.706 | ERROR    | api_stream:trellis_run:276 - [PyMeshLab] FAILED: Failed to apply filter:  'apply_coord_taubin_smoothing. Current mesh does not have Any Faces.. Only original files will be included.
+2025-11-17 14:43:48.707 | ERROR    | api_stream:trellis_run:278 - Traceback (most recent call last):
+  File "/workspace/beau/beau-pipeline/api_stream.py", line 254, in trellis_run
+    ms.apply_coord_taubin_smoothing()
+  File "/venv/beau/lib/python3.10/site-packages/pymeshlab/__init__.py", line 41, in filter_function
+    res_dict = self.apply_filter(name, **kwargs)
+pymeshlab.pmeshlab.PyMeshLabException: Failed to apply filter:  'apply_coord_taubin_smoothing. Current mesh does not have Any Faces.
+
+2025-11-17 14:43:48.708 | INFO     | api_stream:trellis_run:284 - [TRELLIS] Saving middle frame...
+2025-11-17 14:43:48.712 | INFO     | api_stream:trellis_run:287 - [TRELLIS] Frame saved in 0.004s
+2025-11-17 14:43:48.712 | INFO     | api_stream:trellis_run:292 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 14:43:48.734 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.glb (took 0.022s)
+2025-11-17 14:43:48.801 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.ply (took 0.067s)
+2025-11-17 14:43:48.802 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added preview_1758b04c-c7db-4c12-99c5-01c294c4b5bf.mp4 (took 0.001s)
+2025-11-17 14:43:48.802 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added frame_1758b04c-c7db-4c12-99c5-01c294c4b5bf.jpg (took 0.000s)
+2025-11-17 14:43:48.802 | INFO     | api_stream:trellis_run:309 - [TRELLIS] ZIP creation time: 0.090s
+2025-11-17 14:43:48.803 | INFO     | api_stream:trellis_run:316 - [TRELIS] ZIP contains: ['mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.glb', 'mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.ply', 'preview_1758b04c-c7db-4c12-99c5-01c294c4b5bf.mp4', 'frame_1758b04c-c7db-4c12-99c5-01c294c4b5bf.jpg']
+2025-11-17 14:43:48.803 | INFO     | api_stream:trellis_run:318 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 14:43:48.803 | INFO     | api_stream:trellis_run:321 - [TRELLIS] --- FINISHED REQUEST in 118.761s ---
+2025-11-17 14:43:48.807 | INFO     | api_stream:trellis_run:338 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 14:54:02.692 | INFO     | api_stream:load_pipe_flux_t2i:423 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 14:54:12.621 | INFO     | api_stream:load_pipe_flux_t2i:432 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 14:54:12.621 | INFO     | api_stream:load_pipe_flux_t2i:435 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 14:54:12.689 | ERROR    | api_stream:load_pipe_flux_t2i:443 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 14:54:12.689 | INFO     | api_stream:load_pipe_flux_t2i:447 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 14:54:13.397 | INFO     | api_stream:load_pipe_flux_t2i:455 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 14:54:36.702 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 14:54:36.702 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 14:54:36.702 | INFO     | api_stream:load_pipe_trellis:161 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 14:55:03.659 | INFO     | api_stream:load_pipe_trellis:164 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 14:55:06.879 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-17 14:57:33.107 | INFO     | api_stream:trellis_run:174 - [TRELLIS] --- START REQUEST ---
+2025-11-17 14:57:33.108 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 14:57:33.117 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image frame_1758b04c-c7db-4c12-99c5-01c294c4b5bf.jpg in 0.009s
+2025-11-17 14:57:38.642 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 5.525s
+2025-11-17 14:57:38.643 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 14:57:43.650 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 5.007s
+2025-11-17 14:57:43.652 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-17 14:57:48.780 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 5.129s
+2025-11-17 14:57:48.781 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_02.jpg in 0.001s
+2025-11-17 14:57:54.279 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 5.497s
+2025-11-17 14:57:54.281 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_03.jpg in 0.001s
+2025-11-17 14:57:59.362 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 5.081s
+2025-11-17 14:57:59.363 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 14:58:04.066 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 4.703s
+2025-11-17 14:58:04.067 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 14:58:09.278 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 5.211s
+2025-11-17 14:58:09.279 | INFO     | api_stream:trellis_run:193 - [TRELLIS] Input preprocessing finished in 36.171s
+2025-11-17 14:58:09.279 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Total views: 7
+2025-11-17 14:58:09.279 | INFO     | api_stream:trellis_run:197 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 14:58:20.430 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Trellis pipeline duration: 11.151s
+2025-11-17 14:58:20.432 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 14:58:20.432 | INFO     | api_stream:trellis_run:219 - [TRELLIS] Starting save_video...
+2025-11-17 14:58:26.768 | INFO     | api_stream:trellis_run:221 - [TRELLIS] save_video completed in 6.335s
+2025-11-17 14:58:26.768 | INFO     | api_stream:trellis_run:224 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-17 14:58:47.911 | INFO     | api_stream:trellis_run:232 - [TRELLIS] save_mesh completed in 21.143s
+2025-11-17 14:58:47.911 | INFO     | api_stream:trellis_run:235 - [PyMeshLab] Starting mesh post-processing (OBJ Roundtrip)...
+2025-11-17 14:58:47.914 | ERROR    | api_stream:trellis_run:279 - [PyMeshLab] FAILED: name 'pymeshlab' is not defined. O mesh GLB original será usado.
+Traceback (most recent call last):
+  File "/workspace/beau/beau-pipeline/api_stream.py", line 244, in trellis_run
+    ms = pymeshlab.MeshSet()
+NameError: name 'pymeshlab' is not defined. Did you mean: 't_pymeshlab'?
+
+2025-11-17 14:58:47.914 | INFO     | api_stream:trellis_run:284 - [TRELLIS] Saving middle frame...
+2025-11-17 14:58:47.918 | INFO     | api_stream:trellis_run:287 - [TRELLIS] Frame saved in 0.004s
+2025-11-17 14:58:47.918 | INFO     | api_stream:trellis_run:292 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 14:58:47.921 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.glb (took 0.003s)
+2025-11-17 14:58:47.980 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.ply (took 0.059s)
+2025-11-17 14:58:47.981 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added preview_4a23e2a6-1edc-46ed-b601-39a20434b9e5.mp4 (took 0.001s)
+2025-11-17 14:58:47.981 | INFO     | api_stream:trellis_run:305 - [TRELLIS] Added frame_4a23e2a6-1edc-46ed-b601-39a20434b9e5.jpg (took 0.000s)
+2025-11-17 14:58:47.981 | INFO     | api_stream:trellis_run:309 - [TRELLIS] ZIP creation time: 0.064s
+2025-11-17 14:58:47.982 | INFO     | api_stream:trellis_run:316 - [TRELLIS] ZIP contains: ['mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.glb', 'mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.ply', 'preview_4a23e2a6-1edc-46ed-b601-39a20434b9e5.mp4', 'frame_4a23e2a6-1edc-46ed-b601-39a20434b9e5.jpg']
+2025-11-17 14:58:47.982 | INFO     | api_stream:trellis_run:318 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 14:58:47.982 | INFO     | api_stream:trellis_run:321 - [TRELLIS] --- FINISHED REQUEST in 74.875s ---
+2025-11-17 14:58:47.985 | INFO     | api_stream:trellis_run:338 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-17 15:00:27.916 | INFO     | api_stream:load_pipe_flux_t2i:424 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 15:00:37.494 | INFO     | api_stream:load_pipe_flux_t2i:433 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 15:00:37.494 | INFO     | api_stream:load_pipe_flux_t2i:436 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 15:00:37.570 | ERROR    | api_stream:load_pipe_flux_t2i:444 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 15:00:37.570 | INFO     | api_stream:load_pipe_flux_t2i:448 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 15:00:38.288 | INFO     | api_stream:load_pipe_flux_t2i:456 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 15:00:59.850 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 15:00:59.851 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 15:00:59.851 | INFO     | api_stream:load_pipe_trellis:162 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 15:01:28.075 | INFO     | api_stream:load_pipe_trellis:165 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 15:01:31.391 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-17 16:06:09.485 | INFO     | api_stream:trellis_run:175 - [TRELLIS] --- START REQUEST ---
+2025-11-17 16:06:09.486 | INFO     | api_stream:trellis_run:181 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 16:06:09.498 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image frame_4a23e2a6-1edc-46ed-b601-39a20434b9e5.jpg in 0.012s
+2025-11-17 16:06:14.879 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.380s
+2025-11-17 16:06:14.880 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 16:06:19.868 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 4.988s
+2025-11-17 16:06:19.868 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 16:06:25.117 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.249s
+2025-11-17 16:06:25.118 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-17 16:06:30.282 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.163s
+2025-11-17 16:06:30.282 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-17 16:06:35.224 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 4.941s
+2025-11-17 16:06:35.226 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 16:06:39.839 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 4.612s
+2025-11-17 16:06:39.839 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 16:06:43.975 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 4.136s
+2025-11-17 16:06:43.976 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Input preprocessing finished in 34.490s
+2025-11-17 16:06:43.976 | INFO     | api_stream:trellis_run:195 - [TRELLIS] Total views: 7
+2025-11-17 16:06:43.976 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 16:06:55.278 | INFO     | api_stream:trellis_run:200 - [TRELLIS] Trellis pipeline duration: 11.302s
+2025-11-17 16:06:55.279 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 16:06:55.279 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Starting save_video...
+2025-11-17 16:07:01.689 | INFO     | api_stream:trellis_run:222 - [TRELLIS] save_video completed in 6.409s
+2025-11-17 16:07:01.689 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-17 16:07:22.775 | INFO     | api_stream:trellis_run:233 - [TRELLIS] save_mesh completed in 21.086s
+2025-11-17 16:07:22.775 | INFO     | api_stream:trellis_run:236 - [PyMeshLab] Starting mesh post-processing (OBJ Roundtrip)...
+2025-11-17 16:07:22.775 | INFO     | api_stream:trellis_run:246 - [PyMeshLab] Loading raw mesh: /tmp/trellis_eed22629-35e3-48a2-b236-4e45f53a7201_oncnj4r_/mesh_eed22629-35e3-48a2-b236-4e45f53a7201.glb
+2025-11-17 16:07:22.843 | INFO     | api_stream:trellis_run:249 - [PyMeshLab] Applying Taubin smoothing...
+2025-11-17 16:07:22.869 | INFO     | api_stream:trellis_run:252 - [PyMeshLab] Applying Simplification...
+2025-11-17 16:07:22.970 | INFO     | api_stream:trellis_run:259 - [PyMeshLab] Saving intermediate OBJ to: /tmp/trellis_eed22629-35e3-48a2-b236-4e45f53a7201_oncnj4r_/intermediate_mesh_eed22629-35e3-48a2-b236-4e45f53a7201.obj
+2025-11-17 16:07:23.057 | ERROR    | api_stream:trellis_run:280 - [PyMeshLab] FAILED: Image /tmp/trellis_eed22629-35e3-48a2-b236-4e45f53a7201_oncnj4r_/texture_0 cannot be saved. Your MeshLab version has not plugin to save  file format.. O mesh GLB original será usado.
+Traceback (most recent call last):
+  File "/workspace/beau/beau-pipeline/api_stream.py", line 260, in trellis_run
+    ms.save_current_mesh(
+pymeshlab.pmeshlab.PyMeshLabException: Image /tmp/trellis_eed22629-35e3-48a2-b236-4e45f53a7201_oncnj4r_/texture_0 cannot be saved. Your MeshLab version has not plugin to save  file format.
+
+2025-11-17 16:07:23.057 | INFO     | api_stream:trellis_run:285 - [TRELLIS] Saving middle frame...
+2025-11-17 16:07:23.060 | INFO     | api_stream:trellis_run:288 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 16:07:23.060 | INFO     | api_stream:trellis_run:293 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 16:07:23.063 | INFO     | api_stream:trellis_run:306 - [TRELLIS] Added mesh_eed22629-35e3-48a2-b236-4e45f53a7201.glb (took 0.003s)
+2025-11-17 16:07:23.117 | INFO     | api_stream:trellis_run:306 - [TRELLIS] Added mesh_eed22629-35e3-48a2-b236-4e45f53a7201.ply (took 0.054s)
+2025-11-17 16:07:23.126 | INFO     | api_stream:trellis_run:306 - [TRELLIS] Added preview_eed22629-35e3-48a2-b236-4e45f53a7201.mp4 (took 0.009s)
+2025-11-17 16:07:23.127 | INFO     | api_stream:trellis_run:306 - [TRELLIS] Added frame_eed22629-35e3-48a2-b236-4e45f53a7201.jpg (took 0.000s)
+2025-11-17 16:07:23.127 | INFO     | api_stream:trellis_run:310 - [TRELLIS] ZIP creation time: 0.067s
+2025-11-17 16:07:23.128 | INFO     | api_stream:trellis_run:317 - [TRELLIS] ZIP contains: ['mesh_eed22629-35e3-48a2-b236-4e45f53a7201.glb', 'mesh_eed22629-35e3-48a2-b236-4e45f53a7201.ply', 'preview_eed22629-35e3-48a2-b236-4e45f53a7201.mp4', 'frame_eed22629-35e3-48a2-b236-4e45f53a7201.jpg']
+2025-11-17 16:07:23.128 | INFO     | api_stream:trellis_run:319 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 16:07:23.128 | INFO     | api_stream:trellis_run:322 - [TRELLIS] --- FINISHED REQUEST in 73.643s ---
+2025-11-17 16:07:23.132 | INFO     | api_stream:trellis_run:339 - [TRELLIS] Cleanup finished in 0.004s
+2025-11-17 16:20:44.688 | INFO     | api_stream:load_pipe_flux_t2i:417 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 16:20:54.108 | INFO     | api_stream:load_pipe_flux_t2i:426 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 16:20:54.109 | INFO     | api_stream:load_pipe_flux_t2i:429 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 16:20:54.182 | ERROR    | api_stream:load_pipe_flux_t2i:437 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 16:20:54.182 | INFO     | api_stream:load_pipe_flux_t2i:441 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 16:20:54.889 | INFO     | api_stream:load_pipe_flux_t2i:449 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 16:21:19.611 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 16:21:19.613 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 16:21:19.613 | INFO     | api_stream:load_pipe_trellis:162 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 16:21:49.059 | INFO     | api_stream:load_pipe_trellis:165 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 16:21:52.438 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-17 16:22:01.416 | INFO     | api_stream:trellis_run:175 - [TRELLIS] --- START REQUEST ---
+2025-11-17 16:22:01.416 | INFO     | api_stream:trellis_run:181 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 16:22:01.426 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image frame_eed22629-35e3-48a2-b236-4e45f53a7201.jpg in 0.009s
+2025-11-17 16:22:07.029 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.603s
+2025-11-17 16:22:07.030 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 16:22:12.070 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.040s
+2025-11-17 16:22:12.071 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 16:22:17.345 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.275s
+2025-11-17 16:22:17.346 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-17 16:22:22.308 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 4.962s
+2025-11-17 16:22:22.312 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_03.jpg in 0.002s
+2025-11-17 16:22:27.437 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.126s
+2025-11-17 16:22:27.438 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 16:22:32.440 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.001s
+2025-11-17 16:22:32.441 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-17 16:22:37.461 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.020s
+2025-11-17 16:22:37.461 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Input preprocessing finished in 36.045s
+2025-11-17 16:22:37.461 | INFO     | api_stream:trellis_run:195 - [TRELLIS] Total views: 7
+2025-11-17 16:22:37.461 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 16:22:48.368 | INFO     | api_stream:trellis_run:200 - [TRELLIS] Trellis pipeline duration: 10.906s
+2025-11-17 16:22:48.368 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 16:22:48.369 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Starting save_video...
+2025-11-17 16:22:54.213 | INFO     | api_stream:trellis_run:222 - [TRELLIS] save_video completed in 5.844s
+2025-11-17 16:22:54.214 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Starting save_mesh (with internal 0.80 simplify)...
+2025-11-17 16:23:14.296 | INFO     | api_stream:trellis_run:233 - [TRELLIS] save_mesh completed in 20.082s
+2025-11-17 16:23:14.296 | INFO     | api_stream:trellis_run:237 - [Trimesh] Starting mesh post-processing (Fill + Smooth)...
+2025-11-17 16:23:14.296 | INFO     | api_stream:trellis_run:240 - [Trimesh] Loading simplified mesh: /tmp/trellis_de9fb120-b28b-451b-865c-4f1b0eb39b2c_9zei_r56/mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.glb
+2025-11-17 16:23:14.334 | INFO     | api_stream:trellis_run:253 - [Trimesh] Mesh loaded. Verts: 22230, Faces: 33026
+2025-11-17 16:23:14.334 | INFO     | api_stream:trellis_run:256 - [Trimesh] Applying Fill Holes...
+2025-11-17 16:23:14.390 | INFO     | api_stream:trellis_run:258 - [Trimesh] Holes filled. New faces: 33213
+2025-11-17 16:23:14.390 | INFO     | api_stream:trellis_run:261 - [Trimesh] Applying Taubin smoothing (iterations=10)...
+2025-11-17 16:23:14.391 | ERROR    | api_stream:trellis_run:272 - [Trimesh] FAILED: module 'trimesh.smoothing' has no attribute 'smooth_taubin'. O mesh GLB original (simplificado) será usado.
+Traceback (most recent call last):
+  File "/workspace/beau/beau-pipeline/api_stream.py", line 262, in trellis_run
+    mesh.vertices = trimesh.smoothing.smooth_taubin(mesh, iterations=10)
+AttributeError: module 'trimesh.smoothing' has no attribute 'smooth_taubin'
+
+2025-11-17 16:23:14.391 | INFO     | api_stream:trellis_run:278 - [TRELLIS] Saving middle frame...
+2025-11-17 16:23:14.394 | INFO     | api_stream:trellis_run:281 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 16:23:14.395 | INFO     | api_stream:trellis_run:286 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 16:23:14.397 | INFO     | api_stream:trellis_run:299 - [TREIS] Added mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.glb (took 0.002s)
+2025-11-17 16:23:14.438 | INFO     | api_stream:trellis_run:299 - [TREIS] Added mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.ply (took 0.041s)
+2025-11-17 16:23:14.439 | INFO     | api_stream:trellis_run:299 - [TREIS] Added preview_de9fb120-b28b-451b-865c-4f1b0eb39b2c.mp4 (took 0.001s)
+2025-11-17 16:23:14.440 | INFO     | api_stream:trellis_run:299 - [TREIS] Added frame_de9fb120-b28b-451b-865c-4f1b0eb39b2c.jpg (took 0.000s)
+2025-11-17 16:23:14.440 | INFO     | api_stream:trellis_run:303 - [TRELLIS] ZIP creation time: 0.045s
+2025-11-17 16:23:14.440 | INFO     | api_stream:trellis_run:310 - [TRELLIS] ZIP contains: ['mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.glb', 'mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.ply', 'preview_de9fb120-b28b-451b-865c-4f1b0eb39b2c.mp4', 'frame_de9fb120-b28b-451b-865c-4f1b0eb39b2c.jpg']
+2025-11-17 16:23:14.440 | INFO     | api_stream:trellis_run:312 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 16:23:14.440 | INFO     | api_stream:trellis_run:315 - [TRELLIS] --- FINISHED REQUEST in 73.024s ---
+2025-11-17 16:23:14.443 | INFO     | api_stream:trellis_run:332 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-17 16:27:41.259 | INFO     | api_stream:load_pipe_flux_t2i:415 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 16:27:51.182 | INFO     | api_stream:load_pipe_flux_t2i:424 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 16:27:51.182 | INFO     | api_stream:load_pipe_flux_t2i:427 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 16:27:51.292 | ERROR    | api_stream:load_pipe_flux_t2i:435 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 16:27:51.292 | INFO     | api_stream:load_pipe_flux_t2i:439 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 16:27:52.000 | INFO     | api_stream:load_pipe_flux_t2i:447 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 16:28:18.222 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 16:28:18.222 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 16:28:18.223 | INFO     | api_stream:load_pipe_trellis:162 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 16:28:46.116 | INFO     | api_stream:load_pipe_trellis:165 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 16:28:49.201 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-17 16:28:55.922 | INFO     | api_stream:trellis_run:175 - [TRELLIS] --- START REQUEST ---
+2025-11-17 16:28:55.923 | INFO     | api_stream:trellis_run:181 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 16:28:55.934 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image frame_de9fb120-b28b-451b-865c-4f1b0eb39b2c.jpg in 0.011s
+2025-11-17 16:29:01.373 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.439s
+2025-11-17 16:29:01.374 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 16:29:06.368 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 4.994s
+2025-11-17 16:29:06.369 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-17 16:29:11.438 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.069s
+2025-11-17 16:29:11.439 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-17 16:29:16.590 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.151s
+2025-11-17 16:29:16.590 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-17 16:29:21.831 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.240s
+2025-11-17 16:29:21.832 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 16:29:26.929 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.096s
+2025-11-17 16:29:26.930 | INFO     | api_stream:trellis_run:186 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 16:29:32.032 | INFO     | api_stream:trellis_run:190 - [TRELLIS] Removed BG in 5.102s
+2025-11-17 16:29:32.033 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Input preprocessing finished in 36.110s
+2025-11-17 16:29:32.033 | INFO     | api_stream:trellis_run:195 - [TRELLIS] Total views: 7
+2025-11-17 16:29:32.033 | INFO     | api_stream:trellis_run:198 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 16:29:42.824 | INFO     | api_stream:trellis_run:200 - [TRELLIS] Trellis pipeline duration: 10.791s
+2025-11-17 16:29:42.826 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 16:29:42.826 | INFO     | api_stream:trellis_run:220 - [TRELLIS] Starting save_video...
+2025-11-17 16:29:48.870 | INFO     | api_stream:trellis_run:222 - [TRELLIS] save_video completed in 6.043s
+2025-11-17 16:29:48.870 | INFO     | api_stream:trellis_run:225 - [TRELLIS] Starting save_mesh (with internal 0.80 simplify)...
+2025-11-17 16:30:08.964 | INFO     | api_stream:trellis_run:233 - [TRELLIS] save_mesh completed in 20.094s
+2025-11-17 16:30:08.965 | INFO     | api_stream:trellis_run:236 - [Trimesh] Starting mesh post-processing (Fill + Smooth)...
+2025-11-17 16:30:08.965 | INFO     | api_stream:trellis_run:239 - [Trimesh] Loading simplified mesh: /tmp/trellis_d7b086e5-cddc-4264-86bf-7f985cb431d9_c60zfpwu/mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.glb
+2025-11-17 16:30:08.999 | INFO     | api_stream:trellis_run:252 - [Trimesh] Mesh loaded. Verts: 21895, Faces: 33050
+2025-11-17 16:30:08.999 | INFO     | api_stream:trellis_run:255 - [Trimesh] Applying Fill Holes...
+2025-11-17 16:30:09.051 | INFO     | api_stream:trellis_run:257 - [Trimesh] Holes filled. New faces: 33236
+2025-11-17 16:30:09.052 | INFO     | api_stream:trellis_run:260 - [Trimesh] Applying Taubin smoothing (iterations=10)...
+2025-11-17 16:30:09.059 | ERROR    | api_stream:trellis_run:271 - [Trimesh] FAILED: float() argument must be a string or a real number, not 'Trimesh'. O mesh GLB original (simplificado) será usado.
+Traceback (most recent call last):
+  File "/workspace/beau/beau-pipeline/api_stream.py", line 261, in trellis_run
+    mesh.vertices = trimesh.smoothing.filter_taubin(mesh, iterations=10)
+  File "/venv/beau/lib/python3.10/site-packages/trimesh/base.py", line 518, in vertices
+    self._data["vertices"] = np.asanyarray(values, order="C", dtype=float64)
+TypeError: float() argument must be a string or a real number, not 'Trimesh'
+
+2025-11-17 16:30:09.059 | INFO     | api_stream:trellis_run:276 - [TRELLIS] Saving middle frame...
+2025-11-17 16:30:09.063 | INFO     | api_stream:trellis_run:279 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 16:30:09.063 | INFO     | api_stream:trellis_run:284 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 16:30:09.065 | INFO     | api_stream:trellis_run:297 - [TREIS] Added mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.glb (took 0.002s)
+2025-11-17 16:30:09.110 | INFO     | api_stream:trellis_run:297 - [TREIS] Added mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.ply (took 0.044s)
+2025-11-17 16:30:09.131 | INFO     | api_stream:trellis_run:297 - [TREIS] Added preview_d7b086e5-cddc-4264-86bf-7f985cb431d9.mp4 (took 0.021s)
+2025-11-17 16:30:09.132 | INFO     | api_stream:trellis_run:297 - [TREIS] Added frame_d7b086e5-cddc-4264-86bf-7f985cb431d9.jpg (took 0.000s)
+2025-11-17 16:30:09.132 | INFO     | api_stream:trellis_run:301 - [TRELLIS] ZIP creation time: 0.069s
+2025-11-17 16:30:09.132 | INFO     | api_stream:trellis_run:308 - [TRELLIS] ZIP contains: ['mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.glb', 'mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.ply', 'preview_d7b086e5-cddc-4264-86bf-7f985cb431d9.mp4', 'frame_d7b086e5-cddc-4264-86bf-7f985cb431d9.jpg']
+2025-11-17 16:30:09.132 | INFO     | api_stream:trellis_run:310 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 16:30:09.132 | INFO     | api_stream:trellis_run:313 - [TRELLIS] --- FINISHED REQUEST in 73.210s ---
+2025-11-17 16:30:09.135 | INFO     | api_stream:trellis_run:330 - [TRELLIS] Cleanup finished in 0.003s
+2025-11-17 19:20:45.811 | INFO     | api_stream:load_pipe_flux_t2i:375 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-17 19:20:55.149 | INFO     | api_stream:load_pipe_flux_t2i:384 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-17 19:20:55.149 | INFO     | api_stream:load_pipe_flux_t2i:387 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-17 19:20:55.226 | ERROR    | api_stream:load_pipe_flux_t2i:395 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-17 19:20:55.226 | INFO     | api_stream:load_pipe_flux_t2i:399 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-17 19:20:55.903 | INFO     | api_stream:load_pipe_flux_t2i:407 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-17 19:21:27.516 | INFO     | api_stream:load_pipe_mvadapter:65 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-17 19:21:27.517 | INFO     | api_stream:load_pipe_mvadapter:72 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-17 19:21:27.517 | INFO     | api_stream:load_pipe_trellis:161 - [TRELLIS] Pipeline loaded (API)
+2025-11-17 19:21:56.095 | INFO     | api_stream:load_pipe_trellis:164 - [TRELLIS] Pipeline prepared (API)
+2025-11-17 19:21:56.423 | INFO     | api_stream:_startup:36 - [STARTUP] loaded pipelines
+2025-11-17 19:24:06.317 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'aladar': sd
+2025-11-17 19:24:07.959 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-17 19:24:07.959 | INFO     | api_stream:t2mv_generate:120 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, aladar, full body, game asset
+2025-11-17 19:24:20.421 | INFO     | api_stream:t2mv_generate:137 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-17 19:24:20.422 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-17 19:24:20.442 | INFO     | api_stream:t2mv_generate:148 - [MV-ADAPTER] Total time (with encoding): 12.48s
+2025-11-17 19:24:50.226 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'carnotaurus': sd
+2025-11-17 19:24:51.661 | INFO     | api_stream:t2mv_generate:119 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-17 19:24:51.662 | INFO     | api_stream:t2mv_generate:120 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, carnotaurus, full body, game asset
+2025-11-17 19:25:03.651 | INFO     | api_stream:t2mv_generate:137 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-17 19:25:03.652 | INFO     | api_stream:t2mv_generate:139 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-17 19:25:03.663 | INFO     | api_stream:t2mv_generate:148 - [MV-ADAPTER] Total time (with encoding): 12.00s
+2025-11-17 19:25:28.003 | INFO     | api_stream:trellis_run:174 - [TRELLIS] --- START REQUEST ---
+2025-11-17 19:25:28.004 | INFO     | api_stream:trellis_run:180 - [TRELLIS] Starting input decode + BG removal
+2025-11-17 19:25:28.004 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-17 19:25:29.965 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.961s
+2025-11-17 19:25:29.967 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_01.jpg in 0.001s
+2025-11-17 19:25:31.574 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.607s
+2025-11-17 19:25:31.575 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-17 19:25:33.169 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.594s
+2025-11-17 19:25:33.169 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-17 19:25:34.702 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.533s
+2025-11-17 19:25:34.704 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_04.jpg in 0.001s
+2025-11-17 19:25:36.777 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 2.073s
+2025-11-17 19:25:36.778 | INFO     | api_stream:trellis_run:185 - [TRELLIS] Loaded image view_05.jpg in 0.001s
+2025-11-17 19:25:38.264 | INFO     | api_stream:trellis_run:189 - [TRELLIS] Removed BG in 1.486s
+2025-11-17 19:25:38.264 | INFO     | api_stream:trellis_run:193 - [TRELLIS] Input preprocessing finished in 10.260s
+2025-11-17 19:25:38.264 | INFO     | api_stream:trellis_run:194 - [TRELLIS] Total views: 6
+2025-11-17 19:25:38.264 | INFO     | api_stream:trellis_run:197 - [TRELLIS] Running Trellis pipeline...
+2025-11-17 19:25:47.308 | INFO     | api_stream:trellis_run:199 - [TRELLIS] Trellis pipeline duration: 9.044s
+2025-11-17 19:25:47.309 | INFO     | api_stream:trellis_run:204 - [TRELLIS] Output directory prepared in 0.000s
+2025-11-17 19:25:47.309 | INFO     | api_stream:trellis_run:219 - [TRELLIS] Starting save_video...
+2025-11-17 19:25:52.108 | INFO     | api_stream:trellis_run:221 - [TRELLIS] save_video completed in 4.799s
+2025-11-17 19:25:52.109 | INFO     | api_stream:trellis_run:224 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-17 19:26:15.596 | INFO     | api_stream:trellis_run:232 - [TRELLIS] save_mesh completed in 23.487s
+2025-11-17 19:26:15.597 | INFO     | api_stream:trellis_run:236 - [TRELLIS] Saving middle frame...
+2025-11-17 19:26:15.600 | INFO     | api_stream:trellis_run:239 - [TRELLIS] Frame saved in 0.003s
+2025-11-17 19:26:15.600 | INFO     | api_stream:trellis_run:244 - [TRELLIS] Creating ZIP buffer...
+2025-11-17 19:26:15.603 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added mesh_eca25745-6d48-4e8c-b26f-3443788cafda.glb (took 0.002s)
+2025-11-17 19:26:15.645 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added mesh_eca25745-6d48-4e8c-b26f-3443788cafda.ply (took 0.042s)
+2025-11-17 19:26:15.664 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added preview_eca25745-6d48-4e8c-b26f-3443788cafda.mp4 (took 0.019s)
+2025-11-17 19:26:15.665 | INFO     | api_stream:trellis_run:257 - [TRELLIS] Added frame_eca25745-6d48-4e8c-b26f-3443788cafda.jpg (took 0.000s)
+2025-11-17 19:26:15.665 | INFO     | api_stream:trellis_run:261 - [TRELLIS] ZIP creation time: 0.065s
+2025-11-17 19:26:15.666 | INFO     | api_stream:trellis_run:268 - [TRELLIS] ZIP contains: ['mesh_eca25745-6d48-4e8c-b26f-3443788cafda.glb', 'mesh_eca25745-6d48-4e8c-b26f-3443788cafda.ply', 'preview_eca25745-6d48-4e8c-b26f-3443788cafda.mp4', 'frame_eca25745-6d48-4e8c-b26f-3443788cafda.jpg']
+2025-11-17 19:26:15.666 | INFO     | api_stream:trellis_run:270 - [TRELLIS] ZIP validation took 0.001s
+2025-11-17 19:26:15.666 | INFO     | api_stream:trellis_run:273 - [TRELLIS] --- FINISHED REQUEST in 47.663s ---
+2025-11-17 19:26:15.668 | INFO     | api_stream:trellis_run:290 - [TRELLIS] Cleanup finished in 0.002s
+2025-11-18 17:28:33.185 | INFO     | api_stream:load_pipe_flux_t2i:376 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-18 17:28:40.226 | INFO     | api_stream:load_pipe_flux_t2i:385 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-18 17:28:40.227 | INFO     | api_stream:load_pipe_flux_t2i:388 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-18 17:28:40.312 | ERROR    | api_stream:load_pipe_flux_t2i:396 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-18 17:28:40.313 | INFO     | api_stream:load_pipe_flux_t2i:400 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-18 17:28:41.005 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-18 17:29:08.134 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-18 17:29:08.134 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-18 17:29:08.134 | INFO     | api_stream:load_pipe_trellis:162 - [TRELLIS] Pipeline loaded (API)
+2025-11-18 17:29:35.694 | INFO     | api_stream:load_pipe_trellis:165 - [TRELLIS] Pipeline prepared (API)
+2025-11-18 17:29:36.088 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-18 20:11:50.094 | INFO     | api_stream:load_pipe_flux_t2i:376 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-18 20:11:58.680 | INFO     | api_stream:load_pipe_flux_t2i:385 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-18 20:11:58.680 | INFO     | api_stream:load_pipe_flux_t2i:388 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-18 20:11:58.750 | ERROR    | api_stream:load_pipe_flux_t2i:396 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-18 20:11:58.751 | INFO     | api_stream:load_pipe_flux_t2i:400 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-18 20:11:59.445 | INFO     | api_stream:load_pipe_flux_t2i:408 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-18 20:12:26.445 | INFO     | api_stream:load_pipe_mvadapter:66 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-18 20:12:26.446 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-18 20:12:26.446 | INFO     | api_stream:load_pipe_trellis:162 - [TRELLIS] Pipeline loaded (API)
+2025-11-18 20:12:56.981 | INFO     | api_stream:load_pipe_trellis:165 - [TRELLIS] Pipeline prepared (API)
+2025-11-18 20:12:59.684 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-18 20:22:55.370 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'cute cat': sd
+2025-11-18 20:23:24.548 | INFO     | api_stream:t2mv_generate:120 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-18 20:23:24.548 | INFO     | api_stream:t2mv_generate:121 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, cat, cute, full body, game asset
+2025-11-18 20:23:36.835 | INFO     | api_stream:t2mv_generate:138 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-18 20:23:36.836 | INFO     | api_stream:t2mv_generate:140 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-18 20:23:36.852 | INFO     | api_stream:t2mv_generate:149 - [MV-ADAPTER] Total time (with encoding): 12.30s
+2025-11-19 17:33:52.100 | INFO     | api_stream:load_pipe_flux_t2i:397 - [FLUX-T2I] Loading FLUX.1-schnell pipeline...
+2025-11-19 17:33:59.937 | INFO     | api_stream:load_pipe_flux_t2i:406 - [FLUX-T2I] FLUX.1-schnell pipeline loaded.
+2025-11-19 17:33:59.938 | INFO     | api_stream:load_pipe_flux_t2i:409 - [FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...
+2025-11-19 17:34:00.010 | ERROR    | api_stream:load_pipe_flux_t2i:417 - [FLUX-T2I] Failed to load Hyper-SD LoRA: ByteDance/Hyper-SD does not appear to have a file named Hyper-FLUX.1-schnell-8steps-lora.safetensors.
+2025-11-19 17:34:00.010 | INFO     | api_stream:load_pipe_flux_t2i:421 - [FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2
+2025-11-19 17:34:00.770 | INFO     | api_stream:load_pipe_flux_t2i:429 - [FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.
+2025-11-19 17:34:24.862 | INFO     | api_stream:load_pipe_mvadapter:73 - [MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75
+2025-11-19 17:34:24.862 | INFO     | api_stream:load_pipe_mvadapter:80 - [MV-ADAPTER] Pipeline loaded (API)
+2025-11-19 17:34:24.862 | INFO     | api_stream:load_pipe_trellis:178 - [TRELLIS] Pipeline loaded (API)
+2025-11-19 17:34:53.470 | INFO     | api_stream:load_pipe_trellis:181 - [TRELLIS] Pipeline prepared (API)
+2025-11-19 17:34:56.174 | INFO     | api_stream:_startup:37 - [STARTUP] loaded pipelines
+2025-11-19 17:46:13.531 | INFO     | ollama:choose_generation_model:325 - [OLLAMA] Model choice for 'goblin wearing a hat and holding a gun': sd
+2025-11-19 17:46:15.133 | INFO     | api_stream:t2mv_generate:131 - [MV-ADAPTER] Generating images with seed 42 and 28 steps (API)
+2025-11-19 17:46:15.134 | INFO     | api_stream:t2mv_generate:132 - [MV-ADAPTER] Enhanced prompt: 3d style, 3d, goblin, wearing a hat, holding a gun, full body, game asset
+2025-11-19 17:46:27.378 | INFO     | api_stream:t2mv_generate:149 - [MV-ADAPTER] Images generated with 28 steps - 6 views (API)
+2025-11-19 17:46:27.378 | INFO     | api_stream:t2mv_generate:151 - [MV-ADAPTER] Images generated, encoding to base64...
+2025-11-19 17:46:27.392 | INFO     | api_stream:t2mv_generate:160 - [MV-ADAPTER] Total time (with encoding): 12.26s
+2025-11-19 17:46:43.708 | INFO     | api_stream:trellis_run:194 - [TRELLIS] --- START REQUEST ---
+2025-11-19 17:46:43.708 | INFO     | api_stream:trellis_run:200 - [TRELLIS] Starting input decode + BG removal
+2025-11-19 17:46:43.708 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Loaded image view_00.jpg in 0.000s
+2025-11-19 17:46:45.834 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Removed BG in 2.126s
+2025-11-19 17:46:45.835 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Loaded image view_01.jpg in 0.000s
+2025-11-19 17:46:47.474 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Removed BG in 1.639s
+2025-11-19 17:46:47.475 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Loaded image view_02.jpg in 0.000s
+2025-11-19 17:46:49.034 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Removed BG in 1.560s
+2025-11-19 17:46:49.035 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Loaded image view_03.jpg in 0.000s
+2025-11-19 17:46:50.526 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Removed BG in 1.490s
+2025-11-19 17:46:50.526 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Loaded image view_04.jpg in 0.000s
+2025-11-19 17:46:52.143 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Removed BG in 1.616s
+2025-11-19 17:46:52.143 | INFO     | api_stream:trellis_run:205 - [TRELLIS] Loaded image view_05.jpg in 0.000s
+2025-11-19 17:46:53.725 | INFO     | api_stream:trellis_run:209 - [TRELLIS] Removed BG in 1.582s
+2025-11-19 17:46:53.726 | INFO     | api_stream:trellis_run:213 - [TRELLIS] Input preprocessing finished in 10.017s
+2025-11-19 17:46:53.726 | INFO     | api_stream:trellis_run:214 - [TRELLIS] Total views: 6
+2025-11-19 17:46:53.726 | INFO     | api_stream:trellis_run:217 - [TRELLIS] Running Trellis pipeline...
+2025-11-19 17:47:06.123 | INFO     | api_stream:trellis_run:219 - [TRELLIS] Trellis pipeline duration: 12.397s
+2025-11-19 17:47:06.124 | INFO     | api_stream:trellis_run:224 - [TRELLIS] Output directory prepared in 0.001s
+2025-11-19 17:47:06.124 | INFO     | api_stream:trellis_run:238 - [TRELLIS] Starting save_video...
+2025-11-19 17:47:12.960 | INFO     | api_stream:trellis_run:240 - [TRELLIS] save_video completed in 6.836s
+2025-11-19 17:47:12.961 | INFO     | api_stream:trellis_run:243 - [TRELLIS] Starting save_mesh (this can be slow)...
+2025-11-19 17:47:37.281 | INFO     | api_stream:trellis_run:251 - [TRELLIS] save_mesh completed in 24.321s
+2025-11-19 17:47:37.282 | INFO     | api_stream:trellis_run:255 - [TRELLIS] Saving middle frame...
+2025-11-19 17:47:37.286 | INFO     | api_stream:trellis_run:258 - [TRELLIS] Frame saved in 0.004s
+2025-11-19 17:47:37.286 | INFO     | api_stream:trellis_run:263 - [TRELLIS] Creating ZIP buffer...
+2025-11-19 17:47:37.291 | INFO     | api_stream:trellis_run:276 - [TRELLIS] Added mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.glb (took 0.005s)
+2025-11-19 17:47:37.413 | INFO     | api_stream:trellis_run:276 - [TRELLIS] Added mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.ply (took 0.121s)
+2025-11-19 17:47:37.414 | INFO     | api_stream:trellis_run:276 - [TRELLIS] Added preview_d01ed2d2-f880-468c-a9df-5589bbf08c79.mp4 (took 0.001s)
+2025-11-19 17:47:37.414 | INFO     | api_stream:trellis_run:276 - [TRELLIS] Added frame_d01ed2d2-f880-468c-a9df-5589bbf08c79.jpg (took 0.000s)
+2025-11-19 17:47:37.414 | INFO     | api_stream:trellis_run:280 - [TRELLIS] ZIP creation time: 0.129s
+2025-11-19 17:47:37.415 | INFO     | api_stream:trellis_run:287 - [TRELLIS] ZIP contains: ['mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.glb', 'mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.ply', 'preview_d01ed2d2-f880-468c-a9df-5589bbf08c79.mp4', 'frame_d01ed2d2-f880-468c-a9df-5589bbf08c79.jpg']
+2025-11-19 17:47:37.415 | INFO     | api_stream:trellis_run:289 - [TRELLIS] ZIP validation took 0.001s
+2025-11-19 17:47:37.415 | INFO     | api_stream:trellis_run:292 - [TRELLIS] --- FINISHED REQUEST in 53.707s ---
+2025-11-19 17:47:37.420 | INFO     | api_stream:trellis_run:309 - [TRELLIS] Cleanup finished in 0.004s

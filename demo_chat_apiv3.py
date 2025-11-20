@@ -502,8 +502,9 @@ def send_review(
     )
 
 with gr.Blocks() as demo:
-    gr.Markdown("llm chat demo")
+    gr.Markdown("## LLM 3D Generation Pipeline")
 
+    # --- STATES ---
     state_inference_steps = gr.State(value=28)
     state_views_dir = gr.State(value="")
     state_last_prompt = gr.State(value="")
@@ -516,155 +517,88 @@ with gr.Blocks() as demo:
     state_chosen_model = gr.State(value="")
     remake_state = gr.State(0)
     
-    prompt = gr.Textbox(label="Prompt")
+    dummy_state = gr.State()
+
+    prompt = gr.Textbox(label="Prompt", placeholder="Describe your 3D object...")
     
     with gr.Row():
         run_btn_generate = gr.Button("Generate", variant="primary")
 
     with gr.Row(equal_height=True):
         with gr.Column(scale=1, min_width=320):
-            with gr.Accordion("LLM prompts", open=True):
-                ref_prompt = gr.Textbox(
-                    label="Refined positive prompt",
-                    interactive=False,
-                    visible=False,
-                    show_copy_button=True,
-                    lines=2,
-                )
-                neg_prompt = gr.Textbox(
-                    label="Negative prompt",
-                    interactive=False,
-                    visible=False,
-                    show_copy_button=True,
-                    lines=2,
-                )
+            with gr.Accordion("LLM prompts", open=False):
+                ref_prompt = gr.Textbox(label="Refined positive prompt", interactive=False, show_copy_button=True, lines=2)
+                neg_prompt = gr.Textbox(label="Negative prompt", interactive=False, show_copy_button=True, lines=2)
 
         with gr.Column(scale=2, min_width=440):
-            gallery = gr.Gallery(columns=3, rows=2, height=520)
+            gallery = gr.Gallery(columns=3, rows=2, height=520, label="Generated Views")
             
             with gr.Row(equal_height=True):
-                remake_seed_btn = gr.Button("Remake (different seed)", visible=False, scale=1)
+                remake_seed_btn = gr.Button("Remake (new seed)", visible=False, scale=1)
                 remake_steps_btn = gr.Button("Remake (+5 steps)", visible=False, scale=1)
-            
             with gr.Row():
                 image_like_btn = gr.Button("👍", visible=False)
                 image_dislike_btn = gr.Button("👎", visible=False)
             
             with gr.Row(equal_height=True):
-                image_feedback_text = gr.Textbox(
-                    label="What was the problem? (optional)",
-                    placeholder="Describe what was wrong with the images...",
-                    visible=False,
-                    lines=2,
-                    scale=4,
-                )
-                image_feedback_send_btn = gr.Button(
-                    "Send",
-                    visible=False,
-                    size="sm",
-                    scale=1,                    
-                )
+                image_feedback_text = gr.Textbox(label="Issue description", placeholder="What was wrong?", visible=False, lines=2, scale=4)
+                image_feedback_send_btn = gr.Button("Send", visible=False, size="sm", scale=1)
             
-            image_review_status = gr.Textbox(
-                label="Feedback Status",
-                value="",
-                visible=False,
-                interactive=False,
-            )
+            image_review_status = gr.Textbox(label="Status", visible=False, interactive=False)
 
         with gr.Column(scale=1, min_width=360):
             with gr.Accordion("Adjustments Chat", open=True):
-                chatbot = gr.Chatbot(label="Conversation", value=[], height=520)
-                user_msg = gr.Textbox(
-                    label="Your message",
-                    placeholder="remove background, more water, center the lake... (type 'ok' to finalize)",
-                    lines=1,
-                )
-                
-            apply_chat_btn = gr.Button("Regenerate images with chat prompts", visible=False)
+                chatbot = gr.Chatbot(label="Conversation", value=[], height=480)
+                user_msg = gr.Textbox(label="Your message", placeholder="e.g., remove background...", lines=1)
+                apply_chat_btn = gr.Button("Regenerate with changes", visible=False)
 
-    with gr.Accordion("LLM Image Avaliation", open=False):
-        llm_avaliation = gr.Textbox(
-            label="LLM Image Avaliation",
-            interactive=False,
-            visible=False,
-            show_copy_button=True,
-            lines=2
-        )
-        llm_eval_neg_prompt = gr.Textbox(
-            label="LLM Prompt Negative using image avaliation",
-            interactive=False,
-            visible=False,
-            show_copy_button=True,
-            lines=2
-        )
+    with gr.Accordion("Debug Info (LLM Eval)", open=False):
+        llm_avaliation = gr.Textbox(label="Evaluation", interactive=False)
+        llm_eval_neg_prompt = gr.Textbox(label="Eval Negative Prompt", interactive=False)
 
-    run_trellis_btn = gr.Button("Generate 3D Mesh", visible=False)
-    video = gr.Video(label="Mesh video preview", interactive=False)
+    run_trellis_btn = gr.Button("Generate 3D Mesh", visible=False, variant="secondary")
+    video = gr.Video(label="Mesh Preview", interactive=False)
 
     with gr.Row():
         video_like_btn = gr.Button("👍", visible=False)
         video_dislike_btn = gr.Button("👎", visible=False)
 
     with gr.Row():
-        video_feedback_text = gr.Textbox(
-            label="What was the problem? (optional)",
-            placeholder="Describe what was wrong with the 3D mesh...",
-            visible=False,
-            lines=2,
-            scale=4
-        )
+        video_feedback_text = gr.Textbox(label="Issue description", visible=False, lines=2, scale=4)
         video_feedback_send_btn = gr.Button("Send", visible=False, scale=1, size="sm")
     
-    review_status = gr.Textbox(
-        label="Feedback Status",
-        value="Review sent. Thank you!",
-        visible=False,
-        interactive=False,
-    )
+    review_status = gr.Textbox(label="Feedback Status", visible=False, interactive=False)
 
     with gr.Row():
-        download_glb = gr.DownloadButton(
-            label="Download GLB",
-            value=None,
-            visible=False,
-            size="sm"
-        )
-        download_ply = gr.DownloadButton(
-            label="Download PLY",
-            value=None,
-            visible=False,
-            size="sm"
-        )
+        download_glb = gr.DownloadButton("Download GLB", visible=False, size="sm")
+        download_ply = gr.DownloadButton("Download PLY", visible=False, size="sm")
 
-    
-    lock_outputs = [run_btn_generate, remake_seed_btn, remake_steps_btn, run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn]
+    lock_outputs = [
+        run_btn_generate, remake_seed_btn, remake_steps_btn, 
+        run_trellis_btn, apply_chat_btn, image_like_btn, image_dislike_btn
+    ]
+
     unlock_gen_outputs = [run_btn_generate, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
-    unlock_flux_outputs = [run_btn_generate, remake_seed_btn, remake_steps_btn, run_trellis_btn, image_like_btn, image_dislike_btn]
     unlock_trellis_outputs = [run_btn_generate, remake_seed_btn, remake_steps_btn, run_trellis_btn, video_like_btn, video_dislike_btn]
     
     post_processing_outputs = [
         llm_avaliation, llm_eval_neg_prompt,
         chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn,
-        *unlock_gen_outputs
+        *unlock_gen_outputs 
     ]
-    
+
     run_btn_generate.click(
         fn=_lock_all_buttons, inputs=None, outputs=lock_outputs
     ).then(
-        fn=call_choose_model,
-        inputs=prompt,
-        outputs=state_chosen_model
+        fn=call_choose_model, inputs=prompt, outputs=state_chosen_model
     ).then(
         fn=_reset_ui_and_set_steps,
         inputs=state_chosen_model,
         outputs=[
             image_review_status, image_like_btn, image_dislike_btn,
             chatbot, state_chat_msgs, state_full_chat, remake_state,
-            llm_avaliation, llm_eval_neg_prompt,
-            state_inference_steps,
-            image_feedback_text, image_feedback_send_btn,
-            video_feedback_text, video_feedback_send_btn
+            llm_avaliation, llm_eval_neg_prompt, state_inference_steps,
+            image_feedback_text, image_feedback_send_btn, video_feedback_text, video_feedback_send_btn
         ]
     ).then(
         fn=llm_prompt_processing,
@@ -680,29 +614,13 @@ with gr.Blocks() as demo:
         inputs=[state_chosen_model, state_views_dir, prompt, state_last_prompt, state_neg_prompt, llm_avaliation],
         outputs=post_processing_outputs
     ).then(
-       
         fn=lambda new_chat_msgs, choice: new_chat_msgs if choice == 'sd' else [],
         inputs=[state_chat_msgs, state_chosen_model],
         outputs=[state_full_chat]
     )
-    
-    
-    state_views_dir.change(
-        fn=lambda: [],
-        inputs=None,
-        outputs=[state_full_chat]
-    ).then(
-        fn=chat_start_fn,
-        inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
-        outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]
-    ).then(
-        fn=lambda new_chat_msgs: new_chat_msgs,
-        inputs=[state_chat_msgs],
-        outputs=[state_full_chat]
-    ).then(
-        fn=_unlock_after_generate, inputs=None, outputs=unlock_gen_outputs
-    )
-    
+
+    # IMPORTANTE: Removi o state_views_dir.change que causava conflito.
+    # Se precisar dele para upload manual de pasta, crie um botão específico para "Load from Folder".
     user_msg.submit(
         fn=lambda current_msgs: current_msgs,
         inputs=[state_chat_msgs],
@@ -718,17 +636,12 @@ with gr.Blocks() as demo:
         outputs=[state_full_chat]
     )
 
-    # remake images using chat prompt
     apply_chat_btn.click(
-        fn=lambda: 1,
-        inputs=None,
-        outputs=remake_state
+        fn=lambda: 1, outputs=remake_state
     ).then(
-        fn=_lock_all_buttons, 
-        inputs=None, 
-        outputs=lock_outputs
+        fn=_lock_all_buttons, inputs=None, outputs=lock_outputs
     ).then(
-        fn=_sync_llm_prompts,
+        fn=lambda p, n: (p, n),
         inputs=[state_last_prompt, state_neg_prompt],
         outputs=[ref_prompt, neg_prompt]
     ).then(
@@ -736,54 +649,27 @@ with gr.Blocks() as demo:
         inputs=[state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
-    )
-    
-    state_views_dir.change(
+    ).then(
         fn=chat_start_fn,
         inputs=[state_last_prompt, state_neg_prompt, llm_avaliation],
         outputs=[chatbot, state_chat_msgs, state_last_prompt, state_neg_prompt, state_eval, user_msg, apply_chat_btn]
     ).then(
-        fn=lambda full_hist, new_start_msg: full_hist + new_start_msg,
-        inputs=[state_full_chat, state_chat_msgs],
-        outputs=[state_full_chat]
-    ).then(
-        fn=lambda: gr.update(value="", visible=False),
-        inputs=None,
-        outputs=image_review_status
-    ).then(
         fn=_unlock_after_generate, inputs=None, outputs=unlock_gen_outputs
     )
-    
-    # remake (seed)
+
     remake_seed_btn.click(
-        fn=lambda: 1,
-        inputs=None,
-        outputs=remake_state,
+        fn=lambda: 1, outputs=remake_state
     ).then(
-        fn=_lock_all_buttons,
-        inputs=None,
-        outputs=lock_outputs
-    ).then(        
-        fn=lambda: gr.update(value="", visible=False),
-        inputs=None,
-        outputs=image_review_status   
+        fn=_lock_all_buttons, inputs=None, outputs=lock_outputs
     ).then(
         fn=route_generation,
         inputs=[state_chosen_model, state_last_prompt, state_neg_prompt, gr.State(True), state_inference_steps],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
-    ).then(        
+    ).then(
         fn=route_post_processing,
         inputs=[state_chosen_model, state_views_dir, prompt, state_last_prompt, state_neg_prompt, llm_avaliation],
         outputs=post_processing_outputs
-    ).then(        
-        fn=lambda full_hist, new_chat_msgs, choice: (full_hist + new_chat_msgs) if choice == 'sd' else [],
-        inputs=[state_full_chat, state_chat_msgs, state_chosen_model],
-        outputs=[state_full_chat]
-    ).then(
-        fn=lambda: gr.update(value="", visible=False),
-        inputs=None,
-        outputs=image_review_status
     )
 
     remake_steps_btn.click(
@@ -791,33 +677,18 @@ with gr.Blocks() as demo:
         inputs=[remake_state, state_inference_steps],
         outputs=[remake_state, state_inference_steps],
     ).then(
-        fn=_lock_all_buttons,
-        inputs=None,
-        outputs=lock_outputs
-    ).then(        
-        fn=lambda: gr.update(value="", visible=False),
-        inputs=None,
-        outputs=image_review_status   
+        fn=_lock_all_buttons, inputs=None, outputs=lock_outputs
     ).then(
         fn=route_generation,
         inputs=[state_chosen_model, state_last_prompt, state_neg_prompt, gr.State(False), state_inference_steps],
         outputs=[gallery, state_views_dir, run_trellis_btn, state_last_prompt, llm_avaliation, llm_eval_neg_prompt],
         queue=True
-    ).then(        
+    ).then(
         fn=route_post_processing,
         inputs=[state_chosen_model, state_views_dir, prompt, state_last_prompt, state_neg_prompt, llm_avaliation],
         outputs=post_processing_outputs
-    ).then(        
-        fn=lambda full_hist, new_chat_msgs, choice: (full_hist + new_chat_msgs) if choice == 'sd' else [],
-        inputs=[state_full_chat, state_chat_msgs, state_chosen_model],
-        outputs=[state_full_chat]
-    ).then(
-        fn=lambda: gr.update(value="", visible=False),
-        inputs=None,
-        outputs=image_review_status
     )
-
-    # trellis
+    
     run_trellis_btn.click(
         fn=_lock_all_buttons, inputs=None, outputs=lock_outputs
     ).then(
@@ -826,13 +697,20 @@ with gr.Blocks() as demo:
         fn=_unlock_after_trellis, inputs=None, outputs=unlock_trellis_outputs
     )
 
-    # feedback helpers
+    
+    def feedback_wrapper(fn_feedback, btn_clicked, other_btn, *args):
+        """Helper para travar botões, enviar feedback e destravar."""
+        yield gr.update(interactive=False), gr.update(interactive=False), gr.update(visible=True, value="Sending..."), gr.update(), gr.update()
+        
+        outputs = fn_feedback(*args)
+
+        yield outputs[0], outputs[1], outputs[2], outputs[3], outputs[4]
+
     def _get_feedback_click(feedback_type, step=None, dynamic_step=False):
         def inner(orig, refined, chat, neg, video_path, views_dir, current_remake_value, feedback_text):
-            current_step = (            
-                "REGENERATE" if dynamic_step and current_remake_value == 1
-                else ("IMAGE" if dynamic_step else step)
-            )
+            current_step = step
+            if dynamic_step:
+                current_step = "REGENERATE" if current_remake_value == 1 else "IMAGE"
 
             return send_review(
                 feedback_type=feedback_type,
@@ -847,13 +725,29 @@ with gr.Blocks() as demo:
             )
         return inner
 
+    def _get_feedback_click_safe(feedback_type, step=None, dynamic_step=False):
+        original_fn = _get_feedback_click(feedback_type, step, dynamic_step)
+        
+        def inner(*args):            
+            yield (
+                gr.update(interactive=False), # Like btn
+                gr.update(interactive=False), # Dislike btn
+                gr.update(visible=True, value="Sending..."), # Status
+                gr.update(), # Text input
+                gr.update()  # Send btn
+            )
+            result = original_fn(*args)
+            yield result
+            
+        return inner
+
     dummy_state = gr.State()
     
     video_like_btn.click(
-        fn=_get_feedback_click("like", step="VIDEO"),              
+        fn=_get_feedback_click_safe("like", step="VIDEO"),            
         inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, state_frame_path, state_views_dir, dummy_state, gr.State("")],
         outputs=[video_like_btn, video_dislike_btn, review_status, video_feedback_text, video_feedback_send_btn],
-        queue=False
+        queue=True
     )
     
     video_dislike_btn.click(
@@ -864,14 +758,14 @@ with gr.Blocks() as demo:
     )
     
     video_feedback_send_btn.click(
-        fn=_get_feedback_click("dislike", step="VIDEO"),              
+        fn=_get_feedback_click_safe("dislike", step="VIDEO"),              
         inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, state_frame_path, state_views_dir, dummy_state, video_feedback_text],
         outputs=[video_like_btn, video_dislike_btn, review_status, video_feedback_text, video_feedback_send_btn],
         queue=False
     )
     
     image_like_btn.click(
-        fn=_get_feedback_click("like", dynamic_step=True),        
+        fn=_get_feedback_click_safe("like", dynamic_step=True),        
         inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, dummy_state, state_views_dir, remake_state, gr.State("")],
         outputs=[image_like_btn, image_dislike_btn, image_review_status, image_feedback_text, image_feedback_send_btn],
         queue=False
@@ -885,7 +779,7 @@ with gr.Blocks() as demo:
     )
     
     image_feedback_send_btn.click(
-        fn=_get_feedback_click("dislike", dynamic_step=True),        
+        fn=_get_feedback_click_safe("dislike", dynamic_step=True),        
         inputs=[prompt, state_last_prompt, state_full_chat, state_neg_prompt, dummy_state, state_views_dir, remake_state, image_feedback_text],
         outputs=[image_like_btn, image_dislike_btn, image_review_status, image_feedback_text, image_feedback_send_btn],
         queue=False

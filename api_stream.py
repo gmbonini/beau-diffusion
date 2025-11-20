@@ -21,6 +21,7 @@ from PIL import ImageDraw
 from rembg import remove
 from sql.db_connector import DatabaseConnector, get_db_connector
 import uuid
+import subprocess
 
 os.environ["ATTN_BACKEND"] = "xformers"
 
@@ -36,49 +37,59 @@ def _startup():
     logger.info("[STARTUP] loaded pipelines")
 
 def _file_to_b64(path: str) -> str:
-    with open(path, "rb") as f:
-        return base64.b64encode(f.read()).decode("utf-8")
+    try:
+        with open(path, "rb") as f:
+            return base64.b64encode(f.read()).decode("utf-8")
+    except Exception as e:
+        logger.error(f"Failed to convert file {path} to b64: {e}")
+        return ""
+
+# MV-Adapter
 
 pipe_mv, adapters = None, []
 def load_pipe_mvadapter():
     global pipe_mv, adapters
     print('Loading MV-Adapter pipeline...')
-    pipe_mv, adapters = MVAdapterT2MV.prepare_pipeline(
-        base_model="SG161222/RealVisXL_V5.0",
-        vae_model="madebyollin/sdxl-vae-fp16-fix",
-        unet_model=None,
-        lora_model=None,
-        adapter_path="huanngzh/mv-adapter",
-        scheduler="dpmpp_2m",
-        num_views=6,
-        device="cuda" if torch.cuda.is_available() else "cpu",
-        dtype=torch.float16,
-    )
     try:
-        print('Loading 3D Render LoRA (artificialguybr/3DRedmond-V1)...')
-        pipe_mv.load_lora_weights(
-            "artificialguybr/3DRedmond-V1",
-            weight_name="3DRedmond-3DRenderStyle-3DRenderAF.safetensors"
+        pipe_mv, adapters = MVAdapterT2MV.prepare_pipeline(
+            base_model="SG161222/RealVisXL_V5.0",
+            vae_model="madebyollin/sdxl-vae-fp16-fix",
+            unet_model=None,
+            lora_model=None,
+            adapter_path="huanngzh/mv-adapter",
+            scheduler="dpmpp_2m",
+            num_views=6,
+            device="cuda" if torch.cuda.is_available() else "cpu",
+            dtype=torch.float16,
         )
-        pipe_mv.fuse_lora(lora_scale=0.75)
-        print('3D Render LoRA (artificialguybr) loaded and fused.')
-        logger.info("[MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75")
+        try:
+            print('Loading 3D Render LoRA (artificialguybr/3DRedmond-V1)...')
+            pipe_mv.load_lora_weights(
+                "artificialguybr/3DRedmond-V1",
+                weight_name="3DRedmond-3DRenderStyle-3DRenderAF.safetensors"
+            )
+            pipe_mv.fuse_lora(lora_scale=0.75)
+            print('3D Render LoRA (artificialguybr) loaded and fused.')
+            logger.info("[MV-ADAPTER] 3D Render LoRA (artificialguybr) loaded with scale 0.75")
+        except Exception as e:
+            logger.error(f"[MV-ADAPTER] Failed to load LoRA (artificialguybr): {e}")
+            print(f"Warning: Could not load artificialguybr LoRA - {e}")
+
+
+        print('MV-Adapter pipeline loaded.')
+        logger.info("[MV-ADAPTER] Pipeline loaded (API)")
+        
     except Exception as e:
-        logger.error(f"[MV-ADAPTER] Failed to load LoRA (artificialguybr): {e}")
-        print(f"Warning: Could not load artificialguybr LoRA - {e}")
+        logger.error(f"[MV-ADAPTER] CRITICAL FAIL loading pipeline: {e}\n{traceback.format_exc()}")
+        pipe_mv = None
 
-
-    print('MV-Adapter pipeline loaded.')
-    logger.info("[MV-ADAPTER] Pipeline loaded (API)")
-
-# rembg
+# RMBG
 
 pipe_rmbg_model = None
 pipe_rmbg_processor = None
 rmbg_device = "cuda" if torch.cuda.is_available() else "cpu"
         
 def _remove_bg(image: Image.Image) -> Image.Image:
-    """Remove o fundo de uma imagem PIL usando a lib rembg."""
             
     if image.mode == 'RGBA':
         image = image.convert("RGB")
@@ -96,7 +107,7 @@ def _remove_bg(image: Image.Image) -> Image.Image:
         logger.warning(f"[RMBG] Failed to process image with 'rembg' lib: {e}. Returning original.")        
         return image
 
-
+# MV-Adapter
 
 @app.post("/t2mv/generate")
 def t2mv_generate(
@@ -107,61 +118,70 @@ def t2mv_generate(
     use_3d_trigger: bool = True,
     background_tasks: BackgroundTasks = None
 ):
-    start_time = time.time()
-    seed = -1 if randomize else 42
-    
-    enhanced_prompt = ref_prompt
-    if use_3d_trigger:
-        enhanced_prompt = f"3d style, 3d, {ref_prompt}, game asset"
-    
-    enhanced_negative = f"{neg_prompt}, blurry, distorted, deformed, ugly, bad geometry, bad topology, watermark, signature, text, words, letters, nsfw, explicit content" if neg_prompt else "realistic photo, photorealistic, blurry, distorted, deformed, ugly, bad geometry, watermark, text, words, letters, nsfw, explicit content"
-    
-    logger.info(f"[MV-ADAPTER] Generating images with seed {seed} and {inference_steps} steps (API)")
-    logger.info(f"[MV-ADAPTER] Enhanced prompt: {enhanced_prompt}")
-    
-    global pipe_mv, adapters
-    
-    imgs = MVAdapterT2MV.run_pipeline(
-        pipe=pipe_mv,
-        num_views=6,
-        text=enhanced_prompt,
-        height=768, width=768,
-        num_inference_steps=inference_steps,
-        guidance_scale=5.5,
-        seed=seed,
-        negative_prompt=enhanced_negative,
-        device="cuda" if torch.cuda.is_available() else "cpu",
-        adapter_name_list=adapters,
-    )
-    
-    logger.info(f"[MV-ADAPTER] Images generated with {inference_steps} steps - {len(imgs)} views (API)")
-    
-    logger.info(f"[MV-ADAPTER] Images generated, encoding to base64...")
-    
-    b64_images = []
-    for img in imgs:
-        buf = io.BytesIO()
-        img.save(buf, format="JPEG", quality=95)
-        b64_images.append(base64.b64encode(buf.getvalue()).decode("utf-8"))
+    try:
+        start_time = time.time()
+        seed = -1 if randomize else 42
+        
+        enhanced_prompt = ref_prompt
+        if use_3d_trigger:
+            enhanced_prompt = f"3d style, 3d, {ref_prompt}, game asset"
+        
+        enhanced_negative = f"{neg_prompt}, blurry, distorted, deformed, ugly, bad geometry, bad topology, watermark, signature, text, words, letters, nsfw, explicit content" if neg_prompt else "realistic photo, photorealistic, blurry, distorted, deformed, ugly, bad geometry, watermark, text, words, letters, nsfw, explicit content"
+        
+        logger.info(f"[MV-ADAPTER] Generating images with seed {seed} and {inference_steps} steps (API)")
+        logger.info(f"[MV-ADAPTER] Enhanced prompt: {enhanced_prompt}")
+        
+        global pipe_mv, adapters
+        
+        imgs = MVAdapterT2MV.run_pipeline(
+            pipe=pipe_mv,
+            num_views=6,
+            text=enhanced_prompt,
+            height=768, width=768,
+            num_inference_steps=inference_steps,
+            guidance_scale=5.5,
+            seed=seed,
+            negative_prompt=enhanced_negative,
+            device="cuda" if torch.cuda.is_available() else "cpu",
+            adapter_name_list=adapters,
+        )
+        
+        logger.info(f"[MV-ADAPTER] Images generated with {inference_steps} steps - {len(imgs)} views (API)")
+        
+        logger.info(f"[MV-ADAPTER] Images generated, encoding to base64...")
+        
+        b64_images = []
+        for img in imgs:
+            buf = io.BytesIO()
+            img.save(buf, format="JPEG", quality=95)
+            b64_images.append(base64.b64encode(buf.getvalue()).decode("utf-8"))
 
-    elapsed_time = time.time() - start_time
-    logger.info(f"[MV-ADAPTER] Total time (with encoding): {elapsed_time:.2f}s")
-    
-    
-    return {"images": b64_images}
+        elapsed_time = time.time() - start_time
+        logger.info(f"[MV-ADAPTER] Total time (with encoding): {elapsed_time:.2f}s")
+        
+        
+        return {"images": b64_images}
+    except Exception as e:
+        logger.error(f"[MV-ADAPTER] FAILED: {e}\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=f"Error generating MV images: {str(e)}")
 
+# Trellis
 
 pipe_trellis = None
 def load_pipe_trellis():
     global pipe_trellis
-    pipe_trellis = TrellisMV2M(
-        model="microsoft/TRELLIS-image-large",
-        device="cuda"
-    )
-    logger.info("[TRELLIS] Pipeline loaded (API)")
+    try:
+        pipe_trellis = TrellisMV2M(
+            model="microsoft/TRELLIS-image-large",
+            device="cuda"
+        )
+        logger.info("[TRELLIS] Pipeline loaded (API)")
 
-    pipe_trellis.prepare_pipeline()
-    logger.info("[TRELLIS] Pipeline prepared (API)")
+        pipe_trellis.prepare_pipeline()
+        logger.info("[TRELLIS] Pipeline prepared (API)")
+    except Exception as e:
+        logger.error(f"[TRELLIS] Failed to load pipeline: {e}\n{traceback.format_exc()}")
+        pipe_trellis = None
     
 
 @app.post("/mv2m/generate")
@@ -204,7 +224,6 @@ async def trellis_run(files: List[UploadFile] = File(...)):
         logger.info(f"[TRELLIS] Output directory prepared in {time.time()-t_step:.3f}s")
 
 
-        # File paths
         glb_filename = f"mesh_{session_id}.glb"
         ply_filename = f"mesh_{session_id}.ply"
         mp4_filename = f"preview_{session_id}.mp4"
@@ -289,7 +308,9 @@ async def trellis_run(files: List[UploadFile] = File(...)):
             shutil.rmtree(outdir, ignore_errors=True)
         logger.info(f"[TRELLIS] Cleanup finished in {time.time()-t_cleanup:.3f}s")
 
-      
+
+# Save feedback
+
 @app.post("/feedback/save")
 async def feedback_save(
     is_positive: int = Form(...),
@@ -362,10 +383,11 @@ async def feedback_save(
         logger.error(f"[DB ERROR] {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+# Flux
+
 pipe_flux_t2i = None
 
 def load_pipe_flux_t2i():
-    """Carrega o pipeline FLUX.1-schnell para T2I (single image)."""
     global pipe_flux_t2i
     
     if not torch.cuda.is_available():
@@ -421,7 +443,6 @@ def t2i_generate_flux(
     randomize: bool = False, 
     inference_steps: int = 10
 ):
-    """Gera uma única imagem usando FLUX."""
     
     global pipe_flux_t2i
     if pipe_flux_t2i is None:
@@ -463,9 +484,10 @@ def t2i_generate_flux(
     
     return {"image": b64_image}
 
+# Ollama choose model
+
 @app.post("/t2g/choose_model")
 def t2g_choose_model(prompt: str = Form(...)):
-    """Chama o LLM para escolher entre 'sd' (multi-view) e 'flux' (single-image)."""
     if not prompt:
         raise HTTPException(status_code=400, detail="Prompt is required.")
     

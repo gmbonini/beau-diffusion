@@ -26,3 +26,4 @@ utils3d
 nvdiffrast
 peft
 sentencepiece
+pymeshlab

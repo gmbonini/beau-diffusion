@@ -1727,3 +1727,1000 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8
 2025-11-14 19:35:33.198 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_277b0b67-c2ab-4ede-b288-592180847eb3.jpg']
 2025-11-14 19:35:33.198 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_8dky2ztr/frame_277b0b67-c2ab-4ede-b288-592180847eb3.jpg
 2025-11-14 19:35:33.198 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_8dky2ztr/mesh_277b0b67-c2ab-4ede-b288-592180847eb3.glb, PLY=/tmp/views_8dky2ztr/mesh_277b0b67-c2ab-4ede-b288-592180847eb3.ply, MP4=/tmp/views_8dky2ztr/preview_277b0b67-c2ab-4ede-b288-592180847eb3.mp4
+2025-11-17 11:35:25.892 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: goku
+2025-11-17 11:35:28.790 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-17 11:35:28.981 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-17 11:35:29.284 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: goku
+2025-11-17 11:35:29.284 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: goku (using qwen2.5:7b)
+2025-11-17 11:35:30.035 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'goku, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-17 11:35:30.247 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-17 11:35:30.248 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-17 11:35:30.248 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-17 11:35:42.882 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-17 11:35:42.934 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_z8p869zt for Trellis step
+2025-11-17 11:35:42.935 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-17 11:35:43.361 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-17 11:35:43.361 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-17 11:35:43.361 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 11:35:43.362 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 11:35:43.362 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-17 11:35:44.730 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unnatural shadows, unrealistic lighting, cluttered background, eval: 
+2025-11-17 11:35:44.730 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 11:35:44.730 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 11:35:47.621 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_z8p869zt...
+2025-11-17 11:35:47.655 | ERROR    | __main__:generate_3d:238 - [TRELLIS/API] Failed to download/save ZIP: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/mv2m/generate
+2025-11-17 11:35:49.869 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 11:35:49.870 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 11:35:49.870 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-17 11:35:49.870 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 11:35:49.870 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 11:40:12.206 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_z8p869zt...
+2025-11-17 11:41:59.940 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_z8p869zt/trellis_output.zip
+2025-11-17 11:41:59.940 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_z8p869zt
+2025-11-17 11:41:59.991 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_z8p869zt
+2025-11-17 11:41:59.992 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_z8p869zt: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.glb', 'mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.ply', 'preview_4c564238-e062-41a6-a0b7-b21a39fcdf2e.mp4', 'frame_4c564238-e062-41a6-a0b7-b21a39fcdf2e.jpg']
+2025-11-17 11:41:59.992 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.glb']
+2025-11-17 11:41:59.992 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.ply']
+2025-11-17 11:41:59.992 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_4c564238-e062-41a6-a0b7-b21a39fcdf2e.mp4']
+2025-11-17 11:41:59.992 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_4c564238-e062-41a6-a0b7-b21a39fcdf2e.jpg']
+2025-11-17 11:41:59.992 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_z8p869zt/frame_4c564238-e062-41a6-a0b7-b21a39fcdf2e.jpg
+2025-11-17 11:41:59.992 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_z8p869zt/mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.glb, PLY=/tmp/views_z8p869zt/mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.ply, MP4=/tmp/views_z8p869zt/preview_4c564238-e062-41a6-a0b7-b21a39fcdf2e.mp4
+2025-11-17 11:57:32.360 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_z8p869zt...
+2025-11-17 11:59:35.509 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_z8p869zt/trellis_output.zip
+2025-11-17 11:59:35.509 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_z8p869zt
+2025-11-17 11:59:35.512 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.glb
+2025-11-17 11:59:35.516 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/mesh_4c564238-e062-41a6-a0b7-b21a39fcdf2e.ply
+2025-11-17 11:59:35.516 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/preview_4c564238-e062-41a6-a0b7-b21a39fcdf2e.mp4
+2025-11-17 11:59:35.517 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/frame_4c564238-e062-41a6-a0b7-b21a39fcdf2e.jpg
+2025-11-17 11:59:35.555 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_z8p869zt
+2025-11-17 11:59:35.555 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_z8p869zt: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_254c33ab-4767-4af2-8250-f607a546288d.glb', 'mesh_254c33ab-4767-4af2-8250-f607a546288d.ply', 'preview_254c33ab-4767-4af2-8250-f607a546288d.mp4', 'frame_254c33ab-4767-4af2-8250-f607a546288d.jpg']
+2025-11-17 11:59:35.555 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_254c33ab-4767-4af2-8250-f607a546288d.glb']
+2025-11-17 11:59:35.555 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_254c33ab-4767-4af2-8250-f607a546288d.ply']
+2025-11-17 11:59:35.555 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_254c33ab-4767-4af2-8250-f607a546288d.mp4']
+2025-11-17 11:59:35.555 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_254c33ab-4767-4af2-8250-f607a546288d.jpg']
+2025-11-17 11:59:35.555 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_z8p869zt/frame_254c33ab-4767-4af2-8250-f607a546288d.jpg
+2025-11-17 11:59:35.555 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_z8p869zt/mesh_254c33ab-4767-4af2-8250-f607a546288d.glb, PLY=/tmp/views_z8p869zt/mesh_254c33ab-4767-4af2-8250-f607a546288d.ply, MP4=/tmp/views_z8p869zt/preview_254c33ab-4767-4af2-8250-f607a546288d.mp4
+2025-11-17 12:21:03.061 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_z8p869zt...
+2025-11-17 12:23:00.738 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_z8p869zt/trellis_output.zip
+2025-11-17 12:23:00.739 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_z8p869zt
+2025-11-17 12:23:00.740 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/mesh_254c33ab-4767-4af2-8250-f607a546288d.glb
+2025-11-17 12:23:00.742 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/mesh_254c33ab-4767-4af2-8250-f607a546288d.ply
+2025-11-17 12:23:00.743 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/preview_254c33ab-4767-4af2-8250-f607a546288d.mp4
+2025-11-17 12:23:00.743 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/frame_254c33ab-4767-4af2-8250-f607a546288d.jpg
+2025-11-17 12:23:00.785 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_z8p869zt
+2025-11-17 12:23:00.785 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_z8p869zt: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_cffe3bd9-c73a-485f-a282-16131f170040.glb', 'mesh_cffe3bd9-c73a-485f-a282-16131f170040.ply', 'preview_cffe3bd9-c73a-485f-a282-16131f170040.mp4', 'frame_cffe3bd9-c73a-485f-a282-16131f170040.jpg']
+2025-11-17 12:23:00.785 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_cffe3bd9-c73a-485f-a282-16131f170040.glb']
+2025-11-17 12:23:00.785 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_cffe3bd9-c73a-485f-a282-16131f170040.ply']
+2025-11-17 12:23:00.785 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_cffe3bd9-c73a-485f-a282-16131f170040.mp4']
+2025-11-17 12:23:00.785 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_cffe3bd9-c73a-485f-a282-16131f170040.jpg']
+2025-11-17 12:23:00.786 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_z8p869zt/frame_cffe3bd9-c73a-485f-a282-16131f170040.jpg
+2025-11-17 12:23:00.786 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_z8p869zt/mesh_cffe3bd9-c73a-485f-a282-16131f170040.glb, PLY=/tmp/views_z8p869zt/mesh_cffe3bd9-c73a-485f-a282-16131f170040.ply, MP4=/tmp/views_z8p869zt/preview_cffe3bd9-c73a-485f-a282-16131f170040.mp4
+2025-11-17 12:29:14.155 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_z8p869zt...
+2025-11-17 12:31:13.409 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_z8p869zt/trellis_output.zip
+2025-11-17 12:31:13.411 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_z8p869zt
+2025-11-17 12:31:13.414 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/mesh_cffe3bd9-c73a-485f-a282-16131f170040.glb
+2025-11-17 12:31:13.419 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/mesh_cffe3bd9-c73a-485f-a282-16131f170040.ply
+2025-11-17 12:31:13.419 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/preview_cffe3bd9-c73a-485f-a282-16131f170040.mp4
+2025-11-17 12:31:13.419 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/frame_cffe3bd9-c73a-485f-a282-16131f170040.jpg
+2025-11-17 12:31:13.466 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_z8p869zt
+2025-11-17 12:31:13.466 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_z8p869zt: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.glb', 'mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.ply', 'preview_c16ce720-d828-489a-8bda-8b23caecf0d3.mp4', 'frame_c16ce720-d828-489a-8bda-8b23caecf0d3.jpg']
+2025-11-17 12:31:13.466 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.glb']
+2025-11-17 12:31:13.466 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.ply']
+2025-11-17 12:31:13.466 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_c16ce720-d828-489a-8bda-8b23caecf0d3.mp4']
+2025-11-17 12:31:13.466 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_c16ce720-d828-489a-8bda-8b23caecf0d3.jpg']
+2025-11-17 12:31:13.466 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_z8p869zt/frame_c16ce720-d828-489a-8bda-8b23caecf0d3.jpg
+2025-11-17 12:31:13.467 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_z8p869zt/mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.glb, PLY=/tmp/views_z8p869zt/mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.ply, MP4=/tmp/views_z8p869zt/preview_c16ce720-d828-489a-8bda-8b23caecf0d3.mp4
+2025-11-17 12:37:33.180 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_z8p869zt...
+2025-11-17 12:39:23.847 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_z8p869zt/trellis_output.zip
+2025-11-17 12:39:23.848 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_z8p869zt
+2025-11-17 12:39:23.850 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.glb
+2025-11-17 12:39:23.853 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/mesh_c16ce720-d828-489a-8bda-8b23caecf0d3.ply
+2025-11-17 12:39:23.853 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/preview_c16ce720-d828-489a-8bda-8b23caecf0d3.mp4
+2025-11-17 12:39:23.854 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_z8p869zt/frame_c16ce720-d828-489a-8bda-8b23caecf0d3.jpg
+2025-11-17 12:39:23.891 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_z8p869zt
+2025-11-17 12:39:23.891 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_z8p869zt: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_5fe3d4d0-d148-4d40-b370-333896432f95.glb', 'mesh_5fe3d4d0-d148-4d40-b370-333896432f95.ply', 'preview_5fe3d4d0-d148-4d40-b370-333896432f95.mp4', 'frame_5fe3d4d0-d148-4d40-b370-333896432f95.jpg']
+2025-11-17 12:39:23.892 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_5fe3d4d0-d148-4d40-b370-333896432f95.glb']
+2025-11-17 12:39:23.892 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_5fe3d4d0-d148-4d40-b370-333896432f95.ply']
+2025-11-17 12:39:23.892 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_5fe3d4d0-d148-4d40-b370-333896432f95.mp4']
+2025-11-17 12:39:23.892 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_5fe3d4d0-d148-4d40-b370-333896432f95.jpg']
+2025-11-17 12:39:23.892 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_z8p869zt/frame_5fe3d4d0-d148-4d40-b370-333896432f95.jpg
+2025-11-17 12:39:23.892 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_z8p869zt/mesh_5fe3d4d0-d148-4d40-b370-333896432f95.glb, PLY=/tmp/views_z8p869zt/mesh_5fe3d4d0-d148-4d40-b370-333896432f95.ply, MP4=/tmp/views_z8p869zt/preview_5fe3d4d0-d148-4d40-b370-333896432f95.mp4
+2025-11-17 12:50:52.932 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_z8p869zt...
+2025-11-17 12:51:26.209 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: goku
+2025-11-17 12:52:26.272 | ERROR    | __main__:call_choose_model:318 - [Gradio] Failed to choose model: HTTPConnectionPool(host='127.0.0.1', port=8081): Read timed out. (read timeout=60). Defaulting to 'sd'.
+2025-11-17 12:52:26.522 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-17 12:52:26.824 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: goku
+2025-11-17 12:52:26.825 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: goku (using qwen2.5:7b)
+2025-11-17 12:52:30.095 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'goku, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-17 12:52:30.287 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-17 12:52:30.287 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-17 12:52:30.287 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-17 12:52:58.188 | ERROR    | __main__:generate_images:130 - [MV-ADAPTER] Error generating images: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=goku%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f80c7056f80>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140185001907904)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f7f6c11f2e0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140185001907904)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('sd', 'goku, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, li...
+             │       │   └ <function route_generation at 0x7f7f67d0cd30>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f7f67fe44c0>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('sd', 'goku, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, li...
+               └ <function route_generation at 0x7f7f70fb64d0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 346, in route_generation
+    else: # choice == "flux"
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 114, in generate_images
+    pil_images, views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                            │                  │               │                │          └ 28
+                            │                  │               │                └ False
+                            │                  │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+                            │                  └ 'goku, full body'
+                            └ <function _api_t2mv_generate at 0x7f7f70fb5fc0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 91, in _api_t2mv_generate
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x7f80c5e604c0>
+    └ <Response [500]>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [500]>
+          │         └ '500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=goku%2C+full+body&neg_prompt...
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8081/t2mv/generate?ref_prompt=goku%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28
+2025-11-17 12:52:58.194 | ERROR    | __main__:generate_3d:238 - [TRELLIS/API] Failed to download/save ZIP: Response ended prematurely
+2025-11-17 12:52:58.438 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-17 12:52:58.438 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-17 12:53:05.406 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 12:53:05.406 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 12:53:05.406 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-17 12:53:05.407 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 12:53:05.407 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 12:55:01.078 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: goku
+2025-11-17 12:55:01.401 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-17 12:55:01.586 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-17 12:55:01.890 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: goku
+2025-11-17 12:55:01.891 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: goku (using qwen2.5:7b)
+2025-11-17 12:55:02.649 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'goku, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-17 12:55:02.856 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-17 12:55:02.856 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-17 12:55:02.856 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-17 12:55:15.556 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-17 12:55:15.584 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_c9zties1 for Trellis step
+2025-11-17 12:55:15.584 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-17 12:58:26.904 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-17 12:58:26.905 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-17 12:58:26.905 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 12:58:26.912 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 12:58:26.913 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-17 12:58:32.484 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 12:58:32.485 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 12:58:32.485 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a single character from different angles. The consistency across the views is good, and there are no visible issues or artifacts.
+2025-11-17 12:58:32.485 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 12:58:32.485 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 12:58:39.789 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goku, full body, negative: bad anatomy, artifacts, extra limbs, deformed face, deformed tail, unnatural colors, over-saturated colors, background, eval: 
+2025-11-17 12:58:39.804 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 12:58:39.804 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 12:59:02.560 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 13:00:25.815 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 13:00:25.815 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 13:00:25.864 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 13:00:25.864 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.glb', 'mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.ply', 'preview_1be27df6-1245-4b12-b2b5-b2cc43ca161e.mp4', 'frame_1be27df6-1245-4b12-b2b5-b2cc43ca161e.jpg']
+2025-11-17 13:00:25.864 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.glb']
+2025-11-17 13:00:25.864 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.ply']
+2025-11-17 13:00:25.865 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_1be27df6-1245-4b12-b2b5-b2cc43ca161e.mp4']
+2025-11-17 13:00:25.865 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_1be27df6-1245-4b12-b2b5-b2cc43ca161e.jpg']
+2025-11-17 13:00:25.865 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_1be27df6-1245-4b12-b2b5-b2cc43ca161e.jpg
+2025-11-17 13:00:25.865 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.glb, PLY=/tmp/views_c9zties1/mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.ply, MP4=/tmp/views_c9zties1/preview_1be27df6-1245-4b12-b2b5-b2cc43ca161e.mp4
+2025-11-17 13:20:19.634 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 13:22:17.254 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 13:22:17.255 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 13:22:17.257 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.glb
+2025-11-17 13:22:17.260 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_1be27df6-1245-4b12-b2b5-b2cc43ca161e.ply
+2025-11-17 13:22:17.260 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_1be27df6-1245-4b12-b2b5-b2cc43ca161e.mp4
+2025-11-17 13:22:17.261 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_1be27df6-1245-4b12-b2b5-b2cc43ca161e.jpg
+2025-11-17 13:22:17.303 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 13:22:17.304 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.glb', 'mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.ply', 'preview_494fc81c-c25f-46d4-9cc7-283db9d13782.mp4', 'frame_494fc81c-c25f-46d4-9cc7-283db9d13782.jpg']
+2025-11-17 13:22:17.304 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.glb']
+2025-11-17 13:22:17.304 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.ply']
+2025-11-17 13:22:17.304 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_494fc81c-c25f-46d4-9cc7-283db9d13782.mp4']
+2025-11-17 13:22:17.304 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_494fc81c-c25f-46d4-9cc7-283db9d13782.jpg']
+2025-11-17 13:22:17.304 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_494fc81c-c25f-46d4-9cc7-283db9d13782.jpg
+2025-11-17 13:22:17.304 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.glb, PLY=/tmp/views_c9zties1/mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.ply, MP4=/tmp/views_c9zties1/preview_494fc81c-c25f-46d4-9cc7-283db9d13782.mp4
+2025-11-17 13:27:38.574 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 13:29:42.125 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 13:29:42.126 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 13:29:42.127 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.glb
+2025-11-17 13:29:42.131 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_494fc81c-c25f-46d4-9cc7-283db9d13782.ply
+2025-11-17 13:29:42.131 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_494fc81c-c25f-46d4-9cc7-283db9d13782.mp4
+2025-11-17 13:29:42.131 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_494fc81c-c25f-46d4-9cc7-283db9d13782.jpg
+2025-11-17 13:29:42.173 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 13:29:42.173 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.glb', 'mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.ply', 'preview_ee2cce3b-52fa-458d-bf25-0f946a2101ea.mp4', 'frame_ee2cce3b-52fa-458d-bf25-0f946a2101ea.jpg']
+2025-11-17 13:29:42.173 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.glb']
+2025-11-17 13:29:42.174 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.ply']
+2025-11-17 13:29:42.174 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_ee2cce3b-52fa-458d-bf25-0f946a2101ea.mp4']
+2025-11-17 13:29:42.174 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_ee2cce3b-52fa-458d-bf25-0f946a2101ea.jpg']
+2025-11-17 13:29:42.174 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_ee2cce3b-52fa-458d-bf25-0f946a2101ea.jpg
+2025-11-17 13:29:42.174 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.glb, PLY=/tmp/views_c9zties1/mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.ply, MP4=/tmp/views_c9zties1/preview_ee2cce3b-52fa-458d-bf25-0f946a2101ea.mp4
+2025-11-17 13:40:51.533 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 13:42:44.481 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 13:42:44.482 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 13:42:44.483 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.glb
+2025-11-17 13:42:44.486 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_ee2cce3b-52fa-458d-bf25-0f946a2101ea.ply
+2025-11-17 13:42:44.486 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_ee2cce3b-52fa-458d-bf25-0f946a2101ea.mp4
+2025-11-17 13:42:44.487 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_ee2cce3b-52fa-458d-bf25-0f946a2101ea.jpg
+2025-11-17 13:42:44.526 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 13:42:44.526 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.glb', 'mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.ply', 'preview_294d4817-d342-4ace-a5a3-37a9b38fa7aa.mp4', 'frame_294d4817-d342-4ace-a5a3-37a9b38fa7aa.jpg']
+2025-11-17 13:42:44.526 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.glb']
+2025-11-17 13:42:44.526 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.ply']
+2025-11-17 13:42:44.526 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_294d4817-d342-4ace-a5a3-37a9b38fa7aa.mp4']
+2025-11-17 13:42:44.526 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_294d4817-d342-4ace-a5a3-37a9b38fa7aa.jpg']
+2025-11-17 13:42:44.526 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_294d4817-d342-4ace-a5a3-37a9b38fa7aa.jpg
+2025-11-17 13:42:44.526 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.glb, PLY=/tmp/views_c9zties1/mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.ply, MP4=/tmp/views_c9zties1/preview_294d4817-d342-4ace-a5a3-37a9b38fa7aa.mp4
+2025-11-17 13:52:53.260 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 13:54:40.790 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 13:54:40.791 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 13:54:40.792 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.glb
+2025-11-17 13:54:40.794 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_294d4817-d342-4ace-a5a3-37a9b38fa7aa.ply
+2025-11-17 13:54:40.794 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_294d4817-d342-4ace-a5a3-37a9b38fa7aa.mp4
+2025-11-17 13:54:40.795 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_294d4817-d342-4ace-a5a3-37a9b38fa7aa.jpg
+2025-11-17 13:54:40.830 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 13:54:40.830 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.glb', 'mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.ply', 'preview_c9c3e313-5527-4dcb-a689-f84678ace3de.mp4', 'frame_c9c3e313-5527-4dcb-a689-f84678ace3de.jpg']
+2025-11-17 13:54:40.830 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.glb']
+2025-11-17 13:54:40.830 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.ply']
+2025-11-17 13:54:40.830 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_c9c3e313-5527-4dcb-a689-f84678ace3de.mp4']
+2025-11-17 13:54:40.830 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_c9c3e313-5527-4dcb-a689-f84678ace3de.jpg']
+2025-11-17 13:54:40.830 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_c9c3e313-5527-4dcb-a689-f84678ace3de.jpg
+2025-11-17 13:54:40.831 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.glb, PLY=/tmp/views_c9zties1/mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.ply, MP4=/tmp/views_c9zties1/preview_c9c3e313-5527-4dcb-a689-f84678ace3de.mp4
+2025-11-17 14:07:35.875 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 14:09:44.437 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 14:09:44.438 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 14:09:44.441 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.glb
+2025-11-17 14:09:44.445 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_c9c3e313-5527-4dcb-a689-f84678ace3de.ply
+2025-11-17 14:09:44.445 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_c9c3e313-5527-4dcb-a689-f84678ace3de.mp4
+2025-11-17 14:09:44.445 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_c9c3e313-5527-4dcb-a689-f84678ace3de.jpg
+2025-11-17 14:09:44.488 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 14:09:44.489 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.glb', 'mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.ply', 'preview_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.mp4', 'frame_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.jpg']
+2025-11-17 14:09:44.489 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.glb']
+2025-11-17 14:09:44.489 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.ply']
+2025-11-17 14:09:44.489 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.mp4']
+2025-11-17 14:09:44.489 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.jpg']
+2025-11-17 14:09:44.489 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.jpg
+2025-11-17 14:09:44.489 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.glb, PLY=/tmp/views_c9zties1/mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.ply, MP4=/tmp/views_c9zties1/preview_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.mp4
+2025-11-17 14:24:28.886 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 14:26:37.775 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 14:26:37.776 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 14:26:37.779 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.glb
+2025-11-17 14:26:37.783 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.ply
+2025-11-17 14:26:37.783 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.mp4
+2025-11-17 14:26:37.783 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_db8c25f8-ff1b-4eea-809a-f3c57ea044d4.jpg
+2025-11-17 14:26:37.825 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 14:26:37.825 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_aba22c2a-0724-4405-a15d-9a26c015500b.glb', 'mesh_aba22c2a-0724-4405-a15d-9a26c015500b.ply', 'preview_aba22c2a-0724-4405-a15d-9a26c015500b.mp4', 'frame_aba22c2a-0724-4405-a15d-9a26c015500b.jpg']
+2025-11-17 14:26:37.825 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_aba22c2a-0724-4405-a15d-9a26c015500b.glb']
+2025-11-17 14:26:37.826 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_aba22c2a-0724-4405-a15d-9a26c015500b.ply']
+2025-11-17 14:26:37.826 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_aba22c2a-0724-4405-a15d-9a26c015500b.mp4']
+2025-11-17 14:26:37.826 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_aba22c2a-0724-4405-a15d-9a26c015500b.jpg']
+2025-11-17 14:26:37.826 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_aba22c2a-0724-4405-a15d-9a26c015500b.jpg
+2025-11-17 14:26:37.826 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_aba22c2a-0724-4405-a15d-9a26c015500b.glb, PLY=/tmp/views_c9zties1/mesh_aba22c2a-0724-4405-a15d-9a26c015500b.ply, MP4=/tmp/views_c9zties1/preview_aba22c2a-0724-4405-a15d-9a26c015500b.mp4
+2025-11-17 14:41:49.986 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 14:43:55.002 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 14:43:55.003 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 14:43:55.004 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_aba22c2a-0724-4405-a15d-9a26c015500b.glb
+2025-11-17 14:43:55.007 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_aba22c2a-0724-4405-a15d-9a26c015500b.ply
+2025-11-17 14:43:55.007 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_aba22c2a-0724-4405-a15d-9a26c015500b.mp4
+2025-11-17 14:43:55.007 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_aba22c2a-0724-4405-a15d-9a26c015500b.jpg
+2025-11-17 14:43:55.049 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 14:43:55.049 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.glb', 'mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.ply', 'preview_1758b04c-c7db-4c12-99c5-01c294c4b5bf.mp4', 'frame_1758b04c-c7db-4c12-99c5-01c294c4b5bf.jpg']
+2025-11-17 14:43:55.050 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.glb']
+2025-11-17 14:43:55.050 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.ply']
+2025-11-17 14:43:55.050 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_1758b04c-c7db-4c12-99c5-01c294c4b5bf.mp4']
+2025-11-17 14:43:55.050 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_1758b04c-c7db-4c12-99c5-01c294c4b5bf.jpg']
+2025-11-17 14:43:55.050 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_1758b04c-c7db-4c12-99c5-01c294c4b5bf.jpg
+2025-11-17 14:43:55.050 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.glb, PLY=/tmp/views_c9zties1/mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.ply, MP4=/tmp/views_c9zties1/preview_1758b04c-c7db-4c12-99c5-01c294c4b5bf.mp4
+2025-11-17 14:57:33.056 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 14:58:52.868 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 14:58:52.868 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 14:58:52.870 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.glb
+2025-11-17 14:58:52.872 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_1758b04c-c7db-4c12-99c5-01c294c4b5bf.ply
+2025-11-17 14:58:52.872 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_1758b04c-c7db-4c12-99c5-01c294c4b5bf.mp4
+2025-11-17 14:58:52.872 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_1758b04c-c7db-4c12-99c5-01c294c4b5bf.jpg
+2025-11-17 14:58:52.895 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 14:58:52.895 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.glb', 'mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.ply', 'preview_4a23e2a6-1edc-46ed-b601-39a20434b9e5.mp4', 'frame_4a23e2a6-1edc-46ed-b601-39a20434b9e5.jpg']
+2025-11-17 14:58:52.895 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.glb']
+2025-11-17 14:58:52.895 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.ply']
+2025-11-17 14:58:52.895 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_4a23e2a6-1edc-46ed-b601-39a20434b9e5.mp4']
+2025-11-17 14:58:52.895 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_4a23e2a6-1edc-46ed-b601-39a20434b9e5.jpg']
+2025-11-17 14:58:52.896 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_4a23e2a6-1edc-46ed-b601-39a20434b9e5.jpg
+2025-11-17 14:58:52.896 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.glb, PLY=/tmp/views_c9zties1/mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.ply, MP4=/tmp/views_c9zties1/preview_4a23e2a6-1edc-46ed-b601-39a20434b9e5.mp4
+2025-11-17 16:06:09.426 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 16:07:28.113 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 16:07:28.113 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 16:07:28.114 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.glb
+2025-11-17 16:07:28.116 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_4a23e2a6-1edc-46ed-b601-39a20434b9e5.ply
+2025-11-17 16:07:28.116 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_4a23e2a6-1edc-46ed-b601-39a20434b9e5.mp4
+2025-11-17 16:07:28.116 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_4a23e2a6-1edc-46ed-b601-39a20434b9e5.jpg
+2025-11-17 16:07:28.137 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 16:07:28.137 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_eed22629-35e3-48a2-b236-4e45f53a7201.glb', 'mesh_eed22629-35e3-48a2-b236-4e45f53a7201.ply', 'preview_eed22629-35e3-48a2-b236-4e45f53a7201.mp4', 'frame_eed22629-35e3-48a2-b236-4e45f53a7201.jpg']
+2025-11-17 16:07:28.137 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_eed22629-35e3-48a2-b236-4e45f53a7201.glb']
+2025-11-17 16:07:28.137 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_eed22629-35e3-48a2-b236-4e45f53a7201.ply']
+2025-11-17 16:07:28.137 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_eed22629-35e3-48a2-b236-4e45f53a7201.mp4']
+2025-11-17 16:07:28.137 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_eed22629-35e3-48a2-b236-4e45f53a7201.jpg']
+2025-11-17 16:07:28.138 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_eed22629-35e3-48a2-b236-4e45f53a7201.jpg
+2025-11-17 16:07:28.138 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_eed22629-35e3-48a2-b236-4e45f53a7201.glb, PLY=/tmp/views_c9zties1/mesh_eed22629-35e3-48a2-b236-4e45f53a7201.ply, MP4=/tmp/views_c9zties1/preview_eed22629-35e3-48a2-b236-4e45f53a7201.mp4
+2025-11-17 16:22:01.390 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 16:23:19.627 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 16:23:19.627 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 16:23:19.628 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_eed22629-35e3-48a2-b236-4e45f53a7201.glb
+2025-11-17 16:23:19.630 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_eed22629-35e3-48a2-b236-4e45f53a7201.ply
+2025-11-17 16:23:19.631 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_eed22629-35e3-48a2-b236-4e45f53a7201.mp4
+2025-11-17 16:23:19.631 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_eed22629-35e3-48a2-b236-4e45f53a7201.jpg
+2025-11-17 16:23:19.657 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 16:23:19.657 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.glb', 'mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.ply', 'preview_de9fb120-b28b-451b-865c-4f1b0eb39b2c.mp4', 'frame_de9fb120-b28b-451b-865c-4f1b0eb39b2c.jpg']
+2025-11-17 16:23:19.657 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.glb']
+2025-11-17 16:23:19.657 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.ply']
+2025-11-17 16:23:19.657 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_de9fb120-b28b-451b-865c-4f1b0eb39b2c.mp4']
+2025-11-17 16:23:19.657 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_de9fb120-b28b-451b-865c-4f1b0eb39b2c.jpg']
+2025-11-17 16:23:19.657 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_de9fb120-b28b-451b-865c-4f1b0eb39b2c.jpg
+2025-11-17 16:23:19.657 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.glb, PLY=/tmp/views_c9zties1/mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.ply, MP4=/tmp/views_c9zties1/preview_de9fb120-b28b-451b-865c-4f1b0eb39b2c.mp4
+2025-11-17 16:28:55.873 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_c9zties1...
+2025-11-17 16:30:14.135 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_c9zties1/trellis_output.zip
+2025-11-17 16:30:14.135 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_c9zties1
+2025-11-17 16:30:14.136 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.glb
+2025-11-17 16:30:14.139 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/mesh_de9fb120-b28b-451b-865c-4f1b0eb39b2c.ply
+2025-11-17 16:30:14.139 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/preview_de9fb120-b28b-451b-865c-4f1b0eb39b2c.mp4
+2025-11-17 16:30:14.139 | INFO     | __main__:generate_3d:255 - [Gradio/Fix] Removed old file: /tmp/views_c9zties1/frame_de9fb120-b28b-451b-865c-4f1b0eb39b2c.jpg
+2025-11-17 16:30:14.173 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_c9zties1
+2025-11-17 16:30:14.173 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_c9zties1: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.glb', 'mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.ply', 'preview_d7b086e5-cddc-4264-86bf-7f985cb431d9.mp4', 'frame_d7b086e5-cddc-4264-86bf-7f985cb431d9.jpg']
+2025-11-17 16:30:14.173 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.glb']
+2025-11-17 16:30:14.173 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.ply']
+2025-11-17 16:30:14.173 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_d7b086e5-cddc-4264-86bf-7f985cb431d9.mp4']
+2025-11-17 16:30:14.174 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_d7b086e5-cddc-4264-86bf-7f985cb431d9.jpg']
+2025-11-17 16:30:14.174 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_c9zties1/frame_d7b086e5-cddc-4264-86bf-7f985cb431d9.jpg
+2025-11-17 16:30:14.174 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_c9zties1/mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.glb, PLY=/tmp/views_c9zties1/mesh_d7b086e5-cddc-4264-86bf-7f985cb431d9.ply, MP4=/tmp/views_c9zties1/preview_d7b086e5-cddc-4264-86bf-7f985cb431d9.mp4
+2025-11-17 19:18:41.333 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: aladar
+2025-11-17 19:18:41.338 | ERROR    | __main__:call_choose_model:318 - [Gradio] Failed to choose model: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2g/choose_model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67c039d0>: Failed to establish a new connection: [Errno 111] Connection refused')). Defaulting to 'sd'.
+2025-11-17 19:18:41.635 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-17 19:18:41.941 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: aladar
+2025-11-17 19:18:41.941 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: aladar (using qwen2.5:7b)
+2025-11-17 19:18:45.098 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'Aladar, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-17 19:18:45.435 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-17 19:18:45.435 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-17 19:18:45.435 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-17 19:18:45.437 | ERROR    | __main__:generate_images:130 - [MV-ADAPTER] Error generating images: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=Aladar%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x7f80c6695000>
+           └ <module 'urllib3.util.connection' from '/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py'>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+          └ None
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+    │    │       └ ('127.0.0.1', 8081)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+
+ConnectionRefusedError: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x7f80c65d5ea0>
+               └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67c2d7e0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+    │    └ <function HTTPConnection.request at 0x7f80c65c23b0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+    │    └ <function HTTPConnection.endheaders at 0x7f80c6f7eef0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    │    │            │                            └ False
+    │    │            └ None
+    │    └ <function HTTPConnection._send_output at 0x7f80c6f7eb00>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+    │    │    └ b'POST /t2mv/generate?ref_prompt=Aladar%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+lim...
+    │    └ <function HTTPConnection.send at 0x7f80c6f7e950>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>
+  File "/venv/beau/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+    │    └ <function HTTPConnection.connect at 0x7f80c65c1ea0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+    │    │      │    └ <function HTTPConnection._new_conn at 0x7f80c65c1c60>
+    │    │      └ <urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>
+    │    └ None
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+          └ <class 'urllib3.exceptions.NewConnectionError'>
+
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7f80c65d6050>
+           └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67c2d7e0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7f80c6ed15a0>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>: Failed to establish a new connection: [Errn...
+          │             │      │    └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>: Failed to establish a new connection: [Errn...
+          │             │      └ '/t2mv/generate?ref_prompt=Aladar%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+...
+          │             └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67c2d7e0>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=Aladar%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f80c7056f80>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140184435812032)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f7f6c11f2e0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140184435812032)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('sd', 'Aladar, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, ...
+             │       │   └ <function route_generation at 0x7f7f67dd36d0>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f7f67df2040>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('sd', 'Aladar, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, ...
+               └ <function route_generation at 0x7f7f70fb64d0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 346, in route_generation
+    else: # choice == "flux"
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 114, in generate_images
+    pil_images, views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                            │                  │               │                │          └ 28
+                            │                  │               │                └ False
+                            │                  │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+                            │                  └ 'Aladar, full body'
+                            └ <function _api_t2mv_generate at 0x7f7f70fb5fc0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 86, in _api_t2mv_generate
+    response = requests.post(
+               │        └ <function post at 0x7f80c5e62320>
+               └ <module 'requests' from '/venv/beau/lib/python3.10/site-packages/requests/__init__.py'>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           │               │         │          │       └ {'params': {'ref_prompt': 'Aladar, full body', 'neg_prompt': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deform...
+           │               │         │          └ None
+           │               │         └ None
+           │               └ 'http://127.0.0.1:8081/t2mv/generate'
+           └ <function request at 0x7f80c5e1fe20>
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'data': None, 'json': None, 'params': {'ref_prompt': 'Aladar, full body', 'neg_prompt': 'blurry, low detail, artifacts, bad ...
+           │       │              │           └ 'http://127.0.0.1:8081/t2mv/generate'
+           │       │              └ 'post'
+           │       └ <function Session.request at 0x7f80c5e61900>
+           └ <requests.sessions.Session object at 0x7f7f67c2d990>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 600, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x7f80c5e61d80>
+           └ <requests.sessions.Session object at 0x7f7f67c2d990>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 600, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x7f80c5e61240>
+        └ <requests.adapters.HTTPAdapter object at 0x7f7f67c2cee0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=Aladar%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67c2dd50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-11-17 19:18:45.941 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-17 19:18:45.951 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-17 19:18:51.938 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images are not consistent with the prompt and appear to be a chaotic mix of colors and shapes, making it difficult to identify the subject. There are no clear views of a single object from different angles, and the overall quality is poor with no discernible features.', 'negative_prompt': 'nsfw, explicit content, chaotic, inconsistent, low detail, unrealistic, unmatched colors, geometry holes, deformed body'}
+2025-11-17 19:18:51.939 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images are not consistent with the prompt and appear to be a chaotic mix of colors and shapes, making it difficult to identify the subject. There are no clear views of a single object from different angles, and the overall quality is poor with no discernible features.', 'negative_prompt': 'nsfw, explicit content, chaotic, inconsistent, low detail, unrealistic, unmatched colors, geometry holes, deformed body'}
+2025-11-17 19:18:51.939 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: Aladar, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images are not consistent with the prompt and appear to be a chaotic mix of colors and shapes, making it difficult to identify the subject. There are no clear views of a single object from different angles, and the overall quality is poor with no discernible features.
+2025-11-17 19:18:51.939 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 19:18:51.939 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 19:19:46.101 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: cat
+2025-11-17 19:19:46.103 | ERROR    | __main__:call_choose_model:318 - [Gradio] Failed to choose model: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2g/choose_model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67ce05b0>: Failed to establish a new connection: [Errno 111] Connection refused')). Defaulting to 'sd'.
+2025-11-17 19:19:46.405 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-17 19:19:46.759 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cat
+2025-11-17 19:19:46.759 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cat (using qwen2.5:7b)
+2025-11-17 19:19:47.503 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, cute, orange, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-17 19:19:47.721 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-17 19:19:47.721 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-17 19:19:47.721 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-17 19:19:47.723 | ERROR    | __main__:generate_images:130 - [MV-ADAPTER] Error generating images: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+orange%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x7f80c6695000>
+           └ <module 'urllib3.util.connection' from '/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py'>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+          └ None
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+    │    │       └ ('127.0.0.1', 8081)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+
+ConnectionRefusedError: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x7f80c65d5ea0>
+               └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67ce0a30>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+    │    └ <function HTTPConnection.request at 0x7f80c65c23b0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+    │    └ <function HTTPConnection.endheaders at 0x7f80c6f7eef0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    │    │            │                            └ False
+    │    │            └ None
+    │    └ <function HTTPConnection._send_output at 0x7f80c6f7eb00>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+    │    │    └ b'POST /t2mv/generate?ref_prompt=cat%2C+cute%2C+orange%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anato...
+    │    └ <function HTTPConnection.send at 0x7f80c6f7e950>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>
+  File "/venv/beau/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+    │    └ <function HTTPConnection.connect at 0x7f80c65c1ea0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+    │    │      │    └ <function HTTPConnection._new_conn at 0x7f80c65c1c60>
+    │    │      └ <urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>
+    │    └ None
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+          └ <class 'urllib3.exceptions.NewConnectionError'>
+
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>: Failed to establish a new connection: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7f80c65d6050>
+           └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67ce0a30>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7f80c6ed15a0>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>: Failed to establish a new connection: [Errn...
+          │             │      │    └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>: Failed to establish a new connection: [Errn...
+          │             │      └ '/t2mv/generate?ref_prompt=cat%2C+cute%2C+orange%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+...
+          │             └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67ce0a30>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+orange%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f80c7056f80>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140184435812032)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f7f6c11f2e0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140184435812032)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('sd', 'cat, cute, orange, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail...
+             │       │   └ <function route_generation at 0x7f7f67ccd120>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f7f67c3cd40>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('sd', 'cat, cute, orange, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail...
+               └ <function route_generation at 0x7f7f70fb64d0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 346, in route_generation
+    else: # choice == "flux"
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 114, in generate_images
+    pil_images, views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                            │                  │               │                │          └ 28
+                            │                  │               │                └ False
+                            │                  │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+                            │                  └ 'cat, cute, orange, full body'
+                            └ <function _api_t2mv_generate at 0x7f7f70fb5fc0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 86, in _api_t2mv_generate
+    response = requests.post(
+               │        └ <function post at 0x7f80c5e62320>
+               └ <module 'requests' from '/venv/beau/lib/python3.10/site-packages/requests/__init__.py'>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           │               │         │          │       └ {'params': {'ref_prompt': 'cat, cute, orange, full body', 'neg_prompt': 'blurry, low detail, artifacts, bad anatomy, extra li...
+           │               │         │          └ None
+           │               │         └ None
+           │               └ 'http://127.0.0.1:8081/t2mv/generate'
+           └ <function request at 0x7f80c5e1fe20>
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'data': None, 'json': None, 'params': {'ref_prompt': 'cat, cute, orange, full body', 'neg_prompt': 'blurry, low detail, arti...
+           │       │              │           └ 'http://127.0.0.1:8081/t2mv/generate'
+           │       │              └ 'post'
+           │       └ <function Session.request at 0x7f80c5e61900>
+           └ <requests.sessions.Session object at 0x7f7f67ce0130>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 600, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x7f80c5e61d80>
+           └ <requests.sessions.Session object at 0x7f7f67ce0130>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 600, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x7f80c5e61240>
+        └ <requests.adapters.HTTPAdapter object at 0x7f7f67ce1450>
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+orange%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67ce0d30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-11-17 19:19:48.024 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-17 19:19:48.031 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-17 19:19:53.711 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images are not consistent with the prompt. The object appears to be a collection of abstract shapes rather than a cat. The images are not realistic and the colors are mismatched. There are no visible issues such as geometry holes or extra limbs.', 'negative_prompt': 'nsfw, explicit content, abstract shapes, unrealistic, mismatched colors, inconsistent, deformed'}
+2025-11-17 19:19:53.711 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images are not consistent with the prompt. The object appears to be a collection of abstract shapes rather than a cat. The images are not realistic and the colors are mismatched. There are no visible issues such as geometry holes or extra limbs.', 'negative_prompt': 'nsfw, explicit content, abstract shapes, unrealistic, mismatched colors, inconsistent, deformed'}
+2025-11-17 19:19:53.712 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, cute, orange, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images are not consistent with the prompt. The object appears to be a collection of abstract shapes rather than a cat. The images are not realistic and the colors are mismatched. There are no visible issues such as geometry holes or extra limbs.
+2025-11-17 19:19:53.712 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 19:19:53.712 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 19:24:06.028 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: aladar
+2025-11-17 19:24:06.320 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-17 19:24:06.533 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-17 19:24:06.838 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: aladar
+2025-11-17 19:24:06.839 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: aladar (using qwen2.5:7b)
+2025-11-17 19:24:07.596 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'aladar, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-17 19:24:07.954 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-17 19:24:07.955 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-17 19:24:07.955 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-17 19:24:20.456 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-17 19:24:20.485 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_nmhok5xo for Trellis step
+2025-11-17 19:24:20.485 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-17 19:24:20.898 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: aladar, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: 
+2025-11-17 19:24:20.898 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-17 19:24:20.899 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 19:24:20.899 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 19:24:20.899 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-17 19:24:25.821 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 19:24:25.821 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well. The images are consistent across the multi-views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 19:24:25.821 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: aladar, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well. The images are consistent across the multi-views, and there are no visible issues or artifacts.
+2025-11-17 19:24:25.822 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 19:24:25.822 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 19:24:29.716 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: aladar, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, unrealistic shadows, unnatural lighting, cluttered background, eval: 
+2025-11-17 19:24:29.716 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 19:24:29.716 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 19:24:49.993 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: carnotaurus
+2025-11-17 19:24:50.229 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-17 19:24:50.398 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-17 19:24:50.751 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: carnotaurus
+2025-11-17 19:24:50.751 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: carnotaurus (using qwen2.5:7b)
+2025-11-17 19:24:51.425 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'carnotaurus, full body', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-17 19:24:51.658 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-17 19:24:51.658 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-17 19:24:51.658 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-17 19:25:03.676 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-17 19:25:03.701 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_94cvd1ny for Trellis step
+2025-11-17 19:25:03.701 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-17 19:25:04.114 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-17 19:25:04.115 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: carnotaurus, full body, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: 
+2025-11-17 19:25:04.115 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 19:25:04.115 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-17 19:25:04.116 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 19:25:08.767 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a carnotaurus from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 19:25:08.768 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a carnotaurus from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-17 19:25:08.768 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: carnotaurus, full body, negative: blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background, eval: The images match the prompt well, showing a carnotaurus from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-17 19:25:08.768 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 19:25:08.768 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 19:25:12.818 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: carnotaurus, full body, negative: bad proportions, deformed parts, artifacts, low detail, shadows, lighting, background, excessive muscle distortion, eval: 
+2025-11-17 19:25:12.818 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-17 19:25:12.819 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-17 19:25:27.979 | INFO     | __main__:generate_3d:215 - [TRELLIS] Starting 3D generation for views in /tmp/views_94cvd1ny...
+2025-11-17 19:26:19.888 | INFO     | __main__:generate_3d:235 - [TRELLIS/API] Saved ZIP to /tmp/views_94cvd1ny/trellis_output.zip
+2025-11-17 19:26:19.889 | INFO     | __main__:generate_3d:244 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_94cvd1ny
+2025-11-17 19:26:19.915 | INFO     | __main__:generate_3d:262 - [TRELLIS/API] Extracted ZIP to /tmp/views_94cvd1ny
+2025-11-17 19:26:19.915 | INFO     | __main__:generate_3d:265 - [TRELLIS/API-DEBUG] Files in /tmp/views_94cvd1ny: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_eca25745-6d48-4e8c-b26f-3443788cafda.glb', 'mesh_eca25745-6d48-4e8c-b26f-3443788cafda.ply', 'preview_eca25745-6d48-4e8c-b26f-3443788cafda.mp4', 'frame_eca25745-6d48-4e8c-b26f-3443788cafda.jpg']
+2025-11-17 19:26:19.915 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_eca25745-6d48-4e8c-b26f-3443788cafda.glb']
+2025-11-17 19:26:19.915 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_eca25745-6d48-4e8c-b26f-3443788cafda.ply']
+2025-11-17 19:26:19.915 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_eca25745-6d48-4e8c-b26f-3443788cafda.mp4']
+2025-11-17 19:26:19.915 | INFO     | __main__:generate_3d:275 - [TRELLIS/API-DEBUG] Found frame files: ['frame_eca25745-6d48-4e8c-b26f-3443788cafda.jpg']
+2025-11-17 19:26:19.915 | INFO     | __main__:generate_3d:289 - [TRELLIS/API] Frame path found: /tmp/views_94cvd1ny/frame_eca25745-6d48-4e8c-b26f-3443788cafda.jpg
+2025-11-17 19:26:19.915 | INFO     | __main__:generate_3d:293 - [TRELLIS/API] Assets found: GLB=/tmp/views_94cvd1ny/mesh_eca25745-6d48-4e8c-b26f-3443788cafda.glb, PLY=/tmp/views_94cvd1ny/mesh_eca25745-6d48-4e8c-b26f-3443788cafda.ply, MP4=/tmp/views_94cvd1ny/preview_eca25745-6d48-4e8c-b26f-3443788cafda.mp4
+2025-11-18 17:28:04.367 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: cute cat
+2025-11-18 17:28:04.369 | ERROR    | __main__:call_choose_model:318 - [Gradio] Failed to choose model: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2g/choose_model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67b48dc0>: Failed to establish a new connection: [Errno 111] Connection refused')). Defaulting to 'sd'.
+2025-11-18 17:28:04.669 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-18 17:28:04.973 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cute cat
+2025-11-18 17:28:04.973 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cute cat (using qwen2.5:7b)
+2025-11-18 17:28:08.135 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, cute, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-18 17:28:08.363 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-18 17:28:08.364 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-18 17:28:08.364 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-18 17:28:08.365 | ERROR    | __main__:generate_images:130 - [MV-ADAPTER] Error generating images: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x7f80c6695000>
+           └ <module 'urllib3.util.connection' from '/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py'>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+          └ None
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+    │    │       └ ('127.0.0.1', 8081)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+
+ConnectionRefusedError: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x7f80c65d5ea0>
+               └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67c2dba0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+    │    └ <function HTTPConnection.request at 0x7f80c65c23b0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+    │    └ <function HTTPConnection.endheaders at 0x7f80c6f7eef0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    │    │            │                            └ False
+    │    │            └ None
+    │    └ <function HTTPConnection._send_output at 0x7f80c6f7eb00>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+    │    │    └ b'POST /t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extr...
+    │    └ <function HTTPConnection.send at 0x7f80c6f7e950>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>
+  File "/venv/beau/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+    │    └ <function HTTPConnection.connect at 0x7f80c65c1ea0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+    │    │      │    └ <function HTTPConnection._new_conn at 0x7f80c65c1c60>
+    │    │      └ <urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>
+    │    └ None
+    └ <urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+          └ <class 'urllib3.exceptions.NewConnectionError'>
+
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>: Failed to establish a new connection: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7f80c65d6050>
+           └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67c2dba0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7f80c6ed15a0>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>: Failed to establish a new connection: [Errn...
+          │             │      │    └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>: Failed to establish a new connection: [Errn...
+          │             │      └ '/t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limb...
+          │             └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7f67c2dba0>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f80c7056f80>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140184435812032)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f7f6c11f2e0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140184435812032)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('sd', 'cat, cute, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadow...
+             │       │   └ <function route_generation at 0x7f7f67b22440>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f7f5fc40640>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('sd', 'cat, cute, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadow...
+               └ <function route_generation at 0x7f7f70fb64d0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 346, in route_generation
+    else: # choice == "flux"
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 114, in generate_images
+    pil_images, views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                            │                  │               │                │          └ 28
+                            │                  │               │                └ False
+                            │                  │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+                            │                  └ 'cat, cute, full body'
+                            └ <function _api_t2mv_generate at 0x7f7f70fb5fc0>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 86, in _api_t2mv_generate
+    response = requests.post(
+               │        └ <function post at 0x7f80c5e62320>
+               └ <module 'requests' from '/venv/beau/lib/python3.10/site-packages/requests/__init__.py'>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           │               │         │          │       └ {'params': {'ref_prompt': 'cat, cute, full body', 'neg_prompt': 'blurry, low detail, artifacts, bad anatomy, extra limbs, def...
+           │               │         │          └ None
+           │               │         └ None
+           │               └ 'http://127.0.0.1:8081/t2mv/generate'
+           └ <function request at 0x7f80c5e1fe20>
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'data': None, 'json': None, 'params': {'ref_prompt': 'cat, cute, full body', 'neg_prompt': 'blurry, low detail, artifacts, b...
+           │       │              │           └ 'http://127.0.0.1:8081/t2mv/generate'
+           │       │              └ 'post'
+           │       └ <function Session.request at 0x7f80c5e61900>
+           └ <requests.sessions.Session object at 0x7f7f67b4a230>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 600, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x7f80c5e61d80>
+           └ <requests.sessions.Session object at 0x7f7f67b4a230>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 600, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x7f80c5e61240>
+        └ <requests.adapters.HTTPAdapter object at 0x7f7f67b49570>
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7f67b4a140>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-11-18 17:28:08.667 | INFO     | __main__:route_post_processing:353 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-18 17:28:08.667 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-18 17:28:12.918 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute cat from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-18 17:28:12.919 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute cat from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-18 17:28:12.919 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, cute, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a cute cat from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-18 17:28:12.919 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-18 17:28:12.920 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-18 20:22:52.703 | INFO     | __main__:call_choose_model:310 - [Gradio] Choosing model for prompt: cute cat
+2025-11-18 20:22:55.373 | INFO     | __main__:call_choose_model:315 - [Gradio] LLM chose model: sd
+2025-11-18 20:22:55.605 | INFO     | __main__:_reset_ui_and_set_steps:324 - [Gradio] Resetting UI, setting steps to 28
+2025-11-18 20:22:55.962 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cute cat
+2025-11-18 20:22:55.963 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cute cat (using qwen2.5:7b)
+2025-11-18 20:22:56.694 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, cute, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-18 20:23:24.543 | INFO     | __main__:route_generation:344 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-18 20:23:24.543 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-18 20:23:24.543 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-18 20:23:36.872 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-18 20:23:36.896 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_5x909uwl for Trellis step
+2025-11-18 20:23:36.896 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-19 17:46:10.819 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: goblin wearing a hat and holding a gun
+2025-11-19 17:46:13.533 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-19 17:46:13.757 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-19 17:46:14.062 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: goblin wearing a hat and holding a gun
+2025-11-19 17:46:14.063 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: goblin wearing a hat and holding a gun (using qwen2.5:7b)
+2025-11-19 17:46:14.899 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'goblin, wearing a hat, holding a gun, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-19 17:46:15.127 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-19 17:46:15.127 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-19 17:46:15.127 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-19 17:46:27.402 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-19 17:46:27.431 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_6vkmyier for Trellis step
+2025-11-19 17:46:27.431 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-19 17:46:28.059 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-19 17:46:28.060 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-19 17:46:32.730 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a goblin wearing a hat and holding a gun. The multi-views are consistent, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-19 17:46:32.731 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a goblin wearing a hat and holding a gun. The multi-views are consistent, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-19 17:46:32.731 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: goblin, wearing a hat, holding a gun, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a goblin wearing a hat and holding a gun. The multi-views are consistent, and there are no visible issues or artifacts.
+2025-11-19 17:46:32.731 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-19 17:46:32.732 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-19 17:46:43.650 | INFO     | __main__:generate_3d:214 - [TRELLIS] Starting 3D generation for views in /tmp/views_6vkmyier...
+2025-11-19 17:47:44.792 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_6vkmyier/trellis_output.zip
+2025-11-19 17:47:44.793 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_6vkmyier
+2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/views_6vkmyier
+2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/views_6vkmyier: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.glb', 'mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.ply', 'preview_d01ed2d2-f880-468c-a9df-5589bbf08c79.mp4', 'frame_d01ed2d2-f880-468c-a9df-5589bbf08c79.jpg']
+2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.glb']
+2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.ply']
+2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_d01ed2d2-f880-468c-a9df-5589bbf08c79.mp4']
+2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_d01ed2d2-f880-468c-a9df-5589bbf08c79.jpg']
+2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_6vkmyier/frame_d01ed2d2-f880-468c-a9df-5589bbf08c79.jpg
+2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_6vkmyier/mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.glb, PLY=/tmp/views_6vkmyier/mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.ply, MP4=/tmp/views_6vkmyier/preview_d01ed2d2-f880-468c-a9df-5589bbf08c79.mp4
