@@ -405,31 +405,31 @@ def load_pipe_flux_t2i():
         
         logger.info("[FLUX-T2I] FLUX.1-schnell pipeline loaded.")
         
-        try:
-            logger.info("[FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...")
-            pipe_flux_t2i.load_lora_weights(
-                "ByteDance/Hyper-SD",
-                weight_name="Hyper-FLUX.1-schnell-8steps-lora.safetensors"
-            )
-            pipe_flux_t2i.fuse_lora(lora_scale=0.125)
-            logger.info("[FLUX-T2I] Hyper-SD LoRA loaded and fused (scale=0.125)")
-        except Exception as e:
-            logger.error(f"[FLUX-T2I] Failed to load Hyper-SD LoRA: {e}")
+        # try:
+        #     logger.info("[FLUX-T2I] Loading Hyper-SD LoRA for speedup (ByteDance/Hyper-SD)...")
+        #     pipe_flux_t2i.load_lora_weights(
+        #         "ByteDance/Hyper-SD",
+        #         weight_name="Hyper-FLUX.1-schnell-8steps-lora.safetensors"
+        #     )
+        #     pipe_flux_t2i.fuse_lora(lora_scale=0.125)
+        #     logger.info("[FLUX-T2I] Hyper-SD LoRA loaded and fused (scale=0.125)")
+        # except Exception as e:
+        #     logger.error(f"[FLUX-T2I] Failed to load Hyper-SD LoRA: {e}")
 
         
-        try:
-            logger.info("[FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2")
-            pipe_flux_t2i.load_lora_weights(
-                "gokaygokay/Flux-Game-Assets-LoRA-v2",
-                weight_name="game_asst.safetensors"
-            )
+        # try:
+        #     logger.info("[FLUX-T2I] Loading LoRA: gokaygokay/Flux-Game-Assets-LoRA-v2")
+        #     pipe_flux_t2i.load_lora_weights(
+        #         "gokaygokay/Flux-Game-Assets-LoRA-v2",
+        #         weight_name="game_asst.safetensors"
+        #     )
             
             
-            pipe_flux_t2i.fuse_lora(lora_scale=0.8) 
-            logger.info("[FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.")
-        except Exception as e:
+        #     pipe_flux_t2i.fuse_lora(lora_scale=0.8) 
+        #     logger.info("[FLUX-T2I] LoRA 'Flux-Game-Assets-LoRA-v2' loaded and fused with scale 0.8.")
+        # except Exception as e:
             
-            logger.error(f"[FLUX-T2I] Failed to load/fuse Game Assets LoRA: {e}\n{traceback.format_exc()}")
+        #     logger.error(f"[FLUX-T2I] Failed to load/fuse Game Assets LoRA: {e}\n{traceback.format_exc()}")
         
 
     except Exception as e:

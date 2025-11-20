@@ -281,52 +281,55 @@ def describe_pngs_in_dir(dir_path):
 
 
 def choose_generation_model(user_prompt: str) -> str:
-    """Usa LLM para escolher entre 'sd' (multi-view) e 'flux' (single-image)."""
+    """Uses LLM to choose between 'sd' (objects/chars) and 'flux' (environments)."""
     
     prompt_text = f"""
-    You are a model dispatcher. Your job is to select the best model for a user's prompt.
-    You have two choices:
+    You are a classifier for a 3D asset generation pipeline. 
+    Classify the user prompt into one of two categories:
 
-    1.  **sd**: A model that generates 6 views of a 3D object (multi-view). 
-        Use this for: **creatures, objects, simple or small items, game assets, 3D models**, or anything that needs to be seen from all sides. 
-        (Ex: "a dragon", "a sword", "a chair", "a small monster")
-
-    2.  **flux**: A model that generates a single, high-quality 2D image. 
-        Use this for: **constructions, buildings, houses, landscapes, scenes**, complex scenarios, 2D illustrations, logos, or portraits.
-        (Ex: "a modern house", "a forest landscape", "a city scene", "a tall building")
-
-    Analyze the user's prompt and decide which model is more appropriate.
+    1. "sd" -> For CHARACTERS, OBJECTS, ANIMALS, WEAPONS, VEHICLES. 
+       (Things that have a specific shape and can be rotated in 3D).
     
-    RULES:
-    - If the prompt describes a **creature, object, item, or asset** $\rightarrow$ respond "sd".
-    - If the prompt describes a **building, landscape, or scene** $\rightarrow$ respond "flux".
-    - If ambiguous, default to "flux".
+    2. "flux" -> For ENVIRONMENTS, LANDSCAPES, ROOMS, BUILDINGS. 
+       (Backgrounds, places, or scenic views).
+
+    EXAMPLES:
+    - User: "a futuristic city street" -> flux
+    - User: "a warrior holding a sword" -> sd
+    - User: "beautiful mountain landscape" -> flux
+    - User: "rusty old car" -> sd
+    - User: "isometric living room" -> flux
+    - User: "man with mustache" -> sd
+    - User: "golden trophy" -> sd
+    - User: "dark forest background" -> flux
 
     User Prompt: "{user_prompt}"
 
-    Respond with ONLY the chosen model name: "sd" or "flux".
+    Respond with ONLY the category name ("sd" or "flux").
     """
     
     payload = {
-        "model": MODEL_TEXT,
+        "model": MODEL_TEXT, 
         "prompt": prompt_text,
-        "max_tokens": 5,
+        "max_tokens": 10,
         "temperature": 0.0,
         "stream": False,
         "keep_alive": "1h"
     }
     
     try:
-        resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=(10, 30))
+        resp = requests.post(f"{OLLAMA_URL}/api/generate", json=payload, timeout=(5, 10))
         resp.raise_for_status()
-        choice = resp.json()["response"].strip().replace('"', '').lower()
+        choice = resp.json()["response"].strip().lower()
         
         if "sd" in choice:
             logger.info(f"[OLLAMA] Model choice for '{user_prompt}': sd")
             return "sd"
         
-        logger.info(f"[OLLAMA] Model choice for '{user_prompt}': flux (defaulted or chosen)")
+        logger.info(f"[OLLAMA] Model choice for '{user_prompt}': flux (default/chosen)")
         return "flux"
+
     except Exception as e:
+        # Error fallback -> FLUX
         logger.error(f"[OLLAMA] Error choosing model: {e}. Defaulting to 'flux'.")
-        return "flux" # Default fallback
+        return "flux"

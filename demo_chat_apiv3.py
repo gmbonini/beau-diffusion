@@ -187,18 +187,18 @@ def generate_image_flux(refined_prompt, negative_prompt, randomize=False, infere
         
         return (
             pil_images,
-            views_dir, # Necessário para o state e feedback
-            gr.update(visible=False), # run_trellis_btn (NÃO MOSTRAR)
+            views_dir,
+            gr.update(visible=True, interactive=True, variant="secondary"), 
             refined_prompt,
-            gr.update(value="", visible=False), # llm_avaliation
-            gr.update(value="", visible=False)  # llm_eval_neg_prompt
+            gr.update(value="", visible=False), 
+            gr.update(value="", visible=False)  
         )
     except Exception as e:      
         logger.exception(f"[FLUX] Error generating image: {e}") 
         return (
             [],
             "",
-            gr.update(visible=False), # run_trellis_btn
+            gr.update(visible=False),
             refined_prompt or "",
             gr.update(value=f"Error: {e}", visible=True),
             gr.update(value="", visible=False)
@@ -310,7 +310,7 @@ def call_choose_model(prompt):
     try:
         response = requests.post(f"{API_URL}/t2g/choose_model", data={"prompt": prompt}, timeout=60)
         response.raise_for_status()
-        choice = response.json().get("model_choice", "sd") # Default to flux on error
+        choice = response.json().get("model_choice", "sd")
         logger.info(f"[Gradio] LLM chose model: {choice}")
         return choice
     except Exception as e:
@@ -404,7 +404,7 @@ def _unlock_after_flux():
         gr.update(interactive=True), # run_btn_generate (MODIFIED)
         gr.update(visible=False, interactive=False), # remake_seed_btn
         gr.update(visible=False, interactive=False), # remake_steps_btn
-        gr.update(visible=False, interactive=False), # run_trellis_btn
+        gr.update(visible=True, interactive=True), # run_trellis_btn
         gr.update(visible=True, interactive=True), # image_like_btn
         gr.update(visible=True, interactive=True), # image_dislike_btn
     )
@@ -520,16 +520,15 @@ with gr.Blocks() as demo:
     dummy_state = gr.State()
 
     prompt = gr.Textbox(label="Prompt", placeholder="Describe your 3D object...")
+
+    with gr.Accordion("Refined Prompts", open=False):
+        ref_prompt = gr.Textbox(label="Refined Prompt", interactive=False)
+        neg_prompt = gr.Textbox(label="Negative Prompt", interactive=False)
     
     with gr.Row():
         run_btn_generate = gr.Button("Generate", variant="primary")
 
     with gr.Row(equal_height=True):
-        with gr.Column(scale=1, min_width=320):
-            with gr.Accordion("LLM prompts", open=False):
-                ref_prompt = gr.Textbox(label="Refined positive prompt", interactive=False, show_copy_button=True, lines=2)
-                neg_prompt = gr.Textbox(label="Negative prompt", interactive=False, show_copy_button=True, lines=2)
-
         with gr.Column(scale=2, min_width=440):
             gallery = gr.Gallery(columns=3, rows=2, height=520, label="Generated Views")
             

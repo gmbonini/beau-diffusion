@@ -2724,3 +2724,803 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8
 2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_d01ed2d2-f880-468c-a9df-5589bbf08c79.jpg']
 2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_6vkmyier/frame_d01ed2d2-f880-468c-a9df-5589bbf08c79.jpg
 2025-11-19 17:47:44.848 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_6vkmyier/mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.glb, PLY=/tmp/views_6vkmyier/mesh_d01ed2d2-f880-468c-a9df-5589bbf08c79.ply, MP4=/tmp/views_6vkmyier/preview_d01ed2d2-f880-468c-a9df-5589bbf08c79.mp4
+2025-11-20 12:44:41.785 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: strongman holding a gun
+2025-11-20 12:44:44.859 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 12:44:45.013 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 12:44:45.316 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: strongman holding a gun
+2025-11-20 12:44:45.316 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: strongman holding a gun (using qwen2.5:7b)
+2025-11-20 12:44:46.182 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'strongman, holding a gun, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 12:44:46.378 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 12:44:46.378 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 12:44:46.378 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 12:44:51.359 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 12:44:51.369 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_gap5jo6v for feedback
+2025-11-20 12:44:51.370 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 12:44:51.641 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 12:51:17.057 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: cute cat
+2025-11-20 12:51:17.059 | ERROR    | __main__:call_choose_model:317 - [Gradio] Failed to choose model: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2g/choose_model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7bb77a5990>: Failed to establish a new connection: [Errno 111] Connection refused')). Defaulting to 'sd'.
+2025-11-20 12:51:17.359 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-20 12:51:17.662 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cute cat
+2025-11-20 12:51:17.662 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cute cat (using qwen2.5:7b)
+2025-11-20 12:51:18.315 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, cute, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 12:51:18.518 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-20 12:51:18.518 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-20 12:51:18.518 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-20 12:51:18.520 | ERROR    | __main__:generate_images:130 - [MV-ADAPTER] Error generating images: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x7f7d26689120>
+           └ <module 'urllib3.util.connection' from '/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py'>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+          └ None
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+    │    │       └ ('127.0.0.1', 8081)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+
+ConnectionRefusedError: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x7f7d265c5fc0>
+               └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7bb77a6ec0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+    │    └ <function HTTPConnection.request at 0x7f7d265b64d0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+    │    └ <function HTTPConnection.endheaders at 0x7f7d26f73010>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    │    │            │                            └ False
+    │    │            └ None
+    │    └ <function HTTPConnection._send_output at 0x7f7d26f72c20>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+    │    │    └ b'POST /t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extr...
+    │    └ <function HTTPConnection.send at 0x7f7d26f72a70>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>
+  File "/venv/beau/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+    │    └ <function HTTPConnection.connect at 0x7f7d265b5fc0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+    │    │      │    └ <function HTTPConnection._new_conn at 0x7f7d265b5d80>
+    │    │      └ <urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>
+    │    └ None
+    └ <urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+          └ <class 'urllib3.exceptions.NewConnectionError'>
+
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>: Failed to establish a new connection: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7f7d265c6170>
+           └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7bb77a6ec0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7f7d26ec16c0>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>: Failed to establish a new connection: [Errn...
+          │             │      │    └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>: Failed to establish a new connection: [Errn...
+          │             │      └ '/t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limb...
+          │             └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f7bb77a6ec0>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f7d2704b0a0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140169691252416)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7f7bcc14b2e0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140169691252416)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('sd', 'cat, cute, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadow...
+             │       │   └ <function route_generation at 0x7f7bb77b96c0>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7f7bc57e7b80>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('sd', 'cat, cute, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadow...
+               └ <function route_generation at 0x7f7bd0faac20>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 345, in route_generation
+    return generate_images(refined_prompt, negative_prompt, randomize, inference_steps)
+           │               │               │                │          └ 28
+           │               │               │                └ False
+           │               │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+           │               └ 'cat, cute, full body'
+           └ <function generate_images at 0x7f7bd0faa7a0>
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 114, in generate_images
+    pil_images, views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                            │                  │               │                │          └ 28
+                            │                  │               │                └ False
+                            │                  │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+                            │                  └ 'cat, cute, full body'
+                            └ <function _api_t2mv_generate at 0x7f7bd0faa710>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 86, in _api_t2mv_generate
+    response = requests.post(
+               │        └ <function post at 0x7f7d25e4e440>
+               └ <module 'requests' from '/venv/beau/lib/python3.10/site-packages/requests/__init__.py'>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           │               │         │          │       └ {'params': {'ref_prompt': 'cat, cute, full body', 'neg_prompt': 'blurry, low detail, artifacts, bad anatomy, extra limbs, def...
+           │               │         │          └ None
+           │               │         └ None
+           │               └ 'http://127.0.0.1:8081/t2mv/generate'
+           └ <function request at 0x7f7d25e0bf40>
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'data': None, 'json': None, 'params': {'ref_prompt': 'cat, cute, full body', 'neg_prompt': 'blurry, low detail, artifacts, b...
+           │       │              │           └ 'http://127.0.0.1:8081/t2mv/generate'
+           │       │              └ 'post'
+           │       └ <function Session.request at 0x7f7d25e4da20>
+           └ <requests.sessions.Session object at 0x7f7bb77a7a90>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 600, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x7f7d25e4dea0>
+           └ <requests.sessions.Session object at 0x7f7bb77a7a90>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 600, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x7f7d25e4d360>
+        └ <requests.adapters.HTTPAdapter object at 0x7f7bb77a7460>
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=cat%2C+cute%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7bb75f8160>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-11-20 12:51:18.823 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 12:51:18.824 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 12:51:27.640 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images are not consistent and some views have an extra tail. The face has low detail. The colors are unrealistic and unmatched.', 'negative_prompt': 'nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body'}
+2025-11-20 12:51:27.640 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images are not consistent and some views have an extra tail. The face has low detail. The colors are unrealistic and unmatched.', 'negative_prompt': 'nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body'}
+2025-11-20 12:51:27.640 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, cute, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images are not consistent and some views have an extra tail. The face has low detail. The colors are unrealistic and unmatched.
+2025-11-20 12:51:27.640 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 12:51:27.640 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 12:52:07.695 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: cute cat
+2025-11-20 12:52:08.194 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-20 12:52:08.405 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-20 12:52:08.709 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cute cat
+2025-11-20 12:52:08.709 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cute cat (using qwen2.5:7b)
+2025-11-20 12:52:09.497 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'cat, cute, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 12:52:09.720 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-20 12:52:09.720 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-20 12:52:09.720 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-20 12:52:22.669 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-20 12:52:22.700 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_d94dxtiu for Trellis step
+2025-11-20 12:52:22.700 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-20 12:52:58.421 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 12:52:58.421 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 12:53:04.108 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a cute cat from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 12:53:04.108 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a cute cat from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 12:53:04.108 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: cat, cute, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a cute cat from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-20 12:53:04.108 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 12:53:04.109 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 12:55:44.812 | INFO     | __main__:generate_3d:214 - [TRELLIS] Starting 3D generation for views in /tmp/views_d94dxtiu...
+2025-11-20 12:56:52.674 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/views_d94dxtiu/trellis_output.zip
+2025-11-20 12:56:52.675 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/views_d94dxtiu
+2025-11-20 12:56:52.720 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/views_d94dxtiu
+2025-11-20 12:56:52.720 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/views_d94dxtiu: ['view_00.jpg', 'view_01.jpg', 'view_02.jpg', 'view_03.jpg', 'view_04.jpg', 'view_05.jpg', 'trellis_output.zip', 'mesh_de2f17d1-0d05-4183-aaa7-d22292e5b69c.glb', 'mesh_de2f17d1-0d05-4183-aaa7-d22292e5b69c.ply', 'preview_de2f17d1-0d05-4183-aaa7-d22292e5b69c.mp4', 'frame_de2f17d1-0d05-4183-aaa7-d22292e5b69c.jpg']
+2025-11-20 12:56:52.720 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_de2f17d1-0d05-4183-aaa7-d22292e5b69c.glb']
+2025-11-20 12:56:52.720 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_de2f17d1-0d05-4183-aaa7-d22292e5b69c.ply']
+2025-11-20 12:56:52.720 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_de2f17d1-0d05-4183-aaa7-d22292e5b69c.mp4']
+2025-11-20 12:56:52.720 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_de2f17d1-0d05-4183-aaa7-d22292e5b69c.jpg']
+2025-11-20 12:56:52.720 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/views_d94dxtiu/frame_de2f17d1-0d05-4183-aaa7-d22292e5b69c.jpg
+2025-11-20 12:56:52.720 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/views_d94dxtiu/mesh_de2f17d1-0d05-4183-aaa7-d22292e5b69c.glb, PLY=/tmp/views_d94dxtiu/mesh_de2f17d1-0d05-4183-aaa7-d22292e5b69c.ply, MP4=/tmp/views_d94dxtiu/preview_de2f17d1-0d05-4183-aaa7-d22292e5b69c.mp4
+2025-11-20 13:35:52.528 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: strongman holding a gun
+2025-11-20 13:35:55.679 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 13:35:55.925 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 13:35:56.227 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: strongman holding a gun
+2025-11-20 13:35:56.227 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: strongman holding a gun (using qwen2.5:7b)
+2025-11-20 13:35:56.994 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'strongman, holding a gun, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 13:35:57.192 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 13:35:57.192 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 13:35:57.192 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 13:36:02.296 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 13:36:02.307 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_lc9wuh_6 for feedback
+2025-11-20 13:36:02.307 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 13:36:02.576 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 13:41:02.075 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: strongman holding a gun
+2025-11-20 13:41:02.679 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 13:41:02.885 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 13:41:03.137 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: strongman holding a gun
+2025-11-20 13:41:03.137 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: strongman holding a gun (using qwen2.5:7b)
+2025-11-20 13:41:04.097 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'strongman, holding a gun, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 13:41:04.351 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 13:41:04.351 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 13:41:04.351 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 13:41:09.480 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 13:41:09.494 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_tabqwvhk for feedback
+2025-11-20 13:41:09.494 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 13:41:09.861 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 13:41:48.225 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: riven between trees
+2025-11-20 13:41:48.515 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 13:41:48.682 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 13:41:48.983 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: riven between trees
+2025-11-20 13:41:48.983 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: riven between trees (using qwen2.5:7b)
+2025-11-20 13:41:49.796 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'trees, between, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 13:41:49.996 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 13:41:49.996 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 13:41:49.996 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 13:41:54.918 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 13:41:54.931 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_9vb7u6f7 for feedback
+2025-11-20 13:41:54.932 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 13:41:55.205 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 13:42:19.560 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river
+2025-11-20 13:42:19.825 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 13:42:20.016 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 13:42:20.322 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river
+2025-11-20 13:42:20.322 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river (using qwen2.5:7b)
+2025-11-20 13:42:21.128 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 13:42:21.336 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 13:42:21.336 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 13:42:21.336 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 13:42:26.430 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 13:42:26.438 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_kl80xlsk for feedback
+2025-11-20 13:42:26.438 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 13:42:26.805 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 13:42:41.313 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: forest
+2025-11-20 13:42:41.629 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 13:42:41.820 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 13:42:42.073 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: forest
+2025-11-20 13:42:42.073 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: forest (using qwen2.5:7b)
+2025-11-20 13:42:42.776 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'forest, full view', 'negative': 'blurry, low detail, artifacts, shadows, lighting, background'}
+2025-11-20 13:42:42.985 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 13:42:42.985 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 13:42:42.985 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 13:42:47.916 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 13:42:47.934 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_qfsirxgm for feedback
+2025-11-20 13:42:47.934 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 13:42:48.214 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 13:42:55.460 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: fast food restaurant
+2025-11-20 13:42:55.802 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 13:42:55.968 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 13:42:56.271 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: fast food restaurant
+2025-11-20 13:42:56.271 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: fast food restaurant (using qwen2.5:7b)
+2025-11-20 13:42:57.060 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'fast food restaurant, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 13:42:57.281 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 13:42:57.281 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 13:42:57.281 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 13:43:02.216 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 13:43:02.230 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_c9avlm5p for feedback
+2025-11-20 13:43:02.230 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 13:43:02.599 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:00:03.678 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: fast food restaurant
+2025-11-20 14:00:04.064 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:00:04.235 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:00:04.539 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: fast food restaurant
+2025-11-20 14:00:04.539 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: fast food restaurant (using qwen2.5:7b)
+2025-11-20 14:00:05.294 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'fast food restaurant, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 14:00:05.502 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:00:05.503 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:00:05.503 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:00:10.404 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:00:10.424 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_fhcma9bi for feedback
+2025-11-20 14:00:10.425 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:00:10.698 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:00:19.086 | INFO     | __main__:generate_3d:214 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_fhcma9bi...
+2025-11-20 14:01:28.913 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_fhcma9bi/trellis_output.zip
+2025-11-20 14:01:28.913 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_fhcma9bi
+2025-11-20 14:01:28.978 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_fhcma9bi
+2025-11-20 14:01:28.979 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_fhcma9bi: ['view_00.jpg', 'trellis_output.zip', 'mesh_9f2a7dba-0b08-4793-a941-a171309d0d5e.glb', 'mesh_9f2a7dba-0b08-4793-a941-a171309d0d5e.ply', 'preview_9f2a7dba-0b08-4793-a941-a171309d0d5e.mp4', 'frame_9f2a7dba-0b08-4793-a941-a171309d0d5e.jpg']
+2025-11-20 14:01:28.979 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_9f2a7dba-0b08-4793-a941-a171309d0d5e.glb']
+2025-11-20 14:01:28.979 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_9f2a7dba-0b08-4793-a941-a171309d0d5e.ply']
+2025-11-20 14:01:28.979 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_9f2a7dba-0b08-4793-a941-a171309d0d5e.mp4']
+2025-11-20 14:01:28.979 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_9f2a7dba-0b08-4793-a941-a171309d0d5e.jpg']
+2025-11-20 14:01:28.979 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_fhcma9bi/frame_9f2a7dba-0b08-4793-a941-a171309d0d5e.jpg
+2025-11-20 14:01:28.979 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_fhcma9bi/mesh_9f2a7dba-0b08-4793-a941-a171309d0d5e.glb, PLY=/tmp/flux_view_fhcma9bi/mesh_9f2a7dba-0b08-4793-a941-a171309d0d5e.ply, MP4=/tmp/flux_view_fhcma9bi/preview_9f2a7dba-0b08-4793-a941-a171309d0d5e.mp4
+2025-11-20 14:02:27.503 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: trees and river
+2025-11-20 14:02:27.855 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:02:28.058 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:02:28.360 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: trees and river
+2025-11-20 14:02:28.361 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: trees and river (using qwen2.5:7b)
+2025-11-20 14:02:29.197 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'trees, full view, river, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 14:02:29.420 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:02:29.421 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:02:29.421 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:02:34.400 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:02:34.422 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_l355mhnq for feedback
+2025-11-20 14:02:34.422 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:02:34.812 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:02:45.071 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: trees and river on fire
+2025-11-20 14:02:45.332 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:02:45.526 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:02:45.779 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: trees and river on fire
+2025-11-20 14:02:45.780 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: trees and river on fire (using qwen2.5:7b)
+2025-11-20 14:02:46.610 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'trees, on fire, river, on fire, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 14:02:46.793 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:02:46.794 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:02:46.794 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:02:51.702 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:02:51.717 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_1lmkzp2a for feedback
+2025-11-20 14:02:51.717 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:02:52.094 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:03:11.653 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: campfire and some weapons on the ground
+2025-11-20 14:03:11.916 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:03:12.107 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:03:12.361 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: campfire and some weapons on the ground
+2025-11-20 14:03:12.361 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: campfire and some weapons on the ground (using qwen2.5:7b)
+2025-11-20 14:03:13.093 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'campfire, full view, weapons, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 14:03:13.270 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:03:13.270 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:03:13.270 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:03:18.204 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:03:18.216 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_0yo99zgl for feedback
+2025-11-20 14:03:18.217 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:03:18.636 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:03:25.634 | INFO     | __main__:generate_3d:214 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_0yo99zgl...
+2025-11-20 14:04:18.733 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_0yo99zgl/trellis_output.zip
+2025-11-20 14:04:18.734 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_0yo99zgl
+2025-11-20 14:04:18.779 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_0yo99zgl
+2025-11-20 14:04:18.779 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_0yo99zgl: ['view_00.jpg', 'trellis_output.zip', 'mesh_bba2d30f-1af1-40a2-a671-90032ef874b1.glb', 'mesh_bba2d30f-1af1-40a2-a671-90032ef874b1.ply', 'preview_bba2d30f-1af1-40a2-a671-90032ef874b1.mp4', 'frame_bba2d30f-1af1-40a2-a671-90032ef874b1.jpg']
+2025-11-20 14:04:18.780 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_bba2d30f-1af1-40a2-a671-90032ef874b1.glb']
+2025-11-20 14:04:18.780 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_bba2d30f-1af1-40a2-a671-90032ef874b1.ply']
+2025-11-20 14:04:18.780 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_bba2d30f-1af1-40a2-a671-90032ef874b1.mp4']
+2025-11-20 14:04:18.780 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_bba2d30f-1af1-40a2-a671-90032ef874b1.jpg']
+2025-11-20 14:04:18.780 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_0yo99zgl/frame_bba2d30f-1af1-40a2-a671-90032ef874b1.jpg
+2025-11-20 14:04:18.780 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_0yo99zgl/mesh_bba2d30f-1af1-40a2-a671-90032ef874b1.glb, PLY=/tmp/flux_view_0yo99zgl/mesh_bba2d30f-1af1-40a2-a671-90032ef874b1.ply, MP4=/tmp/flux_view_0yo99zgl/preview_bba2d30f-1af1-40a2-a671-90032ef874b1.mp4
+2025-11-20 14:06:06.607 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: campfire and some weapons on the ground in a forest
+2025-11-20 14:06:06.970 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:06:07.213 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:06:07.566 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: campfire and some weapons on the ground in a forest
+2025-11-20 14:06:07.566 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: campfire and some weapons on the ground in a forest (using qwen2.5:7b)
+2025-11-20 14:06:08.391 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'campfire, weapons, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 14:06:08.630 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:06:08.630 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:06:08.630 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:06:13.599 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:06:13.609 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_vf32p84o for feedback
+2025-11-20 14:06:13.609 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:06:13.977 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:06:47.017 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: gold knight
+2025-11-20 14:06:47.304 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-20 14:06:47.524 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-20 14:06:47.828 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: gold knight
+2025-11-20 14:06:47.828 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: gold knight (using qwen2.5:7b)
+2025-11-20 14:06:48.652 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'knight, golden, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 14:06:48.989 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-20 14:06:48.989 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-20 14:06:48.989 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-20 14:07:00.853 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-20 14:07:00.904 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_bv3fcq7v for Trellis step
+2025-11-20 14:07:00.904 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-20 14:07:01.175 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 14:07:01.176 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 14:07:06.862 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a man with muscular features. The multi-views are consistent, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:07:06.863 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a man with muscular features. The multi-views are consistent, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:07:06.863 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: knight, golden, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a man with muscular features. The multi-views are consistent, and there are no visible issues or artifacts.
+2025-11-20 14:07:06.863 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 14:07:06.863 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 14:07:16.821 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: man with mustache
+2025-11-20 14:07:17.110 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:07:17.278 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:07:17.581 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: man with mustache
+2025-11-20 14:07:17.581 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: man with mustache (using qwen2.5:7b)
+2025-11-20 14:07:18.372 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'man, with mustache, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 14:07:18.545 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:07:18.546 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:07:18.546 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:07:23.482 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:07:23.496 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_lt1iuso6 for feedback
+2025-11-20 14:07:23.496 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:07:23.758 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:15:15.355 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: man with mustache
+2025-11-20 14:15:15.678 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:15:15.862 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:15:16.164 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: man with mustache
+2025-11-20 14:15:16.164 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: man with mustache (using qwen2.5:7b)
+2025-11-20 14:15:17.508 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'man, with mustache, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 14:15:17.734 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:15:17.734 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:15:17.734 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:15:22.718 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:15:22.730 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_9_sn4tqc for feedback
+2025-11-20 14:15:22.730 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:15:22.996 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:15:57.187 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: man with mustache
+2025-11-20 14:15:57.190 | ERROR    | __main__:call_choose_model:317 - [Gradio] Failed to choose model: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2g/choose_model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbda38f7280>: Failed to establish a new connection: [Errno 111] Connection refused')). Defaulting to 'sd'.
+2025-11-20 14:15:57.490 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-20 14:15:57.793 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: man with mustache
+2025-11-20 14:15:57.794 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: man with mustache (using qwen2.5:7b)
+2025-11-20 14:15:58.457 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'man, with mustache, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 14:15:58.652 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-20 14:15:58.653 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-20 14:15:58.653 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-20 14:15:58.655 | ERROR    | __main__:generate_images:130 - [MV-ADAPTER] Error generating images: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=man%2C+with+mustache%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbda3950a00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           │          └ <function create_connection at 0x7fbf13045240>
+           └ <module 'urllib3.util.connection' from '/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py'>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+          └ None
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+    │    │       └ ('127.0.0.1', 8081)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+
+ConnectionRefusedError: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               │    └ <function HTTPConnectionPool._make_request at 0x7fbf1283df30>
+               └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7fbda39503a0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+    │    └ <function HTTPConnection.request at 0x7fbf1282e440>
+    └ <urllib3.connection.HTTPConnection object at 0x7fbda3950a00>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 494, in request
+    self.endheaders()
+    │    └ <function HTTPConnection.endheaders at 0x7fbf13203130>
+    └ <urllib3.connection.HTTPConnection object at 0x7fbda3950a00>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    │    │            │                            └ False
+    │    │            └ None
+    │    └ <function HTTPConnection._send_output at 0x7fbf13202d40>
+    └ <urllib3.connection.HTTPConnection object at 0x7fbda3950a00>
+  File "/venv/beau/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+    │    │    └ b'POST /t2mv/generate?ref_prompt=man%2C+with+mustache%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatom...
+    │    └ <function HTTPConnection.send at 0x7fbf13202b90>
+    └ <urllib3.connection.HTTPConnection object at 0x7fbda3950a00>
+  File "/venv/beau/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+    │    └ <function HTTPConnection.connect at 0x7fbf1282df30>
+    └ <urllib3.connection.HTTPConnection object at 0x7fbda3950a00>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 325, in connect
+    self.sock = self._new_conn()
+    │    │      │    └ <function HTTPConnection._new_conn at 0x7fbf1282dcf0>
+    │    │      └ <urllib3.connection.HTTPConnection object at 0x7fbda3950a00>
+    │    └ None
+    └ <urllib3.connection.HTTPConnection object at 0x7fbda3950a00>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+          └ <class 'urllib3.exceptions.NewConnectionError'>
+
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fbda3950a00>: Failed to establish a new connection: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7fbf1283e0e0>
+           └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7fbda39503a0>
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7fbf1315d750>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/venv/beau/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+          │             │      │    │            └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbda3950a00>: Failed to establish a new connection: [Errn...
+          │             │      │    └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbda3950a00>: Failed to establish a new connection: [Errn...
+          │             │      └ '/t2mv/generate?ref_prompt=man%2C+with+mustache%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+e...
+          │             └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7fbda39503a0>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=man%2C+with+mustache%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbda3950a00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/venv/beau/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7fbf132e31c0>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140452826519232)>
+  File "/venv/beau/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function WorkerThread.run at 0x7fbdb8423400>
+    └ <WorkerThread(AnyIO worker thread, started daemon 140452826519232)>
+  File "/venv/beau/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             │       │   │      └ ('sd', 'man, with mustache, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tai...
+             │       │   └ <function route_generation at 0x7fbda3954670>
+             │       └ <method 'run' of '_contextvars.Context' objects>
+             └ <_contextvars.Context object at 0x7fbda38e4740>
+  File "/venv/beau/lib/python3.10/site-packages/gradio/utils.py", line 915, in wrapper
+    response = f(*args, **kwargs)
+               │  │       └ {}
+               │  └ ('sd', 'man, with mustache, full body', 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tai...
+               └ <function route_generation at 0x7fbdbd2a2a70>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 345, in route_generation
+    return generate_images(refined_prompt, negative_prompt, randomize, inference_steps)
+           │               │               │                │          └ 28
+           │               │               │                └ False
+           │               │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+           │               └ 'man, with mustache, full body'
+           └ <function generate_images at 0x7fbdbd2a25f0>
+
+> File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 114, in generate_images
+    pil_images, views_dir = _api_t2mv_generate(refined_prompt, negative_prompt, randomize, inference_steps)
+                            │                  │               │                │          └ 28
+                            │                  │               │                └ False
+                            │                  │               └ 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'
+                            │                  └ 'man, with mustache, full body'
+                            └ <function _api_t2mv_generate at 0x7fbdbd2a2560>
+
+  File "/workspace/beau/beau-pipeline/demo_chat_apiv3.py", line 86, in _api_t2mv_generate
+    response = requests.post(
+               │        └ <function post at 0x7fbf120a63b0>
+               └ <module 'requests' from '/venv/beau/lib/python3.10/site-packages/requests/__init__.py'>
+
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           │               │         │          │       └ {'params': {'ref_prompt': 'man, with mustache, full body', 'neg_prompt': 'blurry, low detail, artifacts, bad anatomy, extra l...
+           │               │         │          └ None
+           │               │         └ None
+           │               └ 'http://127.0.0.1:8081/t2mv/generate'
+           └ <function request at 0x7fbf12067eb0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'data': None, 'json': None, 'params': {'ref_prompt': 'man, with mustache, full body', 'neg_prompt': 'blurry, low detail, art...
+           │       │              │           └ 'http://127.0.0.1:8081/t2mv/generate'
+           │       │              └ 'post'
+           │       └ <function Session.request at 0x7fbf120a5990>
+           └ <requests.sessions.Session object at 0x7fbda39507f0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 600, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [POST]>
+           │    └ <function Session.send at 0x7fbf120a5e10>
+           └ <requests.sessions.Session object at 0x7fbda39507f0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 600, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [POST]>
+        │       └ <function HTTPAdapter.send at 0x7fbf120a52d0>
+        └ <requests.adapters.HTTPAdapter object at 0x7fbda39507c0>
+  File "/venv/beau/lib/python3.10/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [POST]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /t2mv/generate?ref_prompt=man%2C+with+mustache%2C+full+body&neg_prompt=blurry%2C+low+detail%2C+artifacts%2C+bad+anatomy%2C+extra+limbs%2C+deformed+face%2C+deformed+tail%2C+shadows%2C+lighting%2C+background&randomize=False&inference_steps=28 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbda3950a00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-11-20 14:15:58.956 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 14:15:58.957 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 14:16:10.752 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images are not consistent and some views have an extra tail. The face has low detail. The colors are unrealistic and unmatched.', 'negative_prompt': 'nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body'}
+2025-11-20 14:16:10.753 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images are not consistent and some views have an extra tail. The face has low detail. The colors are unrealistic and unmatched.', 'negative_prompt': 'nsfw, explicit content, blurry, low detail, artifacts, geometry holes, extra tail, deformed body'}
+2025-11-20 14:16:10.753 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: man, with mustache, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images are not consistent and some views have an extra tail. The face has low detail. The colors are unrealistic and unmatched.
+2025-11-20 14:16:10.753 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 14:16:10.753 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 14:17:28.176 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: man with mustache
+2025-11-20 14:17:28.445 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-20 14:17:28.682 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-20 14:17:28.934 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: man with mustache
+2025-11-20 14:17:28.934 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: man with mustache (using qwen2.5:7b)
+2025-11-20 14:17:29.681 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'man, with mustache, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 14:17:29.851 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-20 14:17:29.852 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-20 14:17:29.852 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-20 14:17:42.680 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-20 14:17:42.722 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_emmqpluf for Trellis step
+2025-11-20 14:17:42.722 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-20 14:17:43.146 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 14:17:43.147 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 14:17:48.491 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a man with a mustache from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:17:48.492 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a man with a mustache from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:17:48.492 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: man, with mustache, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a man with a mustache from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.
+2025-11-20 14:17:48.492 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 14:17:48.492 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 14:18:01.170 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: muscle man with mustache
+2025-11-20 14:18:01.644 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-20 14:18:01.828 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-20 14:18:02.130 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: muscle man with mustache
+2025-11-20 14:18:02.130 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: muscle man with mustache (using qwen2.5:7b)
+2025-11-20 14:18:02.862 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'man, muscle, with mustache, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 14:18:03.041 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-20 14:18:03.041 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-20 14:18:03.041 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-20 14:18:14.885 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-20 14:18:14.933 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_zjx3unok for Trellis step
+2025-11-20 14:18:14.934 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-20 14:20:03.721 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 14:20:03.722 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 14:20:09.699 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a muscular man with a mustache from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:20:09.699 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a muscular man with a mustache from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:20:09.700 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: man, muscle, with mustache, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a muscular man with a mustache from different angles. The consistency across the multi-views is good, and there are no visible issues or artifacts.
+2025-11-20 14:20:09.700 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 14:20:09.700 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 14:20:16.487 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: man with mustache and red shirt
+2025-11-20 14:20:16.772 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-20 14:20:16.992 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-20 14:20:17.295 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: man with mustache and red shirt
+2025-11-20 14:20:17.296 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: man with mustache and red shirt (using qwen2.5:7b)
+2025-11-20 14:20:18.107 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'man, with mustache, wearing a red shirt, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 14:20:18.313 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-20 14:20:18.313 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-20 14:20:18.313 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-20 14:20:30.128 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-20 14:20:30.177 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_x1bymc73 for Trellis step
+2025-11-20 14:20:30.177 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-20 14:20:30.528 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 14:20:30.528 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 14:20:35.929 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a man with a mustache and a red shirt from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:20:35.930 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a man with a mustache and a red shirt from different angles. The images are consistent across the views, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:20:35.930 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: man, with mustache, wearing a red shirt, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a man with a mustache and a red shirt from different angles. The images are consistent across the views, and there are no visible issues or artifacts.
+2025-11-20 14:20:35.931 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 14:20:35.931 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 14:20:59.793 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: man with mustache and red shirt with red hat with a letter M
+2025-11-20 14:21:00.097 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-20 14:21:00.250 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-20 14:21:00.555 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: man with mustache and red shirt with red hat with a letter M
+2025-11-20 14:21:00.556 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: man with mustache and red shirt with red hat with a letter M (using qwen2.5:7b)
+2025-11-20 14:21:01.461 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'man, with mustache, wearing a red shirt, with a red hat, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-20 14:21:01.668 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-20 14:21:01.669 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-20 14:21:01.669 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-20 14:21:13.488 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-20 14:21:13.528 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_0ugxb1li for Trellis step
+2025-11-20 14:21:13.528 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-20 14:21:13.951 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 14:21:13.952 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 14:21:20.079 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a man with a mustache, red shirt, and red hat with a letter M. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:21:20.080 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a man with a mustache, red shirt, and red hat with a letter M. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:21:20.080 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: man, with mustache, wearing a red shirt, with a red hat, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: The images match the prompt well, showing a man with a mustache, red shirt, and red hat with a letter M. The images are consistent across different angles, and there are no visible issues or artifacts.
+2025-11-20 14:21:20.080 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 14:21:20.080 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 14:21:28.659 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 33 steps
+2025-11-20 14:21:28.659 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 33 inference steps...
+2025-11-20 14:21:28.659 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 33 steps...
+2025-11-20 14:21:42.533 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-20 14:21:42.586 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_7a8tcwg_ for Trellis step
+2025-11-20 14:21:42.586 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-20 14:21:42.851 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-20 14:21:42.851 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-20 14:21:48.292 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'The images match the prompt well, showing a man with a mustache, red shirt, and red hat with a letter M. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:21:48.293 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'The images match the prompt well, showing a man with a mustache, red shirt, and red hat with a letter M. The images are consistent across different angles, and there are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-20 14:21:48.293 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: man, with mustache, wearing a red shirt, with a red hat, full body, negative: blurry, low detail, bad anatomy, extra limbs, deformed face, shadows, lighting, background, eval: The images match the prompt well, showing a man with a mustache, red shirt, and red hat with a letter M. The images are consistent across different angles, and there are no visible issues or artifacts.
+2025-11-20 14:21:48.293 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-20 14:21:48.293 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-20 14:21:58.978 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river between trees
+2025-11-20 14:21:59.270 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:21:59.433 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:21:59.736 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-20 14:21:59.736 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-20 14:22:00.352 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, full view', 'negative': 'blurry, low detail, artifacts, shadows, lighting, background'}
+2025-11-20 14:22:00.547 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:22:00.547 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:22:00.547 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:22:05.811 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:22:05.823 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_1tikawwr for feedback
+2025-11-20 14:22:05.823 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:22:06.195 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:37:18.082 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river between trees
+2025-11-20 14:37:18.337 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:37:18.486 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:37:18.789 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-20 14:37:18.790 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-20 14:37:19.584 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 14:37:19.798 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:37:19.798 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:37:19.798 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:37:25.320 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:37:25.331 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_4b5b14is for feedback
+2025-11-20 14:37:25.331 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:37:25.556 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:43:11.739 | INFO     | __main__:generate_3d:214 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_4b5b14is...
+2025-11-20 14:44:05.142 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_4b5b14is/trellis_output.zip
+2025-11-20 14:44:05.142 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_4b5b14is
+2025-11-20 14:44:05.191 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_4b5b14is
+2025-11-20 14:44:05.191 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_4b5b14is: ['view_00.jpg', 'trellis_output.zip', 'mesh_576ba583-7213-417b-a6dd-1ec3268e193b.glb', 'mesh_576ba583-7213-417b-a6dd-1ec3268e193b.ply', 'preview_576ba583-7213-417b-a6dd-1ec3268e193b.mp4', 'frame_576ba583-7213-417b-a6dd-1ec3268e193b.jpg']
+2025-11-20 14:44:05.192 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_576ba583-7213-417b-a6dd-1ec3268e193b.glb']
+2025-11-20 14:44:05.192 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_576ba583-7213-417b-a6dd-1ec3268e193b.ply']
+2025-11-20 14:44:05.192 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_576ba583-7213-417b-a6dd-1ec3268e193b.mp4']
+2025-11-20 14:44:05.192 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_576ba583-7213-417b-a6dd-1ec3268e193b.jpg']
+2025-11-20 14:44:05.192 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_4b5b14is/frame_576ba583-7213-417b-a6dd-1ec3268e193b.jpg
+2025-11-20 14:44:05.192 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_4b5b14is/mesh_576ba583-7213-417b-a6dd-1ec3268e193b.glb, PLY=/tmp/flux_view_4b5b14is/mesh_576ba583-7213-417b-a6dd-1ec3268e193b.ply, MP4=/tmp/flux_view_4b5b14is/preview_576ba583-7213-417b-a6dd-1ec3268e193b.mp4
+2025-11-20 14:55:45.303 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: snowstorm
+2025-11-20 14:55:45.572 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 14:55:45.761 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 14:55:46.065 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: snowstorm
+2025-11-20 14:55:46.065 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: snowstorm (using qwen2.5:7b)
+2025-11-20 14:55:46.746 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'snowstorm, full view', 'negative': 'blurry, low detail, artifacts, shadows, lighting, background'}
+2025-11-20 14:55:46.976 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 14:55:46.976 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 14:55:46.976 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 14:55:51.776 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 14:55:51.783 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_xlcejy8j for feedback
+2025-11-20 14:55:51.783 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 14:55:52.297 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 14:55:58.688 | INFO     | __main__:generate_3d:214 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_xlcejy8j...
+2025-11-20 14:56:48.199 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_xlcejy8j/trellis_output.zip
+2025-11-20 14:56:48.199 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_xlcejy8j
+2025-11-20 14:56:48.254 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_xlcejy8j
+2025-11-20 14:56:48.254 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_xlcejy8j: ['view_00.jpg', 'trellis_output.zip', 'mesh_c43d3680-3f66-482a-b809-bb320033312a.glb', 'mesh_c43d3680-3f66-482a-b809-bb320033312a.ply', 'preview_c43d3680-3f66-482a-b809-bb320033312a.mp4', 'frame_c43d3680-3f66-482a-b809-bb320033312a.jpg']
+2025-11-20 14:56:48.255 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_c43d3680-3f66-482a-b809-bb320033312a.glb']
+2025-11-20 14:56:48.255 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_c43d3680-3f66-482a-b809-bb320033312a.ply']
+2025-11-20 14:56:48.255 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_c43d3680-3f66-482a-b809-bb320033312a.mp4']
+2025-11-20 14:56:48.255 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_c43d3680-3f66-482a-b809-bb320033312a.jpg']
+2025-11-20 14:56:48.255 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_xlcejy8j/frame_c43d3680-3f66-482a-b809-bb320033312a.jpg
+2025-11-20 14:56:48.255 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_xlcejy8j/mesh_c43d3680-3f66-482a-b809-bb320033312a.glb, PLY=/tmp/flux_view_xlcejy8j/mesh_c43d3680-3f66-482a-b809-bb320033312a.ply, MP4=/tmp/flux_view_xlcejy8j/preview_c43d3680-3f66-482a-b809-bb320033312a.mp4
+2025-11-20 15:01:43.630 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 15:01:43.631 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 15:01:43.631 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 15:01:48.483 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 15:01:48.490 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_5wy9y4q2 for feedback
+2025-11-20 15:01:48.490 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 15:01:48.751 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 15:05:04.884 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: shoppingmall
+2025-11-20 15:05:05.147 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 15:05:05.540 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 15:05:05.943 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: shoppingmall
+2025-11-20 15:05:05.943 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: shoppingmall (using qwen2.5:7b)
+2025-11-20 15:05:06.573 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'shopping mall, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 15:05:06.904 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 15:05:06.904 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 15:05:06.904 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 15:05:11.704 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 15:05:11.718 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_w1h8yfue for feedback
+2025-11-20 15:05:11.718 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 15:05:11.989 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-20 15:05:21.648 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: pet shop
+2025-11-20 15:05:21.876 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-20 15:05:22.054 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-20 15:05:22.360 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: pet shop
+2025-11-20 15:05:22.360 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: pet shop (using qwen2.5:7b)
+2025-11-20 15:05:23.022 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'pet shop, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-20 15:05:23.219 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-20 15:05:23.219 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-20 15:05:23.219 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-20 15:05:28.030 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-20 15:05:28.042 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_wpmkcvvo for feedback
+2025-11-20 15:05:28.042 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-20 15:51:46.675 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
