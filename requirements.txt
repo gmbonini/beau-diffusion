@@ -1,29 +1,34 @@
-
-numpy==1.26
-uvicorn
-fastapi
-loguru
-ollama
-gradio
-diffusers
-einops
-jaxtyping
-omegaconf
-accelerate
+numpy==1.26.0
+uvicorn==0.38.0
+fastapi==0.121.0
+loguru==0.7.3
+mysql-connector-python==9.5.0
+easydict==1.13
+python-multipart==0.0.20
+torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+torchvision==0.20.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+accelerate==1.11.0
+diffusers==0.35.2
+transformers==4.57.1
+peft==0.17.1
+sentencepiece==0.2.1
+einops==0.8.1
+jaxtyping==0.3.3
+omegaconf==2.3.0
+onnxruntime-gpu==1.23.2
+rembg==2.0.67
+ollama==0.6.0
+gradio==5.49.1
+imageio==2.37.0
+open3d==0.19.0
+plyfile==1.1.3
+pymeshlab==2025.7
+opencv-python-headless==4.11.0.86
 xformers==0.0.29
-spconv-cu121
+spconv-cu121==2.3.8
 kaolin @ https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-2.5.1_cu121/kaolin-0.17.0-cp310-cp310-linux_x86_64.whl
-opencv-python
-mysql-connector-python
-imageio
-easydict
-rembg
-onnxruntime
-transformers
-open3d
-plyfile
-utils3d
-nvdiffrast
-peft
-sentencepiece
-pymeshlab
+utils3d @ git+https://github.com/EasternJournalist/utils3d.git@9a4eb15e4021b67b12c460c7057d642626897ec8
+nvdiffrast @ git+https://github.com/NVlabs/nvdiffrast.git
+diffoctreerast @ git+https://github.com/JeffreyXiang/diffoctreerast.git
+diff_gaussian_rasterization @ git+https://github.com/autonomousvision/mip-splatting.git#subdirectory=submodules/diff-gaussian-rasterization

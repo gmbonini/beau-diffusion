@@ -3524,3 +3524,70 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8
 2025-11-20 15:05:28.042 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_wpmkcvvo for feedback
 2025-11-20 15:05:28.042 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
 2025-11-20 15:51:46.675 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-24 12:27:40.301 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: cute black dog
+2025-11-24 12:27:43.024 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: sd
+2025-11-24 12:27:43.185 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 28
+2025-11-24 12:27:43.541 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: cute black dog
+2025-11-24 12:27:43.541 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: cute black dog (using qwen2.5:7b)
+2025-11-24 12:27:44.304 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'dog, cute, black, full body', 'negative': 'blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background'}
+2025-11-24 12:27:44.503 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: sd with 28 steps
+2025-11-24 12:27:44.503 | INFO     | __main__:generate_images:112 - [MV-ADAPTER] Starting generation with 28 inference steps...
+2025-11-24 12:27:44.503 | INFO     | __main__:_api_t2mv_generate:77 - [MV-ADAPTER] Calling API with 28 steps...
+2025-11-24 12:27:56.353 | INFO     | __main__:_api_t2mv_generate:94 - [MV-ADAPTER] API call successful, decoding 6 images...
+2025-11-24 12:27:56.406 | INFO     | __main__:_api_t2mv_generate:107 - Saved images to /tmp/views_337aenyk for Trellis step
+2025-11-24 12:27:56.406 | INFO     | __main__:generate_images:116 - [MV-ADAPTER] Got 6 images
+2025-11-24 12:28:04.855 | INFO     | __main__:route_post_processing:352 - [Gradio] Running SD post-processing (check_views, chat_start)
+2025-11-24 12:28:04.856 | INFO     | ollama:check_views:228 - [MV-ADAPTER] check_views loading (using qwen2.5vl:7b)
+2025-11-24 12:28:09.125 | INFO     | ollama:check_views:235 - [MV-ADAPTER] check_views result: {'avaliation': 'the images match the prompt well. The images are consistent across the multi-views, showing a cute black dog from different angles. There are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-24 12:28:09.125 | INFO     | __main__:check_views_quality:145 - [MV-ADAPTER] views quality check: {'avaliation': 'the images match the prompt well. The images are consistent across the multi-views, showing a cute black dog from different angles. There are no visible issues or artifacts.', 'negative_prompt': 'none'}
+2025-11-24 12:28:09.126 | INFO     | __main__:chat_start_fn:35 - [CHAT] starting chat with refined: dog, cute, black, full body, negative: blurry, low detail, artifacts, bad anatomy, extra limbs, deformed face, deformed tail, shadows, lighting, background, eval: the images match the prompt well. The images are consistent across the multi-views, showing a cute black dog from different angles. There are no visible issues or artifacts.
+2025-11-24 12:28:09.126 | INFO     | ollama_chat:start_chat_from_inputs:112 - [CHAT] STARTING CHAT (using qwen2.5:7b)
+2025-11-24 12:28:09.126 | INFO     | ollama_chat:chat_call:97 - [CHAT] chat_call using qwen2.5:7b
+2025-11-24 12:50:58.381 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river between trees
+2025-11-24 12:51:01.055 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-24 12:51:01.371 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-24 12:51:01.726 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-24 12:51:01.727 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-24 12:51:02.481 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-24 12:51:02.689 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-24 12:51:02.689 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-24 12:51:02.690 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-24 12:51:07.478 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-24 12:51:07.492 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_y7_54adn for feedback
+2025-11-24 12:51:07.493 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-24 12:51:07.931 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-24 12:51:15.245 | INFO     | __main__:generate_3d:214 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_y7_54adn...
+2025-11-24 12:51:58.797 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_y7_54adn/trellis_output.zip
+2025-11-24 12:51:58.797 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_y7_54adn
+2025-11-24 12:51:58.847 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_y7_54adn
+2025-11-24 12:51:58.847 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_y7_54adn: ['view_00.jpg', 'trellis_output.zip', 'mesh_a4407ecc-6d1d-4594-a0df-50841c6aeb05.glb', 'mesh_a4407ecc-6d1d-4594-a0df-50841c6aeb05.ply', 'preview_a4407ecc-6d1d-4594-a0df-50841c6aeb05.mp4', 'frame_a4407ecc-6d1d-4594-a0df-50841c6aeb05.jpg']
+2025-11-24 12:51:58.847 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_a4407ecc-6d1d-4594-a0df-50841c6aeb05.glb']
+2025-11-24 12:51:58.847 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_a4407ecc-6d1d-4594-a0df-50841c6aeb05.ply']
+2025-11-24 12:51:58.847 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_a4407ecc-6d1d-4594-a0df-50841c6aeb05.mp4']
+2025-11-24 12:51:58.847 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_a4407ecc-6d1d-4594-a0df-50841c6aeb05.jpg']
+2025-11-24 12:51:58.847 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_y7_54adn/frame_a4407ecc-6d1d-4594-a0df-50841c6aeb05.jpg
+2025-11-24 12:51:58.847 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_y7_54adn/mesh_a4407ecc-6d1d-4594-a0df-50841c6aeb05.glb, PLY=/tmp/flux_view_y7_54adn/mesh_a4407ecc-6d1d-4594-a0df-50841c6aeb05.ply, MP4=/tmp/flux_view_y7_54adn/preview_a4407ecc-6d1d-4594-a0df-50841c6aeb05.mp4
+2025-11-24 12:56:49.480 | INFO     | __main__:call_choose_model:309 - [Gradio] Choosing model for prompt: river between trees
+2025-11-24 12:56:49.770 | INFO     | __main__:call_choose_model:314 - [Gradio] LLM chose model: flux
+2025-11-24 12:56:49.985 | INFO     | __main__:_reset_ui_and_set_steps:323 - [Gradio] Resetting UI, setting steps to 10
+2025-11-24 12:56:50.288 | INFO     | __main__:llm_prompt_processing:65 - [MV-ADAPTER] generating images. prompt to be refined: river between trees
+2025-11-24 12:56:50.289 | INFO     | ollama:prepare_prompts:133 - [OLLAMA] prepare_prompts: preparing prompts for input: river between trees (using qwen2.5:7b)
+2025-11-24 12:56:51.032 | INFO     | ollama:prepare_prompts:169 - [MV-ADAPTER] prepare_prompts result: {'refined': 'river, between trees, full view', 'negative': 'blurry, low detail, artifacts, bad proportions, deformed parts, floating objects, shadows, lighting, background'}
+2025-11-24 12:56:51.251 | INFO     | __main__:route_generation:343 - [Gradio] Routing generation to model: flux with 10 steps
+2025-11-24 12:56:51.251 | INFO     | __main__:generate_image_flux:182 - [FLUX] Starting generation with 10 inference steps...
+2025-11-24 12:56:51.251 | INFO     | __main__:_api_t2i_generate_flux:151 - [FLUX] Calling API with 10 steps...
+2025-11-24 12:56:56.073 | INFO     | __main__:_api_t2i_generate_flux:166 - [FLUX] API call successful, decoding 1 image...
+2025-11-24 12:56:56.093 | INFO     | __main__:_api_t2i_generate_flux:178 - Saved single FLUX image to /tmp/flux_view_lni1i4mb for feedback
+2025-11-24 12:56:56.094 | INFO     | __main__:generate_image_flux:186 - [FLUX] Got 1 image
+2025-11-24 12:56:56.373 | INFO     | __main__:route_post_processing:368 - [Gradio] Running FLUX post-processing (unlock only)
+2025-11-24 12:57:02.380 | INFO     | __main__:generate_3d:214 - [TRELLIS] Starting 3D generation for views in /tmp/flux_view_lni1i4mb...
+2025-11-24 12:57:49.338 | INFO     | __main__:generate_3d:234 - [TRELLIS/API] Saved ZIP to /tmp/flux_view_lni1i4mb/trellis_output.zip
+2025-11-24 12:57:49.339 | INFO     | __main__:generate_3d:243 - [Gradio/Fix] Cleaning old mesh files from /tmp/flux_view_lni1i4mb
+2025-11-24 12:57:49.367 | INFO     | __main__:generate_3d:261 - [TRELLIS/API] Extracted ZIP to /tmp/flux_view_lni1i4mb
+2025-11-24 12:57:49.368 | INFO     | __main__:generate_3d:264 - [TRELLIS/API-DEBUG] Files in /tmp/flux_view_lni1i4mb: ['view_00.jpg', 'trellis_output.zip', 'mesh_f4f20ae3-ec21-4c70-aa85-443afe84ad51.glb', 'mesh_f4f20ae3-ec21-4c70-aa85-443afe84ad51.ply', 'preview_f4f20ae3-ec21-4c70-aa85-443afe84ad51.mp4', 'frame_f4f20ae3-ec21-4c70-aa85-443afe84ad51.jpg']
+2025-11-24 12:57:49.368 | INFO     | __main__:generate_3d:271 - [TRELLIS/API-DEBUG] Found GLB files: ['mesh_f4f20ae3-ec21-4c70-aa85-443afe84ad51.glb']
+2025-11-24 12:57:49.368 | INFO     | __main__:generate_3d:272 - [TRELLIS/API-DEBUG] Found PLY files: ['mesh_f4f20ae3-ec21-4c70-aa85-443afe84ad51.ply']
+2025-11-24 12:57:49.368 | INFO     | __main__:generate_3d:273 - [TRELLIS/API-DEBUG] Found MP4 files: ['preview_f4f20ae3-ec21-4c70-aa85-443afe84ad51.mp4']
+2025-11-24 12:57:49.368 | INFO     | __main__:generate_3d:274 - [TRELLIS/API-DEBUG] Found frame files: ['frame_f4f20ae3-ec21-4c70-aa85-443afe84ad51.jpg']
+2025-11-24 12:57:49.368 | INFO     | __main__:generate_3d:288 - [TRELLIS/API] Frame path found: /tmp/flux_view_lni1i4mb/frame_f4f20ae3-ec21-4c70-aa85-443afe84ad51.jpg
+2025-11-24 12:57:49.368 | INFO     | __main__:generate_3d:292 - [TRELLIS/API] Assets found: GLB=/tmp/flux_view_lni1i4mb/mesh_f4f20ae3-ec21-4c70-aa85-443afe84ad51.glb, PLY=/tmp/flux_view_lni1i4mb/mesh_f4f20ae3-ec21-4c70-aa85-443afe84ad51.ply, MP4=/tmp/flux_view_lni1i4mb/preview_f4f20ae3-ec21-4c70-aa85-443afe84ad51.mp4
