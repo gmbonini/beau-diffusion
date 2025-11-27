@@ -148,7 +148,7 @@ This script will:
    export VISION_MODEL=qwen2.5vl:7b
    ```
 
-## 🏃 Running the Pipeline
+##  Running the Pipeline
 
 ### Quick Start
 
@@ -191,7 +191,7 @@ uvicorn api:app --host 0.0.0.0 --port 8000 &
 python demo_chat.py
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### POST `/t2mv/generate`
 
@@ -352,7 +352,7 @@ TRELLIS_PATH = "/workspace/TRELLIS"
 - `feedback_id`: Foreign key to feedback table
 - `image_url`: Path to multiview image file
 
-## 🧪 Testing
+##  Testing
 
 Test individual components:
 
@@ -415,7 +415,6 @@ See `requirements.txt` for complete list.
 - **Ollama**: [ollama/ollama](https://github.com/ollama/ollama)
 - **RealVisXL**: SG161222/RealVisXL_V4.0
 
-## 📧 Contact
 
 ### Updating the Application
 To update the Gradio interface and project code to the latest version, verify the steps in the `MAINTENANCE_GUIDE.md` file. Generally, this involves pulling the latest changes and restarting the service.
